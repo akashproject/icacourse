@@ -1,0 +1,53 @@
+.dropzone {
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+}
+.image-thumbnail {
+    width: 110px;
+    margin: 0.5rem;
+    padding: 1px;
+    display: inline-flex;
+    position: relative;
+}
+  
+.image-thumbnail span {
+    position: absolute;
+    bottom: 0;
+    background: #f2f2f2d9;
+    color: #333;
+    font-weight: 600;
+    width: 100%;
+    padding: 2px;
+    width: 100%;
+}
+  
+.image-profile {
+    margin: auto;
+    border: 1px solid #cfcfcf;
+    padding: 1px;
+    display: inline-block;
+    width: auto;
+}
+.image-profile img {
+    width: 100%;
+}
+
+.image-thumbnail.active {
+    border: 2px solid #6e6de5;
+}
+  
+.filter-container {
+    margin-bottom: 1rem;
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 22px 10px 0 10px;
+    width: auto;
+    max-width: 98%;
+    margin: 20px auto;
+    transition: 1s all;
+}
+.file-content {
+    display: inline-block;
+    border: 1px solid #cfcfcf;
+}
