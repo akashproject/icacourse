@@ -52,10 +52,11 @@
                 </div>
                 <div class="col-lg-12 filter-subcategory job-assurance jg-with-tally jg-with-zoho">
                     <ul>
-                        <li class="filter-trigger" data-filter=".short-term">
-                            <a href="javascript:void(0);" >JG</a>
+                        @foreach(getCourseTypeById(1) as $value)
+                        <li class="filter-trigger" data-filter=".{{ $value->slug }}">
+                            <a href="javascript:void(0);" >{{$value->name}}</a>
                         </li>
-                        
+                        @endforeach
                     </ul>
                 </div>
             </div>  
@@ -64,8 +65,7 @@
         <div class="row filteritems justify-content-center">
             <!-- Box Start -->
             @foreach(get_courses() as $course)
-            
-            <div class="col-xl-3 col-lg-4 col-md-6 masonry-item .short-term">
+            <div class="col-xl-3 col-lg-4 col-md-6 masonry-item @if($course->type_id) @foreach(getTypesByCourseId($course->type_id) as $type) {{$type->slug}} @endforeach @endif">
                 <div class="coach_block">
                     <div class="coach_hover_tooltip"> 
                         <h4> {{ $course->name }} </h4>
@@ -87,7 +87,7 @@
                         </div>
                         {!! $course->feature !!}
                         <div class="author text-center">
-                            <a href="/course-link" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
+                            <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
                         </div>
                     </div>
                     <div class="best-selling" >

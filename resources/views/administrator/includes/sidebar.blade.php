@@ -135,27 +135,22 @@
                   </a>
                </li>
                <li class="menu-item">
-                  <a href="{{ route('admin-courses') }}" class="menu-link">
+                  <a href="{{ route('admin-sync-courses') }}" class="menu-link">
                      <div data-i18n="Notifications">Sync Courses</div>
                   </a>
                </li>
                <li class="menu-item">
-                  <a href="{{ route('admin-subjects') }}" class="menu-link">
+                  <a href="{{ route('admin-sync-fees') }}" class="menu-link">
                      <div data-i18n="Notifications">Sync Fees</div>
                   </a>
                </li>
                <li class="menu-item">
-                  <a href="{{ route('admin-topics') }}" class="menu-link">
+                  <a href="{{ route('admin-sync-states') }}" class="menu-link">
                      <div data-i18n="Notifications">Sync States</div>
                   </a>
                </li>
                <li class="menu-item">
-                  <a href="{{ route('admin-topics') }}" class="menu-link">
-                     <div data-i18n="Notifications">Sync Cities</div>
-                  </a>
-               </li>
-               <li class="menu-item">
-                  <a href="{{ route('admin-topics') }}" class="menu-link">
+                  <a href="{{ route('admin-sync-highest-qualifications') }}" class="menu-link">
                      <div data-i18n="Notifications">Sync Qualification</div>
                   </a>
                </li>

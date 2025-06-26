@@ -47,7 +47,7 @@
     <link href="{{ url('assets/frontend/css/responsive.css') }}" rel="stylesheet">
 
     @yield('style')    
-    @if(isset($contentMain->schema))
+    @if(isset($contentMain->schema) && $contentMain->schema != "null")
         {!! $contentMain->schema !!}
     @else
     {!! get_theme_setting('schema') !!}
@@ -82,15 +82,14 @@
         <div id="lead-generate-popup" class="white-popup mfp-hide">
             @include('common.leadCaptureForm')
         </div>
-        <a href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}" target="_blank" class="whatsapp-sticky-btn">
-            <img src="{{ url('/assets/frontend/images/resources/whatsapp.png') }}" alt="" class="src">
-        </a>
+        
         <script>
             let globalUrl = "{{ env("APP_URL") }}"
             let isEnableOtp = {{ (get_theme_setting('enable_otp') == "1")?get_theme_setting('enable_otp'):$contentMain->enable_otp }}
             let isAjaxSubmit = "{{ get_theme_setting('ajax_submit') }}"
         </script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
         <script src="{{ url('assets/frontend/js/plugins/jquery-3.6.0.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/slick.min.js') }}"></script>
@@ -102,7 +101,9 @@
         <script src="{{ url('assets/frontend/js/plugins/jquery.easypiechart.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/jquery.countdown.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/wow.min.js') }}"></script>
+        <script src="{{ url('assets/frontend/js/plugins/jquery.validate.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/custom.js') }}"></script>
+        <script src="{{ url('assets/frontend/js/functions.js') }}"></script>
     </div>
 </body>
 

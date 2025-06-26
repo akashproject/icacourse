@@ -4,7 +4,7 @@
             <div class="leadModelHeader">
                 <div class="headerLogo">
                     <a class="td_site_branding td_accent_color" href="{{ url('/') }}">
-                        <img src="{{ url('assets/logo/logo.gif') }}" class="width-100">                         
+                        <img src="{{ url('assets/logo/logo.png') }}" class="width-100">                         
                     </a> 
                 </div>
             </div>

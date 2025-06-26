@@ -133,6 +133,20 @@ if (! function_exists('getTopicsBySubjectId')) {
     }
 }
 
+if (! function_exists('getCourseFees')) {
+    function getCourseFees($course_id){
+        $fees = DB::table('fees')->where('CourseId',$course_id)->get();
+        return $fees;
+    }
+}
+
+if (! function_exists('getFeeById')) {
+    function getFeeById($id){
+        $fees = DB::table('fees')->where('FeeID',$id)->first();
+        return $fees;
+    }
+}
+
 if (! function_exists('getAllFaqs')) {
     function getAllFaqs(){
         $faq = DB::table('faqs')->where('status',"1")->get();
@@ -411,7 +425,6 @@ if (! function_exists('curl_function')) {
     }
 }
 
-
 if (! function_exists('curl_post_function')) {
     function curl_post_function($url,$data=null) {
         $ch = curl_init();
@@ -421,6 +434,6 @@ if (! function_exists('curl_post_function')) {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $resp = curl_exec($ch);
         curl_close ($ch);
-        return json_decode($resp);
+        return json_decode($resp,true);
     }
 }

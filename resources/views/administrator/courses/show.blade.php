@@ -120,7 +120,7 @@
 									@foreach (getSubjects() as $value)
 									<option value="{{  $value->id }}" {{ (isset($course->subjects)  && in_array($value->id,  $course->subjects))?'selected' : '' }} > {{  $value->name }} </option>
 									@endforeach
-								<select>
+								</select>
 							</div>
 						</div>	
 						<div class="form-group row mb-2">
@@ -130,7 +130,7 @@
 									@foreach (getAllFaqs() as $faq)
 									<option value="{{ $faq->id }}" {{ ($course->faqs != null && in_array($faq->id,  $course->faqs))?'selected' : '' }}> {{  $faq->question }} </option>
 									@endforeach
-								<select>
+								</select>
 							</div>
 						</div>	
 					</div>
@@ -144,7 +144,7 @@
 									@foreach($courseTypes as $value)
 									<option value="{{ $value->id }}" {{ (isset($course->type_id)  && in_array($value->id,  json_decode($course->type_id)))?'selected' : '' }}> {{ $value->name }}</option>
 									@endforeach
-								<select>
+								</select>
 							</div>
 						</div>	
 						<div class="mb-3 row">
@@ -164,7 +164,7 @@
 									<option value="">Update Status</option>
 									<option value="1" selected> Publish</option>
 									<option value="0" > Private </option>
-								<select>
+								</select>
 							</div>
 						</div>
 						<div class="form-group row mb-2">

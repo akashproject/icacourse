@@ -59,7 +59,7 @@
         <div class="nav_warp">
             <nav>
                 <!-- logo -->
-                <a href="https://www.icacourse.in" class="logo">
+                <a href="{{ url('/') }}" class="logo">
                     <!--<img src="" alt="logo">-->
                     <img src="https://www.icacourse.in/wp-content/uploads/2025/05/ICAOnlineCourseLogowithNSDC.png" alt="logo">
                 </a>
@@ -80,7 +80,7 @@
                 <!-- Search -->
                 <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
                 
-                <a href="https://www.icacourse.in/cart" class="product-bag-icon"> 
+                <a href="{{ url('cart') }}" class="product-bag-icon"> 
                     <i class="fal fa-shopping-bag"></i> 
                     <span class="header_cart-items"> 0 </span>
                 </a>
@@ -165,8 +165,7 @@
             <nav>
                 <!-- logo start -->
                 <div class="logo">
-                    <a href="https://www.icacourse.in">
-                        <!--<img src="" alt="logo">-->
+                    <a href="{{ url('/') }}">
                         <img src="https://www.icacourse.in/wp-content/uploads/2022/02/ICAwithNSDC.png" alt="logo">
                     </a>
                 </div>
@@ -188,7 +187,7 @@
                     <a href="https://www.icacourse.in/cart" class="product-bag-icon"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> 
-                            0                            
+                            {{ count($cartItems) }}                   
                         </span>
                     </a>
 

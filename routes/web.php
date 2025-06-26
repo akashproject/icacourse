@@ -100,7 +100,13 @@ Route::group(['prefix' => 'administrator'], function () {
     
         // Sync With ERP
         Route::get('/sync-with-erp', [App\Http\Controllers\Administrator\SyncErpController::class, 'index'])->name('admin-sync-with-erp');
+        Route::get('/sync-courses', [App\Http\Controllers\Administrator\SyncErpController::class, 'courses'])->name('admin-sync-courses');
+        Route::get('/sync-fees', [App\Http\Controllers\Administrator\SyncErpController::class, 'fees'])->name('admin-sync-fees');
+        Route::get('/sync-states', [App\Http\Controllers\Administrator\SyncErpController::class, 'states'])->name('admin-sync-states');
+        Route::get('/sync-cities', [App\Http\Controllers\Administrator\SyncErpController::class, 'cities'])->name('admin-sync-cities');
+        Route::get('/sync-highest-qualifications', [App\Http\Controllers\Administrator\SyncErpController::class, 'highestQualification'])->name('admin-sync-highest-qualifications');
 
+        
         Route::get('/settings', [App\Http\Controllers\Administrator\SettingController::class, 'show'])->name('admin-settings');
         Route::post('/save-settings', [App\Http\Controllers\Administrator\SettingController::class, 'save'])->name('admin-save-settings');
     });
@@ -116,6 +122,9 @@ Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class
 Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('capture-lead');
 Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
 
+//Cart
+Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('add-to-cart');
+Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts'])->name('carts');
 
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');
@@ -123,4 +132,3 @@ Route::get('/api/courses', [App\Http\Controllers\ApiController::class, 'courses'
 Route::get('/api/institutes', [App\Http\Controllers\ApiController::class, 'institutes'])->name('api-institutes');
 Route::get('/api/setting/{key}', [App\Http\Controllers\ApiController::class, 'setting'])->name('api-setting');
 
-Route::get('/certificate/{code}', [App\Http\Controllers\CertificateController::class, 'show'])->name('certificate');

@@ -3,11 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Media;
 use App\Models\Institute;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cookie;
 use View;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
 
     private $courses;
     private $primaryMenu;
+    private $cartItems = [];
 
     public function register(): void
     {
@@ -55,6 +58,10 @@ class AppServiceProvider extends ServiceProvider
             return $this->courses;
         });
 
+        App::singleton('cartItems', function () {
+            return $this->cartItems;
+        });
+
     }
 
     /**
@@ -65,8 +72,7 @@ class AppServiceProvider extends ServiceProvider
         
         View::composer('*', function($view)
         {
-            // Header Menu
-            
+            // Header Menu            
             $view->with('primaryMenu', $this->primaryMenu);
             $view->with('footerMenu', $this->footerMenu);
             $view->with('courses', $this->courses);
@@ -83,6 +89,10 @@ class AppServiceProvider extends ServiceProvider
                 $roles = implode(",",json_decode($roles));
                 $view->with('roles', ucfirst($roles));
             }
+
+            $this->cartItems = (Cookie::get('cartItems'))?json_decode(Cookie::get('cartItems'),true):[];
+            $view->with('cartItems', $this->cartItems);
+
         });
     }
 }

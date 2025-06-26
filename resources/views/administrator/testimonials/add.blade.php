@@ -1,5 +1,4 @@
 @extends('administrator.layouts.admin')
-
 @section('content')
 <div class="col-12">
 	<div class="card">
