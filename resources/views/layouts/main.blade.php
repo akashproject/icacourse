@@ -37,7 +37,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css" />
-    <link href="{{ url('assets/frontend/css/plugins/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url('assets/frontend/css/plugins/slick.css') }}" rel="stylesheet">
     <link href="{{ url('assets/frontend/css/plugins/magnific-popup.css') }}" rel="stylesheet">
     <link href="{{ url('assets/frontend/css/plugins/animate.css') }}" rel="stylesheet">
@@ -91,7 +91,8 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
         <script src="{{ url('assets/frontend/js/plugins/jquery-3.6.0.min.js') }}"></script>
-        <script src="{{ url('assets/frontend/js/plugins/bootstrap.bundle.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/HichemTab-tech/OTP-designer-jquery@2.0.1/dist/otpdesigner.min.js"></script>
         <script src="{{ url('assets/frontend/js/plugins/slick.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/imagesloaded.min.js') }}"></script>
         <script src="{{ url('assets/frontend/js/plugins/isotope.pkgd.min.js') }}"></script>

@@ -46,7 +46,7 @@
 						<div class="mb-3 row">
 							<label for="message" class="col-sm-3 control-label col-form-label">Message</label>
 							<div class="col-sm-9">
-								<textarea class="form-control editor" name="message"  id="message" placeholder="Enter Message Here" ></textarea>
+								<input type="text" class="form-control" name="message"  id="message" placeholder="Enter Message Here" >
 							</div>
 						</div>
 						<div class="mb-3 row">

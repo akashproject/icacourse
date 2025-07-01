@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 use Jenssegers\Agent\Facades\Agent;
 use Illuminate\Support\Facades\Cache;
@@ -11,7 +12,7 @@ use App\Models\Subject;
 use App\Models\Topic;
 use App\Models\State;
 use App\Models\City;
-use App\Models\StudentMeta;
+use Illuminate\Support\Facades\Cookie;
 
 
 if (! function_exists('check_device')) {
@@ -140,6 +141,18 @@ if (! function_exists('getCourseFees')) {
     }
 }
 
+if (! function_exists('totalCartAmount')) {
+    function totalCartAmount(){
+        $totalCartAmount = 0;
+        $cartItems = json_decode(Cookie::get('cartItems'),true);
+        foreach($cartItems as $key => $item) {
+            $fee = DB::table('fees')->where('FeeID',$item)->first();
+            $totalCartAmount+= $fee->Down_Payment;
+        }
+        return $totalCartAmount;
+    }
+}
+
 if (! function_exists('getFeeById')) {
     function getFeeById($id){
         $fees = DB::table('fees')->where('FeeID',$id)->first();
@@ -168,10 +181,21 @@ if (! function_exists('getTestimonials')) {
     }
 }
 
+if (! function_exists('getQualifications')) {
+    function getQualifications(){
+        try {
+            $qualifications = DB::table('highest_qualifications')->get();
+            return $qualifications;
+        } catch(\Illuminate\Database\QueryException $e){
+            throw $e;
+        }
+    }
+}
+
 if (! function_exists('getStates')) {
     function getStates(){
         try {
-            $states = State::where('status', 1)->orderBy("name","asc")->get();
+            $states = State::orderBy("name","asc")->get();
             return $states;
         } catch(\Illuminate\Database\QueryException $e){
             throw $e;
@@ -213,43 +237,6 @@ if (! function_exists('getCitiesByStateName')) {
         } catch(\Illuminate\Database\QueryException $e){
             throw $e;
         }
-    }
-}
-
-if (! function_exists('getInstitutes')) {
-    function getInstitutes($course_id=null, $institute_id=null){    
-        $institutes = DB::table('institutes')->orderBy("name","asc")->where('status',"1")->get();
-        return $institutes;
-    }
-}
-
-if (!function_exists('getCenterByCityId')) {
-    function getCenterByCityId($city = null,$centername = null){
-        $center = DB::table('centers')
-                ->join('cities', 'cities.id', '=', 'centers.city_id')
-                ->select('centers.id','centers.name');
-        if($city){
-            $center->where('cities.name',$city);
-        }
-
-        if($centername){
-            $center->where('centers.name',$centername);
-        }
-
-        $center->where('centers.status','1');
-        $center = $center->get();       
-        return $center;
-    }
-}
-
-if (!function_exists('getCenterById')) {
-    function getCenterById($center_id = null){
-        $center = DB::table('centers');
-        if($center_id){
-            $center->where('id',$center_id);
-        }
-        $center = $center->first();       
-        return $center;
     }
 }
 
@@ -389,11 +376,49 @@ if (! function_exists('getCommunicationMedium')) {
     }
 }
 
-if (! function_exists('get_student_meta')) {
-    function get_student_meta($student_id,$value){
-        $student_meta = StudentMeta::where('student_id',$student_id)->where('key',$value)->first();
-        return (isset($student_meta->value))?$student_meta->value:null;
+if (! function_exists('encryption')) {
+    function encryption($plainText,$key)
+    {
+        $key = hextobin(md5($key));
+        $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+        $openMode = openssl_encrypt($plainText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
+        $encryptedText = bin2hex($openMode);
+        return $encryptedText;
     }
+}
+
+if (! function_exists('decryption')) {
+    function decryption($encryptedText,$key)
+    {
+        $key = hextobin(md5($key));
+        $initVector = pack("C*", 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f);
+        $encryptedText = hextobin($encryptedText);
+        $decryptedText = openssl_decrypt($encryptedText, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $initVector);
+        return $decryptedText;
+    }
+}
+
+if (! function_exists('hextobin')) {
+    function hextobin($hexString){ 
+        $length = strlen($hexString); 
+        $binString="";   
+        $count=0; 
+        while($count<$length) 
+        {       
+            $subString =substr($hexString,$count,2);           
+            $packedString = pack("H*",$subString); 
+            if ($count==0) {
+                $binString=$packedString;
+            } 
+            
+            else {
+                $binString.=$packedString;
+            } 
+            
+            $count+=2; 
+        } 
+        return $binString; 
+    } 
 }
 
 if (! function_exists('random_strings')) {

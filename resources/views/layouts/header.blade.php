@@ -1,7 +1,7 @@
 @if(Request::is('/'))
 <header class="header header-absolute can-sticky">
     <div class="topbar bg-thm-color-two">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4 xs-display-none">
                     <ul class="right-side">
@@ -58,22 +58,30 @@
         <!-- inner -->
         <div class="nav_warp">
             <nav>
-                <!-- logo -->
-                <a href="{{ url('/') }}" class="logo">
-                    <!--<img src="" alt="logo">-->
-                    <img src="https://www.icacourse.in/wp-content/uploads/2025/05/ICAOnlineCourseLogowithNSDC.png" alt="logo">
-                </a>
-                <!-- logo -->
-                <!-- Navigation Start -->
-                <div class="menu-header-menu-container">
-                    <ul id="accordion" class="main-menu">
-                        @foreach($primaryMenu as $key => $menuItem)
-                        <li class="menu-item"><a target="_blank" href="{{ url($menuItem['url']) }}">{{ $menuItem['name'] }}</a></li>
-                        @endforeach
-                        
-                    </ul>
-                </div>    
-                <!-- Navigation Ens -->
+                <div>
+                    <!-- logo -->
+                    <a href="{{ url('/') }}" class="logo">
+                        <!--<img src="" alt="logo">-->
+                        <img src="https://www.icacourse.in/wp-content/uploads/2025/05/ICAOnlineCourseLogowithNSDC.png" alt="logo">
+                    </a>
+                    <a href="{{ route('page-view','online-accounting-courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link mr-5"> Courses </a>
+                    <!-- logo -->
+        
+                </div>
+                <div class="text-right">
+                    <!-- Navigation Start -->
+                    <div class="menu-header-menu-container">
+                        <ul id="accordion" class="main-menu">
+                            @foreach($primaryMenu as $key => $menuItem)
+                            <li class="menu-item"><a target="_blank" href="{{ url($menuItem['url']) }}">{{ $menuItem['name'] }}</a></li>
+                            @endforeach
+                            
+                        </ul>
+                    </div>    
+                    <!-- Navigation Ens -->
+                </div>
+                
+                
             </nav>
             <!-- Head Actions -->
             <div class="head_actions">
@@ -184,7 +192,7 @@
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
                     
-                    <a href="https://www.icacourse.in/cart" class="product-bag-icon"> 
+                    <a href="{{ url('/cart') }}" class="product-bag-icon"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> 
                             {{ count($cartItems) }}                   

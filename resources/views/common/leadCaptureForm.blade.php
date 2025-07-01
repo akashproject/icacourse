@@ -12,7 +12,6 @@
                 <div class="">
                     <a >Contact Details</a>
                 </div>
-                
                 <form id="leadCaptureForm" class="" action="{{ route('capture-lead')}}" method="post" >
                     @csrf
                     @include('common.leadCaptureFormField')

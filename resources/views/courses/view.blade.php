@@ -180,14 +180,23 @@
                             @csrf
                             <div class="sidebar mt-3">
                                 <h6 class="mb-1"> Limited Time Offer </h6>
+                                    
                                 <div class="price_info_widgets"> 
                                     @foreach(getCourseFees($contentMain->erp_course_id) as $fee)
-                                    <input type="radio" name="course_fee_id" class="course_fee_selection" id="select_price_option_{{ $fee->FeeID }}" value="{{ $fee->FeeID }}" checked=""> 
-                                    <label for="select_price_option_{{ $fee->FeeID }}" class="price_options border-4px-radious">
-                                        <span> One Time Pay</span>
-                                        <h3> ₹{{ number_format($fee->Course_Fees)}} </h3>
-                                        <span class="mt-2" style="font-size: 12px;"> </span>
-                                    </label>
+                                        @php 
+                                            @$checked = ($fee->Install_Payable == "N")?"checked":"";
+                                            if(in_array($fee->FeeID,$cartItems)) {
+                                                $checked = "checked";
+                                            }
+                                        @endphp
+                                  
+                                        <input type="radio" name="course_fee_id" class="course_fee_selection" id="select_price_option_{{ $fee->FeeID }}" value="{{ $fee->FeeID }}" {{$checked}} > 
+                                        <label for="select_price_option_{{ $fee->FeeID }}" class="price_options border-4px-radious">
+                                            <span> {{ ($fee->Install_Payable == "N")?"One Time Pay":"Pay"; }}</span>
+                                            <h3> ₹{{ number_format($fee->Down_Payment)}} </h3>
+                                            <span class="mt-2" style="font-size: 12px;"> </span>
+                                            <span class="mt-2" style="font-size: 12px;" > {{ ($fee->Install_Payable == "N")?"":"₹".number_format($fee->InstallAmount)." X ".$fee->NoOfInstall." Months"; }}</span>
+                                        </label>
                                     @endforeach                               
                                 </div>
                                  

@@ -1,166 +1,92 @@
 @charset "UTF-8";
-
-
-
 /*Google Fonts*/
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
 
-
-
 :root {
-
     --thm-font: 'Raleway', sans-serif;
-
     /* Headings */
-
     --thm-b-font: 'Nunito Sans', sans-serif;
 
     /* Body font */
-
     --thm-color-one: #1b2336;
-
     --thm-color-two: #3e4095;
-
     --thm-color-three: #4c9379;
-
     --thm-color-four: #ffbd3f;
-
     --thm-color-five: #0c1634;
-
     --thm-color-six: #ff0030;
-
     --thm-color-light: #dadada;
-
     /*RGB Colors*/
-
     --thm-color-one-rgb: 27, 35, 54;
-
     --thm-color-two-rgb: 75, 131, 251;
-
     --thm-color-three-rgb: 101, 207, 169;
-
     --thm-color-four-rgb: 255, 189, 63;
-
     --thm-color-six-rgb: 255, 0, 48;
-
     --thm-border-rgb: 241, 241, 241;
-
     /*Theme Colors*/
-
     --thm-body-color: #415674;
-
     /*Body Colors*/
-
     --thm-white: #ffffff;
-
     /*White Color*/
-
     --thm-border: #f1f1f1;
-
     /*Border Color*/
-
 }
 
 
 
 /*Animations*/
-
 @keyframes fadeHeaderInDown {
-
     0% {
-
         opacity: 0;
-
         transform: translate3d(0, -100%, 0);
-
     }
-
-
 
     100% {
-
         opacity: 1;
-
         transform: translate3d(0, 0, 0);
-
     }
-
 }
-
 
 
 @keyframes rotateme {
-
     0% {
-
         transform: rotate(0deg);
-
     }
 
 
 
     100% {
-
         transform: rotate(1turn);
-
     }
-
 }
 
 
-
 @keyframes zoom-fade {
-
     0% {
-
         transform: scale(.9);
-
     }
-
-
 
     50% {
-
         transform: scale(1);
-
     }
-
-
 
     100% {
-
         transform: scale(.9);
-
     }
-
 }
 
 
 
 @keyframes slideRight {
-
     0% {
-
         opacity: 1;
-
         transform: translateX(2px);
-
     }
-
-
 
     20% {
-
         opacity: 1;
-
         transform: translateX(4px);
-
     }
-
-
 
     40% {
 
@@ -288,6 +214,16 @@
 
     }
 
+}
+
+a, a:hover, a:focus, a:visited {
+    text-decoration: none;
+}
+.lead_steps.active {
+    display: block;
+}
+.lead_steps {
+    display: none;
 }
 
 /* .filteritems .masonry-item{ display:none;
@@ -673,13 +609,6 @@ img {
     font-size: 12px;
     line-height: 1.0rem;
 }
-
-.form-group {
-    position: relative;
-    margin-bottom: 28px;
-    text-align: left;
-}
-
 
 .container-wide .row {
 
@@ -1437,7 +1366,15 @@ table img {
 
 /*Forms*/
 
-.form-control-custom {
+.form_style .form-control {
+    height: 47px;
+    padding-left: 26px;
+    padding-inline-end: 26px;
+    border-radius: 6px;
+    border-color: #DBD8E6;
+}
+
+/* .form-control-custom {
 
     border: none;
 
@@ -1455,9 +1392,9 @@ table img {
 
     transition: 0.3s all;
 
-}
+} */
 
-
+/* 
 
 .form-control-custom,
 
@@ -1471,7 +1408,7 @@ table img {
 
     color: var(--thm-color-one);
 
-}
+} 
 
 
 
@@ -1555,7 +1492,7 @@ textarea.form-control-custom+i {
 
 }
 
-
+*/
 
 /*Checkbox*/
 
@@ -8865,7 +8802,7 @@ header.header.header-3.can-sticky.sticky {
 
 
 
-.form_style {
+/* .form_style {
 
     display: flex;
 
@@ -8877,104 +8814,26 @@ header.header.header-3.can-sticky.sticky {
 
 }
 
-
-
-/* .form_style label {
-
-    margin-bottom: 0;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    font-family: var(--thm-font);
-
-    position: relative;
-
-    top: 6px;
-
-} */
-
-
-
 .form_style label {
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 700;
     font-family: var(--thm-font);
     position: relative;
-    padding: 11px 30px;
+    padding: 6px 30px;
     background: #f2f2f2;
     border-radius: 5px 0px 0 5px;
-}
+} */
 
 #checkoutform .form_style label {
     width: 100%;
 }
 
 span.required {
-
     color: red;
-
     font-size: 23px;
-
     vertical-align: middle;
-
 }
-
-
-
-.form_style .form-control {
-
-    border: none;
-
-    padding: 0;
-
-    border-radius: 0;
-
-    padding-left: 10px;
-
-}
-
-
-
-.form_style .form-control,
-
-.form_style .form-control::placeholder {
-
-    font-family: var(--thm-font);
-
-    font-size: 16px;
-
-    font-weight: 400;
-
-}
-
-
-
-.form_style textarea.form-control {
-
-    padding-top: 8px;
-
-}
-
-
-
-.form_style .form-control::placeholder {
-
-    font-size: 0;
-
-}
-
-
-
-.form_style .form-control:focus {
-
-    box-shadow: none;
-
-}
-
-
 
 /*course_details*/
 
@@ -10420,15 +10279,14 @@ a#blog_signup {
 .white-popup {
     position: relative;
     background: #FFF;
-    padding: 20px 40px;
+    padding: 0;
     width: auto;
-    max-width: 500px;
+    max-width: 920px;
     margin: 20px auto;
     transition: 1s all;
+    border-radius: 30px;
+    overflow: hidden;
 }
-
-
-
 .disabled {
     background: #9bbbff !important;
 }
@@ -10437,49 +10295,31 @@ table p {
     margin: 0;
 }
 
-
-
 p.Installment_msg {
     font-size: 12px;
 }
 
-.form_style label.error {
-    display: block;
-    top:40px;
-    width: 100%;
-    left: 0px;
+label.error {
     color: red;
-    background: white;
-    position: absolute;
-    padding-left: 0;
-    font-size: 10px;
+    padding: 0;
+    position: relative;
+    font-size: 12px;
     font-weight: 600;
+    margin: 0;
+    padding-top: 3px;
 }
-
-/* header {
-    background: white;
-} */
-
-
 
 .margin-zero {
     margin: 0;
 }
 
-
-
 .margin-0px-top {
     margin-top: 0;
 }
 
-
-
 .margin-0px-bottom {
     margin-bottom: 0;
 }
-
-
-
 /* Chrome, Safari, Edge, Opera */
 
 input::-webkit-outer-spin-button,
@@ -10487,30 +10327,18 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-
-
 /* Firefox */
-
 input[type=number] {
   -moz-appearance: textfield;
 }
-
-
 
 a.product-bag-icon {
     padding: 0 20px;
     position: relative;
 }
-
-
-
 .product-bag-icon i {
     font-size: 33px;
 }
-
-
-
 .product-bag-icon .header_cart-items {
     position: absolute;
     right: 7px;
@@ -10528,31 +10356,18 @@ a.product-bag-icon {
 }
 
 .wpcf7-not-valid-tip {
-
     color: #dc3232;
-
     font-size: 1em;
-
     font-weight: normal;
-
     display: block;
-
     position: absolute;
-
     margin-top: 5px;
-
 }
 
-
-
 a.batch-schedule-link {
-
     background: #fff;
-
     padding: 2px 4px;
-
     border-radius: 5px;
-
 }
 
 #feedback {
@@ -10636,15 +10451,7 @@ a.batch-schedule-link {
 .slide-animate-btn i {
     font-size: 70px;
 }
-/* .course-video-inner-box:before {
-    content: "\ ";
-    position: absolute;
-    left: -50px;
-    width: 50px;
-    background: rgba(255, 255, 255, 0.85);
-    height: 53px;
-    top: 120px;
-} */
+
 .course_inner_title {
     font-size: 18px;
 }
@@ -10675,47 +10482,47 @@ ul.course_sidebar {
 .error {
     color:red;
 }
-    .price-box{
-        display: flex;
-        padding: 15px;
-    }
+.price-box{
+    display: flex;
+    padding: 15px;
+}
 
-  .price-coll:nth-of-type(1){
-    width:40%;
-    font-weight: 600;
-    font-size: 17px;
-    justify-content: center;
-    align-self: center;
-  }
-  .price-coll:nth-of-type(2){
+.price-coll:nth-of-type(1){
+width:40%;
+font-weight: 600;
+font-size: 17px;
+justify-content: center;
+align-self: center;
+}
+.price-coll:nth-of-type(2){
     width:9%;
     text-align: center;
     font-weight: 500;
     justify-content: center;
     align-self: center;
-  }
-  .price-coll:nth-of-type(3){
+}
+.price-coll:nth-of-type(3){
     width:17%;
     text-align: center;
     justify-content: center;
     align-self: center;
-  }
-  .price-coll:nth-of-type(4){
+}
+.price-coll:nth-of-type(4){
     width:17%;
     text-align: center;
     justify-content: center;
-align-self: center;
-  }
-  .price-coll:nth-of-type(5){
+    align-self: center;
+}
+.price-coll:nth-of-type(5){
     width:17%;
     text-align: center;
     justify-content: center;
-align-self: center;
-  }
+    align-self: center;
+}
 
-  .price-coll img{
+.price-coll img{
     width: 20px;
-  }
+}
 
   .price-box:nth-of-type(even){
     background: #eaeaea;
@@ -10966,4 +10773,45 @@ align-self: center;
 	font-size: 14px!important;
 	color: #000000!important;
 	border: 1px dashed #393185!important;
+}
+
+.checkout_information {
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 0px 3px #cfcfd7;
+    overflow: hidden;
+}
+
+.checkout_information h5 {
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    background: #bf39a8;
+    color: #fff;
+    margin: 0;
+}
+
+.checkout_form_info {
+    padding: 20px;
+    /* display: none; */
+}
+.checkout_information.active .checkout_form_info {
+    padding: 20px;
+    display: block;
+}
+
+.leadModelHeader {
+    padding: 20px;
+}
+
+.headerLogo {
+    width: 30%;
+}
+.leadModelBody {
+    padding: 0 20px 30px 30px;
+}
+.lead_steps.active {
+    display: block;
+}
+.form-one__group h3 {
+    font-size: 24px;
+    font-weight: 800;
 }

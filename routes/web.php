@@ -121,11 +121,20 @@ Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 
 Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');
 Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('capture-lead');
 Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
+Route::post('/apply-coupon-code', [App\Http\Controllers\IndexController::class, 'applyCouponCode'])->name('apply-coupon-code');
 
 //Cart
 Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts'])->name('carts');
+Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('remove-from-cart');
 
+//Checkout 
+Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout');
+Route::get('/payemnt/order-success', [App\Http\Controllers\CheckoutController::class, 'orderSuccess'])->name('payment-order-success');
+Route::get('/payemnt/order-failed', [App\Http\Controllers\CheckoutController::class, 'orderFailed'])->name('payment-order-failed');
+
+
+Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');
 Route::get('/api/courses', [App\Http\Controllers\ApiController::class, 'courses'])->name('api-courses');

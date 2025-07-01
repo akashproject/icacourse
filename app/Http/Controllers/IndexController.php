@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\Institute;
 use App\Models\City;
 use App\Models\Lead;
+use App\Models\Coupon;
 use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
@@ -165,5 +166,70 @@ class IndexController extends Controller
         
     }
 
+    public function applyCouponCode(Request $request) {
+        try {
+                $data = $request->all();
+                $totalAmount = totalCartAmount();
+                $coupon = Coupon::where('code',$data['coupon_code'])->first();
+                $couponResponse = [];
+                if(!$coupon){
+                    $couponResponse = [
+                        'message'=> "Coupon is invalid",
+                        'status'=> 0,
+                    ];
+                    return response()->json($couponResponse,"200");
+                }
 
+                if (strtotime(date("Y-m-d")) > strtotime($coupon->expire_date)) {
+                    $couponResponse = [
+                        'message'=> "Coupon is Expired",
+                        'status'=> 0,
+                    ];
+                    return response()->json($couponResponse,"200");
+                }
+
+                if($coupon->number_of_use <= 0){
+                    $couponResponse = [
+                        'message'=> "Coupon use limit exceed",
+                        'status'=> 0,
+                    ];
+                    return response()->json($couponResponse,"200");
+                }
+
+                $couponResponse = [
+                    'message'=> "Coupon Applied",
+                    'offer_message'=> $coupon->message,
+                    'status'=> 1,
+                ];
+
+                if($coupon->discount_type == "0"){
+                    $amount = $totalAmount - $coupon->discount;
+                    $couponResponse['display_discount'] = "₹".number_format($coupon->discount)."/-";
+                    $couponResponse['discount'] = base64_encode($coupon->discount);
+                } else {
+                    $amount = $totalAmount;
+                    $value = ($coupon->discount / 100) * $amount; // Calculate 20% of $total
+                    $amount = $amount-$value;
+                    $couponResponse['display_discount'] = "₹".number_format($value)."/- (".$coupon->discount."%)";
+                    $couponResponse['discount'] = base64_encode($value);
+                }
+                
+                $couponResponse['amount'] = base64_encode($amount);
+                $couponResponse['display_amount'] = "₹".number_format($amount)."/-";
+                return response()->json($couponResponse,"200");
+
+            } catch (\Illuminate\Database\QueryException $e) {
+            return response()->json($e, $this->_statusOK);
+        }
+    }
+
+    public function getCitiesByStateId(Request $request){
+        try {
+            $data = $request->all();
+            $cities = DB::table('cities')->where('state_id', $data['state'])->orderBy('name', 'asc')->get();
+            return response()->json($cities, $this->_statusOK);
+        } catch(\Illuminate\Database\QueryException $e){
+            var_dump($e->getMessage()); 
+        }
+    }
 }
