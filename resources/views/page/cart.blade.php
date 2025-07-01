@@ -83,7 +83,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="{{ route('page-view','checkout') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle proceed-to-checkout-btn"> Proceed To Checkout <i class="fal fa-chevron-right ml-2"></i></a>
+                    <a href="{{ route('checkout') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle proceed-to-checkout-btn"> Proceed To Checkout <i class="fal fa-chevron-right ml-2"></i></a>
                     <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/loader.gif" style="width: 42px;display:none;" class="checkout_loader">
                 </div>
             </div>

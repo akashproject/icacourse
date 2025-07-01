@@ -93,6 +93,9 @@ class AppServiceProvider extends ServiceProvider
             $this->cartItems = (Cookie::get('cartItems'))?json_decode(Cookie::get('cartItems'),true):[];
             $view->with('cartItems', $this->cartItems);
 
+            $this->student = (Cookie::get('student'))?json_decode(Cookie::get('student'),true):[];
+            $view->with('student', $this->student);
+
         });
     }
 }

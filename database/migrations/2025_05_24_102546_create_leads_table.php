@@ -32,10 +32,11 @@ return new class extends Migration
             $table->text('ref_code')->nullable();
             $table->text('source_url')->nullable();
             $table->text('crm_response')->nullable();
-            $table->enum('crm_status', ['0', '1'])->default('1');
-            $table->enum('otp_status', ['0', '1'])->default('1');
-            $table->enum('whatsapp_status', ['0', '1'])->default('1');
-            $table->enum('mail_status', ['0', '1'])->default('1');
+            $table->enum('crm_status', ['0', '1'])->default('0');
+            $table->enum('otp_status', ['0', '1'])->default('0');
+            $table->enum('whatsapp_status', ['0', '1'])->default('0');
+            $table->enum('mail_status', ['0', '1'])->default('0');
+            $table->enum('message_status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }

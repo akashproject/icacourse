@@ -153,6 +153,14 @@ if (! function_exists('totalCartAmount')) {
     }
 }
 
+if (! function_exists('cartItems')) {
+    function cartItems(){
+        $cartItems = json_decode(Cookie::get('cartItems'),true);
+       // dd($cartItems);
+        return $cartItems;
+    }
+}
+
 if (! function_exists('getFeeById')) {
     function getFeeById($id){
         $fees = DB::table('fees')->where('FeeID',$id)->first();
@@ -446,19 +454,28 @@ if (! function_exists('curl_function')) {
         
         $resp = curl_exec($curl);
         curl_close($curl);
-        return json_decode($resp);
+        return json_decode($resp,true);
     }
 }
 
 if (! function_exists('curl_post_function')) {
     function curl_post_function($url,$data=null) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,$url);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $resp = curl_exec($ch);
-        curl_close ($ch);
+        $data = json_encode($data);
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $headers = array(
+            "Content-Type: application/json",
+        );
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $resp = curl_exec($curl);
+        curl_close($curl);
         return json_decode($resp,true);
     }
 }

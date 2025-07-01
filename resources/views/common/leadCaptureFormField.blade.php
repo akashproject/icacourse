@@ -11,7 +11,7 @@
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
                 <input type="hidden" name="lead_mobile[0]" value="+91">
-                <input type="number" class="form-control" name="lead_mobile[1]" id="lead_mobile_number" placeholder="Mobile Number" autocomplete="off" required="">
+                <input type="number" class="form-control" name="lead_mobile[1]" id="lead_mobile_info" placeholder="Mobile Number" autocomplete="off" required="">
                 <label for="email">Mobile Number</label>
             </div>
         </div>
@@ -25,7 +25,7 @@
 
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
-                <input type="number" class="form-control" name="lead_pincode" id="lead_pincode" placeholder="Enter Pincode" autocomplete="off" required="">
+                <input type="number" class="form-control" name="pincode" id="lead_pincode" placeholder="Enter Pincode" autocomplete="off" required="">
                 <label for="lead_pincode">Pincode</label>
             </div>
         </div>
@@ -41,13 +41,13 @@
 
         </div>
         <div class="col-6">
-            <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle submit_lead_generation_form"> Continue OTP <i class="fal fa-chevron-right ml-2"></i></button>
+            <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle"> Continue OTP <i class="fal fa-chevron-right ml-2"></i></button>
         </div>
     </div>
 </div>
 <div class="lead_steps step_2">
     <h3 class="td_mb_20 td_fs_24 td_semibold">We’ve sent you an OTP</h3>
-    <p class="td_fs_14 m-0">On your phone number <a href="javascript:void(0)" class="backstep">+91 <span class="submitted_lead_mobile_no">62905-65997</span> <i class="fa fa-edit" ></i> </a></p>
+    <p class="td_fs_14 m-0">On your phone number <a href="javascript:void(0)" class="backstep">+91 <span class="submitted_lead_mobile_no"></span> <i class="fa fa-edit" ></i> </a></p>
     <div id="otp_target"></div>
     <span id="otp_target-error" class="otp_error" style="display:none">Please Enter valid OTP</span>
     <div class="otp-content">
@@ -63,14 +63,15 @@
         </div>
         <div class="col-lg-6">
             <div class="form-one__control form-one__control--full">
-                <button type="submit" class="eduhive-btn">
+                <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle">
                     <span>Register Now</span>
-                    <span class="eduhive-btn__icon"><i class="icon-right-up"></i></span>
                 </button>
             </div>
         </div>
     </div>
 </div>
+<input type="hidden" class="formFieldOtpResponse" >
+<input type="hidden" class="lead_id" name="lead_id"> 
 <input type="hidden" name="utm_campaign" value="{{ getUtmCampaign(isset($contentMain->utm_campaign)?$contentMain->utm_campaign:null) }}">
 <input type="hidden" name="utm_source" value="{{ getUtmSource(isset($contentMain->utm_source)?$contentMain->utm_source:null) }}">
 <input type="hidden" name ="lead_type" value="{{ getCommunicationMedium(isset($contentMain->lead_type)?$contentMain->lead_type:null) }}" >

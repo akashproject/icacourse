@@ -1,3 +1,5 @@
+let leadSubmitStatus = false;
+let otp_value = null;
 // Add To Cart Ajax
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
@@ -52,9 +54,6 @@ jQuery('#checkoutform').validate({
 
 jQuery('#leadCaptureForm').validate({
     rules: {
-        'lead_mobile_number[0]': {
-            required: true,
-        },
         'lead_mobile_number[1]': {
             required: true,
             number: true,
@@ -91,13 +90,114 @@ jQuery('#leadCaptureForm').validate({
         countDown();
       }
     }
-  });
+});
+
+jQuery('#otp_target').otpdesigner({
+    typingDone: function (code) {      
+      if(otp_value != code){
+        jQuery("#otp_target-error").show();
+      } else {
+        leadSubmitStatus = true;
+      }
+    },
+    length: 4,
+    onlyNumbers: false,
+    inputsClasses: 'some-class text-danger',
+});
+
+jQuery(".resendOtp").on('click',function(){
+    jQuery(this).addClass('display-none');
+    jQuery('.countdown_label').removeClass('display-none');
+    let form = jQuery(this).closest("form");
+    let formId = $(form).attr('id');
+    countDown();
+    sendMobileOtp(formId);
+});
+  
+jQuery(".backstep").on('click',function(){
+    let form = jQuery(this).closest("form");
+    let formId = $(form).attr('id');
+    jQuery("#" + formId + " .lead_steps").removeClass("active");
+    jQuery("#" + formId + " .lead_steps.step_1").addClass("active");
+});
 
 jQuery('.open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
     mainClass: 'mfp-fade'
 });
+
+function insertLeadRecord(form,formId) {
+		$.ajaxSetup({
+			headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+		$.ajax({
+			url: `${globalUrl}insert-lead-records`,
+			type: "post",
+			data: jQuery(form).serialize(),
+			success: function(result) {
+        console.log(result);
+        
+				jQuery("#" + formId + " .lead_id").val(result.id);
+				return true;
+			}
+		});
+}
+
+function sendMobileOtp(formId) {
+  var mobileNo = jQuery("#" + formId + " #lead_mobile_info").val();
+  $.ajaxSetup({
+    headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  $.ajax({
+    url: `${globalUrl}submit-mobile-otp`,
+    type: "post",
+    data: {
+      mobile: mobileNo,
+    },
+    success: function(result) {
+      if (result) {        
+        otp_value = result.otp_value;
+        jQuery("#" + formId + " .formFieldOtpResponse").val(result.otp_value);
+        jQuery("#" + formId + " .submitted_lead_mobile_no").text(mobileNo);
+        jQuery("#" + formId + " .lead_steps").removeClass("active");
+        jQuery("#" + formId + " .lead_steps.step_2").addClass("active");
+        jQuery(".checkout_loader").hide()
+        return true;
+      } else {
+        
+        return true;
+      }
+    }
+  });
+}
+
+let interval;
+function countDown(){
+  clearInterval(interval)
+  var timer2 = "0:59";
+  interval = setInterval(function() {
+    var timer = timer2.split(':');
+    var minutes = parseInt(timer[0], 10);
+    var seconds = parseInt(timer[1], 10);
+    --seconds;
+    minutes = (seconds < 0) ? --minutes : minutes;
+    if (minutes < 0) {
+      clearInterval(interval)
+      jQuery('.countdown_label').addClass("display-none");
+      jQuery('.resendOtp').removeClass("display-none");
+    };
+    seconds = (seconds < 0) ? 59 : seconds;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+    //minutes = (minutes < 10) ?  minutes : minutes;
+    jQuery('.countdown').html(minutes + ':' + seconds);
+    timer2 = minutes + ':' + seconds;
+  }, 1000);
+}
 
 function remove_form_cart(course_id) {    
     $.ajaxSetup({

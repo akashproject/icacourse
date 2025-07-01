@@ -12,76 +12,77 @@
                         <h5> Personal Infomation </h5>
                         <div class="checkout_form_info">
                             <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label class="padding-30px-left-right">First Name<span class="required">*</span></label>
-                                        <input type="text" name="lead_first_name" placeholder="Enter Your First Name" class="form-control" autocomplete="off" value="" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="First Name" value="{{ $student['first_name'] }}" autocomplete="off" required>
+                                        <label for="lead_first_name">First Name</label>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label class="padding-30px-left-right">Last Name<span class="required">*</span></label>
-                                        <input type="text" name="lead_last_name" placeholder="Enter Your Full Name" class="form-control" autocomplete="off" value="" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="lead_last_name" id="lead_last_name" placeholder="Last Name" value="{{ $student['last_name'] }}" autocomplete="off" required>
+                                        <label for="lead_last_name">Last Name</label>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label class="padding-30px-left-right">Guardian Name<span class="required">*</span></label>                                 
-                                        <input type="text" name="guardian_name" placeholder="Enter Your Guardian Name" class="form-control" autocomplete="off" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" name="guardian_name" id="guardian_name" placeholder="Guardian Name" value="{{ $student['guardian_name'] }}" autocomplete="off" required>
+                                        <label for="guardian_name">Guardian Name</label>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label class="padding-30px-left-right">Mobile Number<span class="required">*</span></label>
-                                        <input type="hidden" name="lead_mobile[0]" class="form-control" autocomplete="off" required="" value="+91" style="width: 45px;" readonly="">
-                                        <input type="number" id="lead_mobile_info" name="lead_mobile[1]" class="form-control" placeholder="Mobile Number" min="6000000000" max="9999999999" autocomplete="off" required="">                                    </div>
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="hidden" name="lead_mobile_number[0]" value="+91">
+                                        <input type="text" class="form-control" name="lead_mobile_number[1]" id="lead_mobile_info" placeholder="Mobile Number" value="{{ $student['mobile'] }}" autocomplete="off" required>
+                                        <label for="lead_mobile_info">Mobile Number</label>
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label class="padding-30px-left-right">Email Address<span class="required">*</span></label>
-                                        <input type="email" name="lead_email_address" class="form-control" placeholder="Enter Your Email Address" autocomplete="off" value="" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" name="lead_email_address" id="lead_email_address" placeholder="Email Address" value="{{ $student['email'] }}" autocomplete="off" required>
+                                        <label for="lead_email_address">Email Address</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>Date Of Birth<span class="required">*</span></label>
-                                        <input type="date" name="date_of_birth" class="form-control" placeholder="Select Your Birth Date" id="datePickerId" autocomplete="off"  >
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" placeholder="Date Of Birth" autocomplete="off" value="" required>
+                                        <label for="date_of_birth">Date Of Birth</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>Gender<span class="required">*</span></label>
-                                        <select class="form-control" name="gender" id="gender" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-control" name="gender" id="gender" required>
                                             <option value="">  Select Gender</option>
                                             <option value="M"> Male </option>
                                             <option value="F"> Female </option>
                                             <option value="O"> Other </option> 
                                         </select>
+                                        <label for="gender">Gender</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>Highest Qualification<span class="required">*</span></label>
-                                        <select class="form-control" name="qualification" id="qualification" required="">
+                                <div class="col-lg-4 mb-2">
+                                    <div class="form-floating">
+                                        <select class="form-control" name="qualification" id="qualification" required>
                                             <option value="">  Select Qualification</option>
                                             @foreach(getQualifications() as $value)
                                             <option value="{{ $value->id }}">  {{ $value->name }}</option>
                                             @endforeach
                                         </select>
+                                        <label for="qualification">Highest Qualification</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>Prefferd Language<span class="required">*</span></label>
-                                        <select class="form-control" name="language_option" id="language_option" data-init-id="0" required="">
+                                    <div class="form-floating">
+                                        <select class="form-control" name="language_option" id="language_option" required>
                                             <option value=""> Select Preferred Language </option>
                                             <option value="Hindi-English"> Hindi &amp; English (Mixed) </option>
                                             <option value="English"> English </option>
                                         </select>
+                                        <label for="language_option">Prefferd Language</label>
                                     </div>
                                 </div>
                             </div>
@@ -91,38 +92,39 @@
                         <h5> Billing Address </h5>
                         <div class="checkout_form_info">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group form_style">
-                                        <label>Address<span class="required">*</span></label>
-                                        <textarea name="addressline_1" class="form-control" autocomplete="off" placeholder="Select Address" required=""></textarea>
+                                <div class="col-lg-12 mb-2">
+                                    <div class="form-floating">
+                                        <textarea name="addressline_1" id="addressline_1" class="form-control" autocomplete="off" placeholder="Select Address" required=""></textarea>
+                                        <label for="addressline_1" >Address</label>
                                     </div>
 
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>State<span class="required">*</span></label>
+                                    <div class="form-floating">
                                         <select class="form-control" name="state" id="state" onChange="getCitiesByStateId(this);" required>
                                             <option value="">  Select State</option>
                                             @foreach(getStates() as $value)
                                             <option value="{{ $value->Id }}" > {{ $value->name }} </option>
                                             @endforeach
                                         </select>
+                                        <label for="state" >State</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>City<span class="required">*</span></label>
+                                    <div class="form-floating">
                                         <select class="form-control" name="city" id="city" required="">
                                             <option value="">  Select City</option>
                                         </select>
+                                        <label for="city">City</label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <div class="form-group form_style">
-                                        <label>Pincode<span class="required">*</span></label>
-                                        <input type="text" name="pincode" placeholder="Select Pincode" class="form-control" autocomplete="off" value="" required="">
+                                    <div class="form-floating">
+                                        
+                                        <input type="text" id="pincode" name="pincode" placeholder="Select Pincode" class="form-control" autocomplete="off"  required="">
+                                        <label for="pincode" >Pincode<span class="required">*</span></label>
                                     </div>
                                 </div>
                             </div>

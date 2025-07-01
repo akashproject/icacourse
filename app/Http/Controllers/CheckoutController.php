@@ -6,6 +6,22 @@ use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
 {
+    public function __construct()
+    {
+        
+    }
+
+    public function show(){
+        try {
+            $contentMain = (object)[
+                'enable_otp' => get_theme_setting('enable_otp')
+            ];
+            return view('checkout.show',compact('contentMain'));
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
     public function proceedToCheckout(Request $request)
     {
         try {

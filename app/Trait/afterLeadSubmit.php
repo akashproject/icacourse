@@ -9,89 +9,60 @@ trait afterLeadSubmit
     public $_statusErr = 500;
 
     public function b2cLeadCaptureLeadToExtraage($postData){
-        $apiData = array(
-			'AuthToken' => 'IDCM-03-02-2020',
-			'Source' => 'idcm',
-			'FirstName' => $postData['first_name'],
-			'LastName' => $postData['last_name'],
-			'Email' => $postData['lead_email'],
-			'MobileNumber' => $postData['mobile'],
-			'State' => (isset($postData['state']))?$postData['state']:'',
-			'Center' => (isset($postData['city']))?$postData['city']:'',
-			'Location' => (isset($postData['institute']))?$postData['institute']:'',
-			'Pincode' => $postData['pincode'],
-			'LeadType' => $postData['lead_type'],
-			'LeadSource' => $postData['utm_source'],
-			'LeadName' => $postData['utm_campaign'],
-			'EducationalQualification' => $postData['source_url'],
-			'Textb1' => $postData['utm_term'],
-			'Field3' => $postData['utm_device'],
-			'Textb2' => $postData['utm_adgroup'],
-			'Textb3' => $postData['utm_content'],
-			'Textb10' => $postData['utm_creative'],
-		); 
+        $url = "https://prodapi.extraaedge.com/api/WebHook/addLead";
+        $apiData = [
+            'AuthToken' => "ICAONLINE-13-05-2023",
+            'Source' => "icaonline",
+            'FirstName' => $postData['first_name'],
+            'lastName' => $postData['last_name'],
+            'Email' => $postData['email'],
+            'MobileNumber' => $postData['mobile'],
+            //'Center' => $postData['state'],
+            //'Location' => $postData['city'],
+            'Field4' => "Retail Online",
+            'pincode' => $postData['pincode'],
+            'LeadType' => $postData['lead_type'],
+            'LeadSource' => $postData['utm_source'],
+            'LeadName' => $postData['utm_campaign'],
+            'EducationalQualification' => $postData['source_url'],
+            'textb1' => $_POST['utm_term'],
+            'field3' => $_POST['utm_device'],
+            'textb2' => $_POST['utm_adgroup'],
+            'Textb3' => $_POST['utm_content'],
+            'Textb10' => $_POST['utm_creative'],
+            // 'batchApplied'=>$_POST['highest_qualification'],
+            // 'fatherName'=>$_POST['father_name'],
+            // 'address'=>$_POST['current_address']
+        ];
 
-        $url = "https://prodapi.extraaedge.com/api/WebHook/addLead"; 		
-        $curl = curl_init();
-        
-        $data = json_encode($apiData);
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-        $headers = array(
-            "Content-Type: application/json",
-        );
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        $resp = json_decode($resp,true);
-        return $resp;
+        $response = curl_post_function($url,$apiData);
+        return $response;
     }
 
     function cognoai_api_calling($postData){
-        $whatsappArray = (object) array(
-            "authorization" => "0043ed81-7067-487c-9ea4-51c1e5bfbc9f", 
-            "campaign_id" => "265595", 
+
+        $url = "https://app.cognocart.com/campaign/external/send-event-based-triggered-whatsapp-campaign/";
+        $apiData = (object) array(
+            "authorization" => "21af729f-5733-4f41-a830-f10713525a4e", 
+            "campaign_id" => "275070",
             "whatsapp_bsp" => "1", 
             "client_data" => array(
                 "phone_number" => "+91".$postData['mobile'], 
                 "name" => $postData['first_name'].' '.$postData['last_name'], 
                 "dynamic_data" => array(
-                    "1"=> $postData['first_name'].' '.$postData['last_name']
+                    "1"=> $postData['first_name'].' '.$postData['last_name'] 
                 )
             ) 
         );
-        $curl = curl_init();
-    
-        curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://app.cognocart.com/campaign/external/send-event-based-triggered-whatsapp-campaign/',
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS => json_encode($whatsappArray),
-        CURLOPT_HTTPHEADER => array(
-            'Content-Type: application/json'
-        ),
-        ));
-    
-        $resp = curl_exec($curl);
-        curl_close($curl);
-        $resp = json_decode($resp,true);
-        return $resp;
+        
+        $response = curl_post_function($url,$apiData);
+        return $response;
     }
 
     public function captureLeadToDB($leadData){
         try {
-            $leadData['mobile'] = $leadData['lead_mobile_number'][1];
+            $leadData['mobile'] = $leadData['lead_mobile'][1];
+            $leadData['email'] = $leadData['lead_email'];
             $lead = Lead::create($leadData);
             return $lead;
         } catch(\Illuminate\Database\QueryException $e){
@@ -104,22 +75,10 @@ trait afterLeadSubmit
         try {
 
             $name = $postData['first_name'];
+            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=ICAEDU&to=".$postData['mobile']."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+career+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks+%26+Regards%2C+ICA+Edu+Skills&dltContentId=1207173139255553618&dltPrincipalEntityId=1201159245568554682"; 
 
-            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$postData['mobile']."&text=Hi+".$name."%2C+Thank+you+for+your+interest+in+our+digital+marketing+programs.+We+have+received+your+details+and+will+be+in+touch+soon.+Thanks%2C+IDCM&dltContentId=1207173168686082071&dltPrincipalEntityId=1201159245568554682";
-
-            $curl = curl_init($url);
-            curl_setopt($curl, CURLOPT_URL, $url);
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-            //for debug only!
-            curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-            $resp = curl_exec($curl);
-            curl_close($curl);
-
-            $resp = json_decode($resp,true);
-            return $resp;
+            $response = curl_function($url);
+            return $response;
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;
         }
@@ -129,24 +88,24 @@ trait afterLeadSubmit
     {
         try {
 
+            $url = "https://api.brevo.com/v3/smtp/email";
             $apiData = [
                 "sender" => [
                     "name" => "IDCM- Institute of Digital & Content Marketing",
-                    "email" => "info@myidcm.com",
+                    "email" => "online@icacourse.in",
                 ],
                 "replyTo" => [
                     "name" => "IDCM- Institute of Digital & Content Marketing",
-                    "email" => "no-reply@myidcm.com",
+                    "email" => "no-reply@icacourse.in",
                 ],
                 "params" => [
                     "FIRSTNAME" => $postData["first_name"],
                 ],
-                "to" => [["email" => $postData["lead_email"], "name" => $postData["first_name"]]],
-                "cc" => [["email" => "proloy@icagroup.in", "name" => "Proloy Ghosh"]],
-                "templateId" => 168,
+                "to" => [["email" => $postData["email"], "name" => $postData["first_name"]]],
+                "templateId" => 163,
             ];
 
-            $url = "https://api.brevo.com/v3/smtp/email";
+            
             $curl = curl_init();
             $data = json_encode($apiData);
             $curl = curl_init($url);
@@ -163,7 +122,7 @@ trait afterLeadSubmit
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
             $resp = curl_exec($curl);
             curl_close($curl);
-               
+            
             $resp = json_decode($resp,true);
             return $resp;
         } catch (\Illuminate\Database\QueryException $e) {

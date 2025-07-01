@@ -129,6 +129,7 @@ Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts']
 Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('remove-from-cart');
 
 //Checkout 
+Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout');
 Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout');
 Route::get('/payemnt/order-success', [App\Http\Controllers\CheckoutController::class, 'orderSuccess'])->name('payment-order-success');
 Route::get('/payemnt/order-failed', [App\Http\Controllers\CheckoutController::class, 'orderFailed'])->name('payment-order-failed');

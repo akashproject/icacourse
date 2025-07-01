@@ -9,7 +9,9 @@ use App\Models\Institute;
 use App\Models\City;
 use App\Models\Lead;
 use App\Models\Coupon;
+use App\Models\Student;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 
 class IndexController extends Controller
 {
@@ -48,21 +50,9 @@ class IndexController extends Controller
 
             $curl = curl_init();
 
-            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=MYIDCM&to=".$_POST['mobile']."&text=".$otpvalue."+is+your+One+Time+Password+%28OTP%29+for+digital+marketing+course+enquiry+at+IDCM+for+the+mobile+number+xxxxxx".$lastdigit.".+Thank+you+for+your+enquiry.%0D%0A&dltContentId=1207173168142509871&dltPrincipalEntityId=1201159245568554682";
+            $url = "https://api.st-messaging.com/fe/api/v1/send?username=icaedu1.trans&password=Password@123&unicode=true&from=ICAEDU&to=".$_POST["mobile"]."&text=".$otpvalue."+is+your+One+Time+Password+%28OTP%29+for+course+enquiry+at+ICA+Edu+Skills+Pvt+Ltd.+for+the+mobile+number+xxxxxx".$lastdigit.".+Thank+you+for+your+inquiry.%0D%0A&dltContentId=1207173138503092263&dltPrincipalEntityId=1201159245568554682";
 
-            curl_setopt_array($curl, array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'GET',
-            ));
-
-            $response = curl_exec($curl);
-            curl_close($curl);
+            $response = curl_function($url);
 
             $data = array(
                 "lastdigit" => $lastdigit,
@@ -89,24 +79,6 @@ class IndexController extends Controller
             $postData["first_name"] = current(explode(" ", $postData["lead_full_name"]));
             unset($nameArray["0"]);
             $postData["last_name"] = implode(" ", $nameArray);
-            if (isset($postData["institute"]) && $postData["institute"] != "") {
-                $city = Institute::select("city_id")->where("name", $postData["institute"])->first();
-                $postData["city"] = City::where("id",$city->city_id)->first()->name;
-            } else {
-                $pincode = DB::table("pincodes")
-                    ->join("cities","pincodes.city_id","=","cities.id")
-                    ->join("states","cities.state_id","=","states.id")
-                    ->select("cities.name as city","pincodes.name as pincode","states.name as state","states.id as state_id")
-                    ->where("pincodes.name", $postData["pincode"])
-                    ->first();
-                if($pincode && $pincode->state_id == "10"){
-                    $postData["city"] = $pincode->state;
-                    $postData["institute"] = "IDCM Pitampura";
-                } else {
-                    $postData["city"] = "Kolkata";
-                    $postData["institute"] = "IDCM-Chowringhee-Exide";
-                }
-            }
             $lead = $this->captureLeadToDB($postData);
             return response()->json($lead, $this->_statusOK);
         } catch (\Illuminate\Database\QueryException $e) {
@@ -126,7 +98,7 @@ class IndexController extends Controller
             $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
             $updateData['crm_status'] = ($ee['result'] == "Success")?'1':'0';
             $updateData['crm_response'] = $ee;
-            
+
             $cogno = $this->cognoai_api_calling($lead);
             $updateData['whatsapp_status'] = ($cogno['status'] == "200")?'1':'0';
 
@@ -135,10 +107,20 @@ class IndexController extends Controller
 
             $brevo = $this->sendEmailBrochureByBrevo($lead);
             $updateData['mail_status'] = (isset($brevo['messageId']))?'1':'0';
-            
             $lead->update($updateData);
-            return redirect('/thank-you');
 
+            $student = [
+                'first_name' => $lead->first_name,
+                'last_name' => $lead->last_name,
+                'guardian_name' => $lead->guardian_name,
+                'mobile' => $lead->mobile,
+                'email' => $lead->email,
+                'pincode' => $lead->pincode,
+            ];
+            
+            Student::create($student);
+            Cookie::queue('student', json_encode($student), 6000000000); 
+            return redirect()->route('page-view', 'online-accounting-courses');
         } catch (\Illuminate\Database\QueryException $e) {
             return response()->json($e, $this->_statusOK);
         }
