@@ -271,7 +271,7 @@ a, a:hover, a:focus, a:visited {
 .disclaimer {
     font-size: 13px;
 }
-div#otp_target {
+div#capture_lead_otp_target,div#mobile_validation_otp_target {
     display: flex;
 }
 
@@ -1468,18 +1468,22 @@ textarea.form-control-custom+i {
 
 }
 
-
+.realInput {
+    position: absolute!important;
+    z-index: -2000!important;
+    border: navajowhite;
+}
 
 /*Buttons*/
 
 .thm-btn {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     color: var(--thm-white);
     display: inline-flex;
     align-items: center;
     border: none;
-    padding: 7px 28px;
+    padding: 10px 34px;
     text-transform: uppercase;
     transition: 0.5s all;
 }
@@ -10672,7 +10676,7 @@ align-self: center;
 .checkout_information h5 {
     padding: 10px 20px;
     border-radius: 5px 5px 0 0;
-    background: #bf39a8;
+    background: #6639bf;
     color: #fff;
     margin: 0;
 }

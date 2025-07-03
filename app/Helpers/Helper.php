@@ -153,14 +153,6 @@ if (! function_exists('totalCartAmount')) {
     }
 }
 
-if (! function_exists('cartItems')) {
-    function cartItems(){
-        $cartItems = json_decode(Cookie::get('cartItems'),true);
-       // dd($cartItems);
-        return $cartItems;
-    }
-}
-
 if (! function_exists('getFeeById')) {
     function getFeeById($id){
         $fees = DB::table('fees')->where('FeeID',$id)->first();
@@ -238,7 +230,7 @@ if (! function_exists('getCitiesByStateName')) {
         try {
             $cities = DB::table('cities')
             ->join('states', 'cities.state_id', '=', 'states.id')
-            ->where('states.name',$state)
+            ->where('states.id',$state)
             ->select('cities.*')
             ->get();
             return $cities;

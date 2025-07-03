@@ -129,11 +129,14 @@ Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts']
 Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('remove-from-cart');
 
 //Checkout 
-Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout');
-Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout');
+Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');
+Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout')->middleware('check_cart_item');
 Route::get('/payemnt/order-success', [App\Http\Controllers\CheckoutController::class, 'orderSuccess'])->name('payment-order-success');
 Route::get('/payemnt/order-failed', [App\Http\Controllers\CheckoutController::class, 'orderFailed'])->name('payment-order-failed');
 
+//Payment
+Route::get('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');
+Route::get('/payment/failed', [App\Http\Controllers\PaymentController::class, 'failed'])->name('payment-failed');
 
 Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');

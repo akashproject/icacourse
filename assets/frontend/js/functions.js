@@ -89,15 +89,32 @@ jQuery('#leadCaptureForm').validate({
         sendMobileOtp(formId);
         countDown();
       }
+
     }
 });
 
-jQuery('#otp_target').otpdesigner({
+jQuery('#capture_lead_otp_target').otpdesigner({
     typingDone: function (code) {      
       if(otp_value != code){
         jQuery("#otp_target-error").show();
       } else {
+        jQuery("#otp_target-error").hide();
         leadSubmitStatus = true;
+        jQuery(".after_otp_validation").prop('disabled',false).removeClass("disabled");
+      }
+    },
+    length: 4,
+    onlyNumbers: false,
+    inputsClasses: 'some-class text-danger',
+});
+
+jQuery('#mobile_validation_otp_target').otpdesigner({
+    typingDone: function (code) {      
+      if(otp_value != code){
+        jQuery("#otp_target-error").show();
+      } else {
+        jQuery("#otp_target-error").hide();
+        jQuery(".after_otp_validation").prop('disabled',false).removeClass("disabled");
       }
     },
     length: 4,
@@ -127,6 +144,40 @@ jQuery('.open-popup-link').magnificPopup({
     mainClass: 'mfp-fade'
 });
 
+jQuery("#send_otp_validation").on('click',function(){
+    let mobile = jQuery("#check_mobile_exist").val();
+    let = formId = "checkoutform";
+    $.ajaxSetup({
+      headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+      $.ajax({
+      url: `${globalUrl}submit-mobile-otp`,
+      type: "post",
+      data: {
+        mobile: mobile,
+      },
+      success: function(result) {
+        if (result) {        
+          otp_value = result.otp_value;
+          jQuery("#" + formId + " .submitted_lead_mobile_no").text(mobile);
+          jQuery("#" + formId + " .lead_steps").removeClass("active");
+          jQuery("#" + formId + " .lead_steps.step_2").addClass("active");
+          return true;
+        } else {
+          
+          return true;
+        }
+      }
+    });
+    
+});
+
+jQuery(".after_otp_validation").on("click",function(){
+  
+});
+
 function insertLeadRecord(form,formId) {
 		$.ajaxSetup({
 			headers: {
@@ -147,6 +198,7 @@ function insertLeadRecord(form,formId) {
 }
 
 function sendMobileOtp(formId) {
+  jQuery(".after_otp_validation").prop('disabled',true).addClass("disabled");
   var mobileNo = jQuery("#" + formId + " #lead_mobile_info").val();
   $.ajaxSetup({
     headers: {

@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
     private $courses;
     private $primaryMenu;
     private $cartItems = [];
+    private $student = [];
 
     public function register(): void
     {
