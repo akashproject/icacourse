@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
         '/contact-us' => "Contact Us",
     );
 
+    private $courseTypes;
     private $courses;
     private $primaryMenu;
     private $cartItems = [];
@@ -30,8 +31,9 @@ class AppServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        $this->courseTypes = DB::table('course_types')->whereNull("parent_id")->where("status","1")->get();
         $this->courses = DB::table('courses')->where("status","1")->get();
-        
+
         $this->primaryMenu = array(
             array(
                 'url'=>'/about-us',
@@ -53,6 +55,10 @@ class AppServiceProvider extends ServiceProvider
 
         App::singleton('footerMenu', function () {
             return $this->footerMenu;
+        });
+
+        App::singleton('courseTypes', function () {
+            return $this->courseTypes;
         });
 
         App::singleton('courses', function () {
@@ -77,6 +83,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('primaryMenu', $this->primaryMenu);
             $view->with('footerMenu', $this->footerMenu);
             $view->with('courses', $this->courses);
+            $view->with('courseTypes', $this->courseTypes);
             $media = Media::orderBy('created_at', 'desc')->get();
             $view->with('media', $media);
 

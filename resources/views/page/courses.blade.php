@@ -97,8 +97,8 @@
                         <span > Fast Selling </span>
                     </div>
                     <div class="coach_img">
-                        <a href="/" class="">
-                            <img src="https://dummyimage.com/300x200" alt="Image" class="">
+                        <a href="{{ route('view-courses',$course->slug) }}" class="">
+                            <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">
                         </a>
                     </div>
                     <div class="coach_caption">

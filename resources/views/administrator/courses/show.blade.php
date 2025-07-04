@@ -68,7 +68,7 @@
 						<div class="form-group row mb-2">
 							<label for="price" class="col-sm-3 control-label col-form-label">Price</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="price" id="price" placeholder="Enter Course Duration" >
+								<input type="text" class="form-control" name="price" id="price" value="{{ $course->price }}" placeholder="Enter Course Duration" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">

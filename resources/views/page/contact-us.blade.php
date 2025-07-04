@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-<div class="subheader relative z-1" style="background-image: url(https://www.icacourse.in/wp-content/uploads/2022/06/contact-us-banner-back.jpg);">
+<div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/contact-us.webp')}});">
     <div class="container relative z-1">
         <div class="row">
             <div class="col-12">

@@ -48,7 +48,7 @@
 <div class="lead_steps step_2">
     <h3 class="td_mb_20 td_fs_24 td_semibold">We’ve sent you an OTP</h3>
     <p class="td_fs_14 m-0">On your phone number <a href="javascript:void(0)" class="backstep">+91 <span class="submitted_lead_mobile_no"></span> <i class="fa fa-edit" ></i> </a></p>
-    <div id="capture_lead_otp_target"></div>
+    <div id="otp_target"></div>
     <span id="otp_target-error" class="otp_error" style="display:none">Please Enter valid OTP</span>
     <div class="otp-content">
         <p class="message"> Did not receive OTP?
@@ -63,7 +63,7 @@
         </div>
         <div class="col-lg-6">
             <div class="form-one__control form-one__control--full">
-                <button type="submit" class="after_otp_validation disabled thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" disabled>
+                <button type="submit" class="form-submit-btn disabled thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" disabled>
                     <span>Register Now</span>
                 </button>
             </div>

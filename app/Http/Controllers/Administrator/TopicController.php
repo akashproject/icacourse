@@ -45,7 +45,6 @@ class TopicController extends Controller
             $data = $request->all();
             $validatedData = $request->validate([
                 'name' => 'required',
-                'duration' => 'required',
                 'subject_id' => 'required',
                 'status' => 'required',
             ]);

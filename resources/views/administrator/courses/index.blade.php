@@ -7,16 +7,7 @@
 				<div class="card-title mb-0 me-1">
 					<h5 class="mb-1"> {{ count($courses) }} Records found</h5>
 				</div>
-				<div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
-					<div class="position-relative">
-						<a href="{{ route('admin-add-course') }}" class="btn btn-secondary add-new btn-primary" tabindex="0">
-							<span>
-								<i class="bx bx-plus me-0 me-sm-1"></i>
-								<span class="d-none d-sm-inline-block">Add New Course</span>
-							</span>
-						</a>
-					</div>
-				</div>
+				
 			</div>
 			<div class="card-body">
 				<h5 class="card-title"> Datatable</h5>

@@ -16,10 +16,37 @@ class CheckoutController extends Controller
             $contentMain = (object)[
                 'enable_otp' => get_theme_setting('enable_otp')
             ];
+            return view('checkout.show',compact('contentMain'));
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    public function studentValidate(){
+        try {
+            $contentMain = (object)[
+                'enable_otp' => get_theme_setting('enable_otp')
+            ];
            
-            $student = (Cookie::get('student'))?json_decode(Cookie::get('student'),true):null;
-            
-            return view('checkout.show',compact('contentMain','student'));
+           
+            return view('checkout.validate',compact('contentMain'));
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    public function validateLead(Request $request){
+        try {
+            $data = $request->all();  
+            $student = Student::where('mobile',$data['mobile'])->first();
+            if(!$student){
+                $student = [
+                    'mobile' => $data['mobile'],
+                ];
+            }
+
+            Cookie::queue('student', json_encode($student), 6000000000); 
+            return redirect()->route('checkout'); 
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;
         }

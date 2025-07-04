@@ -121,7 +121,7 @@
                                         </div>
                                         <div class="col-lg-12 text-right">
                                             <div class="form-one__control form-one__control--full">
-                                                <button type="submit" class="disabled after_otp_validation thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" disabled>
+                                                <button type="button" class="disabled after_otp_validation thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" disabled>
                                                     <span>next <i class="fal fa-chevron-right ml-2"></i></span>
                                                 </button>
                                             </div>
@@ -185,6 +185,99 @@
                 </div>
                 <div class="col-md-4">
                     <h3> Your order </h3>
+                    <div class="sidebar">
+                        
+                        <div class="sidebar_widget recent_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <h5 class="widget_title">Courses</h5>
+                            <ul>
+                                @foreach($cartItems as $key => $item)
+                                @php 
+                                    $course = getCourseById($key);
+                                @endphp               
+                                <li>
+                                    <div class="image">
+                                        <img src="{{ url('assets/frontend/images/'.$course->slug.'.webp') }}" alt="img" class="image-fit">
+                                    </div>
+                                    <div class="text">
+                                        <h6 class="mb-0">
+                                            <a href="course-details.html">{{ $course->name }}</a>
+                                        </h6>
+                                    </div>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                        <div class="sidebar_widget info_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                            <ul>
+                                <li class="active">
+                                    <div class="left-side">
+                                        <i class="fal fa-usd-circle"></i>
+                                        <h6 class="mb-0">Course Price</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        $99
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-user-circle"></i>
+                                        <h6 class="mb-0">Instructor</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        Warner
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-clock"></i>
+                                        <h6 class="mb-0">Duration</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        360 Hours
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-book"></i>
+                                        <h6 class="mb-0">Lectures</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        20 Lessons
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-user-graduate"></i>
+                                        <h6 class="mb-0">Enrolled</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        963 Students
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-flag-alt"></i>
+                                        <h6 class="mb-0">Language</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        English
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left-side">
+                                        <i class="fal fa-rupee-sign"></i>
+                                        <h6 class="mb-0">Total Payable</h6>
+                                    </div>
+                                    <div class="right-side">
+                                        {{ number_format(totalCartAmount()) }}/-
+                                    </div>
+                                </li>
+                            </ul>
+                            <hr>
+                            
+                        </div>
+                    </div>
                     <table class="table table-condensed">                       
                         <tbody>
                             <tr>

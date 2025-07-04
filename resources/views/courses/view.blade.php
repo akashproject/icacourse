@@ -63,7 +63,7 @@
                             <div class="tab-pane fade show active" id="description">
                                 <div class="row" >
                                     <div class="course_heading">
-                                        {!! $contentMain->description !!}
+                                        {{ $contentMain->description}}
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                 <div class="desc_box">
                                     <h2 class="course_title" > Course at a glance </h2>
                                     <div class="course_tags" >
-                                        {{ $contentMain->feature }}
+                                          {{ $contentMain->feature}}
                                     </div>
                                 </div>
                             </div>
@@ -79,39 +79,21 @@
                                 <div class="desc_box">
                                     <h2 class="course_title">Eligibility Criteria</h2>
                                 </div>
-                                    {{ $contentMain->criteria }}
+                                <div class="row">
+                                    <div class="col-6 course_criteria">
+                                        <span > <i class="fal fa-graduation-cap"></i> {{ $contentMain->criteria }}</span>    
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="highlights">
-                               {{ $contentMain->highlights }}
+                                <div class="about_list style_2">
+                                highlights
+                                </div>
+                               
                             </div>
                             <div class="tab-pane fade" id="curriculum">
                                 <div class="about_list accordion accordion-style style_2 mb-xl-30" id="generalaccordion">
-                                    @if($contentMain->subjects)
-                                        @foreach(getSubjectsByCourseId($contentMain->subjects) as $subjects)   
-                                        <ul class="card">
-                                            <li class="card-header">
-                                                <a class="btn btn-link collapsed" href="#" data-toggle="collapse" data-target="#GeneralItem0" aria-expanded="false" aria-controls="GeneralItem0">
-                                                    <span class="accordian_icon"> </span> Business Computer Applications - 45 Hours                                                </a>
-                                            </li>
-                                            <div id="GeneralItem0" class="collapse" aria-labelledby="GeneralItem0" data-parent="#generalaccordion">
-                                                <div class="card-body">
-                                                    <ul>
-                                                        <li aria-level="1">Topic: 01 Hardware &amp; Software</li>
-                                                        <li aria-level="1">Topic: 02 Working with Windows 10</li>
-                                                        <li aria-level="1">Topic: 03 File &amp; Folder Management</li>
-                                                        <li aria-level="1">Topic: 04 Introduction to MS Word 2016</li>
-                                                        <li aria-level="1">Topic: 05 Page Set up Drafting &amp; Formatting Documents</li>
-                                                        <li aria-level="1">Topic: 06 Tables</li>
-                                                        <li aria-level="1">Topic: 07 Header &amp; Footer</li>
-                                                        <li aria-level="1">Topic: 08 Number &amp; Conditional Formatting</li>
-                                                        <li aria-level="1">Topic: 09 Database design</li>
-                                                        <li aria-level="1">Topic: 10 Google Drive</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </ul>
-                                        @endforeach
-                                    @endif
+                                    ssss 
                                 </div>
                             </div>
                         </div>
@@ -131,7 +113,7 @@
                                         <h6 class="mb-0">Course Value</h6>
                                     </div>
                                     <div class="right-side" style="color:#3e4095">
-                                        Rs. 49999/-
+                                        Rs. {{ $contentMain->price }}/-
                                     </div>
                                 </li>
                                 <li>
@@ -140,7 +122,7 @@
                                         <h6 class="mb-0">Duration</h6>
                                     </div>
                                     <div class="right-side">
-                                        4 Months                                   
+                                        {{ $contentMain->duration }}                                   
                                      </div>
                                 </li>
                                 <li>

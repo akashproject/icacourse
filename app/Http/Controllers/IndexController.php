@@ -112,7 +112,6 @@ class IndexController extends Controller
             $student = [
                 'first_name' => $lead->first_name,
                 'last_name' => $lead->last_name,
-                'guardian_name' => $lead->guardian_name,
                 'mobile' => $lead->mobile,
                 'email' => $lead->email,
                 'pincode' => $lead->pincode,

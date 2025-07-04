@@ -43,7 +43,6 @@ Route::group(['prefix' => 'administrator'], function () {
 
         //Courses
         Route::get('/courses', [App\Http\Controllers\Administrator\CourseController::class, 'index'])->name('admin-courses');
-        Route::get('/add-course', [App\Http\Controllers\Administrator\CourseController::class, 'Add'])->name('admin-add-course');
         Route::get('/view-course/{id}', [App\Http\Controllers\Administrator\CourseController::class, 'show'])->name('admin-show-course');
         Route::post('/save-course', [App\Http\Controllers\Administrator\CourseController::class, 'save'])->name('admin-save-course');
         Route::get('/delete-course/{id}', [App\Http\Controllers\Administrator\CourseController::class, 'delete'])->name('admin-delete-course');
@@ -115,7 +114,7 @@ Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('w
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page-view')->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
-Route::get('/institutes/{slug}', [App\Http\Controllers\InstituteController::class, 'view'])->name('view-institute');
+Route::get('/category/{slug}', [App\Http\Controllers\CourseTypeController::class, 'view'])->name('category');
 
 Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
 Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');
@@ -129,6 +128,9 @@ Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts']
 Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('remove-from-cart');
 
 //Checkout 
+
+Route::get('/cart/validate', [App\Http\Controllers\CheckoutController::class, 'studentValidate'])->name('validate');
+Route::post('/validate-lead', [App\Http\Controllers\CheckoutController::class, 'validateLead'])->name('validate-lead');
 Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');
 Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout')->middleware('check_cart_item');
 Route::get('/payemnt/order-success', [App\Http\Controllers\CheckoutController::class, 'orderSuccess'])->name('payment-order-success');
