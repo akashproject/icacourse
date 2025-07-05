@@ -59,7 +59,7 @@
                     <div class="sidebar">
                         
                         <div class="sidebar_widget recent_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <h5 class="widget_title">Courses</h5>
+                            <h5 class="widget_title">Course{{ (count($cartItems) >1)?'s ':'' }} added to cart</h5>
                             <ul class="cart-course-list">
                                 @foreach($cartItems as $key => $item)
                                 @php 
@@ -67,7 +67,7 @@
                                 @endphp               
                                 <li>
                                     <div class="image">
-                                        <img src="{{ url('assets/frontend/images/'.$course->slug.'.webp') }}" alt="img" class="image-fit">
+                                        <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="img" class="image-fit">
                                     </div>
                                     <div class="text">
                                         <h6 class="mb-0">

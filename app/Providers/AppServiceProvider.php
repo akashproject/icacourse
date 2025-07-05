@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Media;
-use App\Models\Institute;
+use App\Models\CourseType;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cookie;
 use View;
@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        
         $this->courseTypes = DB::table('course_types')->whereNull("parent_id")->where("status","1")->get();
         $this->courses = DB::table('courses')->where("status","1")->get();
 

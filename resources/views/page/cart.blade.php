@@ -36,7 +36,7 @@
                                 <a href="javascript:void(0)" class="remove_form_cart mr-3" onclick="remove_form_cart({{ $course->id }})"> 
                                     <i class="fa fa-trash" style="color:red"></i> 
                                 </a> 
-                                <img src="https://www.icacourse.in/wp-content/uploads/2022/01/advanced-excel-course-online.webp" alt="Image" style="border: 1px solid #ccc;padding: 2px;">
+                                <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" style="border: 1px solid #ccc;padding: 2px;">
                             </div>
                             <div class="item_part item_content mr-2">
                                 <div class="item_content_description">

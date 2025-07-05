@@ -188,19 +188,19 @@
                     <div class="sidebar">
                         
                         <div class="sidebar_widget recent_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <h5 class="widget_title">Courses</h5>
-                            <ul>
+                            <h5 class="widget_title">Course{{ (count($cartItems) >1)?'s ':'' }} added to cart</h5>
+                            <ul class="cart-course-list">
                                 @foreach($cartItems as $key => $item)
                                 @php 
                                     $course = getCourseById($key);
                                 @endphp               
                                 <li>
                                     <div class="image">
-                                        <img src="{{ url('assets/frontend/images/'.$course->slug.'.webp') }}" alt="img" class="image-fit">
+                                        <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="img" class="image-fit">
                                     </div>
                                     <div class="text">
                                         <h6 class="mb-0">
-                                            <a href="course-details.html">{{ $course->name }}</a>
+                                            <a href="#">{{ $course->name }}</a>
                                         </h6>
                                     </div>
                                 </li>
@@ -210,58 +210,22 @@
 
                         <div class="sidebar_widget info_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                             <ul>
-                                <li class="active">
-                                    <div class="left-side">
-                                        <i class="fal fa-usd-circle"></i>
-                                        <h6 class="mb-0">Course Price</h6>
-                                    </div>
-                                    <div class="right-side">
-                                        $99
-                                    </div>
-                                </li>
                                 <li>
                                     <div class="left-side">
-                                        <i class="fal fa-user-circle"></i>
-                                        <h6 class="mb-0">Instructor</h6>
+                                        <i class="fal fa-rupee-sign"></i>
+                                        <h6 class="mb-0">Subtotal</h6>
                                     </div>
                                     <div class="right-side">
-                                        Warner
+                                        {{ number_format(totalCartAmount()) }}/-
                                     </div>
                                 </li>
-                                <li>
+                                <li class="coupon_discount" style="display:none;">
                                     <div class="left-side">
-                                        <i class="fal fa-clock"></i>
-                                        <h6 class="mb-0">Duration</h6>
+                                        <i class="fal fa-rupee-sign"></i>
+                                        <h6 class="mb-0">Discount</h6>
                                     </div>
                                     <div class="right-side">
-                                        360 Hours
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left-side">
-                                        <i class="fal fa-book"></i>
-                                        <h6 class="mb-0">Lectures</h6>
-                                    </div>
-                                    <div class="right-side">
-                                        20 Lessons
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left-side">
-                                        <i class="fal fa-user-graduate"></i>
-                                        <h6 class="mb-0">Enrolled</h6>
-                                    </div>
-                                    <div class="right-side">
-                                        963 Students
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="left-side">
-                                        <i class="fal fa-flag-alt"></i>
-                                        <h6 class="mb-0">Language</h6>
-                                    </div>
-                                    <div class="right-side">
-                                        English
+                                        <span class="display_coupon_discount"> </span>
                                     </div>
                                 </li>
                                 <li>
@@ -278,39 +242,7 @@
                             
                         </div>
                     </div>
-                    <table class="table table-condensed">                       
-                        <tbody>
-                            <tr>
-                                <th> Course </th>
-                                <td> 
-                                    <ul>       
-                                        @foreach($cartItems as $key => $item)
-                                        @php 
-                                            $course = getCourseById($key);
-                                        @endphp                           
-                                        <li><i class="fa fa-check-circle mr-2" style="color:#4c8b16"></i> {{ $course->name }}</li>
-                                        @endforeach
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th> Subtotal 
-                                </th>
-                                    <td><span class="subtotal">  ₹{{ number_format(totalCartAmount()) }}/- </span>
-                                </td>
-                            </tr>
-                            <tr class="coupon_discount" style="display:none;">
-                                <th> Discount  </th>
-                                <td><span class="display_coupon_discount"> </span></td>
-                            </tr>
-                            <tr>
-                                <th> Total Payable </th>
-                                <td> 
-                                    <p> <span class="total_payble_amount">₹{{ number_format(totalCartAmount()) }}/- </span></p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    
                     <h6 class="coupon_label" > Do you have Scholarship Code? <a href="javascript:void(0)" > Apply Code </a> </h6>
                     <span class="coupon_status" > </span>
                     <div class="apply_coupon_box">

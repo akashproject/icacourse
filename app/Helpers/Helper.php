@@ -128,7 +128,7 @@ if (! function_exists('getSubjectsByCourseId')) {
 }
 
 if (! function_exists('getTopicsBySubjectId')) {
-    function getSubjectsBySubjectId($subject_id){
+    function getTopicsBySubjectId($subject_id){
         $value = Topic::where('subject_id',$subject_id)->where('status','1')->get();
         return (isset($value))?$value:"null";
     }

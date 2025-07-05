@@ -3,7 +3,7 @@
     <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/course-banner-min.webp')}});">
         <div class="container relative z-1">
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
                     <h1 class="page_title">{{ $contentMain->name }}</h1>
                     <div class="page_banner_description text-white">
                         {{ $contentMain->excerpt }}                     
@@ -22,6 +22,9 @@
                         </div>
                         
                         <span class="text-white total-enroll"> 964 students </span>
+                        <div class="course_features text-white mt-5" >
+                            {!! $contentMain->feature !!}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,70 +41,67 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="course_details mb-md-80">
-                        <ul class="nav nav-tabs style_4">
-                            <li class="nav-item">
-                                <a href="#description" class="nav-link active" data-toggle="tab">Summary</a>
+                        <ul class="nav nav-tabs style_4 mb-3" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-description" type="button" role="tab" aria-controls="tab-description" aria-selected="true">Summary</button>
                             </li>
-                            <li class="nav-item">
-                                <a href="#features" class="nav-link" data-toggle="tab">Features</a>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-criteria" type="button" role="tab" aria-controls="tab-criteria" aria-selected="false">Criteria</button>
                             </li>
-                            <li class="nav-item">
-                                <a href="#criteria" class="nav-link" data-toggle="tab">Criteria</a>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-highlights" type="button" role="tab" aria-controls="tab-highlights" aria-selected="false">Highlights</button>
                             </li>
-                            <li class="nav-item">
-                                <a href="#highlights" class="nav-link" data-toggle="tab">Highlights</a>
-                            </li> 
-                            <li class="nav-item">
-                                <a href="#curriculum" class="nav-link" data-toggle="tab">Curriculum</a>
-                            </li>                                                    
-                            <!-- <li class="nav-item">
-                                <a href="#reviews" class="nav-link" data-toggle="tab">Reviews</a>
-                            </li>                            -->
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-curriculum" type="button" role="tab" aria-controls="tab-curriculum" aria-selected="false">Syllabus</button>
+                            </li>
                         </ul>
 
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="description">
-                                <div class="row" >
-                                    <div class="course_heading">
-                                        {{ $contentMain->description}}
-                                    </div>
-                                </div>
+                        <div class="tab-content" id="tab-tabContent">
+                            <div class="tab-pane fade show active" id="tab-description" role="tabpanel" aria-labelledby="tab-description-tab">
+                                {!! $contentMain->description !!}
                             </div>
-                            <div class="tab-pane fade" id="features">
-                                <div class="desc_box">
-                                    <h2 class="course_title" > Course at a glance </h2>
-                                    <div class="course_tags" >
-                                          {{ $contentMain->feature}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="criteria">
+                            <div class="tab-pane fade" id="tab-criteria" role="tabpanel" aria-labelledby="tab-criteria-tab">
                                 <div class="desc_box">
                                     <h2 class="course_title">Eligibility Criteria</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-6 course_criteria">
-                                        <span > <i class="fal fa-graduation-cap"></i> {{ $contentMain->criteria }}</span>    
+                                        <span > <i class="fal fa-graduation-cap"></i> {!! $contentMain->criteria !!}</span>    
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="highlights">
+                            <div class="tab-pane fade" id="tab-highlights" role="tabpanel" aria-labelledby="tab-highlights-tab">
                                 <div class="about_list style_2">
-                                highlights
+                                    {!! $contentMain->highlights !!}
                                 </div>
-                               
                             </div>
-                            <div class="tab-pane fade" id="curriculum">
-                                <div class="about_list accordion accordion-style style_2 mb-xl-30" id="generalaccordion">
-                                    ssss 
+                            <div class="tab-pane fade" id="tab-curriculum" role="tabpanel" aria-labelledby="tab-curriculum-tab">
+                                <div class="syllabus_list accordion accordion-style style_2 mb-xl-30" id="generalaccordion">
+                                    @if($contentMain->subjects)
+                                    @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
+                                    <ul class="card">
+                                        <li class="card-header" id="heading_{{ $key }}">
+                                            <a class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ $key }}" aria-expanded="true" aria-controls="collapse_{{ $key }}">
+                                               <span class="mx-2"><i class="fal fa-book"></i></span> {{ $subject->name }}
+                                            </a>
+                                            <span class="accordion-time__duration"> {{ $subject->duration }} </span>
+                                        </li>
+                                        <div id="collapse_{{ $key }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ $key }}" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    @foreach(getTopicsBySubjectId($subject->id) as $key => $topic)
+                                                    <li aria-level="{{ $key +1}}">{{ $topic->name }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>
-
                     </div>
- 
-                    
-                   
                 </div>
                 <div class="col-lg-4">
                     <div class="sidebar">
@@ -110,7 +110,7 @@
                                 <li class="active">
                                     <div class="left-side">
                                         <i class="fal fa-usd-circle"></i>
-                                        <h6 class="mb-0">Course Value</h6>
+                                        <h6 class="mb-0">Course Price</h6>
                                     </div>
                                     <div class="right-side" style="color:#3e4095">
                                         Rs. {{ $contentMain->price }}/-
@@ -149,7 +149,7 @@
                                         <h6 class="mb-0">Certification</h6>
                                     </div>
                                     <div class="right-side">
-                                        ICA+NSDC                                    
+                                        {{ $contentMain->certification}}                                 
                                     </div>
                                 </li>
                             </ul>
@@ -182,20 +182,22 @@
                                     @endforeach                               
                                 </div>
                                  
-                                <div class="price_info_widgets"> 
-                                      <a href="/apply-for-loan?course=MTM0" class="price_options" style="height: auto;font-size: 13px;font-weight: 800;color: #111010;border-radius: 5px;">
-                                        Check Loan Eligibility
-                                      </a>
-                                </div>
+                                
                             </div>
 
                             <div class="sidebar">
-                                <div class="info_widgets text-center">
+                                <div class="info_widgets mt-5">
                                     <div class="cart-button">
                                         @php    
                                             $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
                                         @endphp
-                                        <button class="{{$props}} add_to_cart_btn_{{ $contentMain->id }} border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" style="margin-top: 25px;background: #7129b5;" {{$props}}> Add to cart &nbsp;<i class="fal fa-shopping-bag"></i></button>
+                                        <button class="{{$props}} add_to_cart_btn_{{ $contentMain->id }} border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" style="background: #7129b5;" {{$props}}> Add to cart &nbsp;<i class="fal fa-shopping-bag"></i></button>
+                                    </div>
+                                    <div class="cart-button">
+                                        @php    
+                                            $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
+                                        @endphp
+                                        <a href="/apply-for-loan?course={{ $contentMain->id }}" class="border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" > Check Loan Eligibility</a>
                                     </div>
                                 </div>
                             </div>

@@ -90,12 +90,12 @@
                             <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
                         </div>
                     </div>
-                    <div class="best-selling" >
+                    <!-- <div class="best-selling" >
                         <span > Best Selling </span>
                     </div>
                     <div class="fast-selling" >
                         <span > Fast Selling </span>
-                    </div>
+                    </div> -->
                     <div class="coach_img">
                         <a href="{{ route('view-courses',$course->slug) }}" class="">
                             <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">

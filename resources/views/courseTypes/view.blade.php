@@ -64,27 +64,28 @@
                             <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
                         </div>
                     </div>
-                    <div class="best-selling" >
+                    <!-- <div class="best-selling" >
                         <span > Best Selling </span>
                     </div>
                     <div class="fast-selling" >
                         <span > Fast Selling </span>
-                    </div>
+                    </div> -->
                     <div class="coach_img">
-                        <a href="/" class="">
-                            <img src="https://dummyimage.com/300x200" alt="Image" class="">
+                        <a href="{{ route('view-courses',$course->slug) }}" class="">
+                            <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">
                         </a>
                     </div>
                     <div class="coach_caption">
+                        <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
                         <div class="coach_meta">
                             <div class="coach_cat thm-color-three-shadow" >
                                 <p href="javascript:void(0)" style="text-transform: capitalize;">Type : Short Term </p>
-                                <p > Course Duration : 5 Month </p>
+                                <p > Course Duration : {{ $course->duration }} </p>
                                 <p > Delivery Mode : Online </p>
                             </div>
                             <div class="price_wrap text-center"> 
                                 <div class="sell_price">
-                                    Rs. <?php echo number_format("1000"); ?>
+                                    Rs. {{ number_format($course->price) }}
                                 </div>
                             </div>
                         </div>
@@ -94,7 +95,7 @@
                                 <input type="hidden" name="course_fee_id" value="1" >
                                 <input type="hidden" name="course_id" value="1" >
                                 <button type="submit" class=" add_to_cart_btn_1 btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> 
-                                    <i class="fal fa-shopping-bag mr-3"></i> Add to cart
+                                    <i class="fal fa-shopping-bag mx-3"></i> Add to cart
                                 </button>
                             </form>
                         </div>

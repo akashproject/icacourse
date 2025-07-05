@@ -62,7 +62,7 @@
 						<div class="form-group row mb-2">
 							<label for="display_price" class="col-sm-3 control-label col-form-label">Display Price</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="display_price" id="display_price" placeholder="Enter Course Duration" >
+								<input type="text" class="form-control" name="display_price" id="display_price" value="{{ $course->display_price }}" placeholder="Enter Course Duration" >
 							</div>
 						</div>
 						<div class="form-group row mb-2">
@@ -77,6 +77,13 @@
 								<input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Course Duration" value="{{ $course->duration }}" >
 							</div>
 						</div>
+						<div class="form-group row mb-2">
+							<label for="certification" class="col-sm-3 control-label col-form-label">Certification</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="certification" id="certification" placeholder="Enter Course certification" value="{{ $course->certification }}" >
+							</div>
+						</div>
+						
 						<div class="form-group row mb-2">
 							<label for="number_of_enrolled" class="col-sm-3 control-label col-form-label">No Of Enrolled</label>
 							<div class="col-sm-9">
