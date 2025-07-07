@@ -3,15 +3,18 @@
 <div class="subheader relative z-1" style="background-image: url(assets/frontend/images/banner/courses.webp);">
     <div class="container relative z-1">
         <div class="row">
-            <div class="col-12">
-                <h1 class="page_title">Courses</h1>
+            <div class="col-md-9">
                 <div class="page_breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ $contentMain->name }}</li>
                         </ol>
                     </nav>
+                </div>
+                <h1 class="page_title">{{ $contentMain->name }}</h1>
+                <div class="page_banner_description text-white">
+                    {{ $contentMain->excerpt }}                     
                 </div>
             </div>
         </div>
@@ -62,10 +65,10 @@
             </div>  
         </div>
         
-        <div class="row filteritems justify-content-center">
+        <div class="row filteritems justify-content-center couse-container">
             <!-- Box Start -->
             @foreach(get_courses() as $course)
-            <div class="col-xl-3 col-lg-4 col-md-6 masonry-item @if($course->type_id) @foreach(getTypesByCourseId($course->type_id) as $type) {{$type->slug}} @endforeach @endif">
+            <div class="col-xl-3 col-lg-4 col-md-6 course_grid masonry-item @if($course->type_id) @foreach(getTypesByCourseId($course->type_id) as $type) {{$type->slug}} @endforeach @endif">
                 <div class="coach_block">
                     <div class="coach_hover_tooltip"> 
                         <h4> {{ $course->name }} </h4>
@@ -102,6 +105,7 @@
                         </a>
                     </div>
                     <div class="coach_caption">
+                        <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
                         <div class="coach_meta">
                             <div class="coach_cat thm-color-three-shadow" >
                                 <p href="javascript:void(0)" style="text-transform: capitalize;">Type : Short Term </p>
@@ -110,7 +114,7 @@
                             </div>
                             <div class="price_wrap text-center"> 
                                 <div class="sell_price">
-                                    Rs. <?php echo number_format("1000"); ?>
+                                    Rs. {{ number_format($course->price) }}
                                 </div>
                             </div>
                         </div>
@@ -120,7 +124,7 @@
                                 <input type="hidden" name="course_fee_id" value="1" >
                                 <input type="hidden" name="course_id" value="1" >
                                 <button type="submit" class=" add_to_cart_btn_1 btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> 
-                                    <i class="fal fa-shopping-bag mr-3"></i> Add to cart
+                                    <i class="fal fa-shopping-bag mx-3"></i> Add to cart
                                 </button>
                             </form>
                         </div>

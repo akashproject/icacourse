@@ -14,6 +14,13 @@ jQuery(".course-header-menu").on('mouseleave',function(){
   jQuery(".submenu-courses").hide();
 });
 
+jQuery('.couse-container .course_grid').each(function(index) {
+  if ((index + 1) % 4 === 0) {
+    console.log(index);
+    jQuery(this).children().addClass('right');
+  }
+});
+
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
     let cart_count = parseInt(jQuery(".header_cart-items").text());

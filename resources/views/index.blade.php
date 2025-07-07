@@ -4,21 +4,18 @@
     <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/banner/element_1.png" class="element_1" alt="Element">
     <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/banner/element_line.png" class="element_line" alt="Element Line">
     <!-- Texts -->
-    <div class="transform-center">
+    <div class="transform-center main-banner">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="text_box">
-                        <h1 style="font-size: 61px;"><div class="strong">Reinvent the ONLINE</div>
-                            <div class="sub">learning experience<br>with us</div>
+                        <h1>
+                            Reinvent the ONLINE learning experience<br>with us
                         </h1>
                         <p>India’s #1 Accounts, Finance &amp; Taxation Training Institute to Provide Online Job Assurance Courses</p>
-                        <div class="text-center">
-                            <a href="/online-accounting-courses/" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rounded mr-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
-                            <!-- <a href="/demo-class" class="video_btn video_text">
-                                <i class="fas fa-play video_icon bg-thm-color-three"></i>
-                                <span>Book Demo Class</span>
-                            </a> -->
+                        <div class="d-flex">
+                            <a href="/online-accounting-courses/" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -34,6 +31,7 @@
     <!-- Bottom Line -->
     <div class="bottom-line container"></div>
 </div>
+@include('common.courses')
 <section id="price-wrap" class="section-padding price">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -584,53 +582,53 @@
 </div>
 </section>
 <!-- Why Us Start -->
-    <section class="section-padding about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-5">
-                    <div class="section-title left-align wow fadeInDown">
-                        <p class="subtitle">
-                            <i class="fal fa-book"></i>
-                            Why choose us
-                        </p>
-                        <h3 class="title">Have a competitive edge over everyone with our online courses!</h3>
-                    </div>
-                    <ul class="why-us-list">
-                        <li class="wow fadeInUp">
-                            <i class="icon fal fa-check"></i>
-                            <div class="text">
-                                <h6 class="mb-2">Live Online Training Program</h6>
-                                <p class="mb-0">We believe in real time learning, which is why we offer live classes for our students. With our online accounting courses, you can learn at your own convenience!</p>
-                            </div>
-                        </li>
-                        <li class="wow fadeInDown">
-                            <i class="icon fal fa-check"></i>
-                            <div class="text">
-                                <h6 class="mb-2">100% Placement Assurance</h6>
-                                <p class="mb-0">Our accountant certification is industry recognized. When you enroll in Certified Industrial Accountant Plus courses, you get Triple Certification Advantage- ICA, SAP & MOS Certification. With ICA Edu Skills online courses, you can be rest assured of becoming job ready.</p>
-                            </div>
-                        </li>
-                        <li class="wow fadeInUp">
-                            <i class="icon fal fa-check"></i>
-                            <div class="text">
-                                <h6 class="mb-2">7 Simulation Softwares</h6>
-                                <p class="mb-0">With our 7 simulation software, you will get hands-on experience on practicing GSTR, ITR, TDS Return Filing, PF & ESI and much more. Stand out in front of recruiters by enrolling in our courses.</p>
-                            </div>
-                        </li>
-                    </ul>
+<section class="section-padding about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-5">
+                <div class="section-title left-align wow fadeInDown">
+                    <p class="subtitle">
+                        <i class="fal fa-book"></i>
+                        Why choose us
+                    </p>
+                    <h3 class="title">Have a competitive edge over everyone with our online courses!</h3>
                 </div>
-                <div class="col-xl-7">
-                    <div class="image_box relative why_us_box mb-0 wow fadeInRight">
-                        <img src="assets/frontend/images/Why-Choose-us.webp" alt="img" class="image-fit">
-                        <img src="assets/frontend/images/elements/element_3.png" class="element_1 zoom-fade" alt="Element">
-                        <img src="assets/frontend/images/elements/element_4.png" class="element_2 rotate_elem" alt="Element">
-                        <img src="assets/frontend/images/elements/element_5.png" class="element_3 rotate_elem" alt="Element">
-                    </div>
+                <ul class="why-us-list">
+                    <li class="wow fadeInUp">
+                        <i class="icon fal fa-check"></i>
+                        <div class="text">
+                            <h6 class="mb-2">Live Online Training Program</h6>
+                            <p class="mb-0">We believe in real time learning, which is why we offer live classes for our students. With our online accounting courses, you can learn at your own convenience!</p>
+                        </div>
+                    </li>
+                    <li class="wow fadeInDown">
+                        <i class="icon fal fa-check"></i>
+                        <div class="text">
+                            <h6 class="mb-2">100% Placement Assurance</h6>
+                            <p class="mb-0">Our accountant certification is industry recognized. When you enroll in Certified Industrial Accountant Plus courses, you get Triple Certification Advantage- ICA, SAP & MOS Certification. With ICA Edu Skills online courses, you can be rest assured of becoming job ready.</p>
+                        </div>
+                    </li>
+                    <li class="wow fadeInUp">
+                        <i class="icon fal fa-check"></i>
+                        <div class="text">
+                            <h6 class="mb-2">7 Simulation Softwares</h6>
+                            <p class="mb-0">With our 7 simulation software, you will get hands-on experience on practicing GSTR, ITR, TDS Return Filing, PF & ESI and much more. Stand out in front of recruiters by enrolling in our courses.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-7">
+                <div class="image_box relative why_us_box mb-0 wow fadeInRight">
+                    <img src="assets/frontend/images/Why-Choose-us.webp" alt="img" class="image-fit">
+                    <img src="assets/frontend/images/elements/element_3.png" class="element_1 zoom-fade" alt="Element">
+                    <img src="assets/frontend/images/elements/element_4.png" class="element_2 rotate_elem" alt="Element">
+                    <img src="assets/frontend/images/elements/element_5.png" class="element_3 rotate_elem" alt="Element">
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Why Us End -->
+    </div>
+</section>
+<!-- Why Us End -->
 <div class="bg-thm-color-two plane_box relative z-1">
     <div class="container relative z-1">
         <div class="row justify-content-center">

@@ -18,6 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class, 
             'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class, 
             'check_cart_item' => \App\Http\Middleware\CheckCartItem::class,
+            'check_student_exist' => \App\Http\Middleware\CheckStudentExist::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

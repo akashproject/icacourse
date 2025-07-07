@@ -62,7 +62,7 @@
                     <!-- logo -->
                     <a href="{{ url('/') }}" class="logo">
                         <!--<img src="" alt="logo">-->
-                        <img src="https://www.icacourse.in/wp-content/uploads/2025/05/ICAOnlineCourseLogowithNSDC.png" alt="logo">
+                        <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo">
                     </a>
                     <!-- logo -->
                 </div>
@@ -71,9 +71,16 @@
                     <span class="icon-list"><i class="fal fa-list"></i></span> Courses</a>
                     <ul class="sub-menu desktop-menu">
                         @foreach($courseTypes as $courseType)
-                        <li data-id="category-accounting-courses">
+                        <li class="more" data-id="category-accounting-courses">
                             <a target="_blank" href="{{ route('category',$courseType->slug) }}">{{ $courseType->name }}</a>
+                            <!-- <ul class="more-sub-menu sub-menu">
+                                <li><a href="">CIA With Tally </a></li>
+                                <li><a href="">CIA With Sap</a></li>
+                            </ul> -->
                         </li>
+
+                        
+
                         @endforeach                 
                     </ul>
                 </div>
@@ -91,7 +98,7 @@
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
                     
-                    <a href="{{ url('cart') }}" class="product-bag-icon"> 
+                    <a href="{{ url('cart') }}" class="product-bag-icon desktop-cart"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> {{ count($cartItems) }} </span>
                     </a>
@@ -100,11 +107,11 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <button type="button" class="head_trigger mobile_trigger">
+                    <!-- <button type="button" class="head_trigger mobile_trigger">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
+                    </button> -->
                 </div>
                 <!-- Head Actions -->
             </nav>
@@ -178,7 +185,7 @@
                 <!-- logo start -->
                 <div class="logo">
                     <a href="{{ url('/') }}">
-                        <img src="https://www.icacourse.in/wp-content/uploads/2022/02/ICAwithNSDC.png" alt="logo">
+                        <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo">
                     </a>
                 </div>
                 <!-- logo end -->
@@ -207,7 +214,7 @@
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
                     
-                    <a href="{{ url('/cart') }}" class="product-bag-icon"> 
+                    <a href="{{ url('/cart') }}" class="product-bag-icon desktop-cart"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> 
                             {{ count($cartItems) }}                   
@@ -219,11 +226,11 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <button type="button" class="head_trigger mobile_trigger">
+                    <!-- <button type="button" class="head_trigger mobile_trigger">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
+                    </button> -->
                 </div>
                 <!-- Head Actions -->
             </nav>

@@ -3,15 +3,18 @@
 <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/contact-us.webp')}});">
     <div class="container relative z-1">
         <div class="row">
-            <div class="col-12">
-                <h1 class="page_title">Contact Us</h1>
+            <div class="col-md-9">
                 <div class="page_breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="https://www.icacourse.in/">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ $contentMain->name }}</li>
                         </ol>
                     </nav>
+                </div>
+                <h1 class="page_title">{{ $contentMain->name }}</h1>
+                <div class="page_banner_description text-white">
+                    {{ $contentMain->excerpt }}                     
                 </div>
             </div>
         </div>

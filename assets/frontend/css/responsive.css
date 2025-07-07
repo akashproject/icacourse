@@ -1,17 +1,9 @@
 @media (max-width: 1500px) {
-
     .single_banner .shape_img {
-
         max-width: 640px;
-
     }
-
-
-
     .bg-banner .think_box {
-
         right: 28%;
-
     }
 
 }
@@ -950,6 +942,18 @@
         text-align:center !important;
     }
  
+    .desktop-cart {
+        display: none;
+    }
+    .header .nav_warp nav .logo{
+        margin-right: 8px;
+    }
+    .course-header-menu a {
+        font-size: 14px;
+    }
+    .main-banner h1 {
+        font-size: 33px;
+    }
     .coach_block {
         border: 1px solid #8c96d952;
     }
@@ -979,17 +983,11 @@
     }
     
     .back-to-top{
-
         bottom: 20px;
-
         right: 20px;
-
         font-size: 18px;
-
         width: 40px;
-
         height: 40px;
-
     }
 
     /*Banner*/
@@ -1012,19 +1010,14 @@
     }
 
     .banner .image_box .circle_element {
-
         max-width: 330px;
-
         min-height: 330px;
-
     }
 
 
 
     .bg-banner .banner_text .title {
-
         font-size: 60px;
-
     }
 
     .price-select {
@@ -1032,11 +1025,8 @@
     }
 
     .search-form-wrapper .close_trigger {
-
         top: 20px;
-
         right: 20px;
-
     }
 
     .single-courses .subheader .page_title {
@@ -1060,23 +1050,16 @@
     /*testimonials*/
 
     .testimonial_slider .slick-dots {
-
         position: relative;
-
         top: 20px;
-
         right: 0;
-
     }
 
 
 
     .header .head_actions .thm-btn,
-
     .newsletter_form_sec .arrows {
-
         display: none;
-
     }
 
     .price_option_wrap {
@@ -1085,35 +1068,24 @@
 
 
     /*Whys us*/
-
     .why_us_box .circle_element {
-
         left: 160px;
-
         max-width: 380px;
-
         min-height: 380px;
-
     }
 
 
 
     .why_us_box .element_1 {
-
         right: 20px;
-
         bottom: -30px;
-
     }
 
 
 
     .why_us_box .element_2 {
-
         right: -40px;
-
         top: 50px;
-
     }
 
 
@@ -1234,6 +1206,13 @@
         line-height: 16px;
     }
 
+    .course_features ul li {
+        width: 100%;
+    }
+    .subheader .page_title {
+        font-size: 34px;
+    }
+
 }
 
 
@@ -1268,7 +1247,7 @@
 
     .banner .text_box .title {
 
-        font-size: 50px;
+        font-size: 30px;
 
     }
 

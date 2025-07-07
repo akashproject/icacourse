@@ -100,9 +100,12 @@ if (! function_exists('getTypesByCourseId')) {
 }
 
 if (! function_exists('get_courses')) {
-    function get_courses(){
-        $value = Course::where('status','1')->get();
-        return (isset($value))?$value:"null";
+    function get_courses($type_id = null){
+        $course = DB::table('courses');
+        if($type_id){
+            $course->where('type_id', 'like', '%"' . $type_id . '"%');
+        }
+        return $course->where('status',"1")->orderBy('name', 'ASC')->get();
     }
 }
 

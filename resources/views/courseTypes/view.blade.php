@@ -4,7 +4,6 @@
     <div class="container relative z-1">
         <div class="row">
             <div class="col-12">
-                <h1 class="page_title">{{ $contentMain->name }}</h1>
                 <div class="page_breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -12,6 +11,10 @@
                             <li class="breadcrumb-item active" aria-current="page">{{ $contentMain->name }}</li>
                         </ol>
                     </nav>
+                </div>
+                <h1 class="page_title">{{ $contentMain->name }}</h1>
+                <div class="page_banner_description text-white">
+                    {{ $contentMain->excerpt }}                     
                 </div>
             </div>
         </div>
@@ -43,9 +46,6 @@
                 <div class="coach_block">
                     <div class="coach_hover_tooltip"> 
                         <h4> {{ $course->name }} </h4>
-                        <div class="course_hover_content" >
-                            {{ $course->excerpt }}
-                        </div>
                         <div class="course_hover_stat" >
                             <div class="total-rating" >
                                 <a href="javascript:void(0)" style="color: #ffbd3f;" > 4.0 </a>

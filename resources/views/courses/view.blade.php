@@ -3,7 +3,7 @@
     <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/course-banner-min.webp')}});">
         <div class="container relative z-1">
             <div class="row">
-                <div class="col-8">
+                <div class="col-md-9">
                     <h1 class="page_title">{{ $contentMain->name }}</h1>
                     <div class="page_banner_description text-white">
                         {{ $contentMain->excerpt }}                     
@@ -186,13 +186,14 @@
                             </div>
 
                             <div class="sidebar">
-                                <div class="info_widgets mt-5">
+                                <div class="info_widgets mt-5 text-center">
                                     <div class="cart-button">
                                         @php    
                                             $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
                                         @endphp
                                         <button class="{{$props}} add_to_cart_btn_{{ $contentMain->id }} border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" style="background: #7129b5;" {{$props}}> Add to cart &nbsp;<i class="fal fa-shopping-bag"></i></button>
                                     </div>
+                                    <span class="division"> Or </span>
                                     <div class="cart-button">
                                         @php    
                                             $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""

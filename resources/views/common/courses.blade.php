@@ -1,123 +1,71 @@
-<section class="courses-one pt-5" id="digital-marketing-courses">
+<section class="section">
     <div class="container">
-        <div class="sec-title wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-            <h3 class="sec-title__title"><span>Explore Our</span> <span class="sec-title__title__shape">Top-Rated</span> <span class="sec-title__title__text">Courses</span></h3><!-- /.sec-title__title -->
-        </div><!-- /.sec-title -->
-    </div><!-- /.container -->
-    <div class="container">
-        <div class="courses-one__carousel eduhive-owl__carousel--with-shadow eduhive-owl__carousel eduhive-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-                "items": 1,
-                "margin": 5,
-                "loop": true,
-                "smartSpeed": 700,
-                "dots": false,
-                "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                "autoplay": false,
-                "responsive": {
-                    "0": {
-                        "items": 1,
-                        "margin": 10
-                    },
-                    "768": {
-                        "items": 2,
-                        "margin": 10
-                    },
-                    "992": {
-                        "items": 3,
-                        "margin": 10
-                    },
-                    "1200": {
-                        "items": 3.3,
-                        "margin": 10
-                    },
-                    "1400": {
-                        "items": 3.4,
-                        "margin": 10
-                    },
-                    "1536": {
-                        "items": 3.5,
-                        "margin": 10
-                    },
-                    "1600": {
-                        "items": 3.7,
-                        "margin": 10
-                    },
-                    "1800": {
-                        "items": 3.94,
-                        "margin": 10
-                    }
-                }
-            }'>
-            @foreach(get_courses() as $course)
-            <div class="item">
-                <div class="course-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
-                    <div class="course-card__image">
-                        <img src="{{ url('assets/frontend/images/courses/'.$course->slug.'.gif')}}" alt="The Data Science Revolution: Upgrading Your Skills">
-                        
-                    </div><!-- /.course-card__image -->
-                    <div class="course-card__content">
-                        <div class="course-card__content__top">
-                            <div class="course-card__category">{{ $course->no_of_module }} Modules</div><!-- /.course-card__category -->
-                            <div class="course-card__duration">
-                                <span class="course-card__duration__icon">
-                                    <i class="icon-clock"></i>
-                                </span><!-- /.course-card__duration__icon -->
-                                {{ $course->duration }}
-                            </div><!-- /.course-card__duration -->
-                        </div><!-- /.course-card__content__top -->
-                        <h3 class="course-card__title"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                        
-                    </div><!-- /.course-card__content -->
-                    <div class="course-card__hover" style="background-image: url(/assets/frontend/images/shapes/course-card-bg-1-1.png);">
-                            <div class="course-card__hover__content">
-                                <div class="course-card__info">
-                                <div class="course-card__lessons">
-                                    <span class="course-card__lessons__icon">       
-                                        <i class="icon-open-book"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    {{ $course->no_of_module }} lessons
-                                </div><!-- /.course-card__lessons -->
-                                <div class="course-card__students">
-                                    <span class="course-card__students__icon">
-                                        <i class="icon-multiple-users-silhouette"></i>
-                                    </span><!-- /.course-card__lessons__icon -->
-                                    {{ $course->number_of_enrolled }} Students
-                                </div><!-- /.course-card__students -->
-                            </div><!-- /.course-card__info -->
-                            <h3 class="course-card__title course-card__title--hover"><a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a></h3><!-- /.course-card__title -->
-                            <p class="course-card__text">{{ substr($course->excerpt, 0, 100) }}...</p><!-- /.course-card__text -->
-                            <div class="course-card__ratings course-card__ratings--hover">
-                            <div class="eduhive-ratings">
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                                <span class="eduhive-ratings__icon">
-                                    <i class="fa fa-star"></i>
-                                </span><!-- /.eduhive-ratings__icon -->
-                            </div><!-- /.product-ratings -->
-                            <p class="course-card__ratings__text">{{$course->number_of_rating}} Ratings</p><!-- /.course-card__ratings__text -->
-                        </div><!-- /.course-card__ratings -->
-                            <a href="#lead-generate-popup" class="course-card__btn eduhive-btn eduhive-btn--border open-popup-link">
-                                <span>Enquire Now</span>
-                                <span class="eduhive-btn__icon">
-                                    <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
-                                </span>
-                            </a><!-- /.course-card__btn eduhive-btn -->
-                        </div><!-- /.course-card__hover__content -->
-                    </div><!-- /.course-card__hover -->
-                </div><!-- /.course-card -->
-            </div><!-- /.item -->
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-12 text-center aos-init" data-aos="fade-up" data-aos-delay="">
+                <h3 class="title">Explore the Best Accounting Training Programs</h3>
+            </div>
+        </div>
+        <div class="row">
+            @foreach(get_courses(1) as $course)
+                <div class="col-xl-3 col-lg-4 col-md-6 course_grid masonry-item @if($course->type_id) @foreach(getTypesByCourseId($course->type_id) as $type) {{$type->slug}} @endforeach @endif">
+                    <div class="coach_block">
+                        <div class="coach_hover_tooltip"> 
+                            <h4> {{ $course->name }} </h4>
+                            <div class="course_hover_content" >
+                                {{ $course->excerpt }}
+                            </div>
+                            <div class="course_hover_stat" >
+                                <div class="total-rating" >
+                                    <a href="javascript:void(0)" style="color: #ffbd3f;" > 4.0 </a>
+                                    <div class="ratings " style="display: inline;margin: 0 6px;">
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="course_price" > Course Price : <strong> Rs. {{ $course->price }}/- </strong></p>
+                            </div>
+                            {!! $course->feature !!}
+                            <div class="author text-center">
+                                <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
+                            </div>
+                        </div>
+                        <!-- <div class="best-selling" >
+                            <span > Best Selling </span>
+                        </div>
+                        <div class="fast-selling" >
+                            <span > Fast Selling </span>
+                        </div> -->
+                        <div class="coach_img">
+                            <a href="{{ route('view-courses',$course->slug) }}" class="">
+                                <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">
+                            </a>
+                        </div>
+                        <div class="coach_caption">
+                            <div class="coach_meta">
+                                <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
+                                <div class="coach_cat thm-color-three-shadow" >
+                                    <p href="javascript:void(0)" style="text-transform: capitalize;">Type : Short Term </p>
+                                    <p > Course Duration : 5 Month </p>
+                                    <p > Delivery Mode : Online </p>
+                                </div>
+                            </div>
+
+                            <div class="author mt-3">
+                                <form method="post" action="#" id="add_course_to_cart_1" class="add_course_to_cart" data-id="1">
+                                    <input type="hidden" name="course_fee_id" value="1" >
+                                    <input type="hidden" name="course_id" value="1" >
+                                    <button type="submit" class=" add_to_cart_btn_1 btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> 
+                                        <i class="fal fa-shopping-bag mx-3"></i> Add to cart
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             @endforeach
-        </div><!-- /.courses-one__carousel -->
-    </div><!-- /.courses-one__container container -->
-    <img src="{{ url('/assets/frontend/images/shapes/courses-shape-1-1.png')}}" alt="shape" class="courses-one__shape">
-</section><!-- /.courses-one section-space-top2 -->
+        </div>
+    </div>
+</section>
