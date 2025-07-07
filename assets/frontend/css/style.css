@@ -8442,12 +8442,18 @@ span.accordion-time__duration {
     width: 100%;
 }
 
+
 span.required {
     color: red;
     font-size: 23px;
     vertical-align: middle;
 }
 
+a.change_mobile_no {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+}
 /*course_details*/
 
 .course_details h2 {

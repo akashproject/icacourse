@@ -33,11 +33,26 @@
                         <i class="fal fa-book"></i>
                         Featured Courses
                     </p>
-
                     <h3 class="title">Browse the Popular Online {{ $contentMain->name }}</h3>
                 </div>
             </div>
         </div>
+        @if($contentMain->children->count() > 0)
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <ul class="nav nav-tabs style_4 mb-3">
+                        @foreach($contentMain->children as $key => $category)
+                        <li class="nav-item "> 
+                            <a href="{{ route('category',$category->slug) }}" class="nav-link {{ ($key == 0)?'active':''}}" >{{$category->name}} </a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+        @endif
+
         
         <div class="row justify-content-center">
             <!-- Box Start -->

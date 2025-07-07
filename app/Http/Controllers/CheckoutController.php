@@ -76,11 +76,12 @@ class CheckoutController extends Controller
             if($student){
                 $student->update($studentInfo);
             } else {
-                $student->create($studentInfo);
+                $student = Student::create($studentInfo);
             }
             Cookie::queue('student', json_encode($student), 6000000000);
 
             $order_id = "order_".random_strings(14);    
+            
             $orderData = [
                 "order_id" => $order_id,
                 "profile_id" => $student->id,

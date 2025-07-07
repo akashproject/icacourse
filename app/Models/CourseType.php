@@ -21,4 +21,9 @@ class CourseType extends Model
         return $this->morphMany(Course::class, 'type_id');
     }
 
+    public function children()
+    {
+        return $this->hasMany(CourseType::class, 'parent_id');
+    }
+
 }

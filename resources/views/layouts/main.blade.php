@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('assets/frontend/images/favicon.ico') }}">
-    <title>{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}</title>
-    <meta name="description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
+    <title>{{ isset($contentMain->title)?$contentMain->title:'Accounting and Taxation Courses Online | ICA Edu Skills' }}</title>
+    <meta name="description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Best Accounting and Taxation courses Online by India’s No. 1 Vocational Training Institute. Courses with Triple Certification & 100% Placement Support.' }}" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="{{url()->current()}}"/>
     <meta name="author" content="MyIdcm">
@@ -15,17 +15,17 @@
 	<meta name="p:domain_verify" content="2757c24fbba370f3d146a24c9c17d66a"/>
 	<meta name="google-site-verification" content="37KdQ39QcywGtqdFHMds0Q9LCbypRJICjnGKONQbLqU" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="title" content="IDCM: Institute of Digital & Content Marketing">
+    <meta name="title" content="Accounting and Taxation Courses Online | ICA Edu Skills">
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Institute of Digital & Content Marketing" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}" />
-    <meta property="og:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
+    <meta property="og:title" content="{{ isset($contentMain->title)?$contentMain->title:'Accounting and Taxation Courses Online | ICA Edu Skills' }}" />
+    <meta property="og:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Best Accounting and Taxation courses Online by India’s No. 1 Vocational Training Institute. Courses with Triple Certification & 100% Placement Support.' }}" />
     <meta property="og:url" content="{{url()->current()}}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@IDCM_dmtraining" />
-    <meta name="twitter:title" content="{{ isset($contentMain->title)?$contentMain->title:'IDCM: Institute of Digital & Content Marketing' }}" />
-    <meta name="twitter:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'IDCM, best digital marketing Institute in Delhi & Kolkata. Get 100% job assurance at affordable fees and 100% Industry Training. Book Your Free Demo Class Now.' }}" />
+    <meta name="twitter:title" content="{{ isset($contentMain->title)?$contentMain->title:'Accounting and Taxation Courses Online | ICA Edu Skills' }}" />
+    <meta name="twitter:description" content="{{ isset($contentMain->meta_description)?$contentMain->meta_description:'Best Accounting and Taxation courses Online by India’s No. 1 Vocational Training Institute. Courses with Triple Certification Best Accounting and Taxation courses Online by India’s No. 1 Vocational Training Institute. Courses with Triple Certification & 100% Placement Support. 100% Placement Support.' }}" />
     <meta name="twitter:creator" content="@IDCM_dmtraining" />
     <meta name="twitter:image" content="" />
     <meta name="twitter:label1" content="Written by" />

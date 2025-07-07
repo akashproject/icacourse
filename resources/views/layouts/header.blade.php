@@ -102,11 +102,11 @@
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> {{ count($cartItems) }} </span>
                     </a>
-                    <button type="button" class="head_trigger desktop_trigger">
+                    <!-- <button type="button" class="head_trigger desktop_trigger">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
+                    </button> -->
                     <!-- <button type="button" class="head_trigger mobile_trigger">
                         <span></span>
                         <span></span>
@@ -221,11 +221,11 @@
                         </span>
                     </a>
 
-                    <button type="button" class="head_trigger desktop_trigger">
+                    <!-- <button type="button" class="head_trigger desktop_trigger">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
+                    </button> -->
                     <!-- <button type="button" class="head_trigger mobile_trigger">
                         <span></span>
                         <span></span>

@@ -37,8 +37,9 @@
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
                                             <input type="hidden" name="lead_mobile_number[0]" value="+91">
-                                            <input type="text" class="form-control" name="lead_mobile_number[1]" id="lead_mobile_info" placeholder="Mobile Number" value="{{ isset($student['mobile'])?$student['mobile']:''}}" autocomplete="off" required>
+                                            <input type="text" class="form-control" name="lead_mobile_number[1]" id="lead_mobile_info" placeholder="Mobile Number" value="{{ isset($student['mobile'])?$student['mobile']:''}}" autocomplete="off" required readonly>
                                             <label for="lead_mobile_info">Mobile Number</label>
+                                            <a href="{{ route('validate') }}" class="change_mobile_no"> Change </a>
                                         </div>
                                     </div>
 
@@ -249,7 +250,7 @@
                         <div class="row" >
                             <div class="col-md-12" >
                                 <div class="form-group form_style" style="display: inline-flex;">
-                                    <input type="text" id="coupon_code" name="coupon_code" placeholder="Place Coupon Code" class="form-control valid" autocomplete="off" aria-invalid="false">
+                                    <input type="text" id="coupon_code" name="coupon_code" placeholder="Place Scholarship Code" class="form-control valid" autocomplete="off" aria-invalid="false">
                                 </div>    
                                 <button id="appy_coupon_btn" type="button" onclick="apply_coupon_code()" class="thm-btn bg-thm-color-three"> 
                                     Apply Code
