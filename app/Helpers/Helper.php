@@ -144,6 +144,13 @@ if (! function_exists('getCourseFees')) {
     }
 }
 
+if (! function_exists('getOneTimePayFee')) {
+    function getOneTimePayFee($course_id){
+        $fee = DB::table('fees')->where('CourseId',$course_id)->where('Install_Payable',"N")->first();
+        return $fee;
+    }
+}
+
 if (! function_exists('totalCartAmount')) {
     function totalCartAmount(){
         $totalCartAmount = 0;

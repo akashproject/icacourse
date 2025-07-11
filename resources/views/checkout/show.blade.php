@@ -234,7 +234,7 @@
                                         <i class="fal fa-rupee-sign"></i>
                                         <h6 class="mb-0">Total Payable</h6>
                                     </div>
-                                    <div class="right-side">
+                                    <div class="right-side total_payble_amount">
                                         {{ number_format(totalCartAmount()) }}/-
                                     </div>
                                 </li>

@@ -26,7 +26,7 @@
 </div>
 <section class="section-padding isotope-filter-items">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="section-title">
                     <p class="subtitle">
@@ -34,6 +34,22 @@
                         Featured Courses
                     </p>
                     <h3 class="title">Browse the Popular Online {{ $contentMain->name }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <ul class="nav nav-tabs style_4 mb-3">
+                        <li class="nav-item "> 
+                            <a href="All" class="nav-link" >All </a>
+                        </li>
+                        @foreach(getCourseTypeById() as $key => $category)
+                        <li class="nav-item "> 
+                            <a href="{{ route('category',$category->slug) }}" class="nav-link {{ ($category->slug == $contentMain->slug)?'active':''}} " >{{$category->name}} </a>
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
@@ -51,74 +67,122 @@
                 </div>
             </div>
         </div>
-        @endif
-
-        
-        <div class="row justify-content-center">
-            <!-- Box Start -->
-            @foreach($categoryCourses as $course)
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="coach_block">
-                    <div class="coach_hover_tooltip"> 
-                        <h4> {{ $course->name }} </h4>
-                        <div class="course_hover_stat" >
-                            <div class="total-rating" >
-                                <a href="javascript:void(0)" style="color: #ffbd3f;" > 4.0 </a>
-                                <div class="ratings " style="display: inline;margin: 0 6px;">
-                                    <i class="fal fa-star active"></i>
-                                    <i class="fal fa-star active"></i>
-                                    <i class="fal fa-star active"></i>
-                                    <i class="fal fa-star active"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                            </div>
-                            <p class="course_price" > Course Price : <strong> Rs. {{ $course->price }}/- </strong></p>
-                        </div>
-                        {!! $course->feature !!}
-                        <div class="author text-center">
-                            <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
-                        </div>
+        @endif -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sort_by">
+                    <h5> Sort By Category </h5>
+                    <div class="form-floating mb-3">
+                        <select class="form-control sort_by_category" >
+                            <option value="" >All </option>
+                            @foreach(getCourseTypeById() as $key => $category)
+                                <option value="{{ route('category',$category->slug) }}" {{ ($contentMain->slug == $category->slug) ?"selected":"" }}> {{$category->name}} </option>
+                            @endforeach
+                        </select>
+                        <label for="email">Select Category</label>
                     </div>
-                    <!-- <div class="best-selling" >
-                        <span > Best Selling </span>
+                    @if($contentMain->parent_id)
+                    <div class="form-floating mb-3">
+                        <select class="form-control sort_by_category" >
+                            <option value="" >All </option>
+                            @foreach(getCourseTypeById($contentMain->parent_id) as $key => $category)
+                                <option value="{{ route('category',$category->slug) }}" {{ ($contentMain->slug == $category->slug) ?"selected":"" }}> {{$category->name}} </option>
+                            @endforeach
+                        </select>
+                        <label for="email">Select Category</label>
                     </div>
-                    <div class="fast-selling" >
-                        <span > Fast Selling </span>
-                    </div> -->
-                    <div class="coach_img">
-                        <a href="{{ route('view-courses',$course->slug) }}" class="">
-                            <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">
-                        </a>
+                    @endif
+                    @if(($contentMain->children->count() > 0))
+                    <div class="form-floating mb-3">
+                        <select class="form-control sort_by_category" >
+                            <option value="" > </option>
+                            @foreach($contentMain->children as $key => $category)
+                                <option value="{{ route('category',$category->slug) }}" > {{$category->name}} </option>
+                            @endforeach
+                        </select>
+                        <label for="email">Select Sub Category</label>
                     </div>
-                    <div class="coach_caption">
-                        <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
-                        <div class="coach_meta">
-                            <div class="coach_cat thm-color-three-shadow" >
-                                <p href="javascript:void(0)" style="text-transform: capitalize;">Type : Short Term </p>
-                                <p > Course Duration : {{ $course->duration }} </p>
-                                <p > Delivery Mode : Online </p>
-                            </div>
-                            <div class="price_wrap text-center"> 
-                                <div class="sell_price">
-                                    Rs. {{ number_format($course->price) }}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="author mt-3">
-                            <form method="post" action="#" id="add_course_to_cart_1" class="add_course_to_cart" data-id="1">
-                                <input type="hidden" name="course_fee_id" value="1" >
-                                <input type="hidden" name="course_id" value="1" >
-                                <button type="submit" class=" add_to_cart_btn_1 btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> 
-                                    <i class="fal fa-shopping-bag mx-3"></i> Add to cart
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
-            <!-- Box End -->
-            @endforeach
+            <div class="col-md-9">
+                <div class="row justify-content-center">
+                    <!-- Box Start -->
+                    @foreach($categoryCourses as $course)
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="coach_block">
+                            <div class="coach_hover_tooltip"> 
+                                <h4> {{ $course->name }} </h4>
+                                <div class="course_hover_stat" >
+                                    <div class="total-rating" >
+                                        <a href="javascript:void(0)" style="color: #ffbd3f;" > 4.0 </a>
+                                        <div class="ratings " style="display: inline;margin: 0 6px;">
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="course_price" > Course Price : <strong> Rs. {{ $course->price }}/- </strong></p>
+                                </div>
+                                {!! $course->feature !!}
+                                <div class="author text-center">
+                                    <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
+                                </div>
+                            </div>
+                            <div class="coach_img">
+                                <a href="{{ route('view-courses',$course->slug) }}" class="">
+                                    <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">
+                                </a>
+                            </div>
+                            <div class="coach_caption">
+                                <div class="course_tag text-white">
+                                    <span class="tag bg-green px-3 py-1"><i class="fal fa-book"></i> {{ $course->no_of_module }} Modules</span>
+                                    <span class="tag bg-orange px-3 py-1"><i class="fal fa-clock"></i> {{ $course->duration }}</span>
+                                </div>
+
+                                <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
+                                <div class="course_tag">
+                                    <div class="total-rating">
+                                        <div class="ratings " style="display: inline;margin: 0 6px;">
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                            <i class="fal fa-star active"></i>
+                                        </div>
+                                        ({{ $course->number_of_rating }}) Ratings
+                                    </div>
+                                </div>
+                                <div class="coach_meta">
+                                    <div class="price_wrap"> 
+                                        <div class="sell_price">
+                                            ₹{{ number_format($course->price) }}/-
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="author mt-3">
+                                    <form method="post" id="add_course_to_cart_{{ $course->id }}" class="add_course_to_cart" data-id="{{ $course->id }}">
+                                        @csrf
+                                        <input type="hidden" name="course_fee_id" value="{{ getOneTimePayFee($course->erp_course_id)->FeeID }}" >
+                                        <input type="hidden" name="course_id" value="{{ $course->id }}" >
+                                        @php    
+                                            $props = (array_key_exists($course->id, $cartItems))?"disabled":""
+                                        @endphp
+                                        <button type="submit" class="{{$props}} add_to_cart_btn_{{ $course->id }} btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" {{$props}}> 
+                                            <i class="fal fa-shopping-bag mx-3"></i> {{ ($props == "disabled")?"Added to cart":"Add to cart"; }}
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Box End -->
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 </section>

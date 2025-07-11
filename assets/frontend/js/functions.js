@@ -21,6 +21,10 @@ jQuery('.couse-container .course_grid').each(function(index) {
   }
 });
 
+jQuery(".sort_by_category").on("change",function (){
+		window.location.href = $(this).val();
+	});
+
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
     let cart_count = parseInt(jQuery(".header_cart-items").text());
@@ -190,6 +194,10 @@ jQuery('.open-popup-link').magnificPopup({
     mainClass: 'mfp-fade'
 });
 
+jQuery(".mfp-close-btn").on("click",function(){
+    jQuery(".mfp-close").trigger("click");
+})
+
 // jQuery("#send_otp_validation").on('click',function(){
 //     let mobile = jQuery("#check_mobile_exist").val();
 //     let = formId = "checkoutform";
@@ -328,13 +336,12 @@ function apply_coupon_code() {
             coupon_code: $("#coupon_code").val(),
         },
         success: function(result) {
-            
+            $(".coupon_status").html(result.message);
+            $(".coupon_status").show();
             if (result.status == 0) {
                 $("#coupon_code").val("");
                 return false;
             }
-            $(".coupon_status").html(result.message);
-            $(".coupon_status").show();
             $("#amount").val(result.amount) 
             $("#discount").val(result.discount)
             $(".coupon_discount").show();

@@ -32,6 +32,14 @@
     /*Border Color*/
 }
 
+.bg-green {
+    background: var(--thm-color-three) !important;
+}
+
+.bg-orange {
+    background:#dd3f02 !important;
+}
+
 /*Animations*/
 @keyframes fadeHeaderInDown {
     0% {
@@ -4450,7 +4458,7 @@ header.header.header-3.can-sticky.sticky {
 }
 
 .ratings i+i {
-    margin-left: 5px;
+    margin-left: 0;
 }
 
 .ratings i.active {
@@ -4812,6 +4820,7 @@ a.remove_form_cart {
 .coach_block {
     box-shadow: 0px 0px 3px 0px #5b5b5b6b;
     margin-bottom: 30px;
+    min-height: 457px;
     position: relative;
 }
 
@@ -4820,30 +4829,40 @@ a.remove_form_cart {
     width: 40px;
     height: 40px;
     position: absolute;
-
     right: 30px;
-
     bottom: -20px;
-
 }
-
 
 
 .coach_block .coach_caption {
     background-color: var(--thm-white);
+    padding: 0 10px;
+}
+
+.coach_block .coach_caption h5 {
+    margin: 0;
 }
 
 .coach_block .coach_caption a {
     font-size: 16px;
 }
 
-
 .coach_block .coach_caption .coach_meta h5 {
     margin-bottom: 10px;
 }
 
+.coach_block .coach_caption .course_tag {
+    overflow: hidden;
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+}
 
-
+.coach_block .coach_caption .course_tag .tag {
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
 
 .coach_block .coach_caption .coach_meta .coach_cat {
     padding: 7px 20px;
@@ -4903,7 +4922,15 @@ a.remove_form_cart {
 
 }
 
+.sort_by {
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+}
 
+.sort_by h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
 /*sponsors*/
 
@@ -6187,19 +6214,10 @@ span.accordion-time__duration {
 
 
 .post .post_img {
-
     border-top-left-radius: 10px;
-
     border-top-right-radius: 10px;
-
     position: relative;
-
     overflow: hidden;
-
-    margin-bottom: 30px;
-
-    height: 228px;
-
 }
 
 
@@ -6265,23 +6283,15 @@ span.accordion-time__duration {
 
 
 .post .post_caption .post_title {
-
-    font-size: 22px;
-
+    font-size: 18px;
     margin-bottom: 15px;
-
     font-weight: 600;
-
 }
-
-
 
 .post .post_caption .post_text {
-
     margin-bottom: 20px;
-
+    line-height: 1.3rem;
 }
-
 
 
 /*style2*/
@@ -6305,37 +6315,20 @@ span.accordion-time__duration {
 
 
 .post.style_2 .post_img {
-
     border-radius: 0;
-
-    height: 275px;
-
-    margin-bottom: -2px;
-
 }
-
-
 
 .post.style_2 .post_caption {
-
-    padding: 30px;
-
+    padding: 10px 15px;
     border: 2px solid var(--thm-border);
-
     border-radius: 8px;
-
     border-top-left-radius: 0;
-
     border-top-right-radius: 0;
-
 }
-
 
 
 .post.style_2 .thm-btn {
-
     background-color: rgb(var(--thm-color-two-rgb), 7%);
-
 }
 
 
@@ -9478,23 +9471,11 @@ ul.cart-course-list a {
 
 }
 
-.price_wrap {
-    display: block;
-    width: 100%;
-    padding: 0px 16px;
-    background: #e7e8fe;
-    margin-bottom: 3px;
-    border-radius: 10px;
-}
-
 .gross_price, .sell_price {
     display: inline-block;
     color: #3e4095;
     width: 49%;
-    font-weight: bold;
-    font-size: 17px;
-}
-.sell_price {
+    font-weight: 800;
     font-size: 20px;
 }
 .gross_price strike{
@@ -9901,6 +9882,7 @@ input.course_fee_selection {
 }
 div#coupon-offer-popup {
     width: 300px;
+    padding: 10px;
 }
 .coupon_offer_message.text-center {
     font-weight: 800;
@@ -10120,6 +10102,7 @@ ul.course_sidebar {
 }
 .total-rating {
     display: initial;
+    font-weight: 800;
 }
 .single-courses .subheader .page_title{
     font-size: 46px;
@@ -10448,14 +10431,14 @@ align-self: center;
 }
 
 .leadModelHeader {
-    padding: 20px;
+    padding: 40px 0 10px 10px;
 }
 
 .headerLogo {
     width: 30%;
 }
 .leadModelBody {
-    padding: 0 20px 30px 30px;
+    padding: 0 0 20px 20px;
 }
 .lead_steps.active {
     display: block;
@@ -10466,6 +10449,36 @@ align-self: center;
 }
 
 /* Menu with soumen */
-.sub-menu{
-    
+.footer-menu{
+  display: none;
+}
+
+@media only screen and (max-width : 768px) {
+  .footer-menu{
+    display: block;
+    background-color: #fff;
+    padding: 20px 5px;
+    position: fixed;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    ul{
+      padding: 0;
+      margin: 0;
+      li{
+        list-style: none;
+        display: inline-block;
+        width: 24%;
+        text-align: center;
+        a{
+          i{
+            font-size: 20px;
+            color: #3e4095;
+          }
+        }
+      }
+    }
+  }
 }

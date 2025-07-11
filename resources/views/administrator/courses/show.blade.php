@@ -148,7 +148,7 @@
 							<div class="col-sm-12">
 								<select name="type_id[]" id="type_id" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
 									<option value="">Select Course Type</option>
-									@foreach($courseTypes as $value)
+									@foreach($categories as $value)
 									<option value="{{ $value->id }}" {{ (isset($course->type_id)  && in_array($value->id,  json_decode($course->type_id)))?'selected' : '' }}> {{ $value->name }}</option>
 									@endforeach
 								</select>

@@ -195,9 +195,6 @@
                                     </div>
                                     <span class="division"> Or </span>
                                     <div class="cart-button">
-                                        @php    
-                                            $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
-                                        @endphp
                                         <a href="/apply-for-loan?course={{ $contentMain->id }}" class="border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" > Check Loan Eligibility</a>
                                     </div>
                                 </div>
@@ -221,4 +218,21 @@
             <img src="{{ url('/assets/frontend/images/elements/element_7.png')}}" class="element_2 zoom-fade" alt="Element">
         </div>
     </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <p class="subtitle">
+                            <i class="fal fa-book"></i>
+                            Faqs 
+                        </p>
+                        <h3 class="title">Frequently Asked Questions</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
     @endsection 

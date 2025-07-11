@@ -1,3 +1,17 @@
+<div class="footer-menu">
+    <ul>
+        <li><a href="{{ route('website') }}"><i class="fas fa-home"></i></a></li>
+        <li><a href="{{ route('page-view','online-accounting-courses') }}"><i class="fal fa-book"></i></a></li>
+        <li><a href="{{ route('page-view','cart') }}" class="product-bag-icon">
+            <i class="fal fa-shopping-bag"></i> 
+                <span class="header_cart-items"> 
+                    {{ count($cartItems) }}                   
+                </span>
+            </a>
+        </li>
+        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+</div>
 <footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_18.png);">
     <div class="container">
         <div class="footer_top section-padding">
@@ -60,10 +74,18 @@
                     <div class="ft_widget ft_menu xs-text-center">
                         <h6 class="ft-title">Classroom Courses</h6>
                         <ul>
-                                <li> <a href="https://www.icajobguarantee.com/courses/accounting-course-cia" target="_blank"> Accounting Course (Offline) </a></li>
-                                <li> <a href="https://www.icajobguarantee.com/courses/sap-fico-course" target="_blank"> Sap Fico Course (Offline) </a></li>
-                                <li> <a href="https://www.icajobguarantee.com/courses/tallyprime-gst-course" target="_blank"> Tally Prime Course (Offline) </a></li>
-                                <li> <a href="https://www.icajobguarantee.com/courses/microsoft-office-course" target="_blank"> MS Office Course (Offline) </a></li>
+                            <li> 
+                                <a href="https://www.icajobguarantee.com/courses/accounting-course-cia" target="_blank"> Accounting Course (Offline) </a>
+                            </li>
+                            <li> 
+                                <a href="https://www.icajobguarantee.com/courses/sap-fico-course" target="_blank"> Sap Fico Course (Offline) </a>
+                            </li>
+                            <li> 
+                                <a href="https://www.icajobguarantee.com/courses/tallyprime-gst-course" target="_blank"> Tally Prime Course (Offline) </a>
+                            </li>
+                            <li> 
+                                <a href="https://www.icajobguarantee.com/courses/microsoft-office-course" target="_blank"> MS Office Course (Offline) </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

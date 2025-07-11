@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                                 <div class="item_content_price">
-                                    <h6 class="Course_Fees mb-0"> ₹ {{ getFeeById($item)->Down_Payment}} </h6>
+                                    <h6 class="Course_Fees mb-0"> ₹{{ number_format(getFeeById($item)->Down_Payment) }} </h6>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             <tr>
                                 <th> Total 
                                 </th><td>                                                       
-                                    <h6 class="Course_Fees mb-0"> {{ totalCartAmount() }} </h6>
+                                    <h6 class="Course_Fees mb-0"> {{ number_format(totalCartAmount()) }} </h6>
                                 </td>
                             </tr>
                         </tbody>

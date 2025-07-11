@@ -30,11 +30,11 @@ class CourseController extends Controller
     public function show($id)
     {
         try {
-            $courseTypes = CourseType::all();
+            $categories = CourseType::all();
             $course = Course::find($id);
             $course->subjects = json_decode($course->subjects);
             $course->faqs = json_decode($course->faqs);
-            return view('administrator.courses.show',compact('course','courseTypes'));
+            return view('administrator.courses.show',compact('course','categories'));
         } catch(\Illuminate\Database\QueryException $e){
         }        
     }

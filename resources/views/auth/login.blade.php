@@ -19,7 +19,7 @@
                     <div class="app-brand justify-content-center">
                         <a href="{{ route('website') }}" class="app-brand-link gap-2">
                             <span class="app-brand-logo demo">
-                                <img src="{{ url('assets/logo/logo.png') }}" class="width-60" />
+                                <img src="{{ url('assets/frontend/images/logo.png') }}" class="width-60" />
                             </span>
                         </a>
                     </div>

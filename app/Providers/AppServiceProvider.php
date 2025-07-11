@@ -15,13 +15,27 @@ use View;
 class AppServiceProvider extends ServiceProvider
 {
 
-    private $footerMenu = array(
+    private $footerMenu = [
         'javascript:void(0)' => 'Events',
         '/blog/' => 'Blogs',
         'javascript:void(0)' => "Awards & Recognitions",
         '/about-us' => 'About Us',
         '/contact-us' => "Contact Us",
-    );
+    ];
+
+    private $classroomCourses = [
+        'https://www.icajobguarantee.com/courses/accounting-course-cia' => 'Accounting Course (Offline)',
+        'https://www.icajobguarantee.com/courses/sap-fico-course' => 'Sap Fico Course (Offline)',
+        'https://www.icajobguarantee.com/courses/tallyprime-gst-course' => "Tally Prime Course (Offline)",
+        'https://www.icajobguarantee.com/courses/microsoft-office-course' => 'MS Office Course (Offline)',
+    ];
+
+    private $featuredCourses = [
+        '/courses/accounting-course-online-cia'=>'Job Assured Course',
+        '/courses/sap-fico-course-online'=>'SAP FICO Course',
+        '/courses/gst-dt-tds-course-online'=>'GST + DT + TDS Course',
+        '/courses/ms-office-2019-course-online'=>'MS Office Course',
+    ];
 
     private $courseTypes;
     private $courses;
