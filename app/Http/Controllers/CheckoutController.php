@@ -55,8 +55,18 @@ class CheckoutController extends Controller
     public function proceedToCheckout(Request $request)
     {
         try {
+            $data = $request->all(); 
+            $validatedData = $request->validate([
+                'lead_first_name' => 'required',
+                'lead_last_name' => 'required',
+                'guardian_name' => 'required',
+                'lead_email_address' => 'required|email',
+                'lead_mobile_number' => ['required', 'array', 'min:1'],
+                'date_of_birth' => ['required'],
+                'amount' => ['required'],
+            ]);            
+
             $cartItems = (Cookie::get('cartItems'))?json_decode(Cookie::get('cartItems'),true):[];
-            $data = $request->all();  
             $student = Student::where('mobile',$data['lead_mobile_number'][1])->first();
             $studentInfo = [
                 'first_name'=>$data['lead_first_name'],
@@ -79,51 +89,63 @@ class CheckoutController extends Controller
                 $student = Student::create($studentInfo);
             }
             Cookie::queue('student', json_encode($student), 6000000000);
-
-            $order_id = "order_".random_strings(14);    
-            
+            //67,997 64,597 3,400
+            $order_id = "order_".random_strings(14);
             $orderData = [
                 "order_id" => $order_id,
                 "profile_id" => $student->id,
                 "coupon" => $data['coupon_code'],
-                "source" => 'seo',
+                "amount" => (int)round(base64_decode($data['amount'])),
+                "discount" => $data['discount'],
+                "source" => $data['utm_source'],
             ];
-            
             $order = Order::create($orderData);
             if(!$order) {
                 return redirect()->back()->with('message', 'Failed to create order! Please try again');
             }
-                
+            
+            if(isset($data['discount']) && $data['discount'] != ''){
+				$base_value = intdiv($data['discount'], count($cartItems));
+				$remainder = $data['discount'] % count($cartItems);
+			}    
+
             $orderItem = [];
             
             foreach ($cartItems as $key => $value) {
                 $course = getCourseById($key);
                 $fee = getFeeById($value);
-                $orderItemData = [
+                $orderItem[] = [
                     'order_id' =>$order->id,
                     'course_id' =>$key,
                     'fee_id' =>$value,
-                    'amount'=> $fee->Down_Payment,
-                    'discount'=> 0
+                    'amount'=> $fee->Down_Payment - $base_value,
+                    'discount' => ($data['discount'])?$base_value:'',
                 ];
-                $orderItem = OrderItem::create($orderItemData);
-                if (!$orderItem) {
+            }
+
+            if(isset($data['discount']) && $data['discount'] != ''){
+				$orderItem[count($cartItems) - 1]['discount'] += $remainder;
+				$orderItem[count($cartItems) - 1]['amount'] -= $remainder;
+			}
+            foreach ($orderItem as $key => $item) {
+                $orderItem = OrderItem::create($item);
+                if (!$item) {
                     return redirect()->back()->with('message', 'Failed to purchase course! Please try again');
                 }
-            }
+            }    
 
             $ccAvenueBillingData = [
                 'merchant_id' => "415669",
                 'order_id' => $order_id,
                 'language' => "EN",
-                'amount' => base64_decode("1000"),
+                'amount' => base64_decode($data['amount']),
                 'currency' => "INR",
                 'redirect_url' => route('payment-success'),
                 'cancel_url' => route('payment-failed'),
                 'billing_name' => $student->first_name.' '.$student->last_name,
                 'billing_address' => $student->address,
-                'billing_state' => $student->state,
-                'billing_city' => $student->city,			
+                'billing_state' => getStateById($student->state)->name,
+                'billing_city' => getCityById($student->city)->name,			
                 'billing_zip' => $student->pincode,
                 'billing_country' => "India",
                 'billing_tel' => $student->mobile,

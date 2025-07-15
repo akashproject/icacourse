@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('order_id');
             $table->integer('profile_id');
             $table->string('coupon')->nullable();
+            $table->integer('amount');
+            $table->integer('discount')->nullable();
             $table->string('student_code')->nullable();
             $table->string('money_receipt')->nullable();
             $table->integer('payment_id')->nullable();

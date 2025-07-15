@@ -22,8 +22,8 @@ jQuery('.couse-container .course_grid').each(function(index) {
 });
 
 jQuery(".sort_by_category").on("change",function (){
-		window.location.href = $(this).val();
-	});
+	window.location.href = $(this).val();
+});
 
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
@@ -47,7 +47,6 @@ jQuery(".course_fee_selection").change(function(){
     var formId = jQuery(this).closest("form").attr('data-id');
     jQuery(".add_to_cart_btn_"+formId).prop('disabled', false).removeClass("disabled");
 });
-
 
 jQuery('#lead_validate_form').validate({
     rules: {
@@ -355,7 +354,6 @@ function apply_coupon_code() {
                 mainClass: 'mfp-fade'
               }
             });
-            
         }
     });
 }

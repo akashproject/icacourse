@@ -261,14 +261,9 @@
                 </div>
             </div>            
             <input type="hidden" name="utm_campaign" value=""> 
-            <input type="hidden" name="utm_source" value=""> 
-            <input type="hidden" name="merchant_id" value="415669"> 
+            <input type="hidden" name="utm_source" value="{{ get_theme_setting('utm_source') }}"> 
             <input type="hidden" name="amount" id="amount" value="{{ base64_encode(totalCartAmount()) }}">
             <input type="hidden" name="discount" id="discount" value="">
-            <input type="hidden" name="language" value="EN">
-            <input type="hidden" name="currency" value="INR"> 
-            <input type="hidden" name="redirect_url" value="{{ route('page-view','order-success') }}"> 
-            <input type="hidden" name="cancel_url" value="{{ route('page-view','order-failed') }}"> 
         </form>
 
     </div>

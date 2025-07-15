@@ -640,4 +640,173 @@
         <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_7.png" class="element_2 zoom-fade" alt="Element">
     </div>
 </div>
+<!-- Testimonials Start -->
+<section class="section section-bg relative z-1 about_bg" style="background-image: url({{ url('assets/frontend/images/bg/bg_1.png')}});">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title left-align wow fadeInLeft">
+                    <p class="subtitle mb-4">
+                        <i class="fal fa-book"></i>
+                        Our Testimonials
+                    </p>
+                    <h3 class="title mb-0">What’s Our Clients<br> About Us</h3>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial_slider style_2 row wow fadeInDown">
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Herminia F. Hudson</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Robert M. Morales</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star"></i>
+                        <i class="fal fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Nicolas Vanderpool</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Herminia F. Hudson</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Robert M. Morales</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star"></i>
+                        <i class="fal fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+            <!-- Testimonial Item -->
+            <div class="slide-item col-12">
+                <div class="testimonial_item style_4">
+                    <div class="author">
+                        <div class="image bg-thm-color-two">
+                            <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
+                        </div>
+                        <div class="text">
+                            <h6 class="mb-0">Nicolas Vanderpool</h6>
+                            <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
+                        </div>
+                    </div>
+                    <p class="comment">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
+                    </p>
+                    <div class="ratings">
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                        <i class="fal fa-star active"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Item -->
+        </div>
+    </div>
+</section>
+<!-- Testimonials End -->
 @endsection

@@ -98,6 +98,12 @@
             </ul>
          </li>
          <li class="menu-item">
+            <a href="{{ route('admin-orders') }}" class="menu-link">
+               <i class="menu-icon tf-icons bx bx-file"></i>
+               <div data-i18n="Page">Orders</div>
+            </a>
+         </li>
+         <li class="menu-item">
             <a href="{{ route('admin-recruiters') }}" class="menu-link">
                <i class="menu-icon tf-icons bx bx-home"></i>
                <div data-i18n="Recruiters">Recruiters</div>

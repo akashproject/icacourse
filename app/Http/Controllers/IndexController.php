@@ -186,13 +186,13 @@ class IndexController extends Controller
                 if($coupon->discount_type == "0"){
                     $amount = $totalAmount - $coupon->discount;
                     $couponResponse['display_discount'] = "₹".number_format($coupon->discount)."/-";
-                    $couponResponse['discount'] = base64_encode($coupon->discount);
+                    $couponResponse['discount'] = $coupon->discount;
                 } else {
                     $amount = $totalAmount;
                     $value = ($coupon->discount / 100) * $amount; // Calculate 20% of $total
                     $amount = $amount-$value;
                     $couponResponse['display_discount'] = "₹".number_format($value)."/- (".$coupon->discount."%)";
-                    $couponResponse['discount'] = base64_encode($value);
+                    $couponResponse['discount'] = round($value);
                 }
                 
                 $couponResponse['amount'] = base64_encode($amount);

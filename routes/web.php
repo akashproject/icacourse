@@ -10,7 +10,6 @@ Route::get('/index/clear-cache', function() {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'administrator'], function () {
-
     Route::group(['middleware' => ['auth','role:super-admin|admin']], function () {
         Route::get('/', [App\Http\Controllers\Administrator\IndexController::class, 'dashboard'])->name('admin-dashboard');
         
@@ -39,7 +38,6 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::get('/view-course-type/{id}', [App\Http\Controllers\Administrator\CourseTypeController::class, 'show'])->name('admin-show-course-type');
         Route::post('/save-course-type', [App\Http\Controllers\Administrator\CourseTypeController::class, 'save'])->name('admin-save-course-type');
         Route::get('/delete-course-type/{id}', [App\Http\Controllers\Administrator\CourseTypeController::class, 'delete'])->name('admin-delete-course-type');
-
 
         //Courses
         Route::get('/courses', [App\Http\Controllers\Administrator\CourseController::class, 'index'])->name('admin-courses');
@@ -105,6 +103,10 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::get('/sync-cities', [App\Http\Controllers\Administrator\SyncErpController::class, 'cities'])->name('admin-sync-cities');
         Route::get('/sync-highest-qualifications', [App\Http\Controllers\Administrator\SyncErpController::class, 'highestQualification'])->name('admin-sync-highest-qualifications');
 
+        //Orders
+        Route::get('/orders', [App\Http\Controllers\Administrator\OrderController::class, 'index'])->name('admin-orders');
+        Route::get('/order/{id}', [App\Http\Controllers\Administrator\OrderController::class, 'show'])->name('admin-order-detail');
+        Route::get('/admissions', [App\Http\Controllers\Administrator\OrderController::class, 'admissions'])->name('admin-admissions');
         
         Route::get('/settings', [App\Http\Controllers\Administrator\SettingController::class, 'show'])->name('admin-settings');
         Route::post('/save-settings', [App\Http\Controllers\Administrator\SettingController::class, 'save'])->name('admin-save-settings');

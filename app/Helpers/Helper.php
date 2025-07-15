@@ -12,6 +12,7 @@ use App\Models\Subject;
 use App\Models\Topic;
 use App\Models\State;
 use App\Models\City;
+use App\Models\Student;
 use Illuminate\Support\Facades\Cookie;
 
 
@@ -82,6 +83,13 @@ if (! function_exists('get_theme_setting')) {
     function get_theme_setting($value){
         $media = Setting::where('key',$value)->first();
         return (isset($media->value))?$media->value:"null";
+    }
+}
+
+if (! function_exists('getStudentById')) {
+    function getStudentById($id){
+        $student = Student::where('id',$id)->first();
+        return (isset($student))?$student:"null";
     }
 }
 
@@ -247,25 +255,6 @@ if (! function_exists('getCitiesByStateName')) {
         } catch(\Illuminate\Database\QueryException $e){
             throw $e;
         }
-    }
-}
-
-if (!function_exists('getCenterByStateId')) {
-    function getCenterByStateId($state = null,$centername = null){
-        $center = DB::table('centers')
-                ->join('states', 'states.id', '=', 'centers.state_id')
-                ->select('centers.id','centers.name');
-        if($state){
-            $center->where('states.name',$state);
-        }
-
-        if($centername){
-            $center->where('centers.name',$centername);
-        }
-
-        $center->where('centers.status','1');
-        $center = $center->orderBy('name', 'asc')->get();       
-        return $center;
     }
 }
 
