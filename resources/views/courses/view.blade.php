@@ -219,6 +219,7 @@
         </div>
     </div>
 
+    @if($contentMain->faqs)
     <section class="section">
         <div class="container">
             <div class="row">
@@ -232,16 +233,47 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="row">
+                <div class="accordion accordion-style accordion-style-2 style_2 mb-xl-30">
+                    <ul class="card">
+                        <li class="card-header" id="heading_0">
+                            <a class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_0" aria-expanded="false" aria-controls="collapse_0">
+                                <span class="mx-2"><i class="fal fa-book"></i></span> Business Computer Applications
+                            </a>
+                            <span class="accordion-time__duration"> 45 Hours </span>
+                        </li>
+                        <div id="collapse_0" class="accordion-collapse collapse" aria-labelledby="heading_0" data-bs-parent="#accordionExample" style="">
+                            <div class="card-body">
+                                    dasdasdasdsa
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#AllCoachItem3" aria-expanded="true" aria-controls="AllCoachItem3">
+                                What equipment do we need to join the course? </button>
+                        </div>
+                        <div id="AllCoachItem3" class="collapse" aria-labelledby="AllCoachItem3" data-parent="#allcoachaccordion">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Laptop or desktop along with stable internet connection &amp; a webcam.</li>
+                                    <li>Smartphone to access the e-content.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    @endif  
 
-    <!-- Testimonials Start -->
-    <section class="section section-bg relative z-1 about_bg" style="background-image: url(assets/images/bg/bg_1.png);">
+   <!-- Testimonials Start -->
+    <section class="section section-bg relative z-1 bg-thm-color-one" style="background-image: url(assets/images/bg/bg_4.png);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title left-align wow fadeInLeft">
+                    <div class="section-title left-align white wow fadeInDown">
                         <p class="subtitle mb-4">
                             <i class="fal fa-book"></i>
                             Our Testimonials
@@ -250,10 +282,10 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial_slider style_2 row wow fadeInDown">
+            <div class="testimonial_slider style_2 row wow fadeInUp">
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
@@ -278,7 +310,7 @@
                 <!-- Testimonial Item -->
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
@@ -303,7 +335,7 @@
                 <!-- Testimonial Item -->
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
@@ -328,7 +360,7 @@
                 <!-- Testimonial Item -->
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
@@ -353,7 +385,7 @@
                 <!-- Testimonial Item -->
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
@@ -378,7 +410,7 @@
                 <!-- Testimonial Item -->
                 <!-- Testimonial Item -->
                 <div class="slide-item col-12">
-                    <div class="testimonial_item style_4">
+                    <div class="testimonial_item style_dark">
                         <div class="author">
                             <div class="image bg-thm-color-two">
                                 <img src="assets/images/author/3.jpg" alt="img" class="image-fit">

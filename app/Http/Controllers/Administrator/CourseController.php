@@ -46,7 +46,6 @@ class CourseController extends Controller
                 'name' => 'required',
                 'slug' => 'required',
             ]);
-            
             $data['subjects'] = isset($data['subjects'])?json_encode($data['subjects']):null;
             if($data['course_id'] <= 0){
                 $course = Course::create($data);

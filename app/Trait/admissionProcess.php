@@ -32,8 +32,9 @@ trait admissionProcess
                     "CourseId"=>$course->erp_course_id,
                     "FeeID"=>$item->fee_id,
                     "SoldAt"=>$item->amount,
-                    "DwnPmt"=>$fee->Down_Payment,
+                    "DwnPmt"=>$item->amount,
                     "Rec_Amt"=>$item->amount,
+                    "InstStartMonth"=> "10/08/2025",
                     "NoOfInstallment"=>$fee->NoOfInstall,
                     "InstAmt"=>$fee->InstallAmount,
                     "batchId"=>"0",
@@ -50,8 +51,8 @@ trait admissionProcess
                 "Student_lname"=> $student->last_name,
                 "Dob"=> $student->date_of_birth,
                 "Qualification"=> $student->qualification,
-                "Address1"=> $student->address,	
-                "Address2"=>"",	
+                "Address1"=> $student->address,
+                "Address2"=>"",
                 "City"=> $student->city,
                 "State"=> $student->state,
                 "Pin"=> $student->pincode,
@@ -85,7 +86,6 @@ trait admissionProcess
             $order->update($data);
             return $admission;
         } catch(\Illuminate\Database\QueryException $e){
-            //throw $th;
             return response()->json($e, $this->_statusOK);
         }
     }

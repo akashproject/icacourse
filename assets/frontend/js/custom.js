@@ -59,14 +59,44 @@
             return false;
         });
     }
-    // testimonial Slider
-    $('.testimonial_slider').slick({
-        slidesToShow: 3,
+
+    $('.course_slider').slick({
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         arrows: true,
-        dots: true,
-        autoplaySpeed: 2000,
+        dots: false,
+        autoplaySpeed: 9000,
+        responsive: [
+            {
+                breakpoint: 1366,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+    // testimonial Slider
+    $('.testimonial_slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: true,
+        autoplaySpeed: 9000,
         responsive: [{
                 breakpoint: 1199,
                 settings: {

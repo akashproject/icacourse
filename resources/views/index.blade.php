@@ -33,228 +33,259 @@
 </div>
 @include('common.courses')
 <section id="price-wrap" class="section-padding price">
-        <div class="container">
-            <div class="row mb-5 justify-content-center">
-                <div class="col-lg-12 text-center aos-init" data-aos="fade-up" data-aos-delay="">
-                    <h3 class="title">Courses For Your Career</h3>
-                </div>
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-12 text-center aos-init" data-aos="fade-up" data-aos-delay="">
+                <h3 class="title">Courses For Your Career</h3>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="price-wrapper xs-display-none">
-                        <div class="price-box">
-                            <div class="price-coll"><span class="modules-text">Modules</span></div>
-                            <div class="price-coll"><span class="modules-text">Hours</span></div>
-                            <div class="price-coll">
-                                <h5>CIA Express<br> (3Months)</h5>
-                                <span>40999</span>
-                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-                            </div>
-                            <div class="price-coll"><h5>CIA <br>(4Months)</h5>
-                                <span>49999</span>
-                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-                            </div>
-                            <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
-                                <span>72999</span>
-                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-                            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="price-wrapper xs-display-none">
+                    <div class="price-box">
+                        <div class="price-coll"><span class="modules-text">Modules</span></div>
+                        <div class="price-coll"><span class="modules-text">Hours</span></div>
+                        <div class="price-coll">
+                            <h5>CIA Express<br> (3Months)</h5>
+                            <span>40999</span>
+                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                         </div>
-                        <div class="price-box">
-                            <div class="price-coll">Business Computer Applications</div>
-                            <div class="price-coll">45</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><h5>CIA <br>(4Months)</h5>
+                            <span>49999</span>
+                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                         </div>
-                        <div class="price-box">
-                            <div class="price-coll">Business Accounting</div>
-                            <div class="price-coll">36</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">TallyPrime</div>
-                            <div class="price-coll">51</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">Business Communication</div>
-                            <div class="price-coll">45</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">Live Project 1</div>
-                            <div class="price-coll">3</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">Direct Tax</div>
-                            <div class="price-coll">39</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">TDS</div>
-                            <div class="price-coll">11</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">Goods and Services Tax (GST)</div>
-                            <div class="price-coll">27</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                        <div class="price-coll">Advanced Accounts</div>
-                            <div class="price-coll">30</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll">Live Project 2</div>
-                            <div class="price-coll">9</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div> 
-                        <div class="price-box">
-                            <div class="price-coll">SAP (Finance &amp; Controlling)</div>
-                            <div class="price-coll">80</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                    
-                        <div class="price-box">
-                            <div class="price-coll">Final Exam</div>
-                            <div class="price-coll">12</div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                            <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll"></div>
-                            <div class="price-coll">Total Hours</div>
-                            <div class="price-coll">230</div>
-                            <div class="price-coll">288</div>
-                            <div class="price-coll">368</div>
-                        </div>
-                        <div class="price-box">
-                            <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Modules</span></div>
-                            <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Hours</span></div>
-                            <div class="price-coll">                   
-                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-                            </div>
-                            <div class="price-coll">
-                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-                            </div>
-                            <div class="price-coll">
-                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-                            </div>
+                        <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
+                            <span>72999</span>
+                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                         </div>
                     </div>
-                    <div class="mobile-price lg-display-none">
-                        <div class="group mobile-gap">
-                            <div class="grid-1-5">
-                                <h2>Business Computer Applications</h2>                          
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Business Computer Applications</div>
+                        <div class="price-coll">45</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Business Accounting</div>
+                        <div class="price-coll">36</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">TallyPrime</div>
+                        <div class="price-coll">51</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Business Communication</div>
+                        <div class="price-coll">45</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Live Project 1</div>
+                        <div class="price-coll">3</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Direct Tax</div>
+                        <div class="price-coll">39</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">TDS</div>
+                        <div class="price-coll">11</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Goods and Services Tax (GST)</div>
+                        <div class="price-coll">27</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                    <div class="price-coll">Advanced Accounts</div>
+                        <div class="price-coll">30</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll">Live Project 2</div>
+                        <div class="price-coll">9</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div> 
+                    <div class="price-box">
+                        <div class="price-coll">SAP (Finance &amp; Controlling)</div>
+                        <div class="price-coll">80</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                
+                    <div class="price-box">
+                        <div class="price-coll">Final Exam</div>
+                        <div class="price-coll">12</div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll"></div>
+                        <div class="price-coll">Total Hours</div>
+                        <div class="price-coll">230</div>
+                        <div class="price-coll">288</div>
+                        <div class="price-coll">368</div>
+                    </div>
+                    <div class="price-box">
+                        <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Modules</span></div>
+                        <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Hours</span></div>
+                        <div class="price-coll">                   
+                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                        </div>
+                        <div class="price-coll">
+                        <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                        </div>
+                        <div class="price-coll">
+                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-price lg-display-none">
+                    <div class="group mobile-gap">
+                        <div class="grid-1-5">
+                            <h2>Business Computer Applications</h2>                          
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
 
-                                    <div class="price-select">
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                            </div>              
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>Business Accounting</h2>               
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                                
+                                
+                            </div>            
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>TallyPrime</h2>
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu">
+                                        <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
+                                    </div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu">
+                                        <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
+                                    </div>
+                                </div>
+
+                                <div class="price-select">
                                     <div class="price-select-full">
-                                        <select>
+                                    <select>
                                         <option>CIA Express (3Months)</option>
                                         <option>CIA (4Months)</option>
                                         <option>CIA With SAP(6Months)</option>
                                     </select>
-                                    </div>
-                                    <div class="price-select-btn">
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                    </div>
-                                    </div>
-                                </div>              
-                            </div>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                            </div>      
+                        </div>
 
-                            <div class="grid-1-5">
-                                <h2>Business Accounting</h2>               
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
+                        <div class="grid-1-5">
+                            <h2>Business Communication</h2>                          
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
 
-                                    <div class="price-select">
+                                <div class="price-select">
                                     <div class="price-select-full">
-                                        <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
-                                    </div>
-                                    <div class="price-select-btn">
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                    </div>
-                                    </div>
-                                    
-                                    
-                                </div>            
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>TallyPrime</h2>
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu">
-                                            <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
-                                        </div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu">
-                                            <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
-                                        </div>
-                                    </div>
-
-                                    <div class="price-select">
-                                        <div class="price-select-full">
                                         <select>
                                             <option>CIA Express (3Months)</option>
                                             <option>CIA (4Months)</option>
@@ -265,311 +296,279 @@
                                         <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
                                         <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
                                     </div>
-                                </div>      
-                            </div>
+                                </div>
+                            </div>   
+                        </div>
 
-                            <div class="grid-1-5">
-                                <h2>Business Communication</h2>                          
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
+                        <div class="grid-1-5">
+                            <h2>Live Project 1</h2>                          
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
 
-                                    <div class="price-select">
-                                        <div class="price-select-full">
-                                            <select>
-                                                <option>CIA Express (3Months)</option>
-                                                <option>CIA (4Months)</option>
-                                                <option>CIA With SAP(6Months)</option>
-                                            </select>
-                                        </div>
-                                        <div class="price-select-btn">
-                                            <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                            <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                        </div>
-                                    </div>
-                                </div>   
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>Live Project 1</h2>                          
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
-                                        <div class="price-select-full">
-                                            <select>
-                                                <option>CIA Express (3Months)</option>
-                                                <option>CIA (4Months)</option>
-                                                <option>CIA With SAP(6Months)</option>
-                                            </select>
-                                        </div>
-                                        <div class="price-select-btn">
-                                            <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                            <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                        </div>
-                                    </div>
-                                </div>                          
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>Direct Tax</h2>                          
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
-                                        <div class="price-select-full">
-                                            <select>
-                                                <option>CIA Express (3Months)</option>
-                                                <option>CIA (4Months)</option>
-                                                <option>CIA With SAP(6Months)</option>
-                                            </select>
-                                        </div>
-                                        <div class="price-select-btn">
-                                            <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                            <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                        </div>
-                                    </div>
-                                </div>                         
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>TDS</h2>
-                            
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
+                                <div class="price-select">
                                     <div class="price-select-full">
                                         <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
+                                            <option>CIA Express (3Months)</option>
+                                            <option>CIA (4Months)</option>
+                                            <option>CIA With SAP(6Months)</option>
+                                        </select>
                                     </div>
                                     <div class="price-select-btn">
                                         <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
                                         <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
                                     </div>
                                 </div>
-                                    
-                                    
-                            </div>
+                            </div>                          
+                        </div>
 
-                            <div class="grid-1-5">
-                                <h2>Goods and Services Tax (GST)</h2>
-                            
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
+                        <div class="grid-1-5">
+                            <h2>Direct Tax</h2>                          
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
 
-                                    <div class="price-select">
+                                <div class="price-select">
                                     <div class="price-select-full">
                                         <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
+                                            <option>CIA Express (3Months)</option>
+                                            <option>CIA (4Months)</option>
+                                            <option>CIA With SAP(6Months)</option>
+                                        </select>
                                     </div>
                                     <div class="price-select-btn">
                                         <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
                                         <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
                                     </div>
-                                    </div>
-                                    
-                                    
                                 </div>
+                            </div>                         
+                        </div>
 
-                            
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>Advanced Accounts</h2>
-                            
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
-                                    <div class="price-select-full">
-                                        <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
-                                    </div>
-                                    <div class="price-select-btn">
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                    </div>
-                                    </div>
-                                    
-                                    
-                                </div>
-
-                            
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>Live Project 2</h2>
-                            
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
-                                    <div class="price-select-full">
-                                        <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
-                                    </div>
-                                    <div class="price-select-btn">
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                    </div>
-                                    </div>
-                                    
-                                    
-                                </div>
-
-                            
-                            </div>
-
-                            <div class="grid-1-5">
-                                <h2>SAP (Finance &amp; Controlling)</h2>
-                            
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-
-                                    <div class="price-select">
-                                    <div class="price-select-full">
-                                        <select>
-                                        <option>CIA Express (3Months)</option>
-                                        <option>CIA (4Months)</option>
-                                        <option>CIA With SAP(6Months)</option>
-                                    </select>
-                                    </div>
-                                    <div class="price-select-btn">
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-1-5">
-                                <h2>Final Exam</h2>
+                        <div class="grid-1-5">
+                            <h2>TDS</h2>
                         
-                                <div class="price-info-wrap">
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA (4Months)<span>49999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
-                                    <div class="price-info-box">
-                                        <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-                                        <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-                                    </div>
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
 
-                                    <div class="price-select">
-                                        <div class="price-select-full">
-                                            <select>
-                                            <option>CIA Express (3Months)</option>
-                                            <option>CIA (4Months)</option>
-                                            <option>CIA With SAP(6Months)</option>
-                                        </select>
-                                    </div>
-                                        <div class="price-select-btn">
-                                            <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-                                            <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-                                        </div>
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                            </div>
+                                
+                                
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>Goods and Services Tax (GST)</h2>
+                        
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>Advanced Accounts</h2>
+                        
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>Live Project 2</h2>
+                        
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                        
+                        </div>
+
+                        <div class="grid-1-5">
+                            <h2>SAP (Finance &amp; Controlling)</h2>
+                        
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                <div class="price-select-full">
+                                    <select>
+                                    <option>CIA Express (3Months)</option>
+                                    <option>CIA (4Months)</option>
+                                    <option>CIA With SAP(6Months)</option>
+                                </select>
+                                </div>
+                                <div class="price-select-btn">
+                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-1-5">
+                            <h2>Final Exam</h2>
+                    
+                            <div class="price-info-wrap">
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+                                <div class="price-info-box">
+                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                </div>
+
+                                <div class="price-select">
+                                    <div class="price-select-full">
+                                        <select>
+                                        <option>CIA Express (3Months)</option>
+                                        <option>CIA (4Months)</option>
+                                        <option>CIA With SAP(6Months)</option>
+                                    </select>
+                                </div>
+                                    <div class="price-select-btn">
+                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
+                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +578,30 @@
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">Top <span class="sec-title__title__shape">Recruiters</span></span></h3><!-- /.sec-title__title -->
+                    <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
+                </div><!-- /.sec-title -->
+            </div>
+            <div class="col-md-8">
+                <ul class="recruiters ">
+                    @foreach(getRecruiters() as $key => $recruiter)
+                    <div class="placement-redious-grid">
+                        <span class="placement-grid-img">
+                            <img src="{{ getSizedImage($recruiter->featured_image) }}" alt="{{ $recruiter->name }}" class="width-100">
+                        </span>
+                    </div>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Why Us Start -->
 <section class="section-padding about">
@@ -644,167 +666,51 @@
 <section class="section section-bg relative z-1 about_bg" style="background-image: url({{ url('assets/frontend/images/bg/bg_1.png')}});">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title left-align wow fadeInLeft">
-                    <p class="subtitle mb-4">
-                        <i class="fal fa-book"></i>
-                        Our Testimonials
-                    </p>
-                    <h3 class="title mb-0">What’s Our Clients<br> About Us</h3>
-                </div>
-            </div>
-        </div>
-        <div class="testimonial_slider style_2 row wow fadeInDown">
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title left-align wow fadeInLeft">
+                            <p class="subtitle mb-4">
+                                <i class="fal fa-book"></i>
+                                Our Testimonials
+                            </p>
+                            <h3 class="title mb-3">What’s Our Students Says<br> About Us</h3>
+                            <p> We take pride in the success of our students. Hear directly from them as they share their experiences, growth, and how our programs have helped shape their journey. </p>
                         </div>
-                        <div class="text">
-                            <h6 class="mb-0">Herminia F. Hudson</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star"></i>
                     </div>
                 </div>
             </div>
-            <!-- Testimonial Item -->
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="testimonial_slider style_2">
+                        @foreach(getTestimonials() as $testimonial)
+                        <div class="slide-item col-12">
+                            <div class="testimonial_item">
+                                <div class="author">
+                                    <div class="image bg-thm-color-two">
+                                        <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
+                                    </div>
+                                    <div class="text">
+                                        <h6 class="mb-0">{{ $testimonial->name }}</h6>
+                                        <p class="mb-0 font-weight-bold thm-color-two">{{ $testimonial->dasignation }}</p>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    {!! $testimonial->comment !!}
+                                </div>
+                                <div class="ratings">
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h6 class="mb-0">Robert M. Morales</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star"></i>
-                        <i class="fal fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial Item -->
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
-                        </div>
-                        <div class="text">
-                            <h6 class="mb-0">Nicolas Vanderpool</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <!-- Testimonial Item -->
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
-                        </div>
-                        <div class="text">
-                            <h6 class="mb-0">Herminia F. Hudson</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial Item -->
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
-                        </div>
-                        <div class="text">
-                            <h6 class="mb-0">Robert M. Morales</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star"></i>
-                        <i class="fal fa-star"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial Item -->
-            <!-- Testimonial Item -->
-            <div class="slide-item col-12">
-                <div class="testimonial_item style_4">
-                    <div class="author">
-                        <div class="image bg-thm-color-two">
-                            <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
-                        </div>
-                        <div class="text">
-                            <h6 class="mb-0">Nicolas Vanderpool</h6>
-                            <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
-                        </div>
-                    </div>
-                    <p class="comment">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                    </p>
-                    <div class="ratings">
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                        <i class="fal fa-star active"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial Item -->
         </div>
     </div>
 </section>

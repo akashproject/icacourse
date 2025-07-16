@@ -5,10 +5,10 @@
                 <h3 class="title">Explore the Best Accounting Training Programs</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="course_slider">
             @foreach(get_courses(1) as $course)
-                <div class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="coach_block">
+                <div class="slide-item col-12">
+                    <div class="coach_block course-item">
                         <div class="coach_hover_tooltip"> 
                             <h4> {{ $course->name }} </h4>
                             <div class="course_hover_stat" >
