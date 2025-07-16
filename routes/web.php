@@ -18,6 +18,7 @@ Route::group(['prefix' => 'administrator'], function () {
 
         // Leads
         Route::get('/leads/{type}', [App\Http\Controllers\Administrator\LeadController::class, 'index'])->name('admin-leads');
+
         //Page
         Route::get('/pages', [App\Http\Controllers\Administrator\PageController::class, 'index'])->name('admin-pages');
         Route::get('/add-page', [App\Http\Controllers\Administrator\PageController::class, 'Add'])->name('admin-add-page');
@@ -107,7 +108,11 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::get('/orders', [App\Http\Controllers\Administrator\OrderController::class, 'index'])->name('admin-orders');
         Route::get('/order/{id}', [App\Http\Controllers\Administrator\OrderController::class, 'show'])->name('admin-order-detail');
         Route::get('/admissions', [App\Http\Controllers\Administrator\OrderController::class, 'admissions'])->name('admin-admissions');
-        
+       
+        //Admission
+        Route::post('/push-to-erp', [App\Http\Controllers\Administrator\AdmissionController::class, 'pushToERP'])->name('admin-push-to-erp');
+
+        //Settings
         Route::get('/settings', [App\Http\Controllers\Administrator\SettingController::class, 'show'])->name('admin-settings');
         Route::post('/save-settings', [App\Http\Controllers\Administrator\SettingController::class, 'save'])->name('admin-save-settings');
     });
@@ -134,8 +139,7 @@ Route::get('/cart/validate', [App\Http\Controllers\CheckoutController::class, 's
 Route::post('/validate-lead', [App\Http\Controllers\CheckoutController::class, 'validateLead'])->name('validate-lead');
 Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');
 Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout')->middleware('check_cart_item');
-Route::get('/payemnt/order-success', [App\Http\Controllers\CheckoutController::class, 'orderSuccess'])->name('payment-order-success');
-Route::get('/payemnt/order-failed', [App\Http\Controllers\CheckoutController::class, 'orderFailed'])->name('payment-order-failed');
+
 
 //Payment
 Route::get('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');

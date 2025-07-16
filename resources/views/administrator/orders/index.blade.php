@@ -6,60 +6,60 @@
 			<div class="card-widget-separator-wrapper">
 			<div class="card-body card-widget-separator">
 				<div class="row gy-4 gy-sm-1">
-				<div class="col-sm-6 col-lg-3">
-					<div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
-					<div>
-						<h4 class="mb-0">56</h4>
-						<p class="mb-0">Pending Payment</p>
-					</div>
-					<span class="avatar w-px-40 h-px-40 me-sm-6">
-						<span class="avatar-initial bg-label-secondary rounded">
-						<i class="icon-base bx bx-calendar icon-lg text-heading"></i>
+					<div class="col-sm-6 col-lg-3">
+						<div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
+						<div>
+							<h4 class="mb-0">{{ $success }}</h4>
+							<p class="mb-0">Success</p>
+						</div>
+						<span class="avatar w-px-40 h-px-40 p-2 me-lg-6">
+							<span class="avatar-initial bg-label-secondary rounded">
+							<i class="icon-base bx bx-check-double icon-lg text-heading"></i>
+							</span>
 						</span>
-					</span>
+						</div>
+						<hr class="d-none d-sm-block d-lg-none">
 					</div>
-					<hr class="d-none d-sm-block d-lg-none me-6">
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
-					<div>
-						<h4 class="mb-0">12,689</h4>
-						<p class="mb-0">Completed</p>
-					</div>
-					<span class="avatar w-px-40 h-px-40 p-2 me-lg-6">
-						<span class="avatar-initial bg-label-secondary rounded">
-						<i class="icon-base bx bx-check-double icon-lg text-heading"></i>
+					<div class="col-sm-6 col-lg-3">
+						<div class="d-flex justify-content-between align-items-start border-end pb-4 pb-sm-0 card-widget-3">
+						<div>
+							<h4 class="mb-0">{{ $erpStatusSuccess }}</h4>
+							<p class="mb-0">ERP Pushed Success</p>
+						</div>
+						<span class="avatar w-px-40 h-px-40 p-2 me-sm-6">
+							<span class="avatar-initial bg-label-secondary rounded">
+							<i class="icon-base bx bx-wallet icon-lg text-heading"></i>
+							</span>
 						</span>
-					</span>
+						</div>
 					</div>
-					<hr class="d-none d-sm-block d-lg-none">
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="d-flex justify-content-between align-items-start border-end pb-4 pb-sm-0 card-widget-3">
-					<div>
-						<h4 class="mb-0">124</h4>
-						<p class="mb-0">Refunded</p>
-					</div>
-					<span class="avatar w-px-40 h-px-40 p-2 me-sm-6">
-						<span class="avatar-initial bg-label-secondary rounded">
-						<i class="icon-base bx bx-wallet icon-lg text-heading"></i>
+					<div class="col-sm-6 col-lg-3">
+						<div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
+						<div>
+							<h4 class="mb-0">{{ $pending }}</h4>
+							<p class="mb-0">Pending Payment</p>
+						</div>
+						<span class="avatar w-px-40 h-px-40 me-sm-6">
+							<span class="avatar-initial bg-label-secondary rounded">
+							<i class="icon-base bx bx-calendar icon-lg text-heading"></i>
+							</span>
 						</span>
-					</span>
+						</div>
+						<hr class="d-none d-sm-block d-lg-none me-6">
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="d-flex justify-content-between align-items-start">
-					<div>
-						<h4 class="mb-0">32</h4>
-						<p class="mb-0">Failed</p>
-					</div>
-					<span class="avatar w-px-40 h-px-40 p-2">
-						<span class="avatar-initial bg-label-secondary rounded">
-						<i class="icon-base bx bx-error-alt icon-lg text-heading"></i>
+					<div class="col-sm-6 col-lg-3">
+						<div class="d-flex justify-content-between align-items-start">
+						<div>
+							<h4 class="mb-0">{{ $erpStatusFailed }}</h4>
+							<p class="mb-0">ERP Pushed Failed</p>
+						</div>
+						<span class="avatar w-px-40 h-px-40 p-2">
+							<span class="avatar-initial bg-label-secondary rounded">
+							<i class="icon-base bx bx-error-alt icon-lg text-heading"></i>
+							</span>
 						</span>
-					</span>
+						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 			</div>

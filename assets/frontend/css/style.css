@@ -40,6 +40,12 @@
     background:#dd3f02 !important;
 }
 
+.label-success {
+    background: #89d511;
+}
+.label-failed {
+    background: #ff1d1d;
+}
 /*Animations*/
 @keyframes fadeHeaderInDown {
     0% {
@@ -239,6 +245,14 @@ a, a:hover, a:focus, a:visited {
 }
 #otp_target {
     display: flex;
+}
+.check-icon {
+    font-size: 72px;
+    overflow: hidden;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: auto;
 }
 /*General*/
 

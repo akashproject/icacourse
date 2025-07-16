@@ -2,6 +2,21 @@
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
 	@if($order)
+		@if ($errors->any())
+			<div class="alert alert-danger">
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
+
+		@if(session()->has('message'))
+			<div class="alert alert-success">
+				{{ session()->get('message') }}
+			</div>
+		@endif
 		<div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-6 row-gap-4">
 			<div class="d-flex flex-column justify-content-center">
 				<div class="mb-1">
@@ -12,10 +27,13 @@
 				<p class="mb-0">{{ date('M d',strtotime($order->created_at)) }}, <span id="orderYear">{{ date('Y',strtotime($order->created_at)) }}</span>, {{ date('h:i',strtotime($order->created_at)) }} </p>
 			</div>
 			@if($order->erp_status == "0")
-			<form 
-			<div class="d-flex align-content-center flex-wrap gap-2">
-				<button class="btn btn-label-danger delete-order ">Push to ERP</button>
-			</div>
+			<form class="form-horizontal" method="post" action="{{ route('admin-push-to-erp') }}" enctype="multipart/form-data">
+				@csrf
+				<div class="d-flex align-content-center flex-wrap gap-2">
+					<input type="hidden" value="{{ $order->order_id }}" name="order_id" >
+					<button type="submit" class="btn btn-label-danger delete-order ">Push to ERP</button>
+				</div>
+			</form>
 			@else
 			<div class="d-flex align-content-center flex-wrap gap-2">
 				<button class="btn btn-label-success">ERP Pushed Success</button>

@@ -16,7 +16,12 @@ class OrderController extends Controller
         try {
 
             $orders = Order::all();
-            return view('administrator.orders.index',compact('orders'));
+            $pending = Order::where('status','pending')->count();
+            $success = Order::where('status','success')->count();
+            $erpStatusFailed = Order::where('erp_status','0')->count();
+            $erpStatusSuccess = Order::where('erp_status','1')->count();
+
+            return view('administrator.orders.index',compact('orders','pending','success','erpStatusSuccess','erpStatusFailed'));
 
         } catch(\Illuminate\Database\QueryException $e){
 

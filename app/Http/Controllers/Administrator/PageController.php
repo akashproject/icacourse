@@ -15,7 +15,6 @@ class PageController extends Controller
         try {
             $pages = Page::all();
             return view('administrator.pages.index',compact('pages'));
-
         } catch(\Illuminate\Database\QueryException $e){
             var_dump($e->getMessage()); 
         }        
@@ -50,8 +49,8 @@ class PageController extends Controller
             if($data['page_id'] <= 0){
                 Page::create($data);
             } else {
-                $institute = Page::findOrFail($data['page_id']);
-                $institute->update($data);
+                $page = Page::findOrFail($data['page_id']);
+                $page->update($data);
             }
             return redirect()->back()->with('message', 'Page updated successfully!');
         } catch(\Illuminate\Database\QueryException $e){
