@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\Invoice;
+use Illuminate\Support\Facades\Mail;
 use App\Trait\admissionProcess;
 use App\Models\Order;
 use App\Models\OrderItem;
@@ -17,10 +19,14 @@ class PaymentController extends Controller
                 'enable_otp' => get_theme_setting('enable_otp')
             ];
             $order_id = "order_O64NWY58Q7E0DS";
-            $erp = $this->erpPushProcess($order_id);
-            if (!$erp) {
-                return redirect()->route('payment-failed');
-            }
+            // $erp = $this->erpPushProcess($order_id);
+            // if (!$erp) {
+            //     return redirect()->route('payment-failed');
+            // }
+
+            $order = ['id' => 101, 'address' => 'Kolkata, India'];
+            $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($order));
+            dd($mail);
             return view('payment.success',compact('contentMain'));
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;

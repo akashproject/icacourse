@@ -585,7 +585,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title">Our <span class="sec-title__title__text">Top <span class="sec-title__title__shape">Recruiters</span></span></h3><!-- /.sec-title__title -->
+                    <h3 class="title">Our Top <span class="curve-text">Recruiters</span></h3>
                     <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
                 </div><!-- /.sec-title -->
             </div>
@@ -688,7 +688,7 @@
                             <div class="testimonial_item">
                                 <div class="author">
                                     <div class="image bg-thm-color-two">
-                                        <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
+                                        <img src="{{ getSizedImage($testimonial->featured_image) }}" alt="img" class="image-fit">
                                     </div>
                                     <div class="text">
                                         <h6 class="mb-0">{{ $testimonial->name }}</h6>

@@ -69,17 +69,6 @@
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="institute_id" class="col-sm-3 text-right control-label col-form-label">Institute</label>
-							<div class="col-sm-9">
-								<select name="institute_id" id="institute_id" class="select2 form-control custom-select" >	
-									<option value="">Select Institute</option>
-									@foreach($institutes as $institute)
-									<option value="{{ $institute->id }}" {{ ( $adPage->institute_id ==  $institute->id )? 'selected' : '' }}>{{ $institute->name }}</option>
-									@endforeach
-								</select>
-							</div>
-						</div>
-						<div class="form-group row mb-2">
 							<label for="template" class="col-sm-3 text-right control-label col-form-label">Template</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" name="template" id="template" placeholder="Template Here" value="{{ $adPage->template }}">

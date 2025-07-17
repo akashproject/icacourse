@@ -4,7 +4,8 @@
 
 'use strict';
 
-let menu, animate;
+let menu, animate, imageId, imagePath, fieldId, lectureField;
+let BulkSelect = false;
 
 (function () {
   // Initialize menu
@@ -115,4 +116,59 @@ let menu, animate;
 
   // Auto update menu collapsed/expanded based on the themeConfig
   window.Helpers.setCollapsed(true, false);
+
+  jQuery('.open-popup-link').magnificPopup({
+    type: 'inline',
+    midClick: true,
+    mainClass: 'mfp-fade'
+  });
+
+  jQuery(".image-thumbnail-container").on("click",'.image-thumbnail',function(){
+    imageId = jQuery(this).attr("data-id");
+    imagePath = jQuery(this).children("img").attr("src");
+    if (!BulkSelect) {
+      jQuery(".image-thumbnail").removeClass("active");
+    }
+    jQuery(this).toggleClass("active");
+  });
+
+  jQuery(".image-profile").on("click",function(){
+    fieldId = jQuery(this).children("input").attr("id");
+  });
+
+  jQuery(".removeImage").on("click",function(){
+    jQuery(this).parent().children().children("img").attr("src","https://dummyimage.com/150x150?text=Add%20Image");
+      jQuery(this).parent().children().children("input").val("");
+  });
 })();
+
+function setMedia(){
+  console.log(fieldId);
+  
+  $("#"+fieldId).val(imageId);
+  $("#"+fieldId).parent().children("img").attr("src",imagePath)
+  $.magnificPopup.close();
+}
+
+function getCitiesByStateId(event){
+  let state_id = event.value;
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  });
+  $.ajax({
+      url: `${globalUrl}administrator/get-city-by-state-id`,
+      type: "post",
+      data: {
+          state_id: state_id,
+      },
+      success: function(result) {
+          let htmlContent = '<option value="">Select City</option>';
+          $.each(result, function (key, data) {
+              htmlContent += '<option value="'+data.id+'"> '+data.name+' </option>';
+          });
+          $("#city_id").html(htmlContent);  
+      }
+  });
+}

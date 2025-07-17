@@ -103,7 +103,7 @@ class CheckoutController extends Controller
             if(!$order) {
                 return redirect()->back()->with('message', 'Failed to create order! Please try again');
             }
-            
+            $base_value = 0;
             if(isset($data['discount']) && $data['discount'] != ''){
 				$base_value = intdiv($data['discount'], count($cartItems));
 				$remainder = $data['discount'] % count($cartItems);
@@ -119,7 +119,7 @@ class CheckoutController extends Controller
                     'course_id' =>$key,
                     'fee_id' =>$value,
                     'amount'=> $fee->Down_Payment - $base_value,
-                    'discount' => ($data['discount'])?$base_value:'',
+                    'discount' => ($data['discount'])?$base_value:0,
                 ];
             }
 

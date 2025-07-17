@@ -77,7 +77,7 @@
 									<option value="">Update Status</option>
 									<option value="1" > Publish</option>
 									<option value="0" > Private </option>
-								<select>
+								</select>
 							</div>
 						</div>
 						<div class="form-group row mb-3">

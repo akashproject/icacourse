@@ -12,7 +12,6 @@ class AdPageController extends Controller
     public function index($slug,Request $request)
     {
         try {
-            $institute = ($request->has("center"))?$request->input('center'):null;
             $contentMain = Adspage::where('slug', $slug)->firstOrFail();
             $courseType = null;
             $courses = null;

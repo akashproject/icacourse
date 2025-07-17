@@ -82,7 +82,7 @@
 									<option value="">Update Status</option>
 									<option value="1" {{ ( $testimonial->status ==  '1' )? 'selected' : '' }} > Publish</option>
 									<option value="0" {{ ( $testimonial->status ==  '0' )? 'selected' : '' }}> Private </option>
-								<select>
+								</select>
 							</div>
 						</div>
 						<div class="form-group row mb-2">

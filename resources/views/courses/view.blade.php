@@ -78,25 +78,25 @@
                             <div class="tab-pane fade" id="tab-curriculum" role="tabpanel" aria-labelledby="tab-curriculum-tab">
                                 <div class="syllabus_list accordion accordion-style style_2 mb-xl-30" id="generalaccordion">
                                     @if($contentMain->subjects)
-                                    @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
-                                    <ul class="card">
-                                        <li class="card-header" id="heading_{{ $key }}">
-                                            <a class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{ $key }}" aria-expanded="true" aria-controls="collapse_{{ $key }}">
-                                               <span class="mx-2"><i class="fal fa-book"></i></span> {{ $subject->name }}
-                                            </a>
-                                            <span class="accordion-time__duration"> {{ $subject->duration }} </span>
-                                        </li>
-                                        <div id="collapse_{{ $key }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ $key }}" data-bs-parent="#accordionExample">
-                                            <div class="card-body">
-                                                <ul>
-                                                    @foreach(getTopicsBySubjectId($subject->id) as $key => $topic)
-                                                    <li aria-level="{{ $key +1}}">{{ $topic->name }}</li>
-                                                    @endforeach
-                                                </ul>
+                                        @foreach(getSubjectsByCourseId($contentMain->subjects) as $key => $subject)
+                                        <ul class="card">
+                                            <li class="card-header" id="heading_{{ $key }}" data-bs-toggle="collapse" data-bs-target="#collapse_{{ $key }}" aria-expanded="true" aria-controls="collapse_{{ $key }}">
+                                                <a class="btn btn-link" type="button" >
+                                                    <span class="mx-2"><i class="fal fa-book"></i></span> {{ $subject->name }}
+                                                </a>
+                                                <span class="accordion-time__duration"> {{ $subject->duration }} </span>
+                                            </li>
+                                            <div id="collapse_{{ $key }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ $key }}" data-bs-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <ul>
+                                                        @foreach(getTopicsBySubjectId($subject->id) as $key => $topic)
+                                                        <li aria-level="{{ $key +1}}">{{ $topic->name }}</li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </ul>
-                                    @endforeach
+                                        </ul>
+                                        @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -218,8 +218,61 @@
             <img src="{{ url('/assets/frontend/images/elements/element_7.png')}}" class="element_2 zoom-fade" alt="Element">
         </div>
     </div>
+    <!-- Testimonials Start -->
+    <section class="section section-bg relative z-1 about_bg" style="background-image: url({{ url('/assets/frontend/images/bg/bg_1.png')}});">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title left-align wow fadeInLeft">
+                                <p class="subtitle mb-4">
+                                    <i class="fal fa-book"></i>
+                                    Our Testimonials
+                                </p>
+                                <h3 class="title mb-3">What’s Our Students Says<br> About Us</h3>
+                                <p> We take pride in the success of our students. Hear directly from them as they share their experiences, growth, and how our programs have helped shape their journey. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="testimonial_slider style_2">
+                            @foreach(getTestimonials() as $testimonial)
+                            <div class="slide-item col-12">
+                                <div class="testimonial_item">
+                                    <div class="author">
+                                        <div class="image bg-thm-color-two">
+                                            <img src="{{ getSizedImage($testimonial->featured_image) }}" alt="img" class="image-fit">
+                                        </div>
+                                        <div class="text">
+                                            <h6 class="mb-0">{{ $testimonial->name }}</h6>
+                                            <p class="mb-0 font-weight-bold thm-color-two">{{ $testimonial->dasignation }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="comment">
+                                        {!! $testimonial->comment !!}
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star active"></i>
+                                        <i class="fal fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials End -->
 
-    @if($contentMain->faqs)
+     @if($contentMain->faqs)
     <section class="section">
         <div class="container">
             <div class="row">
@@ -234,207 +287,26 @@
                 </div>
             </div>
             <div class="row">
+                
                 <div class="accordion accordion-style accordion-style-2 style_2 mb-xl-30">
-                    <ul class="card">
-                        <li class="card-header" id="heading_0">
-                            <a class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_0" aria-expanded="false" aria-controls="collapse_0">
-                                <span class="mx-2"><i class="fal fa-book"></i></span> Business Computer Applications
-                            </a>
-                            <span class="accordion-time__duration"> 45 Hours </span>
-                        </li>
-                        <div id="collapse_0" class="accordion-collapse collapse" aria-labelledby="heading_0" data-bs-parent="#accordionExample" style="">
-                            <div class="card-body">
-                                    dasdasdasdsa
-                            </div>
-                        </div>
-                    </ul>
+                    @foreach(getFaqsById($contentMain->faqs) as $key => $faq)
                     <div class="card">
-                        <div class="card-header">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#AllCoachItem3" aria-expanded="true" aria-controls="AllCoachItem3">
-                                What equipment do we need to join the course? </button>
+                        <div class="card-header" data-bs-toggle="collapse" data-bs-target="#faq_item_{{ $key }}" aria-expanded="false" aria-controls="faq_item_{{ $key }}">
+                            <button class="btn btn-link" type="button" >
+                                {{ $faq->question }} </button>
                         </div>
-                        <div id="AllCoachItem3" class="collapse" aria-labelledby="AllCoachItem3" data-parent="#allcoachaccordion">
+                        <div id="faq_item_{{ $key }}" class="collapse" aria-labelledby="faq_item_{{ $key }}" >
                             <div class="card-body">
-                                <ul>
-                                    <li>Laptop or desktop along with stable internet connection &amp; a webcam.</li>
-                                    <li>Smartphone to access the e-content.</li>
-                                </ul>
+                                {!! $faq->answer !!}
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
+                
             </div>
         </div>
     </section>
     @endif  
 
-   <!-- Testimonials Start -->
-    <section class="section section-bg relative z-1 bg-thm-color-one" style="background-image: url(assets/images/bg/bg_4.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title left-align white wow fadeInDown">
-                        <p class="subtitle mb-4">
-                            <i class="fal fa-book"></i>
-                            Our Testimonials
-                        </p>
-                        <h3 class="title mb-0">What’s Our Clients<br> About Us</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial_slider style_2 row wow fadeInUp">
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Herminia F. Hudson</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Robert M. Morales</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star"></i>
-                            <i class="fal fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Nicolas Vanderpool</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/1.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Herminia F. Hudson</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Web Designer</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/2.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Robert M. Morales</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Business Manager</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star"></i>
-                            <i class="fal fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-                <!-- Testimonial Item -->
-                <div class="slide-item col-12">
-                    <div class="testimonial_item style_dark">
-                        <div class="author">
-                            <div class="image bg-thm-color-two">
-                                <img src="assets/images/author/3.jpg" alt="img" class="image-fit">
-                            </div>
-                            <div class="text">
-                                <h6 class="mb-0">Nicolas Vanderpool</h6>
-                                <p class="mb-0 font-weight-bold thm-color-two">Apps Developer</p>
-                            </div>
-                        </div>
-                        <p class="comment">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudtium totam rem aperiam eaque quae
-                        </p>
-                        <div class="ratings">
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                            <i class="fal fa-star active"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonial Item -->
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials End -->
     @endsection 

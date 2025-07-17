@@ -69,13 +69,12 @@
 							</div>
 						</div>
 						<div class="form-group row mb-2">
-							<label for="institute_id" class="col-sm-3 text-right control-label col-form-label">Institute</label>
-							<div class="col-sm-9">
-								<select name="institute_id[]" id="institute_id" class="select2 form-control custom-select" >	
-									<option value="">Select Institute</option>
-									@foreach($institutes as $institute)
-									<option value="{{ $institute->id }}" >{{ $institute->name }}</option>
-									@endforeach
+							<label for="store_area" class="col-sm-4 text-right control-label col-form-label">Capture To CRM</label>
+							<div class="col-sm-8">
+								<select name="store_area" id="store_area" class="select2 form-control custom-select" >	
+									<option value="">Select Option</option>
+									<option value="1" >Yes</option>
+									<option value="0" >No</option>
 								<select>
 							</div>
 						</div>

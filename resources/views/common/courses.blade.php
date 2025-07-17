@@ -1,34 +1,17 @@
 <section class="section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-12 text-center aos-init" data-aos="fade-up" data-aos-delay="">
-                <h3 class="title">Explore the Best Accounting Training Programs</h3>
+            <div class="col-lg-8 aos-init" data-aos="fade-up" data-aos-delay="">
+                <h3 class="title">Explore the Best <span class="curve-text"> Accounting Training Programs</span></h3>
+            </div>
+            <div class="col-md-4 text-right">
+                <a href="{{ route('page-view','online-accounting-courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
             </div>
         </div>
         <div class="course_slider">
             @foreach(get_courses(1) as $course)
                 <div class="slide-item col-12">
                     <div class="coach_block course-item">
-                        <div class="coach_hover_tooltip"> 
-                            <h4> {{ $course->name }} </h4>
-                            <div class="course_hover_stat" >
-                                <div class="total-rating" >
-                                    <a href="javascript:void(0)" style="color: #ffbd3f;" > 4.0 </a>
-                                    <div class="ratings " style="display: inline;margin: 0 6px;">
-                                        <i class="fal fa-star active"></i>
-                                        <i class="fal fa-star active"></i>
-                                        <i class="fal fa-star active"></i>
-                                        <i class="fal fa-star active"></i>
-                                        <i class="fal fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="course_price" > Course Price : <strong> Rs. {{ $course->price }}/- </strong></p>
-                            </div>
-                            {!! $course->feature !!}
-                            <div class="author text-center">
-                                <a href="{{ route('view-courses',$course->slug) }}" class="btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Know More </a>
-                            </div>
-                        </div>
                         <div class="coach_img">
                             <a href="{{ route('view-courses',$course->slug) }}" class="">
                                 <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" class="">

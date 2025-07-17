@@ -12,6 +12,6 @@ class Adpage extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id','name','slug','banner_image','description','email','mobile','template','course_id','institute_id','faqs','title','enable_otp','store_area','meta_description','schema','robots','utm_campaign','utm_source','lead_type','status','created_at',
+        'id','name','slug','banner_image','description','email','mobile','template','course_id','faqs','title','enable_otp','store_area','meta_description','schema','robots','utm_campaign','utm_source','lead_type','status','created_at',
     ];
 }

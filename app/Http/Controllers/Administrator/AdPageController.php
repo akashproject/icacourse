@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Administrator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Adpage;
-use App\Models\Institute;
 use App\Models\Course;
 use Illuminate\Support\Facades\DB;
 
@@ -26,8 +25,7 @@ class AdPageController extends Controller
     public function add() {
         try {
             $courses = Course::all();
-            $institutes = Institute::all();
-            return view('administrator.adPages.add',compact('institutes','courses'));
+            return view('administrator.adPages.add',compact('courses'));
         } catch(\Illuminate\Database\QueryException $e){
             //throw $th;
         }
@@ -37,9 +35,8 @@ class AdPageController extends Controller
     {
         try {
             $courses = Course::all();
-            $institutes = Institute::all();
             $adPage = Adpage::findorFail($id);
-            return view('administrator.adPages.show',compact('adPage','institutes','courses'));
+            return view('administrator.adPages.show',compact('adPage','courses'));
         } catch(\Illuminate\Database\QueryException $e){
         }        
     }
