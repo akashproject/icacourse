@@ -95,9 +95,9 @@
                                 </a>
                             </div>
                             <div class="coach_caption">
-                                <div class="course_tag text-white">
-                                    <span class="tag bg-green px-3 py-1"><i class="fal fa-book"></i> {{ $course->no_of_module }} Modules</span>
-                                    <span class="tag bg-orange px-3 py-1"><i class="fal fa-clock"></i> {{ $course->duration }}</span>
+                                <div class="course_tag">
+                                    <span class="tag py-1"><i class="fal fa-book"></i> {{ $course->no_of_module }} Modules</span>
+                                    <span class="tag py-1"><i class="fal fa-clock"></i> {{ $course->duration }}</span>
                                 </div>
 
                                 <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
@@ -113,27 +113,30 @@
                                         ({{ $course->number_of_rating }}) Ratings
                                     </div>
                                 </div>
-                                <div class="coach_meta">
-                                    <div class="price_wrap"> 
-                                        <div class="sell_price">
-                                            ₹{{ number_format($course->price) }}/-
+                                <div class="d-flex" style="align-items: center;">
+                                    <div class="coach_meta">
+                                        <div class="price_wrap"> 
+                                            <div class="sell_price">
+                                                ₹{{ number_format($course->price) }}/-
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="author mt-3">
-                                    <form method="post" id="add_course_to_cart_{{ $course->id }}" class="add_course_to_cart" data-id="{{ $course->id }}">
-                                        @csrf
-                                        <input type="hidden" name="course_fee_id" value="{{ getOneTimePayFee($course->erp_course_id)->FeeID }}" >
-                                        <input type="hidden" name="course_id" value="{{ $course->id }}" >
-                                        @php    
-                                            $props = (array_key_exists($course->id, $cartItems))?"disabled":""
-                                        @endphp
-                                        <button type="submit" class="{{$props}} add_to_cart_btn_{{ $course->id }} btn btn-small thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" {{$props}}> 
-                                            <i class="fal fa-shopping-bag mx-3"></i> {{ ($props == "disabled")?"Added to cart":"Add to cart"; }}
-                                        </button>
-                                    </form>
+                                    <div class="author">
+                                        <form method="post" id="add_course_to_cart_{{ $course->id }}" class="add_course_to_cart" data-id="{{ $course->id }}">
+                                            @csrf
+                                            <input type="hidden" name="course_fee_id" value="{{ getOneTimePayFee($course->erp_course_id)->FeeID }}" >
+                                            <input type="hidden" name="course_id" value="{{ $course->id }}" >
+                                            @php    
+                                                $props = (array_key_exists($course->id, $cartItems))?"disabled":""
+                                            @endphp
+                                            <button type="submit" class="{{$props}} add_to_cart_btn_{{ $course->id }} btn btn-small add-to-cart text-white bg-thm-color-two thm-color-two-shadow btn-rectangle" {{$props}}> 
+                                                <i class="fal fa-shopping-bag"></i> {{ ($props == "disabled")?"Added to cart":"Add to cart"; }}
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

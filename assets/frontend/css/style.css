@@ -575,7 +575,10 @@ img {
 
 
 /*Slick Arrows*/
-
+.course_slider {
+    padding-top: 20px;
+    margin-top: 20px;
+}
 .slick-arrow {
     position: absolute;
     top: 50%;
@@ -620,23 +623,21 @@ img {
 
 
 .slick-arrow.slick-prev {
-
-    right: auto;
-
-    left: 0;
-
-}
-
-
-
-.slick-arrow.slick-next {
-
+    display: block !important;
+    position: absolute;
+    right: 60px;
     left: auto;
-
-    right: 0;
-
+    border-radius: 50%;
+    top: 0;
 }
-
+.slick-arrow.slick-next {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    left: auto;
+    border-radius: 50%;
+    top: 0;
+}
 
 
 .slick-arrow:hover {
@@ -4751,10 +4752,10 @@ a.remove_form_cart {
     bottom: 14px;
     right: 0;
 }
+
 .coach_block {
     box-shadow: 0px 0px 3px 0px #5b5b5b6b;
     margin-bottom: 30px;
-    min-height: 437px;
     position: relative;
 }
 
@@ -8348,7 +8349,7 @@ a.change_mobile_no {
 /*course_details*/
 
 .course-item {
-    padding: 0;
+    padding-bottom: 20px;
     margin: 20px 5px;
 }
 
@@ -10384,4 +10385,75 @@ align-self: center;
       }
     }
   }
+}
+
+/* soumen-17-07-27 */
+
+.add-to-cart:hover {
+    background: #97289F;
+}
+
+
+.hero-banner{
+    width: 100%;
+    height: 100vh;
+    background-color: #f9fafe;
+}
+.hero-banner h2{
+    font-size: 3.5rem;
+}
+
+.why-wrapper{
+    background-color: #E7E4FF;
+    padding: 5rem 0;
+}
+.why-wrapper .pre-heading{
+    font-size: 1.2rem;
+    color: #393185;
+    font-weight: 600;
+}
+.why-wrapper .sec-heading{
+    font-size: 2.2rem;
+}
+.why-wrapper h5{
+    margin-bottom: 13px;
+    font-size: 1.3rem;
+}
+
+
+.experience-wrapper{
+    background-color: #655ACC;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0;
+}
+.experience-wrapper::after{
+    content: '';
+    position: absolute;
+    left: 29%;
+    top: 27px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #776fd1;
+    background: linear-gradient(182deg, rgba(119, 111, 209, 1) 42%, rgba(187, 176, 232, 1) 100%);
+}
+.experience-wrapper h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    position: relative;
+    z-index: 999;
+}
+.experience-wrapper .experience-img-right{
+    position: absolute;
+    right: 44px;
+    bottom: 0;
+    width: 158px;
+}
+.experience-wrapper .experience-img-left{
+    position: absolute;
+    left: 44px;
+    bottom: 0;
+    width: 245px;
 }

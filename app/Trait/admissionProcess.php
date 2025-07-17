@@ -28,13 +28,14 @@ trait admissionProcess
             foreach($orderItems as $key => $item) {
                 $course = getCourseById($item->course_id);
                 $fee = getFeeById($item->fee_id);
+                $next_installment = ($fee->Install_Payable == "Y")?date('d/m/Y', strtotime('+1 month')):'';
                 $courseModule[$key] = (object) array(
                     "CourseId"=>$course->erp_course_id,
                     "FeeID"=>$item->fee_id,
-                    "SoldAt"=>$item->amount,
+                    "SoldAt"=>$fee->Course_Fees - $item->discount,
                     "DwnPmt"=>$item->amount,
                     "Rec_Amt"=>$item->amount,
-                    "InstStartMonth"=> "10/08/2025",
+                    "InstStartMonth"=> $next_installment,
                     "NoOfInstallment"=>$fee->NoOfInstall,
                     "InstAmt"=>$fee->InstallAmount,
                     "batchId"=>"0",
@@ -49,7 +50,7 @@ trait admissionProcess
                 "source"=>"ICAJOBGUARANTEE",
                 "Student_fname"=> $student->first_name,
                 "Student_lname"=> $student->last_name,
-                "Dob"=> $student->date_of_birth,
+                "Dob"=> date("d/m/Y",strtotime($student->date_of_birth)),
                 "Qualification"=> $student->qualification,
                 "Address1"=> $student->address,
                 "Address2"=>"",

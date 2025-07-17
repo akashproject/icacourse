@@ -18,11 +18,12 @@ class PaymentController extends Controller
             $contentMain = (object)[
                 'enable_otp' => get_theme_setting('enable_otp')
             ];
-            $order_id = "order_O64NWY58Q7E0DS";
-            // $erp = $this->erpPushProcess($order_id);
-            // if (!$erp) {
-            //     return redirect()->route('payment-failed');
-            // }
+            $order_id = "order_7Z5BAYI492JLKG";
+            $erp = $this->erpPushProcess($order_id);
+            dd($erp);
+            if (!$erp) {
+                return redirect()->route('payment-failed');
+            }
 
             $order = ['id' => 101, 'address' => 'Kolkata, India'];
             $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($order));

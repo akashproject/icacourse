@@ -29,6 +29,33 @@
                 <label for="lead_pincode">Pincode</label>
             </div>
         </div>
+
+        <div class="col-lg-6 mb-2">
+            <div class="form-floating">
+                <select class="form-control" name="state" id="state" onChange="getCitiesByStateId(this);" required>
+                    <option value="">  Select State</option>
+                    @foreach(getStates() as $value)
+                    <option value="{{ $value->Id }}" {{ (isset($student['state']) && $student['state'] == $value->Id )?'selected':''}}> {{ $value->name }} </option>
+                    @endforeach
+                </select>
+                <label for="state" >State</label>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-2">
+            <div class="form-floating">
+                <select class="form-control" name="city" id="city" required="">
+                    <option value="">  Select City</option>
+                    @if(isset($student['state']))
+                        @foreach(getCitiesByStateName($student['state']) as $value)
+                        <option value="{{ $value->id }}" {{ (isset($student['city']) && $student['city'] == $value->id )?'selected':''}}> {{ $value->name }} </option>
+                        @endforeach
+                    @endif
+                </select>
+                <label for="city">City</label>
+            </div>
+        </div>
+
         <div class="col-lg-12">
             <div class="form-group disclaimer">
                 <p style="margin:0"><input type="checkbox" class="" checked> I agree to receive updates on <i class="fab fa-whatsapp" style="color: green;"></i> whatsapp. 

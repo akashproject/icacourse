@@ -9,7 +9,7 @@
                 </span>
             </a>
         </li>
-        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+        <li><a href="#" class="head_trigger mobile_trigger" ><i class="fas fa-bars"></i></a></li>
     </ul>
 </div>
 <footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_18.png);">

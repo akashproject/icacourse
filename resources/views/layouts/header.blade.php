@@ -1,3 +1,40 @@
+<!-- Mobile Menu Start -->
+<aside class="aside_bar aside_bar_left aside_mobile">
+    <!-- logo -->
+    <a href="{{ route('website') }}" class="logo">
+        <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo">
+    </a>
+    <!-- logo -->
+    <div class="container">
+        <ul style="font-size:20px">
+            <li>
+                <a href="tel:{{ get_theme_setting('mobile') }}">
+                    <i class="fal fa-phone"></i>
+                    {{ get_theme_setting('mobile') }}
+                </a>
+            </li>
+            <li>
+                <a href="mailto:{{ get_theme_setting('email') }}">
+                    <i class="fal fa-envelope"></i>
+                    {{ get_theme_setting('email') }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Menu -->
+    <nav>
+        <ul class="main-menu">
+            @foreach($primaryMenu as $key => $menuItem)
+            <li class="menu-item">
+                <a href="{{ url($menuItem['url']) }}">{{ $menuItem['name'] }}</a>
+            </li>
+            @endforeach
+        <ul>
+    </nav>
+    <!-- Menu -->
+</aside>
+<div class="aside-overlay trigger-left"></div>
+<!-- Mobile Menu End -->
 @if(Request::is('/'))
 <header class="header header-absolute can-sticky">
     <div class="topbar bg-thm-color-two">
@@ -6,15 +43,15 @@
                 <div class="col-lg-4 xs-display-none">
                     <ul class="right-side">
                         <li>
-                            <a href="tel:+918100704872">
+                            <a href="tel:{{ get_theme_setting('mobile') }}">
                                 <i class="fal fa-phone"></i>
-                                Call : +918100704872                                
+                                Call : {{ get_theme_setting('mobile') }}                                
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:online@icacourse.in">
+                            <a href="mailto:{{ get_theme_setting('email') }}">
                                 <i class="fal fa-envelope"></i>
-                                online@icacourse.in                                
+                                {{ get_theme_setting('email') }}                                
                             </a>
                         </li>
                     </ul>
@@ -78,9 +115,6 @@
                                 <li><a href="">CIA With Sap</a></li>
                             </ul> -->
                         </li>
-
-                        
-
                         @endforeach                 
                     </ul>
                 </div>
@@ -127,15 +161,15 @@
                 <div class="col-lg-4 xs-display-none">
                     <ul class="right-side">
                         <li>
-                            <a href="tel:+918100704872">
+                            <a href="tel:{{ get_theme_setting('mobile') }}">
                                 <i class="fal fa-phone"></i>
-                                Call : +918100704872                                
+                                Call : {{ get_theme_setting('mobile') }}                                
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:online@icacourse.in">
+                            <a href="mailto:{{ get_theme_setting('email') }}">
                                 <i class="fal fa-envelope"></i>
-                                online@icacourse.in                                
+                                {{ get_theme_setting('email') }}
                             </a>
                         </li>
                     </ul>

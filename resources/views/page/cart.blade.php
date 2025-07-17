@@ -36,7 +36,9 @@
                                 <a href="javascript:void(0)" class="remove_form_cart mr-3" onclick="remove_form_cart({{ $course->id }})"> 
                                     <i class="fa fa-trash" style="color:red"></i> 
                                 </a> 
-                                <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" style="border: 1px solid #ccc;padding: 2px;">
+                                <a href="{{ route('view-courses', $course->slug) }}">
+                                    <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" alt="Image" style="border: 1px solid #ccc;padding: 2px;">
+                                </a>
                             </div>
                             <div class="item_part item_content mr-2">
                                 <div class="item_content_description">
@@ -45,19 +47,19 @@
                                     </h6>
                                     <div class="course_hover_stat">
                                         <div class="total-rating">
-                                            <a href="javascript:void(0)" style="color: #ffbd3f;"> 4.0 </a>
                                             <div class="ratings " style="display: inline;margin: 0 6px;">
                                                 <i class="fal fa-star active"></i>
                                                 <i class="fal fa-star active"></i>
                                                 <i class="fal fa-star active"></i>
                                                 <i class="fal fa-star active"></i>
-                                                <i class="fal fa-star"></i>
+                                                <i class="fal fa-star active"></i>
                                             </div>
+                                            ({{ $course->number_of_rating }}) Ratings
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item_content_price">
-                                    <h6 class="Course_Fees mb-0"> ₹{{ number_format(getFeeById($item)->Down_Payment) }} </h6>
+                                    <h6 class="Course_Fees mb-0"> ₹{{ number_format(getFeeById($item)->Down_Payment) }} <i class="fa fa-tag" ></i></h6>
                                 </div>
                             </div>
                         </div>
@@ -89,6 +91,19 @@
             </div>
         </div>
         @endif
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 aos-init" data-aos="fade-up" data-aos-delay="">
+                <h3 class="title">You May Also Check<span class="curve-text"> Best Selling Courses</span></h3>
+            </div>
+            <div class="col-md-4 text-right">
+                <a href="{{ route('page-view','online-accounting-courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
+            </div>
+        </div>
+        @include('common.courses')
     </div>
 </section>
 @endsection
