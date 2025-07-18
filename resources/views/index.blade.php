@@ -8,7 +8,7 @@
                 <h2>Reinvent the <span class="">online learning</span> experience with us</h2>
                 <p>India’s #1 Accounts, Finance & Taxation Training Institute to Provide Online Job Assurance Courses</p>
                 <div class="d-flex">
-                    <a href="/online-accounting-courses/" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
+                    <a href="{{ route('page-view','courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -30,7 +30,7 @@
                 <h3 class="title">Explore the Best Online <span class="curve-text">Accounting and Taxation</span> Courses</h3>
             </div>
             <div class="col-md-4 text-right">
-                <a href="{{ route('page-view','online-accounting-courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
+                <a href="{{ route('page-view','courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
             </div>
         </div>
         @include('common.courses')

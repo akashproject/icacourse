@@ -140,6 +140,7 @@ Route::post('/validate-lead', [App\Http\Controllers\CheckoutController::class, '
 Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');
 Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout')->middleware('check_cart_item');
 
+Route::get('/cart/mail', [App\Http\Controllers\CheckoutController::class, 'mail'])->name('testInvoice');
 
 //Payment
 Route::get('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');

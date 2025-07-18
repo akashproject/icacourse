@@ -15,15 +15,15 @@
                                 <div class="row">
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="lead_first_name" id="lead_first_name" placeholder="First Name" value="{{ isset($student['first_name'])?$student['first_name']:''}}" autocomplete="off" required>
-                                            <label for="lead_first_name">First Name</label>
+                                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name" value="{{ isset($student['first_name'])?$student['first_name']:''}}" autocomplete="off" required>
+                                            <label for="first_name">First Name</label>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="lead_last_name" id="lead_last_name" placeholder="Last Name" value="{{ isset($student['last_name'])?$student['last_name']:''}}" autocomplete="off" required>
-                                            <label for="lead_last_name">Last Name</label>
+                                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" value="{{ isset($student['last_name'])?$student['last_name']:''}}" autocomplete="off" required>
+                                            <label for="last_name">Last Name</label>
                                         </div>
                                     </div>
 
@@ -36,8 +36,8 @@
 
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
-                                            <input type="hidden" name="lead_mobile_number[0]" value="+91">
-                                            <input type="text" class="form-control" name="lead_mobile_number[1]" id="lead_mobile_info" placeholder="Mobile Number" value="{{ isset($student['mobile'])?$student['mobile']:''}}" autocomplete="off" required readonly>
+                                            <input type="hidden" name="lead_mobile[0]" value="+91">
+                                            <input type="text" class="form-control" name="lead_mobile[1]" id="lead_mobile_info" placeholder="Mobile Number" value="{{ isset($student['mobile'])?$student['mobile']:''}}" autocomplete="off" required readonly>
                                             <label for="lead_mobile_info">Mobile Number</label>
                                             <a href="{{ route('validate') }}" class="change_mobile_no"> Change </a>
                                         </div>
@@ -45,7 +45,7 @@
 
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" name="lead_email_address" id="lead_email_address" placeholder="Email Address" value="{{ isset($student['email'])?$student['email']:''}}" autocomplete="off" required>
+                                            <input type="email" class="form-control" name="lead_email" id="lead_email" placeholder="Email Address" value="{{ isset($student['email'])?$student['email']:''}}" autocomplete="off" required>
                                             <label for="lead_email_address">Email Address</label>
                                         </div>
                                     </div>
@@ -88,47 +88,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            @else
-                                <div class="lead_steps active">
-                                    <div class="row">
-                                        <div class="col-lg-12 mb-2">
-                                            <div class="form-floating">
-                                                <input type="number" class="form-control" name="mobile" id="check_mobile_exist" placeholder="Mobile Number"  autocomplete="off" required>
-                                                <label for="lead_mobile_info">Mobile Number</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 text-right">
-                                            <div class="my-3">
-                                                <button type="button" id="send_otp_validation" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Next <i class="fal fa-chevron-right ml-2"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lead_steps step_2">
-                                    <h3 class="td_mb_20 td_fs_24 td_semibold">We’ve sent you an OTP</h3>
-                                    <p class="td_fs_14 m-0">On your phone number <a href="javascript:void(0)" class="backstep">+91 <span class="submitted_lead_mobile_no"></span> <i class="fa fa-edit" ></i> </a></p>
-                                    <div id="mobile_validation_otp_target"></div>
-                                    <span id="otp_target-error" class="otp_error" style="display:none">Please Enter valid OTP</span>
-                                    <div class="otp-content">
-                                        <p class="message"> Did not receive OTP?
-                                            <span class="countdown_label"> Resend in <span class="countdown" >59</span> Sec </span>
-                                            <a class="resendOtp display-none" href="javascript:void(0)"> Resend OTP </a>
-                                        </p>
-                                    </div>
-                                    <p class="td_fs_14 td_mb_20 mt-3">By entering the OTP and clicking continue I confirm that I have read, understood and agree with the <a href="{{ url('/term-condition') }}" >Terms and Conditions</a> and <a href="{{ url('/privacy-policy') }}" >Privacy Policy</a>.</p>
-                                    <div class="row align-items-center td_row_reverse_lg td_gap_y_20">
-                                        <div class="col-lg-6 text-center-lg">
-                                        
-                                        </div>
-                                        <div class="col-lg-12 text-right">
-                                            <div class="form-one__control form-one__control--full">
-                                                <button type="button" class="disabled after_otp_validation thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" disabled>
-                                                    <span>next <i class="fal fa-chevron-right ml-2"></i></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             @endif
                         </div>
                     </div>
@@ -144,7 +103,7 @@
 
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-2">
                                     <div class="form-floating">
                                         <select class="form-control" name="state" id="state" onChange="getCitiesByStateId(this);" required>
                                             <option value="">  Select State</option>
@@ -155,7 +114,7 @@
                                         <label for="state" >State</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-2">
                                     <div class="form-floating">
                                         <select class="form-control" name="city" id="city" required="">
                                             <option value="">  Select City</option>
@@ -169,7 +128,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-2">
                                     <div class="form-floating">
                                         <input type="number" id="pincode" name="pincode" placeholder="Select Pincode" class="form-control" autocomplete="off" value="{{ isset($student['pincode'])?$student['pincode']:''}}" required="">
                                         <label for="pincode" >Pincode</label>
@@ -260,10 +219,14 @@
                     </div>
                 </div>
             </div>            
-            <input type="hidden" name="utm_campaign" value=""> 
-            <input type="hidden" name="utm_source" value="{{ get_theme_setting('utm_source') }}"> 
+            <input type="hidden" name="utm_campaign" value="{{ getUtmCampaign(isset($contentMain->utm_campaign)?$contentMain->utm_campaign:null) }}">
+            <input type="hidden" name="utm_source" value="{{ get_theme_setting('utm_source') }}">
+            <input type="hidden" name ="lead_type" value="{{ getCommunicationMedium(isset($contentMain->lead_type)?$contentMain->lead_type:null) }}" >
+            <input type="hidden" name ="store_area" value="1" >
+            <input type="hidden" name ="source_url" value="{{ url()->current() }}" >
             <input type="hidden" name="amount" id="amount" value="{{ base64_encode(totalCartAmount()) }}">
             <input type="hidden" name="discount" id="discount" value="">
+            
         </form>
 
     </div>

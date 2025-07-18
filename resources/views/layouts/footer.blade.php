@@ -1,7 +1,8 @@
+@if(check_device("mobile"))
 <div class="footer-menu">
     <ul>
         <li><a href="{{ route('website') }}"><i class="fas fa-home"></i></a></li>
-        <li><a href="{{ route('page-view','online-accounting-courses') }}"><i class="fal fa-book"></i></a></li>
+        <li><a href="{{ route('page-view','courses') }}"><i class="fal fa-book"></i></a></li>
         <li><a href="{{ route('page-view','cart') }}" class="product-bag-icon">
             <i class="fal fa-shopping-bag"></i> 
                 <span class="header_cart-items"> 
@@ -12,6 +13,8 @@
         <li><a href="#" class="head_trigger mobile_trigger" ><i class="fas fa-bars"></i></a></li>
     </ul>
 </div>
+@endif
+
 <footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_18.png);">
     <div class="container">
         <div class="footer_top section-padding">
@@ -94,7 +97,7 @@
                         <h6 class="ft-title">About Us</h6>
                         <ul>
                             <li> <a href="/about-us/"> Our Story </a></li>
-                            <li> <a href="/online-accounting-courses/"> Courses </a></li>
+                            <li> <a href="{{ route('page-view','courses') }}"> Courses </a></li>
                             <li> <a href="/blog/"> Blog </a></li>
                             <li> <a href="/contact-us/"> Contact Us </a></li>								
                             <!--li> <a href="/privacy-policy/" > Privacy Policy </a>  </li-->

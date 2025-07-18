@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trait\afterLeadSubmit;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\App;
 use App\Models\Student;
@@ -11,6 +12,9 @@ use App\Models\OrderItem;
 
 class CheckoutController extends Controller
 {
+    use afterLeadSubmit;
+    public $_statusOK = 200;
+    public $_statusErr = 500;
     public function show(){
         try {
             $contentMain = (object)[
@@ -55,25 +59,32 @@ class CheckoutController extends Controller
     public function proceedToCheckout(Request $request)
     {
         try {
-            $data = $request->all(); 
+            $data = $request->all();
             $validatedData = $request->validate([
-                'lead_first_name' => 'required',
-                'lead_last_name' => 'required',
+                'last_name' => 'required',
+                'last_name' => 'required',
                 'guardian_name' => 'required',
-                'lead_email_address' => 'required|email',
-                'lead_mobile_number' => ['required', 'array', 'min:1'],
+                'lead_email' => 'required|email',
+                'lead_mobile' => ['required', 'array', 'min:1'],
                 'date_of_birth' => ['required'],
                 'amount' => ['required'],
-            ]);            
+            ]);
+            $data['otp_status'] = "1";
+            $lead = $this->captureLeadToDB($data);
 
-            $cartItems = (Cookie::get('cartItems'))?json_decode(Cookie::get('cartItems'),true):[];
-            $student = Student::where('mobile',$data['lead_mobile_number'][1])->first();
+            $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
+            $data['crm_status'] = ($ee['result'] == "Success")?'1':'0';
+            $data['crm_response'] = $ee;
+            $lead->update($data);
+
+            $cartItems = json_decode(Cookie::get('cartItems'),true);
+            $student = Student::where('mobile',$data['lead_mobile'][1])->first();
             $studentInfo = [
-                'first_name'=>$data['lead_first_name'],
-                'last_name'=>$data['lead_last_name'],
+                'first_name'=>$data['first_name'],
+                'last_name'=>$data['last_name'],
                 'guardian_name'=>$data['guardian_name'],
-                'mobile'=>$data['lead_mobile_number'][1],
-                'email'=>$data['lead_email_address'],
+                'mobile'=>$data['lead_mobile'][1],
+                'email'=>$data['lead_email'],
                 'date_of_birth'=>$data['date_of_birth'],
                 'gender'=>$data['gender'],
                 'qualification'=>$data['qualification'],
@@ -89,7 +100,6 @@ class CheckoutController extends Controller
                 $student = Student::create($studentInfo);
             }
             Cookie::queue('student', json_encode($student), 6000000000);
-            //67,997 64,597 3,400
             $order_id = "order_".random_strings(14);
             $orderData = [
                 "order_id" => $order_id,
@@ -101,16 +111,16 @@ class CheckoutController extends Controller
             ];
             $order = Order::create($orderData);
             if(!$order) {
-                return redirect()->back()->with('message', 'Failed to create order! Please try again');
+                return redirect()->back()->with('message','Failed to create order! Please try again');
             }
+
             $base_value = 0;
             if(isset($data['discount']) && $data['discount'] != ''){
 				$base_value = intdiv($data['discount'], count($cartItems));
 				$remainder = $data['discount'] % count($cartItems);
-			}    
+			}   
 
             $orderItem = [];
-            
             foreach ($cartItems as $key => $value) {
                 $course = getCourseById($key);
                 $fee = getFeeById($value);
@@ -127,12 +137,13 @@ class CheckoutController extends Controller
 				$orderItem[count($cartItems) - 1]['discount'] += $remainder;
 				$orderItem[count($cartItems) - 1]['amount'] -= $remainder;
 			}
-            foreach ($orderItem as $key => $item) {
+
+            foreach($orderItem as $key => $item) {
                 $orderItem = OrderItem::create($item);
                 if (!$item) {
                     return redirect()->back()->with('message', 'Failed to purchase course! Please try again');
                 }
-            }    
+            }
 
             $ccAvenueBillingData = [
                 'merchant_id' => "415669",
@@ -152,8 +163,8 @@ class CheckoutController extends Controller
                 'billing_email' => $student->email,
             ];
             $merchant_data = '';
-            $working_key='69E5D32F26D61263CCC4B0CC40C5689C';//Shared by CCAVENUES
-		    $access_code='AVCT76JC54CI17TCIC';//Shared by CCAVENUES
+            $working_key='69E5D32F26D61263CCC4B0CC40C5689C'; //Shared by CCAVENUES
+		    $access_code='AVCT76JC54CI17TCIC'; //Shared by CCAVENUES
             foreach ($ccAvenueBillingData as $key => $value){
                 $merchant_data.=$key.'='.urlencode($value).'&';
             }
@@ -167,7 +178,6 @@ class CheckoutController extends Controller
             </form>
             <script language='javascript'>document.redirect.submit();</script>
             <?php 
-            
         } catch (\Illuminate\Database\QueryException $e) {
              return response()->json($e, 200);
         }
@@ -189,5 +199,40 @@ class CheckoutController extends Controller
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;
         }
+    }
+
+    public function mail() {
+        $data = [];
+        $course = [];
+        $order = Order::where('order_id','order_S6F218XUMV7PIK')->first();
+        $orderItems = OrderItem::where('order_id',$order->id)->get();
+        $course_fee = 0;
+        foreach($orderItems as $key => $item) {
+            $amount = getFeeById($item->fee_id)->Down_Payment;
+            $course_fee += $amount;
+            $course[$key] = [
+                'course' => getCourseById($item->course_id)->name,
+                'amount' => number_format($amount)
+            ];
+        }
+
+        $student = Student::find($order->profile_id);
+
+        $data = [
+            'student_code' => $order->student_code,
+            'payment_id'=> $order->payment_id,
+            'date' => date('d/m/Y',strtotime($order->created_at)),
+            'address' => $student->address,
+            'state_name' => getStateById($student->state)->name,
+            'city' => getCityById($student->city)->name,
+            'pincode' => $student->pincode,
+            'mobile' => $student->mobile,
+            'email' =>  $student->email,
+            'course' => $course,
+            'course_fee' => number_format($course_fee),
+            'total' =>  number_format($order->amount),
+            'discount' =>  number_format($order->discount),
+        ];
+        return view('emails.invoice',compact('data'));
     }
 }

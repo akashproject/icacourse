@@ -16,7 +16,7 @@ class CourseTypeController extends Controller
 
             $contentMain = CourseType::whereRaw("`slug` COLLATE utf8mb4_bin = ?", [$slug])->first();
                             
-            $categoryCourses = Course::where('type_id', 'like', '%"' . $contentMain->id . '"%')->get();
+            $categoryCourses = Course::where('type_id', 'like', '%"' . $contentMain->id . '"%')->where('status',"0")->where('visibility',"1")->get();
 
             $utm_campaign = $contentMain->utm_campaign;
             $utm_source = $contentMain->utm_source;

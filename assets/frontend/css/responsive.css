@@ -1831,4 +1831,30 @@
         height: 550px;
         border-radius: 50%;
     }
+    .cart-wrapper{
+    background: #f4f6ff;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    padding: 15px 0 79px;
+    border-top: 1px solid #d1d1d1;
+    display: block;
+    }
+    .cart-wrapper h4{
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+        color: #393185;
+    }
+    .cart-wrapper span{
+        color: #434141;
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-left: 7px;
+    }
 }
+.cart-wrapper{
+    display: none;
+}
+

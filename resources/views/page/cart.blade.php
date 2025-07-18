@@ -7,7 +7,7 @@
             <div class="col-md-12 text-center">
                 <i class="fal fa-cart-plus" style="font-size: 100px;"></i>
                 <p class="px-3 py-2">No products added to the cart</p>
-                <a href="{{ url('/online-accounting-courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" > Return To Courses</a>
+                <a href="{{ route('page-view','courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle" > Return To Courses</a>
             </div>
         </div>
         @else
@@ -100,7 +100,7 @@
                 <h3 class="title">You May Also Check<span class="curve-text"> Best Selling Courses</span></h3>
             </div>
             <div class="col-md-4 text-right">
-                <a href="{{ route('page-view','online-accounting-courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
+                <a href="{{ route('page-view','courses') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
             </div>
         </div>
         @include('common.courses')

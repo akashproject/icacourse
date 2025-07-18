@@ -113,7 +113,7 @@ if (! function_exists('get_courses')) {
         if($type_id){
             $course->where('type_id', 'like', '%"' . $type_id . '"%');
         }
-        return $course->where('status',"1")->orderBy('name', 'ASC')->get();
+        return $course->where('status',"1")->where('visibility',"1")->orderBy('name', 'ASC')->get();
     }
 }
 
