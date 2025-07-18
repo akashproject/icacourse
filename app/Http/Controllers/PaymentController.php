@@ -18,7 +18,7 @@ class PaymentController extends Controller
             $contentMain = (object)[
                 'enable_otp' => get_theme_setting('enable_otp')
             ];
-            $order_id = "order_7Z5BAYI492JLKG";
+            $order_id = "order_S6F218XUMV7PIK";
             $erp = $this->erpPushProcess($order_id);
             dd($erp);
             if (!$erp) {

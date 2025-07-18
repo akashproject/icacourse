@@ -68,7 +68,7 @@
                     <!-- Box Start -->
                     @foreach($categoryCourses as $course)
                     <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="coach_block">
+                        <div class="coach_block course-item">
                             <div class="coach_hover_tooltip"> 
                                 <h4> {{ $course->name }} </h4>
                                 <div class="course_hover_stat" >
@@ -113,7 +113,7 @@
                                         ({{ $course->number_of_rating }}) Ratings
                                     </div>
                                 </div>
-                                <div class="d-flex" style="align-items: center;">
+                                <div class="course_price_box">
                                     <div class="coach_meta">
                                         <div class="price_wrap"> 
                                             <div class="sell_price">

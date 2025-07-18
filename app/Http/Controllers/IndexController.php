@@ -109,15 +109,19 @@ class IndexController extends Controller
             $updateData['mail_status'] = (isset($brevo['messageId']))?'1':'0';
             $lead->update($updateData);
 
-            $student = [
-                'first_name' => $lead->first_name,
-                'last_name' => $lead->last_name,
-                'mobile' => $lead->mobile,
-                'email' => $lead->email,
-                'pincode' => $lead->pincode,
-            ];
+            $student = Student::where('mobile',$lead->mobile)->exist();
+            if(!$student) {
+                $student = [
+                    'first_name' => $lead->first_name,
+                    'last_name' => $lead->last_name,
+                    'mobile' => $lead->mobile,
+                    'email' => $lead->email,
+                    'pincode' => $lead->pincode,
+                ];
+                
+                Student::create($student);
+            }
             
-            Student::create($student);
             Cookie::queue('student', json_encode($student), 6000000000); 
             return redirect()->route('page-view', 'online-accounting-courses');
         } catch (\Illuminate\Database\QueryException $e) {

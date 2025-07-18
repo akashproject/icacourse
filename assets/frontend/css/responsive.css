@@ -1211,6 +1211,9 @@
         font-size: 34px;
     }
 
+    .placement-redious-grid {
+        width: 108px;
+    }
 }
 
 
@@ -1520,6 +1523,9 @@
 
 
     /*Course*/
+    .course-item {
+        margin: 5px;
+    }
 
     .nav-tabs.style_4 {
 
@@ -1774,5 +1780,55 @@
     }
     .coach_block.right .coach_hover_tooltip{
         left: 0;
+    }
+}
+
+
+@media only screen and (max-width : 768px) {
+    .hero-banner{
+        padding: 110px 0 85px;
+    }
+    .hero-banner h2{
+        font-size: 2.5rem;
+        margin-top: 5px;
+    }
+    .hero-banner .banner-img .chat-up {
+        position: absolute;
+        bottom: -23px;
+        right: 11px;
+        width: 169px;
+    }
+    .hero-banner .banner-img .students-img {
+        position: absolute;
+        bottom: 120px;
+        width: 117px;
+    }
+    .hero-banner .banner-img .stape {
+        position: absolute;
+        right: 0px;
+        top: 96px;
+        width: 123px;
+    }
+    .experience-wrapper {
+        padding: 3rem 0;
+    }
+    .experience-wrapper h2 {
+        font-size: 2rem;
+        z-index: 999;
+    }
+    .experience-wrapper .experience-img-left {
+        display: none;
+    }
+    .experience-wrapper .experience-img-right {
+        display: none;
+    }
+    .experience-wrapper::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 27px;
+        width: 100%;
+        height: 550px;
+        border-radius: 50%;
     }
 }

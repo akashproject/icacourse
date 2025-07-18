@@ -104,7 +104,7 @@
                     <!-- logo -->
                 </div>
                 <div class="course-header-menu menu-item menu-item-has-children">
-                    <a href="{{ route('page-view','online-accounting-courses') }}" class="thm-btn-border btn-rectangle" >
+                    <a href="{{ route('page-view','courses') }}" class="thm-btn-border btn-rectangle" >
                     <span class="icon-list"><i class="fal fa-list"></i></span> Courses</a>
                     <ul class="sub-menu desktop-menu">
                         @foreach($courseTypes as $courseType)
@@ -224,7 +224,7 @@
                 </div>
                 <!-- logo end -->
                 <div class="course-header-menu menu-item menu-item-has-children">
-                    <a href="{{ route('page-view','online-accounting-courses') }}" class="thm-btn-border bg-white btn-rectangle" >
+                    <a href="{{ route('page-view','courses') }}" class="thm-btn-border bg-white btn-rectangle" >
                     <span class="icon-list"><i class="fal fa-list"></i></span> Courses</a>
                     <ul class="sub-menu desktop-menu">
                         @foreach($courseTypes as $courseType)

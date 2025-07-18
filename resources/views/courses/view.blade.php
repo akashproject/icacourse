@@ -207,17 +207,17 @@
     </section>
     <!-- Details End -->
 
-    <div class="bg-thm-color-two plane_box relative z-1">
-        <div class="container relative z-1">
+    <section class="experience-wrapper">
+        <img src="{{ url('assets/frontend/images/experience-img-left.png')}}" alt="" class="experience-img-left">
+        <img src="{{ url('assets/frontend/images/experience-img-right.png')}}" alt="" class="experience-img-right">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-9 col-lg-11 relative z-1">
-                    <img src="{{ url('/assets/frontend/images/elements/element_6.png')}}" class="element_1 rotate_elem" alt="Element">
-                    <h2 class="thm-color-white">Get The Best E-learning Experience with ICA!</h2>
+                <div class="col-lg-5">
+                    <h2>Get The Best E-learning Experience with ICA!</h2>
                 </div>
             </div>
-            <img src="{{ url('/assets/frontend/images/elements/element_7.png')}}" class="element_2 zoom-fade" alt="Element">
         </div>
-    </div>
+    </section>
     <!-- Testimonials Start -->
     <section class="section section-bg relative z-1 about_bg" style="background-image: url({{ url('/assets/frontend/images/bg/bg_1.png')}});">
         <div class="container">

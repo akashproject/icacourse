@@ -8,9 +8,9 @@
                     </a>
                 </div>
                 <div class="coach_caption">
-                    <div class="course_tag text-white">
-                        <span class="tag bg-green px-3 py-1"><i class="fal fa-book"></i> {{ $course->no_of_module }} Modules</span>
-                        <span class="tag bg-orange px-3 py-1"><i class="fal fa-clock"></i> {{ $course->duration }}</span>
+                    <div class="course_tag">
+                        <span class="tag py-1"><i class="fal fa-book"></i> {{ $course->no_of_module }} Modules</span>
+                        <span class="tag py-1"><i class="fal fa-clock"></i> {{ $course->duration }}</span>
                     </div>
 
                     <h5><a href="{{ route('view-courses',$course->slug) }}"> {{ $course->name }} </a></h5>
@@ -26,7 +26,7 @@
                             ({{ $course->number_of_rating }}) Ratings
                         </div>
                     </div>
-                    <div class="d-flex" style="align-items: center;">
+                    <div class="course_price_box">
                         <div class="coach_meta">
                             <div class="price_wrap"> 
                                 <div class="sell_price">

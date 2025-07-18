@@ -24,8 +24,8 @@
 								<th>Name</th>
 								<th>Email</th>
 								<th>Mobile</th>
+								<th>State</th>
 								<th>City</th>
-								<th>Institute</th>
 								<th>Pincode</th>
 								<th>Campaign</th>
 								<th>Source</th>
@@ -44,8 +44,8 @@
 								<td>{{ $value->first_name }} {{ $value->last_name }}</td>													
 								<td>{{ $value->lead_email }}</td>													
 								<td>{{ $value->mobile }}</td>
+								<td>{{ getStateById($value->state)->name }}</td>
 								<td>{{ $value->city }}</td>
-								<td>{{ $value->institute }}</td>
 								<td>{{ $value->pincode }}</td>
 								<td>{{ $value->utm_campaign }}</td>
 								<td>{{ $value->utm_source }}</td>

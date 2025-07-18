@@ -11,7 +11,7 @@
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
                 <input type="hidden" name="lead_mobile[0]" value="+91">
-                <input type="number" class="form-control" name="lead_mobile[1]" id="lead_mobile_info" placeholder="Mobile Number" autocomplete="off" required="">
+                <input type="number" class="form-control" name="lead_mobile[1]" id="lead_mobile_info" placeholder="Mobile Number" autocomplete="off" required min="6000000000" max="9999999999">
                 <label for="email">Mobile Number</label>
             </div>
         </div>
@@ -64,10 +64,10 @@
                 </p>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
 
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
             <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle"> Continue OTP <i class="fal fa-chevron-right ml-2"></i></button>
         </div>
     </div>

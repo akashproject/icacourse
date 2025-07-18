@@ -4330,13 +4330,15 @@ header.header.header-3.can-sticky.sticky {
 
 
 /*testimonials*/
+.testimonial_slider {
+    margin-top: 60px;
+}
 .testimonial_item {
     padding: 40px;
     border: 2px solid var(--thm-border);
     background-color: transparent;
     transition: 0.3s all;
     margin: 15px;
-    margin-top: 30px;
     border-radius: 8px;
 	height:290px;
 }
@@ -4755,8 +4757,9 @@ a.remove_form_cart {
 
 .coach_block {
     box-shadow: 0px 0px 3px 0px #5b5b5b6b;
-    margin-bottom: 30px;
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 
@@ -4791,7 +4794,7 @@ a.remove_form_cart {
     overflow: hidden;
     display: flex;
     gap: 30px;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .coach_block .coach_caption .course_tag .tag {
@@ -9374,13 +9377,18 @@ ul.cart-course-list a {
     padding: 0px 30px;
 
 }
+.course_price_box {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e5e4e4;
+    padding-top: 15px;
+}
 
 .gross_price, .sell_price {
     display: inline-block;
     color: #3e4095;
-    width: 49%;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 25px;
 }
 .gross_price strike{
     color: #e90c0c;
@@ -9563,7 +9571,7 @@ input.course_down_fees {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 11px;
-    left: 317px;
+    left: 297px;
     bottom: 0;
     box-shadow: 1px 1px 14px 5px #6f6f6f;
 }
@@ -9573,14 +9581,12 @@ input.course_down_fees {
     left: -17px;
     position: absolute;
     top: 54%;
-    width: 16px;
     z-index: 1;
-    height: 22px;
     width: 0;
     height: 0;
-    border-top: 18px solid transparent;
-    border-bottom: 22px solid transparent;
-    border-left: 16px solid #797cd9;
+    border-top: 5px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 10px solid #797cd9;
 }
 
 .coach_block.right .coach_hover_tooltip {
@@ -10396,11 +10402,36 @@ align-self: center;
 
 .hero-banner{
     width: 100%;
-    height: 100vh;
-    background-color: #f9fafe;
+    padding: 110px 0 100px;
+    background: #e2d9ff;
+    background: linear-gradient(93deg, rgba(226, 217, 255, 1) 33%, rgba(255, 255, 255, 1) 100%);
 }
 .hero-banner h2{
     font-size: 3.5rem;
+    margin-top: 93px;
+}
+.hero-banner h2 span{
+    color: #8F6CED;
+}
+.hero-banner .banner-img{
+    position: relative;
+}
+.hero-banner .banner-img .students-img{
+    position: absolute;
+    bottom: 0;
+    width: 202px;
+}
+.hero-banner .banner-img .chat-up{
+    position: absolute;
+    bottom: 54px;
+    right: 33px;
+    width: 238px;
+}
+.hero-banner .banner-img .stape{
+    position: absolute;
+    right: 36px;
+    top: 166px;
+    width: 208px;
 }
 
 .why-wrapper{
@@ -10426,6 +10457,7 @@ align-self: center;
     position: relative;
     overflow: hidden;
     padding: 5rem 0;
+    z-index: 0;
 }
 .experience-wrapper::after{
     content: '';
