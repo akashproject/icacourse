@@ -1,6 +1,6 @@
 @extends('layouts.main')
     @section('content')
-    <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/course-banner-min.webp')}});">
+    <!-- <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/course-banner-min.webp')}});">
         <div class="container relative z-1">
             <div class="row">
                 <div class="col-md-9">
@@ -33,7 +33,49 @@
             <img src="{{ url('/assets/frontend/images/elements/element_20.png')}}" alt="element" class="element_3 rotate_elem">
             <img src="{{ url('/assets/frontend/images/elements/element_21.png')}}" alt="element" class="element_4 rotate_elem">
         </div>
+    </div> -->
+
+    <section class="banner-inner">
+    <div class="container">
+        <div class="inner-left"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
+        <div class="inner-right"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
+        <div class="inner-top"><img src="/assets/frontend/images/top.svg" alt="" class="img-fluid"></div>
+        <div class="inner-animation"><img src="/assets/frontend/images/page-header-shape-2.png" alt="" class="img-fluid"></div>
+        <div class="inner-bottom"><img src="/assets/frontend/images/bottom.svg" alt="" class="img-fluid"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-11">
+                        <h1 class="page_title">{{ $contentMain->name }}</h1>
+                        <div class="page_banner_description text-white">
+                            {{ $contentMain->excerpt }}                     
+                        </div>
+
+                        <div class="page_banner_meta">
+                            <div class="total-rating">
+                                <a href="javascript:void(0)" style="color: #ffbd3f;"> 4.0 </a>
+                                <div class="ratings " style="display: inline;margin: 0 6px;">
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star active"></i>
+                                    <i class="fal fa-star"></i>
+                                </div>
+                                <a href="javascript:void(0)" class="text-white" style="cursor: auto;margin: 0 6px;"> (388 Reviews )</a>
+                            </div>
+                            
+                            <span class="text-white total-enroll"> 964 students </span>
+                            <div class="course_features text-white mt-5" >
+                                {!! $contentMain->feature !!}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
     <!-- Details Start -->
     <section class="section">
@@ -187,7 +229,7 @@
 
                             <div class="sidebar">
                                 <div class="info_widgets mt-5 text-center">
-                                    <div class="cart-button">
+                                    <div class="cart-button d-none d-lg-block">
                                         @php    
                                             $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
                                         @endphp
@@ -270,6 +312,11 @@
             </div>
         </div>
     </section>
+
+    <div class="cart-sm d-block d-lg-none">
+        <a href="#" class="btn btn-cart">Add to cart</a>
+    </div>
+
     <!-- Testimonials End -->
 
      @if($contentMain->faqs)
@@ -307,6 +354,8 @@
             </div>
         </div>
     </section>
+    
+
     @endif  
 
     @endsection 

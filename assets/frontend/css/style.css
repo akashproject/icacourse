@@ -6006,7 +6006,7 @@ span.accordion-time__duration {
 }
 
 .accordion-style>.card>.card-header>.btn-link {
-    width: 75%;
+    width: 90%;
     text-align: left;
     background-color: transparent;
     font-family: var(--thm-font);
@@ -7619,40 +7619,6 @@ ul.category-widget li {
 .service_block .text p {
     line-height: 1.3rem;
     font-size: 13px;
-}
-
-.service_block:before {
-
-    counter-increment: count;
-
-    content: "0"counter(count);
-
-    font-size: 150px;
-
-    font-weight: bold;
-
-    position: absolute;
-
-    line-height: 0;
-
-    color: rgb(var(--thm-color-one-rgb), 10%);
-
-    z-index: -1;
-
-    -webkit-text-stroke: 1px rgb(var(--thm-color-one-rgb), 10%);
-
-    -webkit-text-fill-color: transparent;
-
-    font-family: var(--thm-font);
-
-    top: 40%;
-
-    transform: translateY(-60%);
-
-    right: 60px;
-
-    pointer-events: none;
-
 }
 
 
@@ -9588,7 +9554,7 @@ input.course_down_fees {
     border-left: 10px solid #797cd9;
 }
 
-.coach_block.right .coach_hover_tooltip {
+.coach_block .coach_hover_tooltip.right {
     position: absolute;
     z-index: 99;
     background: #fff;
@@ -9600,7 +9566,7 @@ input.course_down_fees {
     box-shadow: 1px 1px 14px 5px #6f6f6f;
 }
 
-.coach_block.right .coach_hover_tooltip:before {
+.coach_block .coach_hover_tooltip.right:before {
     content: " ";
     left: 299px;
     position: absolute;
@@ -9692,6 +9658,12 @@ h2.course_title {
     font-size: 18px;
     padding: 0 15px;
     line-height: 1.5rem;
+}
+.course_criteria ul li {
+    font-family: 'Font Awesome 5 Pro';
+}
+.course_criteria ul li::before {
+    content: "\f19d";
 }
 .coupon_label {
     font-size: 12px;
@@ -10203,6 +10175,34 @@ align-self: center;
 }
 
 /* all styles related to blog post */
+.blog-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.blog-card__meta li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #7B7980;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.571;
+    gap: 10px;
+}
+.blog-card_image_wrapper {
+    display: flex;
+    gap: 10px;
+}
+.blog-card--two .blog-card__title {
+    font-size: 22px;
+}
+.blog-card__meta {
+    margin: 0 0 21px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 #post_content {
     color: #222!important; 	
 }
@@ -10569,3 +10569,146 @@ align-self: center;
         right: 63%;
     }
 }
+
+
+
+/* .form-right{
+    background: #abadff;
+    padding: 0px 44px;
+    overflow: hidden;
+}
+
+.form-right .right-object{
+    position: absolute;
+    left: -88px;
+    top: -154px;
+    width: 280px;
+}
+
+.form-right .bottom-object{
+    position: absolute;
+    bottom: -79px;
+    width: 184px;
+    right: -70px;
+}
+
+@keyframes sway {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-1.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+.form-right .right-card{
+    text-align: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-right: 5px solid #393185;
+    position: relative;
+}
+
+.form-right .right-card.animate-sway {
+    animation: sway 1.5s ease-in-out infinite;
+}
+
+.form-right .right-card h2{
+    font-size: 20px;
+    color: #393185;
+}
+.form-right .right-card .stycky-pin{
+    border-radius: 50%;
+    position: absolute;
+    left: 44%;
+    top: -17px;
+    width: 35px;
+    animation: none; 
+}
+.form-right .right-card .right-profile{
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: #d4d5ff 0px 2px 8px 0px;
+    width: 150px;
+} */
+
+
+
+.form-right {
+      background: #abadff;
+      padding: 0px 44px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-right .right-object {
+      position: absolute;
+      left: -88px;
+      top: -154px;
+      width: 280px;
+    }
+
+    .form-right .bottom-object {
+      position: absolute;
+      bottom: -79px;
+      width: 184px;
+      right: -70px;
+    }
+
+    @keyframes sway {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-2deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .form-right .right-card {
+      text-align: center;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      border-right: 5px solid #393185;
+      position: relative;
+      transform-origin: center center;
+      width: 300px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: sway 1s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    }
+
+    .form-right .right-card:hover {
+      animation-play-state: paused;
+    }
+
+    .form-right .right-card h2 {
+      font-size: 20px;
+      color: #393185;
+      margin: 15px 0;
+    }
+
+    .form-right .stycky-pin {
+        position: absolute;
+        top: 95px;
+        width: 30px;
+        left: 45%;
+        z-index: 2;
+    }
+
+    .form-right .right-card .right-profile {
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: #d4d5ff 0px 2px 8px 0px;
+      width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .form-right .right-card p {
+      color: #444;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }

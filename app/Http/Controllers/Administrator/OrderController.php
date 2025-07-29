@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\OrderItem;
@@ -53,4 +55,29 @@ class OrderController extends Controller
             
         }        
     }
+
+    public function exportCsv()
+    {
+        $results = DB::table('orders')->get();
+
+        $csvData = [];
+        $csvData[] = ['Order ID', 'Amount', 'Discount'];
+
+        foreach ($results as $row) {
+            $csvData[] = [
+                $row->order_id,
+                $row->amount,
+                $row->discount,
+            ];
+        }
+
+        return response()->streamDownload(function () use ($csvData) {
+            $handle = fopen('php://output', 'w');
+            foreach ($csvData as $row) {
+                fputcsv($handle, $row);
+            }
+            fclose($handle);
+        }, 'orders_export.csv');
+    }
+
 }

@@ -1168,8 +1168,6 @@
 
 </section>
 
-
-
 <section class="section-padding">
     <div class="container-fluid">
         <div class="row">
@@ -1300,4 +1298,95 @@
     </div>
 </section>
 <!-- Testimonials End -->
+
+<section class="section" >
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-9 text-left aos-init">
+                <h3 class="title">Our latest blog news</h3>
+            </div>
+            <div class="col-lg-3 text-right aos-init">
+                <a href="/blog" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All Blogs <i class="fal fa-chevron-right ml-2"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @foreach(getBlogs(null,1,0) as $value)
+                <article class="post post_list style_2 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                    <div class="post_img">
+                        <img src="{{ $value->source_url }}" alt="{!! $value->title->rendered !!}" class="image-fit">
+                    </div>
+                    <div class="post_caption">
+                        <ul class="post_meta">
+                            <li>
+                                <i class="fal fa-user"></i>
+                                {{ $value->author['name'] }}
+                            </li>
+                            <li>
+                                <i class="fal fa-calendar-alt"></i>
+                                {{ date('M d, Y',strtotime($value->date)) }}
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-lines"></i>
+                                Comments (05)
+                            </li>
+                        </ul>
+                        <h4 class="post_title">
+                            <a href="{{ $value->link }}">{!! $value->title->rendered !!}</a>
+                        </h4>
+                        <p class="post_text">
+                            But must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give complete account of the system, and expound the actual teachings
+                        </p>
+                        <a href="{{ $value->link }}" class="thm-btn bg-thm-color-white thm-color-one btn-rectangle">Read More <i class="fal fa-chevron-right ml-2"></i></a>
+                    </div>
+                </article>
+                @endforeach
+            </div>
+            <div class="col-lg-6">
+                <div class="row gutter-y-30">
+                    @foreach(getBlogs(null,3,1) as $value)
+                    <div class="col-lg-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                        <div class="blog-card blog-card--two">
+                            <div class="blog-card_image_wrapper">
+                                <div class="blog-card__image" style="width: 40%;">
+                                    <img src="{{ $value->source_url }}" alt="{!! $value->title->rendered !!}">
+                                    <a href="{{ $value->link }}" class="blog-card__image__link">
+                                        <span class="sr-only">{!! $value->title->rendered !!}</span></a>
+                                </div>
+                                <div class="blog-card__content">
+                                    <h3 class="blog-card__title"><a href="{{ $value->link }}">{!! $value->title->rendered !!}</a></h3>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <ul class="list-unstyled blog-card__meta">
+                                    <li>
+                                        <a href="#">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="fal fa-calendar-alt"></i>
+                                            </span>
+                                            {{ date('M d, Y',strtotime($value->date)) }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        @foreach($value->category as $category)
+                                        <a href="{{ $category['link'] }}">
+                                            <span class="blog-card__meta__icon">
+                                                <i class="fa fa-tag"></i>
+                                            </span>
+                                            {{ $category['name'] }}
+                                        </a>
+                                        @endforeach
+                                    </li>
+                                </ul><!-- /.list-unstyled blog-card__meta -->
+                            </div>
+                        </div>
+
+                    </div>
+                    @endforeach
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

@@ -4,64 +4,64 @@
 	@if($orders)
 		<div class="card mb-6">
 			<div class="card-widget-separator-wrapper">
-			<div class="card-body card-widget-separator">
-				<div class="row gy-4 gy-sm-1">
-					<div class="col-sm-6 col-lg-3">
-						<div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
-						<div>
-							<h4 class="mb-0">{{ $success }}</h4>
-							<p class="mb-0">Success</p>
-						</div>
-						<span class="avatar w-px-40 h-px-40 p-2 me-lg-6">
-							<span class="avatar-initial bg-label-secondary rounded">
-							<i class="icon-base bx bx-check-double icon-lg text-heading"></i>
+				<div class="card-body card-widget-separator">
+					<div class="row gy-4 gy-sm-1">
+						<div class="col-sm-6 col-lg-3">
+							<div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
+							<div>
+								<h4 class="mb-0">{{ $success }}</h4>
+								<p class="mb-0">Success</p>
+							</div>
+							<span class="avatar w-px-40 h-px-40 p-2 me-lg-6">
+								<span class="avatar-initial bg-label-secondary rounded">
+								<i class="icon-base bx bx-check-double icon-lg text-heading"></i>
+								</span>
 							</span>
-						</span>
+							</div>
+							<hr class="d-none d-sm-block d-lg-none">
 						</div>
-						<hr class="d-none d-sm-block d-lg-none">
-					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="d-flex justify-content-between align-items-start border-end pb-4 pb-sm-0 card-widget-3">
-						<div>
-							<h4 class="mb-0">{{ $erpStatusSuccess }}</h4>
-							<p class="mb-0">ERP Pushed Success</p>
-						</div>
-						<span class="avatar w-px-40 h-px-40 p-2 me-sm-6">
-							<span class="avatar-initial bg-label-secondary rounded">
-							<i class="icon-base bx bx-wallet icon-lg text-heading"></i>
+						<div class="col-sm-6 col-lg-3">
+							<div class="d-flex justify-content-between align-items-start border-end pb-4 pb-sm-0 card-widget-3">
+							<div>
+								<h4 class="mb-0">{{ $erpStatusSuccess }}</h4>
+								<p class="mb-0">ERP Pushed Success</p>
+							</div>
+							<span class="avatar w-px-40 h-px-40 p-2 me-sm-6">
+								<span class="avatar-initial bg-label-secondary rounded">
+								<i class="icon-base bx bx-wallet icon-lg text-heading"></i>
+								</span>
 							</span>
-						</span>
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
-						<div>
-							<h4 class="mb-0">{{ $pending }}</h4>
-							<p class="mb-0">Pending Payment</p>
-						</div>
-						<span class="avatar w-px-40 h-px-40 me-sm-6">
-							<span class="avatar-initial bg-label-secondary rounded">
-							<i class="icon-base bx bx-calendar icon-lg text-heading"></i>
+						<div class="col-sm-6 col-lg-3">
+							<div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
+							<div>
+								<h4 class="mb-0">{{ $pending }}</h4>
+								<p class="mb-0">Pending Payment</p>
+							</div>
+							<span class="avatar w-px-40 h-px-40 me-sm-6">
+								<span class="avatar-initial bg-label-secondary rounded">
+								<i class="icon-base bx bx-calendar icon-lg text-heading"></i>
+								</span>
 							</span>
-						</span>
+							</div>
+							<hr class="d-none d-sm-block d-lg-none me-6">
 						</div>
-						<hr class="d-none d-sm-block d-lg-none me-6">
-					</div>
-					<div class="col-sm-6 col-lg-3">
-						<div class="d-flex justify-content-between align-items-start">
-						<div>
-							<h4 class="mb-0">{{ $erpStatusFailed }}</h4>
-							<p class="mb-0">ERP Pushed Failed</p>
-						</div>
-						<span class="avatar w-px-40 h-px-40 p-2">
-							<span class="avatar-initial bg-label-secondary rounded">
-							<i class="icon-base bx bx-error-alt icon-lg text-heading"></i>
+						<div class="col-sm-6 col-lg-3">
+							<div class="d-flex justify-content-between align-items-start">
+							<div>
+								<h4 class="mb-0">{{ $erpStatusFailed }}</h4>
+								<p class="mb-0">ERP Pushed Failed</p>
+							</div>
+							<span class="avatar w-px-40 h-px-40 p-2">
+								<span class="avatar-initial bg-label-secondary rounded">
+								<i class="icon-base bx bx-error-alt icon-lg text-heading"></i>
+								</span>
 							</span>
-						</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 		</div>
 		<div class="card">
@@ -71,14 +71,40 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap mb-3" >
-					<div class="position-relative">
-						<div class="input-group input-group-merge">
-							<span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
-							<input type="text" class="form-control" placeholder="Search..." aria-label="Search...">
+				
+				<div class="row ms-3 my-0 justify-content-between">
+					<div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto px-3 mt-0">
+						<div class="dt-search">
+							<input type="search" class="form-control ms-0" id="dt-search-0" placeholder="Search Order">
+							<label for="dt-search-0"></label>
+						</div>
+					</div>
+					<div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto px-3 mt-0">
+						<div class="dt-length mt-md-6 mt-0">
+							<select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select" id="dt-length-0">
+								<option value="7">7</option>
+								<option value="10">10</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							</select>
+							<label for="dt-length-0"></label>
+						</div>
+						<div class="dt-buttons btn-group flex-wrap gap-2 px-3 mt-0 mb-md-0 mb-6">
+							<div class="btn-group mx-auto">
+								<a class="btn buttons-collection btn-label-primary btn-label-secondary" href="{{ route('admin-export-csv') }}" >
+								<span>
+									<span class="d-flex align-items-center gap-2">
+										<i class="icon-base bx bx-export icon-sm"></i>
+										<span class="d-none d-sm-inline-block">Export CSV</span>
+									</span>
+								</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="table-responsive">
 					<table id="" class="table">
 						<thead>

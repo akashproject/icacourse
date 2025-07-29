@@ -1035,6 +1035,7 @@
     .total-enroll,.total-rating {
         display: block;
         text-align: left;
+        font-size: 12px;
     }
 
     .single-courses .page_banner_description {
@@ -1212,7 +1213,7 @@
     }
 
     .placement-redious-grid {
-        width: 108px;
+        width: 126px;
     }
 }
 
@@ -1832,15 +1833,14 @@
         border-radius: 50%;
     }
     .cart-wrapper{
-    background: #f4f6ff;
-    position: fixed;
-    bottom: 0;
-    z-index: 999;
-    width: 100%;
-    left: 0;
-    padding: 15px 0 79px;
-    border-top: 1px solid #d1d1d1;
-    display: block;
+        background: #f4f6ff;
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        width: 100%;
+        left: 0;
+        padding: 15px 0 79px;
+        border-top: 1px solid #d1d1d1;
     }
     .cart-wrapper h4{
         font-size: 1.3rem;
@@ -1853,8 +1853,49 @@
         font-size: 1.3rem;
         margin-left: 7px;
     }
-}
-.cart-wrapper{
-    display: none;
+    .ratings i {
+        font-size: 7px;
+    }
+    .check-text{
+        font-size: 25px;
+    }
+    .inner-bottom img{
+        position: absolute;
+        left: -69px;
+        width: 115px;
+        bottom: -37px;
+    }
+    .inner-top img {
+        width: 99px;
+    }
+    .banner-inner .inner-left img{
+        width: 91px;
+    }
+    .banner-inner .inner-right img {
+        width: 130px;
+    }
+    .banner-inner .page_title{
+        font-size: 30px;
+        color: #fff;
+    }
+    .cart-sm{
+        text-align: center;
+        position: fixed;
+        bottom: 10%;
+        left: 14%;
+        width: 72%;
+        z-index: 9;
+    }
+    .cart-sm .btn-cart{
+        background-color: #3e4095;
+        color: #fff;
+        width: 100%;
+        padding: 13px;
+    }
+    .accordion-style.style_2>.card>.card-header>.btn-link {
+        padding: 0px !important;
+        width: 50% !important;
+        
+    }
 }
 

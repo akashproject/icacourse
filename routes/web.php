@@ -108,6 +108,7 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::get('/orders', [App\Http\Controllers\Administrator\OrderController::class, 'index'])->name('admin-orders');
         Route::get('/order/{id}', [App\Http\Controllers\Administrator\OrderController::class, 'show'])->name('admin-order-detail');
         Route::get('/admissions', [App\Http\Controllers\Administrator\OrderController::class, 'admissions'])->name('admin-admissions');
+        Route::get('/export-csv', [App\Http\Controllers\Administrator\OrderController::class, 'exportCsv'])->name('admin-export-csv');
        
         //Admission
         Route::post('/push-to-erp', [App\Http\Controllers\Administrator\AdmissionController::class, 'pushToERP'])->name('admin-push-to-erp');

@@ -327,10 +327,9 @@ if (! function_exists('getBlogs')) {
             $resp = curl_exec($curl);
             curl_close($curl);
             $post = json_decode($resp);
-
             foreach ($post as $key => $value) {
                 $image_url = env("APP_URL")."/blog/wp-json/wp/v2/media/".$value->featured_media;
-                $post[$key]->source_url = (curl_function($image_url)->source_url)?curl_function($image_url)->source_url:"";
+                $post[$key]->source_url = (curl_function($image_url)['source_url'])?curl_function($image_url)['source_url']:"";
                 
                 $author_url = env("APP_URL")."/blog/wp-json/wp/v2/users/".$value->author."?&_fields=id,name,avatar_urls,link";
                 $post[$key]->author = (curl_function($author_url))?curl_function($author_url):[];
@@ -341,6 +340,7 @@ if (! function_exists('getBlogs')) {
                     $post[$key]->category = (curl_function($category_url))?curl_function($category_url):[];
                 }
             }
+
             return $post;
         } catch (\Throwable $th) {
             var_dump($th);
