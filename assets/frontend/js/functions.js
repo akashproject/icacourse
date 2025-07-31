@@ -400,8 +400,10 @@ if ($('#file-dropzone').length) {
           action: "varthana_upload_payslip",
       },
       success: function(file, response) {
-          if (response.success) {
-              uploadedFiles.push(response.data.url);
+          if (response) {
+              console.log(response);
+              
+              uploadedFiles.push(response);
           }
           jQuery("#varthana_payslips").val(uploadedFiles);        
       }

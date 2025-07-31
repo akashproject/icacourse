@@ -73,6 +73,7 @@ class MediaController extends Controller
             $imageType = [
                 'jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff', 'tif', 'webp','heic', 'heif', 'svg', 'eps', 'pdf', 'raw', 'nef', 'cr2','arw','dng', 'ico', 'tga', 'exr'
             ];
+            
             if(in_array($fileDataArray['extension'], $imageType)){
                 $manager = new ImageManager(new Driver());
                 $image = $manager->read($fileData->getRealPath());
