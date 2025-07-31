@@ -71,28 +71,11 @@
 				</div>
 			</div>
 			<div class="card-body">
-				
 				<div class="row ms-3 my-0 justify-content-between">
-					<div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto px-3 mt-0">
-						<div class="dt-search">
-							<input type="search" class="form-control ms-0" id="dt-search-0" placeholder="Search Order">
-							<label for="dt-search-0"></label>
-						</div>
-					</div>
 					<div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto px-3 mt-0">
-						<div class="dt-length mt-md-6 mt-0">
-							<select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select" id="dt-length-0">
-								<option value="7">7</option>
-								<option value="10">10</option>
-								<option value="25">25</option>
-								<option value="50">50</option>
-								<option value="100">100</option>
-							</select>
-							<label for="dt-length-0"></label>
-						</div>
 						<div class="dt-buttons btn-group flex-wrap gap-2 px-3 mt-0 mb-md-0 mb-6">
 							<div class="btn-group mx-auto">
-								<a class="btn buttons-collection btn-label-primary btn-label-secondary" href="{{ route('admin-export-csv') }}" >
+								<a class="btn buttons-collection btn-label-primary" href="{{ route('admin-export-csv') }}" >
 								<span>
 									<span class="d-flex align-items-center gap-2">
 										<i class="icon-base bx bx-export icon-sm"></i>
@@ -106,7 +89,7 @@
 				</div>
 
 				<div class="table-responsive">
-					<table id="" class="table">
+					<table id="zero_config" class="table">
 						<thead>
 							<tr>
 								<th>Order ID</th>
@@ -123,7 +106,7 @@
 						</thead>
 
 						<tbody>
-							@foreach ($orders as $value)
+							@foreach($orders as $value)
 							<tr>
 								<td><a href="{{ route('admin-order-detail',$value->id) }}"><span>#{{ $value->order_id }}</span></a></td>									
 								<td>

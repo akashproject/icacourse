@@ -1326,16 +1326,20 @@
                                 <i class="fal fa-calendar-alt"></i>
                                 {{ date('M d, Y',strtotime($value->date)) }}
                             </li>
-                            <li>
-                                <i class="fal fa-comment-lines"></i>
-                                Comments (05)
-                            </li>
+                            @foreach($value->category as $category)
+                            <a href="{{ $category['link'] }}">
+                                <span class="blog-card__meta__icon">
+                                    <i class="fa fa-tag"></i>
+                                </span>
+                                {{ $category['name'] }}
+                            </a>
+                            @endforeach
                         </ul>
                         <h4 class="post_title">
                             <a href="{{ $value->link }}">{!! $value->title->rendered !!}</a>
                         </h4>
                         <p class="post_text">
-                            But must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and will give complete account of the system, and expound the actual teachings
+                            {!! substr($value->excerpt->rendered,0,200); !!}...
                         </p>
                         <a href="{{ $value->link }}" class="thm-btn bg-thm-color-white thm-color-one btn-rectangle">Read More <i class="fal fa-chevron-right ml-2"></i></a>
                     </div>

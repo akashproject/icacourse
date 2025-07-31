@@ -112,6 +112,7 @@
             }
         ]
     });
+
     $('.testimonial_slider_single').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -120,6 +121,16 @@
         dots: true,
         autoplaySpeed: 2000
     });
+
+    $('.blog_slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        dots: false,
+        autoplaySpeed: 5000,
+    });
+
     $('.testimonial_slider_main').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -136,6 +147,7 @@
             }
         }]
     });
+
     $('.testimonial_slider_nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -147,6 +159,7 @@
         asNavFor: '.testimonial_slider_main',
         focusOnSelect: true
     });
+
     // Coach Slider
     $('.coach_slider').slick({
         slidesToShow: 4,
@@ -178,6 +191,7 @@
     });
     // Magnific Popup
     $('.popup-youtube').magnificPopup({ type: 'iframe' });
+
     $('.gallery-thumb').magnificPopup({
         type: 'image',
         gallery: {

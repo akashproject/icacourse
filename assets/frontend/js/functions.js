@@ -15,7 +15,7 @@ jQuery(".course-header-menu").on('mouseleave',function(){
 });
 
 jQuery('.couse-container .course_grid').each(function(index) {
-  if ((index + 1) % 4 === 0) {
+  if ((index + 1) % 3 === 0) {
     console.log(index);
     jQuery(this).children().addClass('right');
   }
@@ -28,6 +28,7 @@ jQuery(".sort_by_category").on("change",function (){
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
     let cart_count = parseInt(jQuery(".header_cart-items").text());
+    console.log(cart_count);
     var formId = jQuery(this).closest("form").attr('data-id');
     jQuery(".add_to_cart_btn_"+formId).text("Adding to cart...")
     $.ajax({
@@ -36,6 +37,8 @@ jQuery('.add_course_to_cart').on('submit', function(e) {
         data: $(this).serialize(),
         success: function(response) {
             cart_count++;
+            console.log(cart_count);
+            
             jQuery(".header_cart-items").text(cart_count);
             jQuery(".add_to_cart_btn_"+formId).prop('disabled', true).text('Added to cart').addClass("disabled");
         },
@@ -197,37 +200,6 @@ jQuery(".mfp-close-btn").on("click",function(){
     jQuery(".mfp-close").trigger("click");
 })
 
-// jQuery("#send_otp_validation").on('click',function(){
-//     let mobile = jQuery("#check_mobile_exist").val();
-//     let = formId = "checkoutform";
-//     $.ajaxSetup({
-//       headers: {
-//       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//       }
-//     });
-//       $.ajax({
-//       url: `${globalUrl}submit-mobile-otp`,
-//       type: "post",
-//       data: {
-//         mobile: mobile,
-//       },
-//       success: function(result) {
-//         if (result) {        
-//           otp_value = result.otp_value;
-//           jQuery("#" + formId + " .submitted_lead_mobile_no").text(mobile);
-//           jQuery("#" + formId + " .lead_steps").removeClass("active");
-//           jQuery("#" + formId + " .lead_steps.step_2").addClass("active");
-//           return true;
-//         } else {
-          
-//           return true;
-//         }
-//       }
-//     });
-    
-// });
-
-
 function insertLeadRecord(form,formId) {
 		$.ajaxSetup({
 			headers: {
@@ -383,4 +355,55 @@ function getCitiesByStateId(event){
             $("#city").html(htmlContent);  
         }
     });
+}
+
+jQuery("#varthana_loan_application_form .copy_address").on("click",function(){
+    jQuery("input[name=permanent_address]").val(jQuery("input[name=current_address]").val());
+    jQuery("input[name=permanent_pincode]").val(jQuery("input[name=current_pincode]").val());
+    jQuery("input[name=permanent_city]").val(jQuery("input[name=current_city]").val());
+    jQuery("input[name=no_of_years_permanent_residence]").val(jQuery("input[name=no_of_years_current_residence]").val());
+    jQuery("select[name=permanent_residence_type]").val(jQuery("select[name=current_residence_type]").val());
+})
+
+jQuery("#varthana_loan_application_form").validate({
+    rules: {
+        'email': {
+            required: true,
+            email_rule: true
+        }
+    }
+})
+
+jQuery(".occupation").on("change",function(){
+    let id = jQuery(this).attr('id');
+    var selectedId = jQuery('#'+id+" option:selected").attr('data-id');
+    jQuery(".professional_section").removeClass("active");
+    jQuery("."+selectedId).addClass("active");
+})
+
+if ($('#file-dropzone').length) {
+  Dropzone.autoDiscover = true;
+
+  const uploadedFiles = [];
+
+  const myDropzone = new Dropzone("#file-dropzone", {
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      url: `${globalUrl}upload-payslips`,
+      paramName: "file",
+      maxFilesize: 5,
+      uploadMultiple: false,
+      addRemoveLinks: true,
+      acceptedFiles: "image/*,.pdf",
+      params: {
+          action: "varthana_upload_payslip",
+      },
+      success: function(file, response) {
+          if (response.success) {
+              uploadedFiles.push(response.data.url);
+          }
+          jQuery("#varthana_payslips").val(uploadedFiles);        
+      }
+  });
 }

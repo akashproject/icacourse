@@ -6006,7 +6006,7 @@ span.accordion-time__duration {
 }
 
 .accordion-style>.card>.card-header>.btn-link {
-    width: 90%;
+    width: 80%;
     text-align: left;
     background-color: transparent;
     font-family: var(--thm-font);
@@ -6091,6 +6091,10 @@ span.accordion-time__duration {
 }
 
 /*Blog*/
+
+.blog-item {
+    margin: 20px 5px;
+}
 
 ul.category-widget li {
     display: inline-flex;
@@ -9664,6 +9668,7 @@ h2.course_title {
 }
 .course_criteria ul li::before {
     content: "\f19d";
+    margin-right: 8px;
 }
 .coupon_label {
     font-size: 12px;

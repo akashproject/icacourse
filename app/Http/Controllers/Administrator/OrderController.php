@@ -58,16 +58,40 @@ class OrderController extends Controller
 
     public function exportCsv()
     {
-        $results = DB::table('orders')->get();
-
+        $results = DB::table('orders')->join('students', 'orders.profile_id', '=', 'students.id')->get();
         $csvData = [];
-        $csvData[] = ['Order ID', 'Amount', 'Discount'];
+        $csvData[] = ['Order ID','Name','Email','Mobile','Date Of Birth','Address','State','City','Pincode','Courses','Total Amount', 'Discount','Student Code','Money Receipt','Payment Id','Payment Mode','Status','ERP Status','Created At'];
 
         foreach ($results as $row) {
+            $courses = "";
+            $order_items = DB::table('order_items')
+            ->join('courses', 'order_items.course_id', '=', 'courses.id')
+            ->select('courses.name as course', 'order_items.fee_id', 'order_items.amount', 'order_items.discount')
+            ->where('order_items.order_id',$row->id)
+            ->get();
+            foreach ($order_items as $key => $item) {
+                $courses .= $item->course.': Rs.'.$item->amount.' Discount Rs.'.$item->discount.' ,';
+            }
             $csvData[] = [
                 $row->order_id,
+                $row->first_name.' '.$row->last_name,
+                $row->email,
+                $row->mobile,
+                $row->date_of_birth,
+                $row->address,
+                $row->state,
+                $row->city,
+                $row->pincode,
+                $courses,
                 $row->amount,
                 $row->discount,
+                $row->student_code,
+                $row->money_receipt,
+                $row->payment_id,
+                $row->payment_mode,
+                $row->status,
+                $row->erp_status,
+                $row->created_at,
             ];
         }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use App\Models\VarthanaLoanApplicationForm;
 
 class CartController extends Controller
 {
@@ -41,5 +42,42 @@ class CartController extends Controller
             //throw $th;
         }
     }
+
+    public function checkLoanEligibility($course_id)
+    {
+        
+        $contentMain = (object)[
+            'enable_otp' => get_theme_setting('enable_otp')
+        ];
+        $course_id = base64_decode($course_id);
+        return view("cart.check-loan-eligibility",compact('course_id','contentMain'));
+    }
+
+    public function submitLoanEligibilityForm(Request $request)
+    {
+        try {
+            $data = $request->all();
+            VarthanaLoanApplicationForm::create($data);
+            return redirect()->back()->with('message', 'Loan Application Form Submitted successfully!');
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    public function uploadPayslips(Request $request)
+    {
+        try {
+            $data = $request->all();
+            $fileData = $request->file('file');
+            dd($fileData);
+            return redirect()->back()->with('message', 'Loan Application Form Submitted successfully!');
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    
+
+    
     
 }

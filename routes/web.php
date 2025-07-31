@@ -131,9 +131,12 @@ Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'save
 Route::post('/apply-coupon-code', [App\Http\Controllers\IndexController::class, 'applyCouponCode'])->name('apply-coupon-code');
 
 //Cart
+Route::get('loan/check-eligibility/{course_id}', [App\Http\Controllers\CartController::class, 'checkLoanEligibility'])->name('loan-check-eligibility');
 Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('add-to-cart');
 Route::get('/index/carts', [App\Http\Controllers\CartController::class, 'carts'])->name('carts');
 Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'removeFromCart'])->name('remove-from-cart');
+Route::post('/submit-loan-eligibility-form', [App\Http\Controllers\CartController::class, 'submitLoanEligibilityForm'])->name('submit-loan-eligibility-form');
+Route::post('/upload-payslips', [App\Http\Controllers\CartController::class, 'uploadPayslips'])->name('upload-payslips');
 
 //Checkout 
 Route::get('/cart/validate', [App\Http\Controllers\CheckoutController::class, 'studentValidate'])->name('validate');

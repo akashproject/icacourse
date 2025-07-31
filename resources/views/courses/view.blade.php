@@ -1,41 +1,6 @@
 @extends('layouts.main')
     @section('content')
-    <!-- <div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/course-banner-min.webp')}});">
-        <div class="container relative z-1">
-            <div class="row">
-                <div class="col-md-9">
-                    <h1 class="page_title">{{ $contentMain->name }}</h1>
-                    <div class="page_banner_description text-white">
-                        {{ $contentMain->excerpt }}                     
-                    </div>
-                    <div class="page_banner_meta">
-                        <div class="total-rating">
-                            <a href="javascript:void(0)" style="color: #ffbd3f;"> 4.0 </a>
-                            <div class="ratings " style="display: inline;margin: 0 6px;">
-                                <i class="fal fa-star active"></i>
-                                <i class="fal fa-star active"></i>
-                                <i class="fal fa-star active"></i>
-                                <i class="fal fa-star active"></i>
-                                <i class="fal fa-star"></i>
-                            </div>
-                            <a href="javascript:void(0)" class="text-white" style="cursor: auto;margin: 0 6px;"> (388 Reviews )</a>
-                        </div>
-                        
-                        <span class="text-white total-enroll"> 964 students </span>
-                        <div class="course_features text-white mt-5" >
-                            {!! $contentMain->feature !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="{{ url('/assets/frontend/images/elements/element_19.png')}}" alt="element" class="element_1 slideRightTwo">
-            <img src="{{ url('/assets/frontend/images/elements/element_10.png')}}" alt="element" class="element_2 zoom-fade">
-            <img src="{{ url('/assets/frontend/images/elements/element_20.png')}}" alt="element" class="element_3 rotate_elem">
-            <img src="{{ url('/assets/frontend/images/elements/element_21.png')}}" alt="element" class="element_4 rotate_elem">
-        </div>
-    </div> -->
-
-    <section class="banner-inner">
+<section class="banner-inner">
     <div class="container">
         <div class="inner-left"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
         <div class="inner-right"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
@@ -107,8 +72,8 @@
                                     <h2 class="course_title">Eligibility Criteria</h2>
                                 </div>
                                 <div class="row">
-                                    <div class="col-6 course_criteria">
-                                        <span > <i class="fal fa-graduation-cap"></i> {!! $contentMain->criteria !!}</span>    
+                                    <div class="col-12 course_criteria">
+                                        {!! $contentMain->criteria !!}
                                     </div>
                                 </div>
                             </div>
@@ -235,10 +200,12 @@
                                         @endphp
                                         <button class="{{$props}} add_to_cart_btn_{{ $contentMain->id }} border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" style="background: #7129b5;" {{$props}}> Add to cart &nbsp;<i class="fal fa-shopping-bag"></i></button>
                                     </div>
-                                    <span class="division"> Or </span>
-                                    <div class="cart-button">
-                                        <a href="/apply-for-loan?course={{ $contentMain->id }}" class="border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" > Check Loan Eligibility</a>
-                                    </div>
+                                    @if(in_array('1',json_decode($contentMain->type_id))) 
+                                        <span class="division"> Or </span>
+                                        <div class="cart-button d-none d-lg-block">
+                                            <a href="{{ route('loan-check-eligibility',base64_encode($contentMain->id)) }}" class="border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" > Check Loan Eligibility</a>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                             <input type="hidden" name="course_id" value="{{ $contentMain->id }}">
@@ -312,14 +279,73 @@
             </div>
         </div>
     </section>
-
+                                           
     <div class="cart-sm d-block d-lg-none">
-        <a href="#" class="btn btn-cart">Add to cart</a>
+        <div class="d-flex">
+            <div class="item">
+                <a href="#" class="btn-cart">Add to cart</a>
+            </div>
+            <div class="item">
+                <a href="/apply-for-loan?course={{ $contentMain->id }}" class="btn-cart">Check Loan Eligibility</a>
+            </div>
+        </div> 
     </div>
 
+    @if($contentMain->blog)
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 aos-init" data-aos="fade-up" data-aos-delay="">
+                    <h3 class="title">Related  <span class="curve-text">Educational Topics</span></h3>
+                </div>
+                <div class="col-md-4 text-right">
+                    <a href="{{ url('blog') }}" target="_blank" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All <i class="fal fa-chevron-right ml-2"></i></a>
+                </div>
+            </div>
+            <div class="blog_slider">
+                @foreach(getBlogs($contentMain->blog) as $value)
+                <!-- post -->
+                <div class="slide-item col-12">
+                    <article class="post style_2 wow fadeInDown blog-item" data-wow-delay=".10ms">
+                        <div class="post_img">
+                            <img src="{{ $value->source_url }}" alt="img" class="image-fit">
+                        </div>
+                        <div class="post_caption">
+                            <ul class="post_meta">
+                                <li>
+                                    <i class="fal fa-calendar-alt"></i>
+                                    {{ date('M d, Y',strtotime($value->date)) }}
+                                </li>
+                                <li>
+                                    @foreach($value->category as $category)
+                                    <a href="{{ $category['link'] }}">
+                                        <span class="blog-card__meta__icon">
+                                            <i class="fa fa-tag"></i>
+                                        </span>
+                                        {{ $category['name'] }}
+                                    </a>
+                                    @endforeach
+                                </li>
+                            </ul>
+                            <h4 class="post_title">
+                                <a href="{{ $value->link }}">{!! $value->title->rendered !!}</a>
+                            </h4>
+                            <p class="post_text">
+                                {!! substr($value->excerpt->rendered,0,100); !!}
+                            </p>
+                            <a href="{{ $value->link }}" class="thm-btn bg-thm-color-white thm-color-one btn-rectangle">Read More <i class="fal fa-chevron-right ml-2"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <!-- post -->
+                @endforeach
+            </div>
+        </div>
+    </section>
+    @endif  
     <!-- Testimonials End -->
 
-     @if($contentMain->faqs)
+    @if($contentMain->faqs)
     <section class="section">
         <div class="container">
             <div class="row">
@@ -354,8 +380,6 @@
             </div>
         </div>
     </section>
-    
-
     @endif  
 
     @endsection 
