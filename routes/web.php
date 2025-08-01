@@ -120,9 +120,14 @@ Route::group(['prefix' => 'administrator'], function () {
 });
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('website');
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page-view')->where('slug', '([A-Za-z0-9\-]+)');
-Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
+
+
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
 Route::get('/category/{slug}', [App\Http\Controllers\CourseTypeController::class, 'view'])->name('category');
+
+
+Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
+Route::post('/ad-page-capture-lead', [App\Http\Controllers\AdPageController::class, 'captureLead'])->name('ad-page-capture-lead');
 
 Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
 Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');

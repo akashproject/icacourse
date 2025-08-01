@@ -1,0 +1,529 @@
+.container-wide {
+	width: 96%;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding-left: 1.5rem;
+		padding-right: 1.5rem;
+
+	@media (max-width: 992px) {
+		/* //width: 100%; */
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;	
+		/* // .row {
+		// 	margin-left: -50px !important;
+		// 	margin-right: -50px !important;
+		// } */
+	}
+	@media (max-width: 768px) {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+	@media (max-width: 992px) {
+		.row {
+			margin-left: -15px !important;
+			margin-right: -15px !important;
+		}
+	}
+}
+
+
+.banner-pagelanding{
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 32px;
+  padding-top: 42px;
+  position: relative;
+}
+.banner-pagelanding .banner-bottom{
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    bottom: -59px;
+    background-color: #ffffff;
+}
+
+.banner-pagelanding .text-assurance{
+  font-size: 21px;
+  margin-bottom: 10px;
+  color: #fff;
+  margin-top: 22px;
+}
+
+.banner-pagelanding .banner-form{
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.banner-line{
+  width: 436px;
+  background: #fff;
+  height: 1px;
+  position: relative;
+}
+
+
+
+.banner-pagelanding .banner-form .form-control{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.banner-pagelanding .banner-form .form-label {
+  color: #fff;
+ }
+
+.banner-pagelanding h1{
+    font-size: 47px;
+    font-weight: 700;
+    color: #fff;
+}
+.banner-pagelanding h2{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.banner-list{
+  padding: 0;
+  margin: 0;
+}
+.banner-list li{
+    display: inline-block;
+    margin-right: 14px;
+    color: #fff;
+}
+.banner-list li i{
+    margin-right: 11px;
+}
+.banner-pagelanding p{
+    color: #6b7385;
+}
+
+.banner-pagelanding .form-check .form-check-label{
+  color: #A1A1A1;
+  font-weight: 400;
+}
+
+.banner-pagelanding .form-check-input:checked {
+    background-color: #393185;
+    border-color: #393185;
+}
+
+.banner-pagelanding .btn-banner-primary{
+    background-color: #393185;
+    padding: 8px 34px;
+    border-radius: 50px;
+    border: transparent;
+    color: #fff;
+}
+.banner-pagelanding .btn-banner-primary:hover{
+    background-color: #ffc107;
+    border: transparent;
+    color: #000;
+}
+
+.banner-pagelanding .logo-bar{
+  padding: 27px 27px 32px;
+  background-color: #fff;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: initial;
+}
+.banner-pagelanding .banner-logo{
+  max-width: 50%;
+}
+
+.review-section{
+  border-left: 1px solid #fff;
+  padding: 5px 16px;
+}
+.review-section h6{
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.partner-heading{
+  font-size: 1.1rem;
+  color: #fff;
+}
+.partner-logo{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width : 768px) {
+  .banner-pagelanding h1 {
+    font-size: 29px;
+  }
+  .banner-pagelanding h2 {
+    font-size: 1rem;
+  }
+  .banner-pagelanding .text-assurance {
+    font-size: 19px;
+  }
+  .review-section{
+    margin-top: 33px;
+  }
+  .banner-line {
+    width: 100%;
+  }
+}
+
+
+
+
+
+.landing-about{
+  padding: 2rem 0;
+}
+.landing-about p{
+  color: #636363;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.landing-about h4{
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+.landing-about h4 i{
+    color: #393185;
+}
+.landing-about .content-bar{
+  padding-left: 50px;
+}
+
+
+.landing-about .about-1{
+    border-radius: 36px;
+    position: absolute;
+    right: 0;
+    max-width: 400px;
+}
+.landing-about .about-2{
+    border-radius: 36px;
+    position: absolute;
+    left: 165px;
+    bottom: 487px;
+    z-index: 999;
+    max-width: 123px;
+}
+.landing-about .about-3{
+    border-radius: 36px;
+    position: absolute;
+    left: 39px;
+    bottom: 190px;
+    max-width: 400px;
+}
+.landing-about .pre-heading{
+    color: #393185;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.landing-about .about-heading{
+  font-size: 42px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width : 768px) {
+  .landing-about .content-bar {
+    padding-left: 0;
+  }
+  .landing-about .about-heading {
+    font-size: 23px;
+  }
+}
+
+
+
+.section-learn h2{
+  color: #000;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.section-learn p{
+  color: #636363;
+  font-weight: 400;
+}
+.section-learn .btn-banner-primary{
+    background-color: #393185;
+    padding: 8px 34px;
+    border-radius: 50px;
+    border: transparent;
+    color: #fff;
+}
+.section-learn .btn-banner-primary:hover{
+    background-color: #ffc107;
+    border: transparent;
+    color: #000;
+}
+
+.section-learn .learn-img{
+  border-radius: 36px;
+}
+
+.section-training{
+  background-color: #E7E4FF;
+}
+.section-training .pre-heading{
+  font-size: 19px;
+  color: #393185;
+  margin-bottom: 10px;
+}
+.section-training h3{
+  font-weight: 600;
+  color: #000;
+}
+
+.process-bar{
+    background-color: #fff;
+    padding: 2px 16px;
+    text-align: center;
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    min-height: 337px;
+}
+.process-bar i{
+  font-size: 51px;
+  color: #393185;
+}
+.process-bar h4{
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #000;
+  font-size: 17px;
+}
+.process-bar p{
+  color: #8B8B8B;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.section-certifications .pre-heading{
+  font-size: 19px;
+  color: #393185;
+}
+.section-certifications h3{
+  font-weight: 600;
+  color: #000;
+}
+
+.section-certifications p{
+    color: #636363;
+    font-weight: 400;
+}
+
+.certifications-bar{
+  background-color: #fff;
+  padding: 11px 8px;
+  text-align: center;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.certifications-bar img{
+  border-radius: 14px;
+}
+
+
+.landing-choose{
+  background-color: #E7E4FF;
+  padding: 4rem 0;
+}
+.landing-choose .pre-heading{
+  color: #393185;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.landing-choose .choose-heading{
+  color: #000;
+  font-size: 36px;
+  font-weight: 600;
+}
+.landing-choose h4{
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.landing-choose h4 i{
+  color: #393185;
+}
+
+
+
+.courses-wrapper{
+  background-color: #E7E4FF;
+}
+.courses-wrapper .pre-heading{
+  color: #393185;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.courses-wrapper .courses-bar{
+  padding: 16px;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 528px;
+}
+.courses-wrapper .courses-bar img{
+  border-radius: 10px;
+}
+.courses-wrapper .courses-bar .card-body{
+  padding: 16px 0;
+}
+.courses-wrapper .courses-bar .courses-title{
+  color: #393185;
+  font-size: 17px;
+  margin-bottom: 15px;
+  height: 75px;
+}
+.courses-wrapper .courses-bar .meta-courses{
+  background-color: #CCC8FF;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.courses-wrapper .courses-bar .meta-courses h6{
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.courses-wrapper .courses-bar .meta-courses h6 span{
+  font-weight: 400;
+}
+
+.courses-wrapper .courses-bar .btn-brochure{
+    background-color: #393185;
+    width: 100%;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width : 768px) {
+  .section-learn h2 {
+    font-size: 21px;
+  }
+}
+
+.testimonials-bar{
+  background-color: #EFEFEF;
+}
+.testimonials-bar .pre-heading{
+    color: #393185;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.testimonials-bar .comment-bar .comment-box{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 265px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+.testimonials-bar .comment-bar .comment-box::after{
+  content: '';
+    position: absolute;
+    height: 36px;
+    bottom: -36px;
+    left: 23px;
+    border-left: 22px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 13px solid #ffffff;
+}
+
+.testimonials-bar .comment-bar .comment-profile{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+.testimonials-bar .comment-bar .profile-name{
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+.testimonials-bar .comment-bar .profile-course{
+    margin-bottom: 0;
+}
+.testimonials-bar .comment-bar .profile-bar{
+  margin-top: 20px;
+}
+
+
+
+/* demo */
+.course-details{
+  display: none;
+  background-color: #fff;
+  padding: 41px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.course-details.active {
+    display: block;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #393185;
+    border-radius: 22px;
+}
+.courses-details-heading{
+  color: #393185;
+  font-size: 23px;
+}
+
+.section-training .btn-banner-primary{
+    background-color: #393185;
+    padding: 8px 34px;
+    border-radius: 50px;
+    border: transparent;
+    color: #fff;
+}
+.section-training .btn-banner-primary:hover{
+    background-color: #ffc107;
+    border: transparent;
+    color: #000;
+}
+
+.section-certifications .btn-banner-primary{
+    background-color: #393185;
+    padding: 8px 34px;
+    border-radius: 50px;
+    border: transparent;
+    color: #fff;
+}
+.section-certifications .btn-banner-primary:hover{
+    background-color: #ffc107;
+    border: transparent;
+    color: #000;
+}
+
+.landing-choose .btn-banner-primary{
+    background-color: #393185;
+    padding: 8px 34px;
+    border-radius: 50px;
+    border: transparent;
+    color: #fff;
+}
+.landing-choose .btn-banner-primary:hover{
+    background-color: #ffc107;
+    border: transparent;
+    color: #000;
+}
+
+
+footer h5{
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
