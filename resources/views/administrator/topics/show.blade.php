@@ -34,6 +34,17 @@
 								<input name="duration" class="form-control" type="text" value="{{ $topic->duration }}" id="name" placeholder="Enter Duration Here" >
 							</div>
 						</div>
+						<div class="form-group row">
+							<label for="subject_id" class="col-sm-3 text-left control-label col-form-label">Subjects</label>
+							<div class="col-sm-9">
+								<select name="subject_id" id="subject_id" class="select2 form-control custom-select">	
+									<option value="" > Select Subject </option>
+									@foreach (getSubjects() as $value)
+									<option value="{{  $value->id }}" {{ ($value->id == $topic->subject_id)?'selected':'' }}> {{  $value->name }} </option>
+									@endforeach
+								<select>
+							</div>
+						</div>
 					</div>
 
 					<div class="col-md-5">
