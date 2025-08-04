@@ -183,24 +183,6 @@ class CheckoutController extends Controller
         }
     }
 
-    public function orderSuccess(Request $request)
-    {
-        try {
-            echo "success";
-        } catch (\Illuminate\Database\QueryException $e) {
-            //throw $th;
-        }
-    }
-
-    public function orderFailed(Request $request)
-    {
-        try {
-            echo "failed";
-        } catch (\Illuminate\Database\QueryException $e) {
-            //throw $th;
-        }
-    }
-
     public function mail() {
         $data = [];
         $course = [];
