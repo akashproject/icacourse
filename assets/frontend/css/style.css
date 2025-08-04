@@ -9395,6 +9395,11 @@ h2.glsr-title {
     font-size: 20px;
 }
 
+/* Mobile VIew Price */
+.mobile-view-price-wrap {
+    display: flex;
+}
+
 .price_option_wrap {
     background: #dfe0ff;
     position: relative;
@@ -9566,13 +9571,13 @@ input.course_down_fees {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 11px;
-    left: -317px;
+    left: -302px;
     box-shadow: 1px 1px 14px 5px #6f6f6f;
 }
 
 .coach_block .coach_hover_tooltip.right:before {
     content: " ";
-    left: 299px;
+    left: 290px;
     position: absolute;
     top: 54%;
     width: 16px;
@@ -9580,9 +9585,9 @@ input.course_down_fees {
     height: 22px;
     width: 0;
     height: 0;
-    border-top: 18px solid transparent;
-    border-bottom: 22px solid transparent;
-    border-right: 16px solid #797cd9;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #797cd9;
     border-left: 0;
 }
 

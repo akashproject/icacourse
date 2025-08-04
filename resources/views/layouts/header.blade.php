@@ -58,9 +58,6 @@
                 </div>
                 <div class="col-lg-5 xs-display-none">
                     <div class="left-side">
-                        <!-- <p style="margin: auto;">Check Online Class Schedule 
-                            <a href="https://www.icacourse.in/batch-schedule/" class="batch-schedule-link"> Click Here </a> 
-                        </p> -->
                     </div>
                 </div>
                 <div class="col-lg-3 xs-display-none">
@@ -85,7 +82,6 @@
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -98,22 +94,21 @@
                 <div class="logo">
                     <!-- logo -->
                     <a href="{{ url('/') }}" class="logo">
-                        <!--<img src="" alt="logo">-->
                         <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo">
                     </a>
                     <!-- logo -->
                 </div>
                 <div class="course-header-menu menu-item menu-item-has-children">
+                    @if(check_device("mobile") || check_device("tablet"))
+                    <a href="javascript:void(0)" class="thm-btn-border btn-rectangle" >
+                    @else
                     <a href="{{ route('page-view','courses') }}" class="thm-btn-border btn-rectangle" >
+                    @endif
                     <span class="icon-list"><i class="fal fa-list"></i></span> Courses</a>
                     <ul class="sub-menu desktop-menu">
                         @foreach($courseTypes as $courseType)
                         <li class="more" data-id="category-accounting-courses">
                             <a target="_blank" href="{{ route('category',$courseType->slug) }}">{{ $courseType->name }}</a>
-                            <!-- <ul class="more-sub-menu sub-menu">
-                                <li><a href="">CIA With Tally </a></li>
-                                <li><a href="">CIA With Sap</a></li>
-                            </ul> -->
                         </li>
                         @endforeach                 
                     </ul>
@@ -131,21 +126,10 @@
                 <div class="head_actions">
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
-                    
                     <a href="{{ url('cart') }}" class="product-bag-icon desktop-cart"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> {{ count($cartItems) }} </span>
                     </a>
-                    <!-- <button type="button" class="head_trigger desktop_trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button> -->
-                    <!-- <button type="button" class="head_trigger mobile_trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button> -->
                 </div>
                 <!-- Head Actions -->
             </nav>
@@ -206,7 +190,6 @@
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -224,7 +207,11 @@
                 </div>
                 <!-- logo end -->
                 <div class="course-header-menu menu-item menu-item-has-children">
+                    @if(check_device("mobile") || check_device("tablet"))
+                    <a href="javascript:void(0)" class="thm-btn-border bg-white btn-rectangle" >
+                    @else
                     <a href="{{ route('page-view','courses') }}" class="thm-btn-border bg-white btn-rectangle" >
+                    @endif
                     <span class="icon-list"><i class="fal fa-list"></i></span> Courses</a>
                     <ul class="sub-menu desktop-menu">
                         @foreach($courseTypes as $courseType)
@@ -247,24 +234,13 @@
                 <div class="head_actions">
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
-                    
+                
                     <a href="{{ url('/cart') }}" class="product-bag-icon desktop-cart"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> 
                             {{ count($cartItems) }}                   
                         </span>
                     </a>
-
-                    <!-- <button type="button" class="head_trigger desktop_trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button> -->
-                    <!-- <button type="button" class="head_trigger mobile_trigger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button> -->
                 </div>
                 <!-- Head Actions -->
             </nav>

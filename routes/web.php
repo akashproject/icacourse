@@ -157,7 +157,9 @@ Route::get('/payment/failed', [App\Http\Controllers\PaymentController::class, 'f
 
 Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');
+Route::get('/api/cart', [App\Http\Controllers\ApiController::class, 'cart'])->name('api-cart');
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');
 Route::get('/api/courses', [App\Http\Controllers\ApiController::class, 'courses'])->name('api-courses');
+Route::get('/api/course-types', [App\Http\Controllers\ApiController::class, 'courseCategory'])->name('api-courses');
 Route::get('/api/institutes', [App\Http\Controllers\ApiController::class, 'institutes'])->name('api-institutes');
 Route::get('/api/setting/{key}', [App\Http\Controllers\ApiController::class, 'setting'])->name('api-setting');

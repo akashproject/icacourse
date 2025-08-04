@@ -1878,24 +1878,61 @@
         font-size: 30px;
         color: #fff;
     }
-    .cart-sm{
+    .cart-sm {
         text-align: center;
         position: fixed;
-        bottom: 10%;
-        left: 14%;
-        width: 72%;
-        z-index: 9;
-    }
-    .cart-sm .btn-cart{
-        background-color: #3e4095;
-        color: #fff;
+        bottom: 68px;
+        left: 0;
         width: 100%;
-        padding: 13px;
+        z-index: 999;
+        background: #FFF;
+        padding: 10px 0;
     }
     .accordion-style.style_2>.card>.card-header>.btn-link {
         padding: 0px !important;
         width: 50% !important;
         
+    }
+
+    .division {
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+
+    .course_mobile_price_options {
+        border: 2px solid #6c7db5;
+        padding: 7px 10px;
+        background: #e6ebff;
+        text-align: center;
+        height: 79px;
+        position: relative;
+        margin: 6px 5px;
+        float: left;
+        width: 47%;
+    }
+
+    .course_mobile_price_options h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+    .course_mobile_price_options span {
+        font-weight: 800;
+        font-size: 16px;
+    }
+    .cart-price-wrap {
+        overflow: hidden;
+    }
+    .cart-btn-wrap {
+        overflow: hidden;
+    }
+    .cart-btn-options {
+        display: flex;
+        justify-content: center;
+    }
+    .mobile_sticky_add_to_cart {
+        padding: 8px 17px !important;
+        font-size: 18px;
     }
 }
 
