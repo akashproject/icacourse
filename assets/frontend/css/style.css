@@ -9398,6 +9398,7 @@ h2.glsr-title {
 /* Mobile VIew Price */
 .mobile-view-price-wrap {
     display: flex;
+    justify-content: center;
 }
 
 .price_option_wrap {
