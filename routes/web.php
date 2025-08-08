@@ -142,7 +142,7 @@ Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class
 Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('capture-lead');
 Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
 Route::post('/apply-coupon-code', [App\Http\Controllers\IndexController::class, 'applyCouponCode'])->name('apply-coupon-code');
-
+Route::get('/index/test-mail', [App\Http\Controllers\IndexController::class, 'testEmail'])->name('test-mail');
 //Cart
 Route::get('loan/check-eligibility/{course_id}', [App\Http\Controllers\CartController::class, 'checkLoanEligibility'])->name('loan-check-eligibility');
 Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('add-to-cart');

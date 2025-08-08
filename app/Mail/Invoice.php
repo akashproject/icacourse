@@ -29,7 +29,7 @@ class Invoice extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('info@icajobguarantee.com', 'ICA Online'),
+            from: new Address('online@icacourse.in', 'ICA Online'),
             subject: 'ICA Online Course Purchese Successfull',
         );
     }

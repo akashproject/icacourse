@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="banner-img">
-                    <a href="https://api.whatsapp.com/send?phone=8100704872" class="chat-card">
+                    <a href="https://api.whatsapp.com/send?phone=get_theme_setting" class="chat-card">
                         <div class="chat-text">
                         <strong>Chat up with your mentor</strong>
                         <span>Find your mentor by one click</span>
@@ -133,34 +133,22 @@
 
                     <div class="price-box">
                         <div class="price-coll">Business Accounting</div>
-
                         <div class="price-coll">36</div>
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll">TallyPrime</div>
-
                         <div class="price-coll">51</div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll">Business Communication</div>
-
                         <div class="price-coll">45</div>
 
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>

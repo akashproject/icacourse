@@ -10,6 +10,7 @@
                 </span>
             </a>
         </li>
+        <li><a href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}"><i class="fab fa-whatsapp"></i></a></li>
         <li><a href="#" class="head_trigger mobile_trigger" ><i class="fas fa-bars"></i></a></li>
     </ul>
 </div>

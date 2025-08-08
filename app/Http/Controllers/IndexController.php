@@ -7,6 +7,8 @@ use App\Trait\afterLeadSubmit;
 use App\Models\Contact;
 use App\Models\Institute;
 use App\Models\City;
+use App\Mail\Invoice;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Lead;
 use App\Models\Coupon;
 use App\Models\Student;
@@ -215,6 +217,27 @@ class IndexController extends Controller
             return response()->json($cities, $this->_statusOK);
         } catch(\Illuminate\Database\QueryException $e){
             var_dump($e->getMessage()); 
+        }
+    }
+
+    public function testEmail()
+    {
+        try {
+            
+            $order = [
+                'title' => 'Success',
+                'content' => 'This is an email testing using Laravel-Brevo',
+                'name' => "Akash Dutta",
+                'email' => 'akash.dutta@icagroup.in',
+            ];
+           
+            $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($order));
+           
+            return true;
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+
+            var_dump($e);
         }
     }
 }
