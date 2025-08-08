@@ -18,10 +18,10 @@
                 </div>
             </div>
         </div>
-        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_19.png" alt="element" class="element_1 slideRightTwo">
-        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_10.png" alt="element" class="element_2 zoom-fade">
-        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_20.png" alt="element" class="element_3 rotate_elem">
-        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_21.png" alt="element" class="element_4 rotate_elem">
+        <img src="{{ url('/assets/frontend/images/elements/element_19.png')}}" alt="element" class="element_1 slideRightTwo">
+        <img src="{{ url('/assets/frontend/images/elements/element_10.png')}}" alt="element" class="element_2 zoom-fade">
+        <img src="{{ url('/assets/frontend/images/elements/element_20.png')}}" alt="element" class="element_3 rotate_elem">
+        <img src="{{ url('/assets/frontend/images/elements/element_21.png')}}" alt="element" class="element_4 rotate_elem">
     </div>
 </div>
 <section class="section-padding">
@@ -41,7 +41,7 @@
             <div class="col-lg-6">
                 <div class="contact_faq_box shadow_1">
                     <div class="icon">
-                        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/icons/customer-support-Icon.png" alt="icon" class="image-fit-contain">
+                        <img src="{{ url('/assets/frontend/images/icons/customer-support-Icon.png')}}" alt="icon" class="image-fit-contain">
                     </div>
                     <div class="text">
                         <h4>Get instant support</h4>
@@ -53,7 +53,7 @@
             <div class="col-lg-6">
                 <div class="contact_faq_box shadow_1">
                     <div class="icon">
-                        <img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/icons/question-Icon.png" alt="icon" class="image-fit-contain">
+                        <img src="{{ url('/assets/frontend/images/icons/question-Icon.png')}}" alt="icon" class="image-fit-contain">
                     </div>
                     <div class="text">
                         <h4>Still have doubts?</h4>

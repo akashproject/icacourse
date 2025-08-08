@@ -137,7 +137,6 @@ class CheckoutController extends Controller
 				$orderItem[count($cartItems) - 1]['discount'] += $remainder;
 				$orderItem[count($cartItems) - 1]['amount'] -= $remainder;
 			}
-
             foreach($orderItem as $key => $item) {
                 $orderItem = OrderItem::create($item);
                 if (!$item) {
@@ -168,7 +167,7 @@ class CheckoutController extends Controller
             foreach ($ccAvenueBillingData as $key => $value){
                 $merchant_data.=$key.'='.urlencode($value).'&';
             }
-            $encrypted_data=encrypt($merchant_data,$working_key); // Method for encrypting the data.
+            $encrypted_data=encryption($merchant_data,$working_key); // Method for encrypting the data.
             ?>
             <form method="post" name="redirect" action="https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction"> 
                 <?php

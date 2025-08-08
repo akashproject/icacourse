@@ -13,12 +13,11 @@ trait admissionProcess
     public function erpPushProcess($order_id){
         try {
             $order = Order::where('order_id',$order_id)->first();
-
             if(!$order) {
                 return false;
             }
 
-            if($order->status != "success" || $order->payment_id == null) {
+            if($order->status != "success") {
                 return false;
             }
             
@@ -61,13 +60,14 @@ trait admissionProcess
                 "Email"=> $student->email,
                 "Student_gender"=>$student->gender,
                 "WebSource"=>$order->source,
-                "CenterCode"=> "X999",
+                "CenterCode"=> "RT01",
                 "EnquiryId"=>null,
                 "PaymentMode"=> ($methodlist[$order->payment_mode])?$methodlist[$order->payment_mode]:"P",
                 "ChqDrfNo"=>$order->payment_id,
                 "listCourse"=> $courseModule,
                 "contactCentre"=>null
             );
+
             $data = json_encode($admissionArray);
             
             $url = "https://new.icaerp.com/api/online/saveEnquiryAdmission";

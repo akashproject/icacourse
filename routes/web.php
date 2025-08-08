@@ -160,8 +160,8 @@ Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::cl
 Route::get('/cart/mail', [App\Http\Controllers\CheckoutController::class, 'mail'])->name('testInvoice');
 
 //Payment
-Route::get('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');
-Route::get('/payment/failed', [App\Http\Controllers\PaymentController::class, 'failed'])->name('payment-failed');
+Route::post('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');
+Route::post('/payment/failed', [App\Http\Controllers\PaymentController::class, 'failed'])->name('payment-failed');
 
 Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');

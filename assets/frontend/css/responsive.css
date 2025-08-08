@@ -1641,77 +1641,44 @@
 
 
 @media (max-width: 380px) {
-
-
-
     .about .image_box .image_2 {
-
         width: 120px;
-
         height: 120px;
-
     }
-
-
 
     /*blog*/
-
     .post {
-
         padding: 20px;
-
     }
-
-
 
     .post .post_caption {
-
         padding: 0;
-
     }
-
-
 
     .bg-banner .banner_text .title {
-
         font-size: 40px;
-
     }
-
-
 
     .testimonial_item {
-
         padding: 30px;
-
     }
-
-
 
     /*Contact*/
-
     .form_style label {
-
         display: none;
-
     }
-
-
 
     .form_style .form-control {
-
         padding-left: 13px;
-
     }
-
-
 
     .form_style .form-control::placeholder {
-
         font-size: 16px;
-
     }
 
+    .placement-redious-grid {
+        width: 109px;
+    }
 }
 
 

@@ -17,7 +17,7 @@ jQuery(".course-header-menu").on('mouseleave',function(){
 jQuery('.couse-container .course_grid').each(function(index) {
   if ((index + 1) % 3 === 0) {
     console.log(index);
-    jQuery(this).children().addClass('right');
+    jQuery(this).children('coach_hover_tooltip').addClass('right');
   }
 });
 

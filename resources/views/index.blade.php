@@ -13,9 +13,15 @@
             </div>
             <div class="col-lg-6">
                 <div class="banner-img">
-                    <img src="assets/frontend/images/students.svg" alt="" class="img-fluid students-img">
-                    <img src="assets/frontend/images/chat-up.svg" alt="" class="img-fluid chat-up">
-                    <img src="assets/frontend/images/stape.svg" alt="" class="img-fluid stape">
+                    <a href="https://api.whatsapp.com/send?phone=8100704872" class="chat-card">
+                        <div class="chat-text">
+                        <strong>Chat up with your mentor</strong>
+                        <span>Find your mentor by one click</span>
+                        </div>
+                        <div class="chat-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="chat icon">
+                        </div>
+                    </a>
                     <img src="assets/frontend/images/banner-img-right.png" alt="" class="img-fluid">
                 </div>
             </div>
@@ -41,7 +47,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 my-4">
-                <img src="assets/frontend/images/about-img-home.jpg" alt="" class="img-fluid">
+                <img src="assets/frontend/images/about-img-home.png" alt="" class="img-fluid">
             </div>
             <div class="col-lg-6 ps-lg-5 my-4">
                 <h2 class="pre-heading">Our Offerings</h2>
@@ -103,56 +109,37 @@
                         <div class="price-coll"><span class="modules-text">Hours</span></div>
                         <div class="price-coll">
                             <h5>CIA Express<br> (3Months)</h5>
-
                             <span>40999</span>
-
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-
                         </div>
-
                         <div class="price-coll"><h5>CIA <br>(4Months)</h5>
-
                             <span>49999</span>
-
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-
                         </div>
-
                         <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
-
                             <span>72999</span>
-
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
-
                         </div>
 
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll">Business Computer Applications</div>
-
                         <div class="price-coll">45</div>
-
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll">Business Accounting</div>
 
                         <div class="price-coll">36</div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
-
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -162,11 +149,11 @@
 
                         <div class="price-coll">51</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -176,11 +163,11 @@
 
                         <div class="price-coll">45</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -190,11 +177,11 @@
 
                         <div class="price-coll">3</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -204,11 +191,11 @@
 
                         <div class="price-coll">39</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -218,11 +205,11 @@
 
                         <div class="price-coll">11</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
                     </div>
 
@@ -232,11 +219,11 @@
 
                         <div class="price-coll">27</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -246,11 +233,11 @@
 
                         <div class="price-coll">30</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -260,11 +247,11 @@
 
                         <div class="price-coll">9</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div> 
 
@@ -274,11 +261,11 @@
 
                         <div class="price-coll">80</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="not available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -290,11 +277,11 @@
 
                         <div class="price-coll">12</div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                     </div>
 
@@ -354,7 +341,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -362,7 +349,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -370,7 +357,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -418,7 +405,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -426,7 +413,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -434,7 +421,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -486,7 +473,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -496,7 +483,7 @@
 
                                     <div class="price-text-valu">
 
-                                        <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
+                                        <img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
 
                                     </div>
 
@@ -508,7 +495,7 @@
 
                                     <div class="price-text-valu">
 
-                                        <img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available">
+                                        <img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
 
                                     </div>
 
@@ -556,7 +543,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -564,7 +551,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -572,7 +559,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -620,7 +607,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -628,7 +615,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -636,7 +623,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -684,7 +671,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -692,7 +679,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -700,7 +687,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -750,7 +737,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -758,7 +745,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -766,7 +753,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -818,7 +805,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -826,7 +813,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -834,7 +821,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -892,7 +879,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -900,7 +887,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -908,7 +895,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -966,7 +953,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -974,7 +961,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -982,7 +969,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1040,7 +1027,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1048,7 +1035,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/cancel.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1056,7 +1043,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1104,7 +1091,7 @@
 
                                     <div class="price-text">CIA Express (3Months)<span>40999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1112,7 +1099,7 @@
 
                                     <div class="price-text">CIA (4Months)<span>49999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 
@@ -1120,7 +1107,7 @@
 
                                     <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
 
-                                    <div class="price-text-valu"><img style="width: 20px;" src="https://www.icacourse.in/wp-content/themes/scriptcrown/images/tick.png" alt="available"></div>
+                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
                                 </div>
 

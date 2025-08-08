@@ -15,14 +15,14 @@
 </div>
 @endif
 
-<footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(https://www.icacourse.in/wp-content/themes/scriptcrown/images/elements/element_18.png);">
+<footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(/assets/frontend/images/elements/element_18.png);">
     <div class="container">
         <div class="footer_top section-padding">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="ft_widget ft_about xs-text-center">
                         <a href="https://www.icacourse.in/" class="logo">
-                            <img src="https://www.icacourse.in/wp-content/uploads/2025/05/ICAOnlineCourseLogowithNSDC-1.png" alt="logo" class="image-fit">
+                            <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo" class="image-fit">
                         </a>
                         <ul class="info xs-text-center">
                             <li>

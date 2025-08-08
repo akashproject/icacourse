@@ -20,6 +20,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'check_cart_item' => \App\Http\Middleware\CheckCartItem::class,
             'check_student_exist' => \App\Http\Middleware\CheckStudentExist::class,
         ]);
+        $middleware->validateCsrfTokens(except: [
+            'payment/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

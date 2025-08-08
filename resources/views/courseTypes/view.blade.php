@@ -68,7 +68,7 @@
                         <label for="email">Select Sub Category</label>
                     </div>
                     @endif
-                    <h5> Filter By Course </h5>
+                    <h5> Filter By Field </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control filter_by_tag" >
                             <option value="" >All </option>

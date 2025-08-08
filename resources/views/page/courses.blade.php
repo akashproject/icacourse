@@ -53,7 +53,7 @@
                         </select>
                         <label for="email">Select Category</label>
                     </div>
-                    <h5> Filter By Course </h5>
+                    <h5> Filter By Field </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control filter_by_tag" >
                             <option value="" >All </option>
@@ -66,11 +66,11 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="row">
+                <div class="row justify-content-center couse-container">
                     @foreach(get_courses() as $course)
                     <!-- Box Start -->
                     <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="coach_block course-item">
+                        <div class="coach_block course-item course_grid">
                             <div class="coach_hover_tooltip"> 
                                 <h4> {{ $course->name }} </h4>
                                 <div class="course_hover_stat" >

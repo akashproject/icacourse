@@ -22,9 +22,9 @@
                         <h1 class="page_title">Online {{ $contentMain->name }} Courses</h1>
                     </div>
                     <div class="col-lg-6">
-                        <p class="text-white">
-                            {{ $contentMain->excerpt }}                     
-                        </p>
+                        <div class="text-white excerpt-content">
+                            {!! $contentMain->excerpt !!}                     
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         </select>
                         <label for="email">Select Category</label>
                     </div>
-                    <h5> Filter By Course </h5>
+                    <h5> Filter By Field </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control filter_by_tag" >
                             <option value="" >All </option>
