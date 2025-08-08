@@ -25,6 +25,10 @@ jQuery(".sort_by_category").on("change",function (){
 	window.location.href = $(this).val();
 });
 
+jQuery(".filter_by_tag").on("change",function (){
+	window.location.href = $(this).val();
+});
+
 jQuery('.add_course_to_cart').on('submit', function(e) {
     e.preventDefault();
     let cart_count = parseInt(jQuery(".header_cart-items").text());

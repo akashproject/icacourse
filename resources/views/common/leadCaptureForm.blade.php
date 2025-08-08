@@ -18,26 +18,18 @@
                 </form>
             </div>
         </div>
-        <div class="col-md-5 position-relative">
+        <div class="col-md-5 position-relative form-right">
             <div class="modelSideBanner">
+                <img src="{{ url('assets/frontend/images/right-obj.png') }}" alt="" class="right-object">
+                <img src="{{ url('assets/frontend/images/right-obj.png') }}" alt="" class="bottom-object">
                 <div class="sec-title sec-title--center wow fadeInUp mb-3 mt-5" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <h3 class="sec-title__title" style="font-size:22px"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="row justified-content-center">
-                    @foreach(getPlacements(1) as $placement)
-                        <div class="col-10"> 
-                            <div class="placed-student-container placement-featured my-2">
-                                <div class="placed-student-content text-white margin-20px-right">
-                                    <h6 class="margin-10px-bottom"> <strong>{{$placement->name }}</strong> </h6>
-                                    <p> Designation: <strong>{{ $placement->dasignation}}</strong></p>
-                                    <p> Placed At: <strong>{{ $placement->placed_at}}</strong></p>
-                                </div>
-                                <div class="student-image">                     
-                                    <img src="{{ getSizedImage($placement->featured_image) }}" alt="{{$placement->name }}" data-no-retina="">
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                    <!-- <h3 class="sec-title__title text-center pe-lg-4" style="font-size:22px"><span>Placed </span> <span class="sec-title__title__shape">Students</span><span class="sec-title__title__text"> Story</span></h3> -->
+                </div>
+                <img src="{{ url('assets/frontend/images/stycky-pin.png') }}" alt="" class="img-fluid stycky-pin">
+                <div class="right-card">    
+                    <h2>Still Thinking? Seats Are Filling Fast!</h2>
+                    <img src="{{ url('assets/frontend/images/girl-2.jpg') }}" alt="" class="img-fluid right-profile mb-4">
+                    <p>You’ve seen the opportunity, now grab it! Get job-ready skills with ICA’s expert-led, practical training — anytime, anywhere..</p>
                 </div>
             </div>
         </div>

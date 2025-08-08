@@ -43,15 +43,25 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="sort_by">
-                    <h5> Sort By Category </h5>
+                    <h5> Filter By Category </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control sort_by_category" >
                             <option value="" >All </option>
                             @foreach(getCourseTypeById() as $key => $category)
-                                <option value="{{ route('category',$category->slug) }}" {{ ($contentMain->slug == $category->slug) ?"selected":"" }}> {{$category->name}} </option>
+                                <option value="{{ route('category',$category->slug) }}"> {{$category->name}} </option>
                             @endforeach
                         </select>
                         <label for="email">Select Category</label>
+                    </div>
+                    <h5> Filter By Course </h5>
+                    <div class="form-floating mb-3">
+                        <select class="form-control filter_by_tag" >
+                            <option value="" >All </option>
+                            @foreach(getTags() as $key => $tag)
+                                <option value="{{ route('tag',$tag->slug) }}"> {{$tag->name}} </option>
+                            @endforeach
+                        </select>
+                        <label for="email">Select Course</label>
                     </div>
                 </div>
             </div>

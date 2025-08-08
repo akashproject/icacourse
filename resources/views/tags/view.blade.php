@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="page_breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0">
@@ -19,7 +19,7 @@
                                 </ol>
                             </nav>
                         </div>
-                        <h1 class="page_title">{{ $contentMain->name }}</h1>
+                        <h1 class="page_title">Online {{ $contentMain->name }} Courses</h1>
                     </div>
                     <div class="col-lg-6">
                         <p class="text-white">
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="sort_by">
-                    <h5> Sort By Category </h5>
+                    <h5> Filter By Category </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control sort_by_category" >
                             <option value="" >All </option>
@@ -46,28 +46,6 @@
                         </select>
                         <label for="email">Select Category</label>
                     </div>
-                    @if($contentMain->parent_id)
-                    <div class="form-floating mb-3">
-                        <select class="form-control sort_by_category" >
-                            <option value="" >All </option>
-                            @foreach(getCourseTypeById($contentMain->parent_id) as $key => $category)
-                                <option value="{{ route('category',$category->slug) }}" {{ ($contentMain->slug == $category->slug) ?"selected":"" }}> {{$category->name}} </option>
-                            @endforeach
-                        </select>
-                        <label for="email">Select Category</label>
-                    </div>
-                    @endif
-                    @if(($contentMain->children->count() > 0))
-                    <div class="form-floating mb-3">
-                        <select class="form-control sort_by_category" >
-                            <option value="" > </option>
-                            @foreach($contentMain->children as $key => $category)
-                                <option value="{{ route('category',$category->slug) }}" > {{$category->name}} </option>
-                            @endforeach
-                        </select>
-                        <label for="email">Select Sub Category</label>
-                    </div>
-                    @endif
                     <h5> Filter By Course </h5>
                     <div class="form-floating mb-3">
                         <select class="form-control filter_by_tag" >
@@ -81,9 +59,10 @@
                 </div>
             </div>
             <div class="col-md-9">
+                @if(count($tagCourses) > 0)
                 <div class="row justify-content-center couse-container">
                     <!-- Box Start -->
-                    @foreach($categoryCourses as $course)
+                    @foreach($tagCourses as $course)
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="coach_block course-item course_grid">
                             @if(check_device("desktop"))
@@ -159,6 +138,13 @@
                     <!-- Box End -->
                     @endforeach
                 </div>
+                @else
+                <div class="row justify-content-center couse-container">
+                    <div class="col-12 text-center">
+                        <h4> No Record Found </h4>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@ use App\Models\Setting;
 use App\Models\CourseType;
 use App\Models\Course;
 use App\Models\Subject;
+use App\Models\Tag;
 use App\Models\Topic;
 use App\Models\State;
 use App\Models\City;
@@ -100,6 +101,13 @@ if (! function_exists('getCourseTypeById')) {
     }
 }
 
+if (! function_exists('getTags')) {
+    function getTags(){
+        $value = Tag::all();
+        return (isset($value))?$value:"null";
+    }
+}
+
 if (! function_exists('getTypesByCourseId')) {
     function getTypesByCourseId($types){
         $value = CourseType::whereIn('id',json_decode($types))->where('status','1')->get();
@@ -126,7 +134,7 @@ if (! function_exists('getCourseById')) {
 
 if (! function_exists('getSubjects')) {
     function getSubjects(){
-        $value = Subject::where('status','1')->get();
+        $value = Subject::all();
         return (isset($value))?$value:"null";
     }
 }

@@ -95,6 +95,11 @@
                      <div data-i18n="Notifications">Topics</div>
                   </a>
                </li>
+               <li class="menu-item">
+                  <a href="{{ route('admin-tags') }}" class="menu-link">
+                     <div data-i18n="Notifications">Tags</div>
+                  </a>
+               </li>
             </ul>
          </li>
          <li class="menu-item">

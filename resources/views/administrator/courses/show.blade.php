@@ -124,7 +124,7 @@
 							<label for="subjects" class="col-sm-3 text-left control-label col-form-label">Subjects</label>
 							<div class="col-sm-9">
 								<select name="subjects[]" id="subjects" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
-									@foreach (getSubjects() as $value)
+									@foreach(getSubjects() as $value)
 									<option value="{{  $value->id }}" {{ (isset($course->subjects)  && in_array($value->id,  $course->subjects))?'selected' : '' }} > {{  $value->name }} </option>
 									@endforeach
 								</select>
@@ -150,6 +150,16 @@
 									<option value="">Select Course Type</option>
 									@foreach($categories as $value)
 									<option value="{{ $value->id }}" {{ (isset($course->type_id)  && in_array($value->id,  json_decode($course->type_id)))?'selected' : '' }}> {{ $value->name }}</option>
+									@endforeach
+								</select>
+							</div>
+						</div>	
+						<div class="form-group row mb-2">
+							<label for="tags" class="col-sm-12 text-left control-label col-form-label">Tags</label>
+							<div class="col-sm-12">
+								<select name="tags[]" id="tags" class="select2 form-control custom-select" style="width: 100%; height:100px;" multiple>	
+									@foreach(getTags() as $value)
+									<option value="{{  $value->id }}" {{ (isset($course->tags)  && in_array($value->id,  json_decode($course->tags)))?'selected' : '' }} > {{  $value->name }} </option>
 									@endforeach
 								</select>
 							</div>

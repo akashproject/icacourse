@@ -45,10 +45,13 @@ class AdPageController extends Controller
                 $lead = Lead::find($postData['lead_id']);
             }
             $updateData['otp_status'] = "1";
-            $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
-            $updateData['crm_status'] = ($ee['result'] == "Success")?'1':'0';
-            $updateData['crm_response'] = $ee;
-
+            
+            if($postData['store_area'] == "1"){
+                $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
+                $updateData['crm_status'] = ($ee['result'] == "Success")?'1':'0';
+                $updateData['crm_response'] = $ee;
+            }
+            
             $cogno = $this->cognoai_api_calling($lead);
             $updateData['whatsapp_status'] = ($cogno['status'] == "200")?'1':'0';
 

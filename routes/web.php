@@ -40,6 +40,13 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::post('/save-course-type', [App\Http\Controllers\Administrator\CourseTypeController::class, 'save'])->name('admin-save-course-type');
         Route::get('/delete-course-type/{id}', [App\Http\Controllers\Administrator\CourseTypeController::class, 'delete'])->name('admin-delete-course-type');
 
+        //Tags
+        Route::get('/tags', [App\Http\Controllers\Administrator\TagController::class, 'index'])->name('admin-tags');
+        Route::get('/add-tag', [App\Http\Controllers\Administrator\TagController::class, 'Add'])->name('admin-add-tag');
+        Route::get('/view-tag/{id}', [App\Http\Controllers\Administrator\TagController::class, 'show'])->name('admin-show-tag');
+        Route::post('/save-tag', [App\Http\Controllers\Administrator\TagController::class, 'save'])->name('admin-save-tag');
+        Route::get('/delete-tag/{id}', [App\Http\Controllers\Administrator\TagController::class, 'delete'])->name('admin-delete-tag');
+
         //Courses
         Route::get('/courses', [App\Http\Controllers\Administrator\CourseController::class, 'index'])->name('admin-courses');
         Route::get('/view-course/{id}', [App\Http\Controllers\Administrator\CourseController::class, 'show'])->name('admin-show-course');
@@ -124,6 +131,7 @@ Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->na
 
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
 Route::get('/category/{slug}', [App\Http\Controllers\CourseTypeController::class, 'view'])->name('category');
+Route::get('/tag/{slug}', [App\Http\Controllers\TagController::class, 'view'])->name('tag');
 
 
 Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
