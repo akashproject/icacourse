@@ -91,11 +91,11 @@ trait afterLeadSubmit
             $url = "https://api.brevo.com/v3/smtp/email";
             $apiData = [
                 "sender" => [
-                    "name" => "IDCM- Institute of Digital & Content Marketing",
+                    "name" => "ICA Edu Skills - Retail Online",
                     "email" => "online@icacourse.in",
                 ],
                 "replyTo" => [
-                    "name" => "IDCM- Institute of Digital & Content Marketing",
+                    "name" => "ICA Edu Skills - Retail Online",
                     "email" => "no-reply@icacourse.in",
                 ],
                 "params" => [

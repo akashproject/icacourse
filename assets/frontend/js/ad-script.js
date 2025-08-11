@@ -72,6 +72,29 @@ jQuery('#otp_target').otpdesigner({
     inputsClasses: 'some-class text-danger',
 });
 
+// testimonial Slider
+$('.testimonial_slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: true,
+    autoplaySpeed: 9000,
+    responsive: [{
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                arrows: false
+            }
+        }
+    ]
+});
+
 function insertLeadRecord(form,formId) {
 		$.ajaxSetup({
 			headers: {
