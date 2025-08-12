@@ -47,8 +47,7 @@ class PaymentController extends Controller
                 return Http::post(route('payment-failed'), ['status' => 'failure']);
             }
 
-            $order = ['id' => 101, 'address' => 'Kolkata, India'];
-            $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($order));
+            $this->invoice($responseData['order_id']);
             return view('payment.success',compact('contentMain'));
         } catch (\Illuminate\Database\QueryException $e) {
             var_dump($e->getMessage());
@@ -66,5 +65,35 @@ class PaymentController extends Controller
             //throw $th;
         }
         
+    }
+
+    public function invoice($order_id){
+        $order = Order::where('order_id',$order_id)->first();
+        $orderItem = OrderItem::where('order_id',$order->id)->get();
+        $student = Student::find($order->profile_id);
+        $items = [];
+        $totalCourseFee = 0;
+        foreach($orderItem as $key => $item){
+            $items[$key]['name'] = getCourseById($item->course_id)->name;
+            $items[$key]['amount'] = $item->amount;
+            $totalCourseFee += getFeeById($item->fee_id)->Down_Payment;
+        }
+        $invoiceData = [
+            'payment_id' => $order->payment_id,
+            'student_code' => $order->student_code,
+            'date' => date('d M,Y',strtotime($order->created_at)),
+            'first_name' => $student->first_name,
+            'last_name' => $student->last_name,
+            'mobile' => $student->mobile,
+            'address' => $student->address,
+            'state' => $student->state,
+            'city' => $student->city,
+            'pincode' => $student->pincode,
+            'order_items' => $items,
+            'amount' => $order->amount,
+            'totalCourseFee' => $totalCourseFee,
+            'discount' => $order->discount,
+        ];
+        $mail = Mail::to($student->email,$student->first_name.' '.$student->last_name)->send(new Invoice($invoiceData));
     }
 }

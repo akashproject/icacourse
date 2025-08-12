@@ -11,7 +11,6 @@ class CheckCartItem
     {
         $cartItem = json_decode(Cookie::get('cartItems'),true);
         if (!Cookie::has('cartItems') || count($cartItem) <= 0) {
-            echo "here"; exit;
             return redirect()->route('page-view','cart'); 
         }
 

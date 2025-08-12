@@ -58,6 +58,9 @@
                 </div>
                 <div class="col-lg-5 xs-display-none">
                     <div class="left-side">
+                        <!-- <p style="margin: auto;">Check Online Class Schedule 
+                            <a href="https://www.icacourse.in/batch-schedule/" class="batch-schedule-link"> Click Here </a> 
+                        </p> -->
                     </div>
                 </div>
                 <div class="col-lg-3 xs-display-none">
@@ -68,7 +71,7 @@
                             </a>
                         </li>
                         <li style="margin-right: 20px;">
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=8100704872">
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
@@ -81,7 +84,7 @@
                             <a target="_blank" href="https://www.linkedin.com/showcase/ica-edu-skills-online-course/">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                        </li>
+                        </li>                    
                     </ul>
                 </div>
             </div>
@@ -122,7 +125,7 @@
                     </ul>
                 </div>    
                 <!-- Navigation Ens -->
-                 <!-- Head Actions -->
+                <!-- Head Actions -->
                 <div class="head_actions">
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
@@ -160,7 +163,6 @@
                 </div>
                 <div class="col-lg-5 xs-display-none">
                     <div class="left-side">
-                        
                     </div>
                 </div>
                 <div class="col-lg-3 xs-display-none">
@@ -171,7 +173,7 @@
                             </a>
                         </li>
                         <li style="margin-right: 20px;">
-                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+91https://api.whatsapp.com/send?phone=8100704872">
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
@@ -234,7 +236,6 @@
                 <div class="head_actions">
                     <!-- Search -->
                     <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"> Apply Now </a>
-                
                     <a href="{{ url('/cart') }}" class="product-bag-icon desktop-cart"> 
                         <i class="fal fa-shopping-bag"></i> 
                         <span class="header_cart-items"> 

@@ -20,7 +20,7 @@ class CourseController extends Controller
         try {
 
             $contentMain = Course::whereRaw("`slug` COLLATE utf8mb4_bin = ?", [$slug])->first();
-                            
+            $contentMain->course_id = $contentMain->id;
             //Related Courses
             $courses = DB::table('courses')->get();
 

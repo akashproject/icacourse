@@ -99,6 +99,9 @@
 </div>
 <input type="hidden" class="formFieldOtpResponse" >
 <input type="hidden" class="lead_id" name="lead_id"> 
+@if(isset($contentMain->course_id))
+<input type="hidden" name="course_id" value="{{$contentMain->course_id}}">
+@endif
 <input type="hidden" name="utm_campaign" value="{{ getUtmCampaign(isset($contentMain->utm_campaign)?$contentMain->utm_campaign:null) }}">
 <input type="hidden" name="utm_source" value="{{ getUtmSource(isset($contentMain->utm_source)?$contentMain->utm_source:null) }}">
 <input type="hidden" name ="lead_type" value="{{ getCommunicationMedium(isset($contentMain->lead_type)?$contentMain->lead_type:null) }}" >

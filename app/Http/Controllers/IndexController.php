@@ -14,6 +14,8 @@ use App\Models\Coupon;
 use App\Models\Student;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
+use App\Models\Order;
+use App\Models\OrderItem;
 
 class IndexController extends Controller
 {
@@ -111,7 +113,7 @@ class IndexController extends Controller
             $updateData['mail_status'] = (isset($brevo['messageId']))?'1':'0';
             $lead->update($updateData);
 
-            $student = Student::where('mobile',$lead->mobile)->exist();
+            $student = Student::where('mobile',$lead->mobile)->first();
             if(!$student) {
                 $student = [
                     'first_name' => $lead->first_name,
@@ -223,16 +225,36 @@ class IndexController extends Controller
     public function testEmail()
     {
         try {
-            
-            $order = [
-                'title' => 'Success',
-                'content' => 'This is an email testing using Laravel-Brevo',
-                'name' => "Akash Dutta",
-                'email' => 'akash.dutta@icagroup.in',
+            $order_id = "order_SQAR8GW2C7VXBM";
+            $order = Order::where('order_id',$order_id)->first();
+            $orderItem = OrderItem::where('order_id',$order->id)->get();
+            $student = Student::find($order->profile_id);
+            $items = [];
+            $totalCourseFee = 0;
+            foreach($orderItem as $key => $item){
+                $items[$key]['name'] = getCourseById($item->course_id)->name;
+                $items[$key]['amount'] = $item->amount;
+                $totalCourseFee += getFeeById($item->fee_id)->Down_Payment;
+            }
+            $invoiceData = [
+                'payment_id' => $order->payment_id,
+                'student_code' => $order->student_code,
+                'date' => date('d M,Y',strtotime($order->created_at)),
+                'first_name' => $student->first_name,
+                'last_name' => $student->last_name,
+                'mobile' => $student->mobile,
+                'address' => $student->address,
+                'state' => $student->state,
+                'city' => $student->city,
+                'pincode' => $student->pincode,
+                'order_items' => $items,
+                'amount' => $order->amount,
+                'totalCourseFee' => $totalCourseFee,
+                'discount' => $order->discount,
             ];
+            $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($invoiceData));
            
-            $mail = Mail::to('akashdutta.icagroup@gmail.com','Akash Dutta')->send(new Invoice($order));
-           
+
             return true;
         } catch (\Illuminate\Database\QueryException $e) {
             //throw $th;

@@ -14,13 +14,13 @@ class Invoice extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $order; // pass data to view
+    public $data; // pass data to view
     /**
      * Create a new message instance.
      */
-    public function __construct($order)
+    public function __construct($data)
     {
-        $this->order = $order;
+        $this->data = $data;
     }
 
     /**

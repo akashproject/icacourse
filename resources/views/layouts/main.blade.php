@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,6 +34,13 @@
     <meta name="twitter:label2" content="Est. reading time" />
     <meta name="twitter:data2" content="2 minute" />
     
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NDKPWTPM');</script>
+    <!-- End Google Tag Manager -->
     <!-- Fonts and Styles -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" />
@@ -53,6 +61,7 @@
     @else
     {!! get_theme_setting('schema') !!}
     @endif
+    
     <script>
         let popUp = 1
 	</script>
@@ -62,16 +71,10 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://web.archive.org/web/20250514003503if_/https://www.googletagmanager.com/ns.html?id=GTM-TR496XN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) --> 
-    <!-- <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div> -->
-
-    <!-- <div class="preloader">
-        <div class="preloader__image" style="background-image: url(/assets/frontend/images/idcm-loader.gif);"></div>
-    </div> -->
-    <!-- /.preloader -->
+   <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDKPWTPM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="page-wrapper">
         @include('layouts.header')
         @yield('content')
@@ -104,5 +107,4 @@
         <script src="{{ url('assets/frontend/js/functions.js') }}"></script>
     </div>
 </body>
-
 </html>

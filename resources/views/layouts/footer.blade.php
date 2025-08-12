@@ -10,11 +10,19 @@
                 </span>
             </a>
         </li>
-        <li><a href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}"><i class="fab fa-whatsapp"></i></a></li>
+        <li><a href="https://api.whatsapp.com/send?phone={{ get_theme_setting('whatsapp') }}"><i class="fab fa-whatsapp text-green"></i></a></li>
         <li><a href="#" class="head_trigger mobile_trigger" ><i class="fas fa-bars"></i></a></li>
     </ul>
 </div>
 @endif
+
+
+<div class="call-bar-fixd-screen">
+    <a href="tel:{{ get_theme_setting('mobile') }}">
+        <i class="fa fa-solid fa-phone"></i>
+    </a>
+</div>
+
 
 <footer class="footer bg-thm-color-one style_2 style_3" style="background-image:url(/assets/frontend/images/elements/element_18.png);">
     <div class="container">

@@ -13,13 +13,13 @@
             </div>
             <div class="col-lg-6">
                 <div class="banner-img">
-                    <a href="https://api.whatsapp.com/send?phone=get_theme_setting" class="chat-card">
+                    <a href="https://api.whatsapp.com/send?phone=8100704872" class="chat-card">
                         <div class="chat-text">
                         <strong>Chat up with your mentor</strong>
                         <span>Find your mentor by one click</span>
                         </div>
                         <div class="chat-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="chat icon">
+                        <img src="assets/frontend/images/chat-icon.png" alt="chat icon">
                         </div>
                     </a>
                     <img src="assets/frontend/images/banner-img-right.png" alt="" class="img-fluid">
@@ -103,7 +103,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="price-wrapper xs-display-none">
+                <div class="price-wrapper">
                     <div class="price-box">
                         <div class="price-coll"><span class="modules-text">Modules</span></div>
                         <div class="price-coll"><span class="modules-text">Hours</span></div>
@@ -133,22 +133,34 @@
 
                     <div class="price-box">
                         <div class="price-coll">Business Accounting</div>
+
                         <div class="price-coll">36</div>
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                     </div>
 
                     <div class="price-box">
+
                         <div class="price-coll">TallyPrime</div>
+
                         <div class="price-coll">51</div>
+
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                     </div>
 
                     <div class="price-box">
+
                         <div class="price-coll">Business Communication</div>
+
                         <div class="price-coll">45</div>
 
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
@@ -232,909 +244,52 @@
                     <div class="price-box">
 
                         <div class="price-coll">Live Project 2</div>
-
                         <div class="price-coll">9</div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                     </div> 
 
                     <div class="price-box">
-
                         <div class="price-coll">SAP (Finance &amp; Controlling)</div>
-
                         <div class="price-coll">80</div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                     </div>
 
                 
 
                     <div class="price-box">
-
                         <div class="price-coll">Final Exam</div>
-
                         <div class="price-coll">12</div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                         <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll"></div>
-
                         <div class="price-coll">Total Hours</div>
-
                         <div class="price-coll">230</div>
-
                         <div class="price-coll">288</div>
-
                         <div class="price-coll">368</div>
-
                     </div>
 
                     <div class="price-box">
-
                         <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Modules</span></div>
-
                         <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Hours</span></div>
-
                         <div class="price-coll">                   
-
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-
                         </div>
-
                         <div class="price-coll">
-
                         <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-
                         </div>
-
                         <div class="price-coll">
-
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-
                         </div>
-
                     </div>
-
                 </div>
-
-                <div class="mobile-price lg-display-none">
-
-                    <div class="group mobile-gap">
-
-                        <div class="grid-1-5">
-
-                            <h2>Business Computer Applications</h2>                          
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                            </div>              
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Business Accounting</h2>               
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                                
-
-                                
-
-                            </div>            
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>TallyPrime</h2>
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu">
-
-                                        <img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
-
-                                    </div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu">
-
-                                        <img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
-
-                                    </div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                    <div class="price-select-full">
-
-                                    <select>
-
-                                        <option>CIA Express (3Months)</option>
-
-                                        <option>CIA (4Months)</option>
-
-                                        <option>CIA With SAP(6Months)</option>
-
-                                    </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                            </div>      
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Business Communication</h2>                          
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                    <div class="price-select-full">
-
-                                        <select>
-
-                                            <option>CIA Express (3Months)</option>
-
-                                            <option>CIA (4Months)</option>
-
-                                            <option>CIA With SAP(6Months)</option>
-
-                                        </select>
-
-                                    </div>
-
-                                    <div class="price-select-btn">
-
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>   
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Live Project 1</h2>                          
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                    <div class="price-select-full">
-
-                                        <select>
-
-                                            <option>CIA Express (3Months)</option>
-
-                                            <option>CIA (4Months)</option>
-
-                                            <option>CIA With SAP(6Months)</option>
-
-                                        </select>
-
-                                    </div>
-
-                                    <div class="price-select-btn">
-
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>                          
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Direct Tax</h2>                          
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                    <div class="price-select-full">
-
-                                        <select>
-
-                                            <option>CIA Express (3Months)</option>
-
-                                            <option>CIA (4Months)</option>
-
-                                            <option>CIA With SAP(6Months)</option>
-
-                                        </select>
-
-                                    </div>
-
-                                    <div class="price-select-btn">
-
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>                         
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>TDS</h2>
-
-                        
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                            </div>
-
-                                
-
-                                
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Goods and Services Tax (GST)</h2>
-
-                        
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                                
-
-                                
-
-                            </div>
-
-
-
-                        
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Advanced Accounts</h2>
-
-                        
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                                
-
-                                
-
-                            </div>
-
-
-
-                        
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>Live Project 2</h2>
-
-                        
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                                
-
-                                
-
-                            </div>
-
-
-
-                        
-
-                        </div>
-
-
-
-                        <div class="grid-1-5">
-
-                            <h2>SAP (Finance &amp; Controlling)</h2>
-
-                        
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                <div class="price-select-full">
-
-                                    <select>
-
-                                    <option>CIA Express (3Months)</option>
-
-                                    <option>CIA (4Months)</option>
-
-                                    <option>CIA With SAP(6Months)</option>
-
-                                </select>
-
-                                </div>
-
-                                <div class="price-select-btn">
-
-                                    <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                    <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="grid-1-5">
-
-                            <h2>Final Exam</h2>
-
-                    
-
-                            <div class="price-info-wrap">
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA Express (3Months)<span>40999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA (4Months)<span>49999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-                                <div class="price-info-box">
-
-                                    <div class="price-text">CIA With SAP(6Months)<span>72999</span></div>
-
-                                    <div class="price-text-valu"><img style="width: 20px;" src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-
-                                </div>
-
-
-
-                                <div class="price-select">
-
-                                    <div class="price-select-full">
-
-                                        <select>
-
-                                        <option>CIA Express (3Months)</option>
-
-                                        <option>CIA (4Months)</option>
-
-                                        <option>CIA With SAP(6Months)</option>
-
-                                    </select>
-
-                                </div>
-
-                                    <div class="price-select-btn">
-
-                                        <a href="#lead-generate-popup" class="bg-thm-color-two btn-rectangle open-popup-link">Enroll Now</a>
-
-                                        <span>or <a href="#lead-generate-popup" class="enquire_now_btn open-popup-link">Enquire now</a></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
         </div>
@@ -1149,7 +304,7 @@
             <div class="col-md-4">
                 <div class="sec-title sec-title--center wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <h3 class="title">Our Top <span class="curve-text">Recruiters</span></h3>
-                    <p>We connect you with top companies, and our dedicated placement assistance helps you land your dream job in the digital marketing industry. Our strong ties with leading recruiters ensure IDCM Alumni are highly sought after for cutting-edge job roles.</p>
+                    <p>Our program offers a robust placement assurance that goes far beyond a simple job board. We've built strong, lasting relationships with leading companies and top-tier recruiters in the industry.</p>
                 </div><!-- /.sec-title -->
             </div>
             <div class="col-md-8">
@@ -1197,8 +352,8 @@
                         <img src="assets/frontend/images/soft-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>7 Simulation Softwares</h5>
-                        <p>With our 7 simulation software, you will get hands-on experience on practicing GSTR, ITR, TDS Return Filing, PF & ESI and much more. Stand out in front of recruiters by enrolling in our courses.</p>
+                        <h5>10 Simulation Softwares</h5>
+                        <p>With our 10 simulation software, you will get hands-on experience on practicing GSTR, ITR, TDS Return Filing, PF & ESI and much more. Stand out in front of recruiters by enrolling in our courses.</p>
                     </div>
                 </div>
             </div>
