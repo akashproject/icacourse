@@ -10,7 +10,7 @@
 							<div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
 							<div>
 								<h4 class="mb-0">{{ $success }}</h4>
-								<p class="mb-0">Success</p>
+								<p class="mb-0">Payment Success</p>
 							</div>
 							<span class="avatar w-px-40 h-px-40 p-2 me-lg-6">
 								<span class="avatar-initial bg-label-secondary rounded">

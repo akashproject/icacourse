@@ -68,7 +68,8 @@
 
         </div>
         <div class="col-md-6">
-            <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle"> Continue OTP <i class="fal fa-chevron-right ml-2"></i></button>
+            <button type="submit" class="thm-btn bg-thm-color-three thm-color-three-shadow btn-rectangle"> Continue
+                 <i class="fal fa-chevron-right ml-2"></i></button>
         </div>
     </div>
 </div>

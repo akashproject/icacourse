@@ -264,7 +264,7 @@
                 @php 
                     $course = getCourseById($course_id);
                 @endphp
-                <div class="col-lg-4 my-4" id="course_{{$course_id}}">
+                <div class="col-lg-4 my-4">
                     <div class="card courses-bar">
                         <img src="{{ url('/assets/frontend/images/course/'.$course->slug.'.webp') }}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -274,145 +274,12 @@
                                 <h6>Course Module :<span> {{ $course->number_of_modules }} Modules</span></h6>
                                 <h6>Delivery Mode :<span> Online</span></h6>
                             </div>
-                            <a href="#banner-form" class="btn btn-brochure " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Download Brochure</a>
+                            <a href="#banner-form" class="btn btn-brochure ">Download Brochure</a>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-
-            <div class="row">
-                @foreach($course_ids as $key => $course_id)
-                @php 
-                    $course = getCourseById($course_id);
-                @endphp
-                <div class="col-lg-12">
-                    <div class="course-details {{ ($key == 0)?'active':'' }} course_{{ $course->id }}">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="course_details mb-md-80">
-                                    <h2 class="courses-details-heading">{{ $course->name }}</h2>
-                                    <ul class="nav nav-tabs style_4 mb-3" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-description_{{ $course->id }}" type="button" role="tab" aria-controls="tab-description" aria-selected="true">Summary</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-criteria_{{ $course->id }}" type="button" role="tab" aria-controls="tab-criteria" aria-selected="false">Criteria</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-highlights_{{ $course->id }}" type="button" role="tab" aria-controls="tab-highlights" aria-selected="false">Highlights</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-curriculum_{{ $course->id }}" type="button" role="tab" aria-controls="tab-curriculum" aria-selected="false">Syllabus</button>
-                                        </li>
-                                    </ul>
-
-                                    <div class="tab-content" id="tab-tabContent">
-                                        <div class="tab-pane fade show active" id="tab-description_{{ $course->id }}" role="tabpanel" aria-labelledby="tab-description-tab_{{ $course->id }}">
-                                            {!! $course->description !!}
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-criteria_{{ $course->id }}" role="tabpanel" aria-labelledby="tab-criteria-tab_{{ $course->id }}">
-                                            <div class="desc_box">
-                                                <h2 class="course_title">Eligibility Criteria</h2>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12 course_criteria">
-                                                    {!! $course->criteria !!}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-highlights_{{ $course->id }}" role="tabpanel" aria-labelledby="tab-highlights-tab_{{ $course->id }}">
-                                            <div class="about_list style_2">
-                                                {!! $course->highlights !!}
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tab-curriculum_{{ $course->id }}" role="tabpanel" aria-labelledby="tab-curriculum-tab_{{ $course->id }}">
-                                            <div class="syllabus_list accordion accordion-style style_2 mb-xl-30" id="generalaccordion">
-                                                @if($course->subjects)
-                                                    @foreach(getSubjectsByCourseId($course->subjects) as $key => $subject)
-                                                    <ul class="card">
-                                                        <li class="card-header" id="heading_{{ $key }}" data-bs-toggle="collapse" data-bs-target="#collapse_{{ $key }}" aria-expanded="true" aria-controls="collapse_{{ $key }}">
-                                                            <a class="btn btn-link" type="button" >
-                                                                <span class="mx-2"><i class="fal fa-book"></i></span> {{ $subject->name }}
-                                                            </a>
-                                                            <span class="accordion-time__duration"> {{ $subject->duration }} </span>
-                                                        </li>
-                                                        <div id="collapse_{{ $key }}" class="accordion-collapse collapse" aria-labelledby="heading_{{ $key }}" data-bs-parent="#accordionExample">
-                                                            <div class="card-body">
-                                                                <ul>
-                                                                    @foreach(getTopicsBySubjectId($subject->id) as $key => $topic)
-                                                                    <li aria-level="{{ $key +1}}">{{ $topic->name }}</li>
-                                                                    @endforeach
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </ul>
-                                                    @endforeach
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="sidebar">
-                                    <div class="sidebar_widget info_widgets">
-                                        <ul>     
-                                            <li class="active">
-                                                <div class="left-side">
-                                                    <i class="fal fa-usd-circle"></i>
-                                                    <h6 class="mb-0">Course Price</h6>
-                                                </div>
-                                                <div class="right-side" style="color:#3e4095">
-                                                    Rs. {{ $course->price }}/-
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="left-side">
-                                                    <i class="fal fa-clock"></i>
-                                                    <h6 class="mb-0">Duration</h6>
-                                                </div>
-                                                <div class="right-side">
-                                                    {{ $course->duration }}                                   
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="left-side">
-                                                    <i class="fal fa-graduation-cap"></i>
-                                                    <h6 class="mb-0">Eligibility</h6>
-                                                </div>
-                                                <div class="right-side">
-                                                    12+ / Graduate                                    
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="left-side">
-                                                    <i class="fal fa-book"></i>
-                                                    <h6 class="mb-0">Course Type</h6>
-                                                </div>
-                                                <div class="right-side">
-                                                    100% Job Assurance                                    
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="left-side">
-                                                    <i class="fal fa-file-certificate"></i>
-                                                    <h6 class="mb-0">Certification</h6>
-                                                </div>
-                                                <div class="right-side">
-                                                    {{ $course->certification}}                                 
-                                                </div>
-                                            </li>
-                                        </ul> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-                @endforeach
-            </div>
-
         </div>
     </div>
   

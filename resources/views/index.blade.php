@@ -103,193 +103,200 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="price-wrapper">
-                    <div class="price-box">
-                        <div class="price-coll"><span class="modules-text">Modules</span></div>
-                        <div class="price-coll"><span class="modules-text">Hours</span></div>
-                        <div class="price-coll">
-                            <h5>CIA Express<br> (3Months)</h5>
-                            <span>40999</span>
-                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+                @if(!check_device("mobile"))
+                    <div class="price-wrapper">
+                        <div class="price-box">
+                            <div class="price-coll"><span class="modules-text">Modules</span></div>
+                            <div class="price-coll"><span class="modules-text">Hours</span></div>
+                            <div class="price-coll">
+                                <h5>CIA Express<br> (3Months)</h5>
+                                <span>40999</span>
+                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+                            </div>
+                            <div class="price-coll"><h5>CIA <br>(4Months)</h5>
+                                <span>49999</span>
+                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+                            </div>
+                            <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
+                                <span>72999</span>
+                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+                            </div>
+
                         </div>
-                        <div class="price-coll"><h5>CIA <br>(4Months)</h5>
-                            <span>49999</span>
-                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+
+                        <div class="price-box">
+                            <div class="price-coll">Business Computer Applications</div>
+                            <div class="price-coll">45</div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
                         </div>
-                        <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
-                            <span>72999</span>
-                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
+
+                        <div class="price-box">
+                            <div class="price-coll">Business Accounting</div>
+
+                            <div class="price-coll">36</div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+
                         </div>
 
-                    </div>
+                        <div class="price-box">
 
-                    <div class="price-box">
-                        <div class="price-coll">Business Computer Applications</div>
-                        <div class="price-coll">45</div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                    </div>
+                            <div class="price-coll">TallyPrime</div>
 
-                    <div class="price-box">
-                        <div class="price-coll">Business Accounting</div>
+                            <div class="price-coll">51</div>
 
-                        <div class="price-coll">36</div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">TallyPrime</div>
+                            <div class="price-coll">Business Communication</div>
 
-                        <div class="price-coll">51</div>
+                            <div class="price-coll">45</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">Business Communication</div>
+                            <div class="price-coll">Live Project 1</div>
 
-                        <div class="price-coll">45</div>
+                            <div class="price-coll">3</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">Live Project 1</div>
+                            <div class="price-coll">Direct Tax</div>
 
-                        <div class="price-coll">3</div>
+                            <div class="price-coll">39</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">Direct Tax</div>
+                            <div class="price-coll">TDS</div>
 
-                        <div class="price-coll">39</div>
+                            <div class="price-coll">11</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">TDS</div>
+                            <div class="price-coll">Goods and Services Tax (GST)</div>
 
-                        <div class="price-coll">11</div>
+                            <div class="price-coll">27</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                        <div class="price-coll">Goods and Services Tax (GST)</div>
+                        <div class="price-coll">Advanced Accounts</div>
 
-                        <div class="price-coll">27</div>
+                            <div class="price-coll">30</div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
 
-                    </div>
+                        </div>
 
-                    <div class="price-box">
+                        <div class="price-box">
 
-                    <div class="price-coll">Advanced Accounts</div>
+                            <div class="price-coll">Live Project 2</div>
+                            <div class="price-coll">9</div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        </div> 
 
-                        <div class="price-coll">30</div>
+                        <div class="price-box">
+                            <div class="price-coll">SAP (Finance &amp; Controlling)</div>
+                            <div class="price-coll">80</div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        </div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
+                    
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        <div class="price-box">
+                            <div class="price-coll">Final Exam</div>
+                            <div class="price-coll">12</div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                            <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        </div>
 
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
+                        <div class="price-box">
+                            <div class="price-coll"></div>
+                            <div class="price-coll">Total Hours</div>
+                            <div class="price-coll">230</div>
+                            <div class="price-coll">288</div>
+                            <div class="price-coll">368</div>
+                        </div>
 
-                    </div>
-
-                    <div class="price-box">
-
-                        <div class="price-coll">Live Project 2</div>
-                        <div class="price-coll">9</div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                    </div> 
-
-                    <div class="price-box">
-                        <div class="price-coll">SAP (Finance &amp; Controlling)</div>
-                        <div class="price-coll">80</div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                    </div>
-
-                
-
-                    <div class="price-box">
-                        <div class="price-coll">Final Exam</div>
-                        <div class="price-coll">12</div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                        <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
-                    </div>
-
-                    <div class="price-box">
-                        <div class="price-coll"></div>
-                        <div class="price-coll">Total Hours</div>
-                        <div class="price-coll">230</div>
-                        <div class="price-coll">288</div>
-                        <div class="price-coll">368</div>
-                    </div>
-
-                    <div class="price-box">
-                        <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Modules</span></div>
-                        <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Hours</span></div>
-                        <div class="price-coll">                   
+                        <div class="price-box">
+                            <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Modules</span></div>
+                            <div class="price-coll" style="visibility: hidden;"><span class="modules-text">Hours</span></div>
+                            <div class="price-coll">                   
+                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                            </div>
+                            <div class="price-coll">
                             <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-                        </div>
-                        <div class="price-coll">
-                        <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
-                        </div>
-                        <div class="price-coll">
-                            <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                            </div>
+                            <div class="price-coll">
+                                <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enroll now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
+                @if(check_device("mobile"))
+                    <div class="mobile-price-wrapper">
+                        Soumen Work
+                    </div>
+                @endif
             </div>
 
         </div>

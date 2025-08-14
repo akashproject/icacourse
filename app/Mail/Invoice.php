@@ -30,6 +30,10 @@ class Invoice extends Mailable
     {
         return new Envelope(
             from: new Address('online@icacourse.in', 'ICA Online'),
+            bcc: [
+                new Address('akashdutta.icagroup@gmail.com', 'Product Development Manager'),
+                new Address('backup.proloy.ghosh@icagroup.in', 'DM Team'),
+            ],
             subject: 'ICA Online Course Purchese Successfull',
         );
     }

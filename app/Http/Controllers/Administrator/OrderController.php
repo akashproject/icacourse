@@ -20,7 +20,7 @@ class OrderController extends Controller
             $orders = Order::all();
             $pending = Order::where('status','pending')->count();
             $success = Order::where('status','success')->count();
-            $erpStatusFailed = Order::where('erp_status','0')->count();
+            $erpStatusFailed = Order::where('erp_status','0')->where('status','success')->count();
             $erpStatusSuccess = Order::where('erp_status','1')->count();
 
             return view('administrator.orders.index',compact('orders','pending','success','erpStatusSuccess','erpStatusFailed'));
