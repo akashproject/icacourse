@@ -60,7 +60,7 @@
             <div class="form-group disclaimer">
                 <p style="margin:0"><input type="checkbox" class="" checked> I agree to receive updates on <i class="fab fa-whatsapp" style="color: green;"></i> whatsapp. 
                 </p>
-                <p><input type="checkbox" class="" checked> I agree to <a href="/privacy-policy" >Privacy Policy</a> & overriding DNC/NDNC request for Call/SMS. 
+                <p><input type="checkbox" class="" checked> I agree to <a target="_blank" href="/privacy-policy" >Privacy Policy</a> & overriding DNC/NDNC request for Call/SMS. 
                 </p>
             </div>
         </div>

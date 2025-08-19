@@ -17,7 +17,7 @@ jQuery(".course-header-menu").on('mouseleave',function(){
 jQuery('.couse-container .course_grid').each(function(index) {
   if ((index + 1) % 3 === 0) {
     console.log(index);
-    jQuery(this).children('coach_hover_tooltip').addClass('right');
+    jQuery(this).children().addClass('right');
   }
 });
 
@@ -413,3 +413,68 @@ if ($('#file-dropzone').length) {
       }
   });
 }
+
+
+
+
+
+
+$(document).ready(function () {
+  if($('.mobile-price-heading').length) {
+    var $stickyForm = $('.mobile-price-heading');
+    var stickyOffset = $stickyForm.offset().top + (1 * 16); // Start sticky after 1rem
+    var sectionBottom = $stickyForm.closest('section').offset().top + $stickyForm.closest('section').outerHeight();
+
+    function handleSticky() {
+        var scrollTop = $(window).scrollTop();
+        var windowWidth = $(window).width();
+
+        if (windowWidth < 768) { // Only on small screens
+            if (scrollTop < stickyOffset) {
+                // Before sticky starts - reset styles but keep visible
+                $stickyForm.show().css({
+                    'position': '',
+                    'top': '',
+                    'z-index': '',
+                    'width': '',
+                    'background-color': '',
+                    'border': ''
+                });
+            } else if (scrollTop >= stickyOffset && scrollTop < sectionBottom - $stickyForm.outerHeight()) {
+                // Sticky active with top 74px
+                $stickyForm.show().css({
+                    'position': 'fixed',
+                    'top': '74px',
+                    'z-index': '2',
+                    'width': $stickyForm.parent().width(),
+                    'background-color': '#fff',
+                    'border': '1px solid #ddd'
+                });
+            } else {
+                // After section ends - hide
+                $stickyForm.hide().css({
+                    'position': '',
+                    'top': '',
+                    'z-index': '',
+                    'width': '',
+                    'background-color': '',
+                    'border': ''
+                });
+            }
+        } else {
+            // Reset styles for larger screens
+            $stickyForm.show().css({
+                'position': '',
+                'top': '',
+                'z-index': '',
+                'width': '',
+                'background-color': '',
+                'border': ''
+            });
+        }
+    }
+
+    $(window).on('scroll resize', handleSticky);
+    handleSticky(); // Run on load
+  }
+});

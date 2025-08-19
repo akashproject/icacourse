@@ -75,10 +75,10 @@
                     <div class="ft_widget ft_menu xs-text-center">
                         <h6 class="ft-title">Featured Courses</h6>                           
                         <ul>
-                            <li> <a href="/courses/accounting-course-online-cia/"> Job Assured Course </a>  </li>
-                            <li> <a href="/courses/sap-fico-course-online/"> SAP FICO Course </a></li>
-                            <li> <a href="/courses/gst-dt-tds-course-online/"> GST + DT + TDS Course </a></li>
-                            <li> <a href="/courses/ms-office-2019-course-online/"> MS Office Course </a></li>
+                            <li> <a href="/category/job-assurance-courses"> Job Assured Course </a>  </li>
+                            <li> <a href="/courses/sap-fico-course-online"> SAP FICO Course </a></li>
+                            <li> <a href="/courses/gst-dt-tds-course-online"> GST + DT + TDS Course </a></li>
+                            <li> <a href="/courses/ms-office-2019-course-online"> MS Office Course </a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,12 +105,12 @@
                     <div class="ft_widget ft_menu xs-text-center">
                         <h6 class="ft-title">About Us</h6>
                         <ul>
-                            <li> <a href="/about-us/"> Our Story </a></li>
+                            <li> <a href="/about-us"> Our Story </a></li>
                             <li> <a href="{{ route('page-view','courses') }}"> Courses </a></li>
                             <li> <a href="/blog/"> Blog </a></li>
-                            <li> <a href="/contact-us/"> Contact Us </a></li>								
-                            <!--li> <a href="/privacy-policy/" > Privacy Policy </a>  </li-->
-                            <!--li> <a href="/terms-condition/" > Terms & Conditions </a>  </li-->
+                            <li> <a href="/contact-us"> Contact Us </a></li>								
+                            <li> <a href="/privacy-policy" > Privacy Policy </a>  </li>
+                            <li> <a href="/terms-conditions" > Terms & Conditions </a>  </li>
                         </ul>
                     </div>
                 </div>

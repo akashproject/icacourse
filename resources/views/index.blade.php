@@ -294,7 +294,296 @@
                 @endif
                 @if(check_device("mobile"))
                     <div class="mobile-price-wrapper">
-                        Soumen Work
+                        <div class="mobile-price-heading" data-sticky>
+                            <div class="row">
+                                <div class="col-4 pe-0">
+                                    <div class="tabil-hade-sm text-center">
+                                        <h2>CIA Express <br>( 3 Months )</h2>
+                                        <h3>{{ number_format('40999')}}</h3>
+                                        <a href="#">Enquire now</a>
+                                    </div>
+                                </div>
+                                <div class="col-4 px-1">
+                                    <div class="tabil-hade-sm text-center">
+                                        <h2>CIA <br>( 4 Months )</h2>
+                                        <h3>{{ number_format('40999')}}</h3>
+                                        <a href="#">Enquire now</a>
+                                    </div>
+                                </div>
+                                <div class="col-4 ps-0">
+                                    <div class="tabil-hade-sm text-center">
+                                        <h2>CIA With SAP<br>(6 Months)</h2>
+                                        <h3>{{ number_format('72999')}}</h3>
+                                        <a href="#">Enquire now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Business Computer Applications <span>( Hours : 45 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Business Accounting <span>( Hours : 36 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>TallyPrime <span>( Hours : 51 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Business Communication <span>( Hours : 45 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Live Project 1 <span>( Hours : 3 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Direct Tax <span>( Hours : 39 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>TDS <span>( Hours : 11 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Goods and Services Tax (GST) <span>( Hours : 27 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Advanced Accounts <span>( Hours : 30 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Live Project 2 <span>( Hours : 9 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>SAP (Finance & Controlling) <span>( Hours : 80 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="tabil-content-head mt-3">
+                                    <h2>Final Exam <span>( Hours : 12 )</span></h2>
+                                </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 px-1">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available">
+                                </div>
+                            </div>
+                            <div class="col-4 ps-0">
+                                <div class="tabil-content text-center">
+                                    <img src="{{ url('/assets/frontend/images/tick.png') }}" alt="not available">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 @endif
             </div>

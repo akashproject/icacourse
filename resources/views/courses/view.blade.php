@@ -97,7 +97,7 @@
                                                 <div class="card-body">
                                                     <ul>
                                                         @foreach(getTopicsBySubjectId($subject->id) as $key => $topic)
-                                                        <li aria-level="{{ $key +1}}">{{ $topic->name }}</li>
+                                                        <li aria-level="{{ $key +1}}"> {{ $key +1}}. {{ $topic->name }}</li>
                                                         @endforeach
                                                     </ul>
                                                 </div>

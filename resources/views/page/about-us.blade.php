@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="image_box shadow_1 mb-md-80">                 
-                    <img src="https://www.icacourse.in/wp-content/uploads/2023/07/icacourse-about.webp" alt="img" class="image-fit">
+                    <img src="{{ url('assets/frontend/images/icacourse-about.webp')}}" alt="img" class="image-fit">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -56,44 +56,29 @@
 
                         <div class="icon">                   
 
-                            <img src="https://www.icacourse.in/wp-content/uploads/2022/04/2022-04-26-1.png" alt="img" class="image-fit">
+                            <img src="{{ url('assets/frontend/images/tick.png')}}" alt="img" class="image-fit">
 
                         </div>
 
                         <div class="text">
-
                             <h6 class="mb-2">90% Practical &amp; 10% Theory</h6>
-
-                            <p class="mb-0"><ol><li>Virtual Office - BAP</li><li>GST and ITR Filings on Simulation</li><li>JET: Journal Entry Test (Over 200+)</li></ol></p>
-
+                            <ol>
+                                <li>Virtual Office - BAP</li>
+                                <li>GST and ITR Filings on Simulation</li>
+                                <li>JET: Journal Entry Test (Over 200+)</li>
+                            </ol>
                         </div>
-
                     </li>
-
                     <li class="col-md-6">
-
-                        <div class="icon">                        
-
-                            <img src="https://www.icacourse.in/wp-content/uploads/2022/04/2022-04-26-1.png" alt="img" class="image-fit">                              
-
+                        <div class="icon">    
+                            <img src="assets/frontend/images/tick.png" alt="img" class="image-fit"> 
                         </div>
-
                         <div class="text">
-
                             <h6 class="mb-2">Learn From Anywhere, Anytime</h6>
-
-                            <p class="mb-0">
-
-                                <ul>
-
-                                    <li>Self-Paced (Recordings Only): Ideal for working professionals, those with rotational shifts, new parents, or aspiring entrepreneurs.</li>
-
-                                    <li>Live Classes Only: Students, Part Time workers, Own Business</li>
-
-                                </ul>
-
-                            </p>
-
+                            <ul>
+                                <li>Self-Paced (Recordings Only): Ideal for working professionals, those with rotational shifts, new parents, or aspiring entrepreneurs.</li>
+                                <li>Live Classes Only: Students, Part Time workers, Own Business</li>
+                            </ul>
                         </div>
 
                     </li>
@@ -101,179 +86,98 @@
                     <li class="col-md-6">
 
                         <div class="icon">
-
-                            <img src="https://www.icacourse.in/wp-content/uploads/2022/04/2022-04-26-1.png" alt="img" class="image-fit">                       
-
+                            <img src="{{ url('assets/frontend/images/tick.png')}}" alt="img" class="image-fit">                       
                         </div>
-
                         <div class="text">
-
                             <h6 class="mb-2">Internship Focused Training</h6>
-
                             <p class="mb-0">For all Job Assured Candidates, internship is strongly suggested which helps in building stronger CV and thereby confidence before stepping into corporate world.</p>
-
                         </div>
-
                     </li>
 
                     <li class="col-md-6">
-
                         <div class="icon">                      
-
-                            <img src="https://www.icacourse.in/wp-content/uploads/2022/06/2022-04-26-1.png" alt="img" class="image-fit">                    
-
+                            <img src="{{ url('/assets/frontend/images/tick.png')}}" alt="img" class="image-fit">
                         </div>
 
                         <div class="text">
-
                             <h6 class="mb-2">900+ Vacancies Weekly Pan-India</h6>
-
                             <p class="mb-0">Make your resume strong with relevant skills and practice. Get discovered by recruiters and give your career a kickstart.</p>
-
                         </div>
-
                     </li>
-
                 </ul>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <div class="section-padding pt-0">
-
     <div class="container">
-
         <div class="row">
-
             <!-- Box -->
-
             <div class="col-lg-3 col-md-6">
-
                 <div class="counter_box">
-
                     <div class="icon">                     
-
-                        <img src="https://www.icacourse.in/wp-content/uploads/2022/04/About-us-Advisor-icon.png" alt="img" class="image-fit">
-
+                        <img src="{{ url('assets/frontend/images/About-us-Advisor-icon.png')}}" alt="img" class="image-fit">
                     </div>
-
                     <div class="text">
-
                         <h3 class="counter1 mb-0">
-
                             <b data-to="26+">26+</b>
-
                         </h3>
-
                         <p class="mb-0">Years of Excellence</p>
-
                     </div>
-
                 </div>
-
-            </div>  
-
+            </div> 
             <!-- Box -->
-
             <!-- Box -->
 
             <div class="col-lg-3 col-md-6">
-
                 <div class="counter_box">
-
                     <div class="icon">                   
-
-                        <img src="https://www.icacourse.in/wp-content/uploads/2022/04/About-us-Review-icon.png" alt="img" class="image-fit">
-
+                        <img src="{{ url('assets/frontend/images/About-us-Review-icon.png')}}" alt="img" class="image-fit">
                     </div>
-
                     <div class="text">
-
                         <h3 class="counter1 mb-0">
-
                             <b data-to="70K">70K</b>
-
                         </h3>
-
                         <p class="mb-0">Registered Employers</p>
-
                     </div>
-
                 </div>
-
             </div>  
-
             <!-- Box -->
-
             <!-- Box -->
-
             <div class="col-lg-3 col-md-6">
-
                 <div class="counter_box">
-
                     <div class="icon">                  
-
-                        <img src="https://www.icacourse.in/wp-content/uploads/2022/04/About-us-Advisor-icon.png" alt="img" class="image-fit">
-
+                        <img src="{{ url('assets/frontend/images/About-us-Advisor-icon.png')}}" alt="img" class="image-fit">
                     </div>
-
                     <div class="text">
-
                         <h3 class="counter1 mb-0">
-
                             <b data-to="30">30</b>
-
                         </h3>
-
                         <p class="mb-0">Placement Offices in India</p>
-
                     </div>
-
                 </div>
-
             </div>  
-
             <!-- Box -->
 
             <!-- Box -->
-
             <div class="col-lg-3 col-md-6">
-
                 <div class="counter_box">
-
                     <div class="icon">                     
-
-                        <img src="https://www.icacourse.in/wp-content/uploads/2022/04/About-us-coach-icon.png" alt="img" class="image-fit">
-
+                        <img src="{{ url('assets/frontend/images/About-us-coach-icon.png')}}" alt="img" class="image-fit">
                     </div>
 
                     <div class="text">
-
                         <h3 class="counter1 mb-0">
-
                             <b data-to="400+">400+</b>
-
                         </h3>
-
                         <p class="mb-0">Satisfied Students</p>
-
                     </div>
-
                 </div>
-
             </div>  
-
             <!-- Box -->
-
         </div>
-
     </div>
-
 </div>
 
 <!-- Start Awards section -->

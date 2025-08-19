@@ -1,29 +1,36 @@
 @extends('layouts.main')
 @section('content')
-<div class="subheader relative z-1" style="background-image: url({{ url('/assets/frontend/images/banner/contact-us.webp')}});">
-    <div class="container relative z-1">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="page_breadcrumb">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $contentMain->name }}</li>
-                        </ol>
-                    </nav>
-                </div>
-                <h1 class="page_title">{{ $contentMain->name }}</h1>
-                <div class="page_banner_description text-white">
-                    {{ $contentMain->excerpt }}                     
+<section class="banner-inner">
+    <div class="container">
+        <div class="inner-left"><img src="{{ url('assets/frontend/images/round-dot.png')}}" alt="" class="img-fluid"></div>
+        <div class="inner-right"><img src="{{ url('assets/frontend/images/round-dot.png')}}" alt="" class="img-fluid"></div>
+        <div class="inner-top"><img src="{{ url('assets/frontend/images/top.svg')}}" alt="" class="img-fluid"></div>
+        <div class="inner-animation"><img src="{{ url('assets/frontend/images/page-header-shape-2.png')}}" alt="" class="img-fluid"></div>
+        <div class="inner-bottom"><img src="{{ url('assets/frontend/images/bottom.svg')}}" alt="" class="img-fluid"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-4">
+                        <div class="page_breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{{ url('/') }}" class="text-white">Home</a></li>
+                                    <li class="breadcrumb-item active text-white" aria-current="page">{{ $contentMain->name }}</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <h1 class="page_title">{{ $contentMain->name }}</h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-white">
+                            {{ $contentMain->excerpt }}                     
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <img src="{{ url('/assets/frontend/images/elements/element_19.png')}}" alt="element" class="element_1 slideRightTwo">
-        <img src="{{ url('/assets/frontend/images/elements/element_10.png')}}" alt="element" class="element_2 zoom-fade">
-        <img src="{{ url('/assets/frontend/images/elements/element_20.png')}}" alt="element" class="element_3 rotate_elem">
-        <img src="{{ url('/assets/frontend/images/elements/element_21.png')}}" alt="element" class="element_4 rotate_elem">
     </div>
-</div>
+</section>
 <section class="section-padding">
     <div class="container">
         <div class="row">

@@ -19,11 +19,11 @@ class OrderController extends Controller
 
             $orders = Order::all();
             $pending = Order::where('status','pending')->count();
-            $success = Order::where('status','success')->count();
+            $success = Order::where('status','success')->whereNotNull('payment_id')->count();
             $erpStatusFailed = Order::where('erp_status','0')->where('status','success')->count();
-            $erpStatusSuccess = Order::where('erp_status','1')->count();
+            $admissions = Order::where('status','success')->whereNotNull('student_code')->whereNotNull('payment_id')->where('erp_status','1')->count();
 
-            return view('administrator.orders.index',compact('orders','pending','success','erpStatusSuccess','erpStatusFailed'));
+            return view('administrator.orders.index',compact('orders','pending','success','admissions','erpStatusFailed'));
 
         } catch(\Illuminate\Database\QueryException $e){
 
@@ -41,6 +41,44 @@ class OrderController extends Controller
 
         } catch(\Illuminate\Database\QueryException $e){
 
+        }        
+    }
+
+    public function filterOrder($status)
+    { 
+        try {
+
+            $orders = Order::all();
+            $pending = Order::where('status','pending')->count();
+            $success = Order::where('status','success')->whereNotNull('payment_id')->count();
+            $erpStatusFailed = Order::where('erp_status','0')->where('status','success')->count();
+            $admissions = Order::where('status','success')->whereNotNull('student_code')->whereNotNull('payment_id')->where('erp_status','1')->count();
+
+            $orders = Order::select();
+            switch ($status) {
+                case 'admissions':
+                    $orders = $orders->where('status',"success")->whereNotNull('student_code')->whereNotNull('payment_id')->where('erp_status','1');
+                    break;
+                case 'success':
+                    $orders = $orders->where('status',"success")->whereNotNull('payment_id');
+                    break;
+                case 'pending':
+                    $orders = $orders->where('status',"pending")->whereNull('student_code')->whereNull('payment_id')->where('erp_status','0');
+                    break;
+                case 'erp-failed':
+                    $orders = $orders->where('status',"success")->whereNotNull('payment_id')->where('erp_status','0');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+
+            $orders = $orders->orderBy("id","desc")->get();
+
+            return view('administrator.orders.index',compact('orders','pending','success','admissions','erpStatusFailed'));
+
+        } catch(\Illuminate\Database\QueryException $e){
+            
         }        
     }
 

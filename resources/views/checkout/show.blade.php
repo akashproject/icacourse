@@ -134,6 +134,11 @@
                                         <label for="pincode" >Pincode</label>
                                     </div>
                                 </div>
+                                <div class="col-12 ">
+                                    <div class="form-group disclaimer">
+                                        <p style="margin:0"><input type="checkbox" class="" checked="" required> I agree to accept all  <a target="_blank" href="{{ route('page-view','term-condition') }}" >T&C</a> and the <a target="_blank" href="{{ route('page-view','guidelines') }}" >guidelines</a> before purchasing the course </p>
+                                    </div>
+                                </div>
                                 <div class="col-12 text-right">
                                     <div class="my-3">
                                         <button type="submit" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle"> Proceed to Payment <i class="fal fa-chevron-right ml-2"></i></button>
@@ -160,7 +165,7 @@
                                     </div>
                                     <div class="text">
                                         <h6 class="mb-0">
-                                            <a href="#">{{ $course->name }}</a>
+                                            <a href="{{ route('view-courses',$course->slug) }}">{{ $course->name }}</a>
                                         </h6>
                                     </div>
                                 </li>
