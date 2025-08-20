@@ -33,7 +33,7 @@
                         <a href="https://www.icacourse.in/" class="logo">
                             <img src="{{ url('/assets/frontend/images/logo.png') }}" alt="logo" class="image-fit">
                         </a>
-                        <ul class="info xs-text-center">
+                        <ul class="info xs-text-center text-white">
                             <li>
                                 <i class="fal fa-map"></i>
                                 <a target="_blank" href="https://goo.gl/maps/txdRDtPS75qvoB2QA">Unit No. ECSL1401, EcoCentre Business Park, EM Block, Sector V, Salt Lake, Kolkata, West Bengal 700091</a>

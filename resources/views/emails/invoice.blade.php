@@ -46,7 +46,7 @@
               <table width="100%" cellpadding="0" cellspacing="0" border="0" class="two-col">
                 <tr>
                   <td width="50%" valign="top" style="padding:10px;">
-                    <h3 style="margin:0 0 10px 0; font-size:22px; color: #000;">Your Company</h3>
+                    <h3 style="margin:0 0 10px 0; font-size:22px; color: #000;">ICA Edu skills</h3>
                     <p style="font-size:13px; margin:0; line-height:18px;">
                       UNIT-1401, Eco Centre, Plot-O4,<br> BLOCK-EM, Sector V Saltlake, Kolkata-700091, West Bengal</p>
                       <p style="font-size:13px; margin:0; line-height:18px;">GSTIN : 19AABCIO017RIZE</p>
@@ -58,7 +58,7 @@
                   <td width="50%" valign="top" style="padding:10px; padding-top: 47px; text-align:right;">
                     <p style="font-size:13px; margin:0 0 5px 0;">
                       <strong style="color: #000;">Transaction ID :</strong> {{ $data['payment_id']}}</p>
-                      <strong style="color: #000;">Student Code :</strong> {{ $data['student_code'] }}</p>
+                      <strong style="color: #000;">Student Code : <span style="background: #392da3;color: #fff;padding: 5px;">{{ $data['student_code'] }}<span></strong></p>
                       <p style="font-size:13px; margin:0 0 5px 0;"><strong style="color: #000;">Date :</strong> {{ $data['date'] }}</p>
                     
                     <h3 style="margin:0 0 10px 0; font-size:22px; color: #000; margin-top: 20px; margin-bottom: 30px;">Student Details</h3>
