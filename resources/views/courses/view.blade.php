@@ -65,7 +65,9 @@
 
                         <div class="tab-content" id="tab-tabContent">
                             <div class="tab-pane fade show active" id="tab-description" role="tabpanel" aria-labelledby="tab-description-tab">
-                                {!! $contentMain->description !!}
+                                <div class="course-description">
+                                    {!! $contentMain->description !!}
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="tab-criteria" role="tabpanel" aria-labelledby="tab-criteria-tab">
                                 <div class="desc_box">

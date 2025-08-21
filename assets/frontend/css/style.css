@@ -6198,6 +6198,23 @@ ul.category-widget li {
     line-height: 1.3rem;
 }
 
+.author-box {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background: #eff0ff;
+    border: 2px dashed #1b4d7a;
+}
+.author-avatar {
+    width: 38%;
+}
+.author-box .author-avatar img {
+    width: 100%;
+    display: block;
+}
+.author-info h3 {
+    margin: 0;
+}
 
 /*style2*/
 
@@ -8277,31 +8294,6 @@ ul.category-widget li {
 
 }
 
-
-
-/* .form_style {
-
-    display: flex;
-
-    border: 3px solid var(--thm-border);
-
-    border-radius: 8px;
-
-    white-space: nowrap;
-
-}
-
-.form_style label {
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: var(--thm-font);
-    position: relative;
-    padding: 6px 30px;
-    background: #f2f2f2;
-    border-radius: 5px 0px 0 5px;
-} */
-
 #checkoutform .form_style label {
     width: 100%;
 }
@@ -8313,15 +8305,6 @@ ul.category-widget li {
 .guidelines ul {
     list-style: disc;
     margin-left: 20px;
-}
-
-.guidelines table td {
-    padding: 5px;
-}
-.guidelines table th {
-    background: #3e4095;
-    padding: 5px;
-    color: #fff;
 }
 
 
@@ -8370,109 +8353,91 @@ a.change_mobile_no {
 }
 
 .course_details .author img {
-
     width: 35px;
-
     height: 35px;
-
     border-radius: 50%;
-
     margin-right: 15px;
-
 }
-
-
 
 .course_details .author a {
-
     font-weight: 700;
-
     font-size: 16px;
-
     font-family: var(--thm-font);
-
 }
 
+.course-description h2 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
 
+.course-description ul {
+    margin-left: 25px;
+}
+
+.course-description p {
+    margin-bottom: 10px;
+    line-height: 25px;
+}
+
+.course-description li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Pro" !important;
+    position: absolute;
+    left: -22px;
+    font-size: 15px;
+    top: 3px;
+    font-weight: 800;
+    color: #34368c;
+}
 
 .sidebar .sidebar_widget {
-
     background-color: var(--thm-white);
-
     border-radius: 8px;
-
     padding: 30px;
-
     box-shadow: 0px 1px 30px 1px #ecf2ff;
-
     margin-bottom: 30px;
-
     background-image: url(../images/bg/sidebar_shape.png);
-
     background-repeat: no-repeat;
-
     background-position: right center;
-
 }
 
-
-
 .sidebar .sidebar_widget .widget_title {
-
     font-size: 22px;
-
     font-weight: 600;
-
     padding-bottom: 20px;
-
     margin-bottom: 30px;
-
     border-bottom: 1px solid var(--thm-border);
-
 }
 
 
 
 .sidebar .sidebar_widget:last-child {
-
     margin-bottom: 0;
-
 }
 
 
 
 .sidebar .sidebar_widget hr {
-
     padding-top: 30px;
-
     margin-bottom: 30px;
-
     border: none;
-
     border-bottom: 1px solid var(--thm-border);
-
 }
 
 
 
 .sidebar .sidebar_widget cite {
-
     font-size: 18px;
-
     font-family: var(--thm-font);
-
     font-weight: 600;
-
     color: var(--thm-color-one);
-
     display: flex;
-
 }
-
 
 .sidebar .recent_widgets ul.cart-course-list li {
     align-items: normal;
 }
+
 .sidebar .recent_widgets ul li {
     display: flex;
     align-items: center;
@@ -8481,18 +8446,13 @@ a.change_mobile_no {
 }
 
 .sidebar .recent_widgets ul li:last-child {
-
     margin-bottom: 0;
-
 }
-
-
 
 .sidebar .recent_widgets ul li .image {
     width: 90px;
     margin-right: 30px;
 }
-
 
 ul.cart-course-list a {
     font-size: 14px;
@@ -8500,111 +8460,68 @@ ul.cart-course-list a {
 }
 
 .sidebar .recent_widgets ul li .text {
-
     width: calc(100% - 120px);
-
 }
 
 
 
 .sidebar .recent_widgets ul li .text h6 {
-
     font-size: 18px;
-
 }
-
 
 
 .sidebar .recent_widgets ul li .text p a {
-
     font-size: 14px;
-
     font-weight: 600;
-
     color: var(--thm-body-color);
-
 }
-
-
 
 .sidebar .recent_widgets ul li .text p:hover a {
-
     color: var(--thm-color-two);
-
 }
-
-
 
 .sidebar .recent_widgets ul li .text p strong {
-
     font-weight: 700;
-
 }
 
-
-
 .sidebar .info_widgets ul li {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     margin-bottom: 20px;
-
 }
 
 
 
 .sidebar .info_widgets ul li:last-child {
-
     margin-bottom: 0;
-
 }
-
 
 
 .sidebar .info_widgets ul li .left-side {
-
     display: flex;
-
     align-items: center;
-
     font-size: 18px;
-
     font-weight: 600;
-
 }
 
-
-
 .sidebar .info_widgets ul li .left-side i {
-
     margin-right: 8px;
-
     color: var(--thm-color-two);
-
     font-weight: 500;
-
 }
 
 
 
 .sidebar .info_widgets ul li .left-side h6 {
-
     font-size: 18px;
-
     line-height: normal;
-
 }
 
 
 
 .sidebar .info_widgets ul li .right-side {
-
     font-size: 18px;
-
 }
 
 
@@ -8618,13 +8535,9 @@ ul.cart-course-list a {
 
 
 .sidebar .info_widgets ul li.active .right-side {
-
     color: var(--thm-color-three);
-
     font-size: 22px;
-
     font-weight: bold;
-
 }
 
 

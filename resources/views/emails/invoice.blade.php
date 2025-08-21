@@ -7,10 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-
   <style>
     @media only screen and (max-width: 600px) {
       .content { width: 100% !important; }
@@ -62,9 +59,9 @@
                       <p style="font-size:13px; margin:0 0 5px 0;"><strong style="color: #000;">Date :</strong> {{ $data['date'] }}</p>
                     
                     <h3 style="margin:0 0 10px 0; font-size:22px; color: #000; margin-top: 20px; margin-bottom: 30px;">Student Details</h3>
-                        <p style="font-size:13px; margin:0; line-height:18px; text-align:right;">{{ $data['first_name']}} {{ $data['last_name']}}</p>
-                        <p style="font-size:13px; margin:0; line-height:18px; text-align:right;">{{ $data['mobile']}}</p>
-                        <p style="font-size:13px; margin:0; line-height:18px; text-align:right;"> {{ $data['address']}}, {{ $data['city']}}, <br>{{ $data['state']}}, {{ $data['pincode']}} </p>
+                    <p style="font-size:13px; margin:0; line-height:18px; text-align:right;">{{ $data['first_name']}} {{ $data['last_name']}}</p>
+                    <p style="font-size:13px; margin:0; line-height:18px; text-align:right;">{{ $data['mobile']}}</p>
+                    <p style="font-size:13px; margin:0; line-height:18px; text-align:right;"> {{ $data['address']}}, {{ $data['city']}}, <br>{{ $data['state']}}, {{ $data['pincode']}} </p>
                   </td>
                 </tr>
               </table>
