@@ -1,6 +1,6 @@
 @extends('layouts.main')
     @section('content')
-    <section class="banner-inner">
+    <section class="banner-inner py-3">
         <div class="container">
             <div class="inner-left"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
             <div class="inner-right"><img src="/assets/frontend/images/round-dot.png" alt="" class="img-fluid"></div>
@@ -16,7 +16,7 @@
                                 {{ $contentMain->excerpt }}                     
                             </div>
 
-                            <div class="page_banner_meta">
+                            <div class="page_banner_meta mt-3">
                                 <div class="total-rating">
                                     <a href="javascript:void(0)" style="color: #ffbd3f;"> 4.0 </a>
                                     <div class="ratings " style="display: inline;margin: 0 6px;">
@@ -26,10 +26,10 @@
                                         <i class="fal fa-star active"></i>
                                         <i class="fal fa-star"></i>
                                     </div>
-                                    <a href="javascript:void(0)" class="text-white" style="cursor: auto;margin: 0 6px;"> (388 Reviews )</a>
+                                    <a href="javascript:void(0)" class="text-white" style="cursor: auto;margin: 0 6px;"> ({{ $contentMain->number_of_rating }} Reviews )</a>
                                 </div>
                                 
-                                <span class="text-white total-enroll"> 964 students </span>
+                                <span class="text-white total-enroll"> {{ $contentMain->number_of_enrolled }} students </span>
                                 <div class="course_features text-white mt-5" >
                                     {!! $contentMain->feature !!}
                                 </div>
@@ -53,7 +53,7 @@
                                 <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-description" type="button" role="tab" aria-controls="tab-description" aria-selected="true">Summary</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-criteria" type="button" role="tab" aria-controls="tab-criteria" aria-selected="false">Criteria</button>
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-criteria" type="button" role="tab" aria-controls="tab-criteria" aria-selected="false">Eligibility</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-highlights" type="button" role="tab" aria-controls="tab-highlights" aria-selected="false">Highlights</button>
@@ -140,7 +140,7 @@
                                         <h6 class="mb-0">Eligibility</h6>
                                     </div>
                                     <div class="right-side">
-                                        12+ / Graduate                                    
+                                        {{ $contentMain->eligibility }}
                                     </div>
                                 </li>
                                 <li>

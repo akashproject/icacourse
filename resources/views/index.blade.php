@@ -8,7 +8,8 @@
                 <h2>Reinvent the <span class="">online learning</span> experience with us</h2>
                 <p>India’s #1 Accounts, Finance & Taxation Training Institute to Provide Online Job Assurance Courses</p>
                 <div class="d-flex">
-                    <a href="{{ route('page-view','courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
+					<a href="{{ route('page-view','courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow mx-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
+					<a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow mb-4"><i class="fal fa-calendar-alt mx-2"></i>Schedule A DEMO CLASS </a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -50,16 +51,16 @@
                 <img src="assets/frontend/images/about-img-home.png" alt="" class="img-fluid">
             </div>
             <div class="col-lg-6 ps-lg-5 my-4">
-                <h2 class="pre-heading">Our Offerings</h2>
-                <h3 class="sec-heading mb-5">Take Charge of Your Career with ICA Edu Skills!</h3>
-                <p>ICA Edu Skills is regarded as the leading vocational training institute and the best accounts training institute in India. ICA Online Courses, a venture of ICA Edu Skills aims to make the youth industry ready by curating job-oriented accounting classes online. These courses are designed following the best industry practices.</p>
+                <!--h2 class="pre-heading">Why ICA Online</h2-->
+                <h3 class="sec-heading mb-5">Master In-Demand Accounting & Taxation Skills with ICA Edu Skills Online</h3>
+                <p>ICA Edu Skills, India's top vocational training institute, offers expert-led online courses to develop your job-relevant skills. Our programs are designed to give you practical, in-demand skills in Business Accounting, Tally, GST, Direct Tax, Advanced Accounts, SAP FICO/HANA and .</p>
                 <div class="d-flex">
                     <div class="flex-shrink-0">
                         <img src="assets/frontend/images/live-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>Pocket-Friendly Fees</h5>
-                        <p>Our course fees are affordable and allow you to learn from the comfort of your home.</p>
+                        <h5>Practical Skills</h5>
+                        <p>You'll work in a Virtual Office and master real-world tasks like BAP GST and ITR filings through over 200 exercises on our exclusive SimulationJET platform.</p>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -67,8 +68,8 @@
                         <img src="assets/frontend/images/plece-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>Develop Job-Ready Skills</h5>
-                        <p>With a cutting edge curriculum, designed with the guidance of the industry and academia, you will have developed job-ready skills at the end of the course.</p>
+                        <h5>Affordable & Value for Money</h5>
+                        <p>Get a top-tier education that’s affordable and high-value, so you can start your career without the financial strain.</p>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -76,19 +77,11 @@
                         <img src="assets/frontend/images/soft-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>Learn From Industry Experts</h5>
-                        <p>Our faculty are leading practitioners in the field of Accounting, Taxation and Finance. They utilize case studies and live classes, making the course interactive.</p>
+                        <h5>Internship Focused Training</h5>
+                        <p>Our training is designed to get you hired, giving you the skills and confidence for a great internship and a high-paying job.</p>
                     </div>
                 </div>
-                <div class="d-flex">
-                    <div class="flex-shrink-0">
-                        <img src="assets/frontend/images/soft-img.png" alt="..." class="img-fluid">
-                    </div>
-                    <div class="flex-grow-1 ms-4">
-                        <h5>Work on Live Projects</h5>
-                        <p>Live projects involving real world data to give you firsthand experience. What are you waiting for?</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -109,23 +102,23 @@
                             <div class="price-coll"><span class="modules-text">Modules</span></div>
                             <div class="price-coll"><span class="modules-text">Hours</span></div>
                             <div class="price-coll">
-                                <h5>CIA Express<br> (3Months)</h5>
-                                <span>40999</span>
+                                <h5>CIA Express<br> (3 Months)</h5>
+                                <span>44999</span>
                                 <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                             </div>
-                            <div class="price-coll"><h5>CIA <br>(4Months)</h5>
-                                <span>49999</span>
+                            <div class="price-coll"><h5>CIA <br>(4 Months)</h5>
+                                <span>53999</span>
                                 <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                             </div>
-                            <div class="price-coll"><h5>CIA With SAP <br>(6Months)</h5>
-                                <span>72999</span>
+                            <div class="price-coll"><h5>CIA With SAP <br>(6 Months)</h5>
+                                <span>72900</span>
                                 <a href="#lead-generate-popup" class="thm-btn bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link">Enquire now</a>
                             </div>
 
                         </div>
 
                         <div class="price-box">
-                            <div class="price-coll">Business Computer Applications</div>
+                            <div class="price-coll">Business Computer Applications (Ms Office)</div>
                             <div class="price-coll">45</div>
                             <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
                             <div class="price-coll"><img src="{{ url('/assets/frontend/images/tick.png') }}" alt="available"></div>
@@ -160,7 +153,7 @@
 
                         <div class="price-box">
 
-                            <div class="price-coll">Business Communication</div>
+                            <div class="price-coll">Business/Corporate Communication</div>
 
                             <div class="price-coll">45</div>
 
@@ -230,7 +223,7 @@
 
                         <div class="price-box">
 
-                        <div class="price-coll">Advanced Accounts</div>
+                        <div class="price-coll">Advanced Accounts (Finalisation of Accounts)</div>
 
                             <div class="price-coll">30</div>
 
@@ -252,7 +245,7 @@
                         </div> 
 
                         <div class="price-box">
-                            <div class="price-coll">SAP (Finance &amp; Controlling)</div>
+                            <div class="price-coll">SAP FICO End User</div>
                             <div class="price-coll">80</div>
                             <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
                             <div class="price-coll"><img src="{{ url('/assets/frontend/images/cancel.png') }}" alt="not available"></div>
@@ -543,7 +536,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="tabil-content-head mt-3">
-                                    <h2>SAP (Finance & Controlling) <span>( Hours : 80 )</span></h2>
+                                    <h2>SAP FICO End User <span>( Hours : 80 )</span></h2>
                                 </div>
                             </div>
                             <div class="col-4 pe-0">
@@ -612,7 +605,7 @@
                         </span>
                     </div>
                     @endforeach
-                </ul>
+                </ul> <strong>& many more</strong>
             </div>
         </div>
     </div>
@@ -624,14 +617,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 pe-lg-5">
                 <h2 class="pre-heading">Why choose us</h2>
-                <h3 class="sec-heading mb-5">Have a competitive edge over everyone with our online courses!</h3>
+                <h3 class="title">Have a <span class="curve-text">competitive edge</span> over everyone with our online courses!</h3>
                 <div class="d-flex">
                     <div class="flex-shrink-0">
                         <img src="assets/frontend/images/live-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>Live Online Training Program</h5>
-                        <p>We believe in real time learning, which is why we offer live classes for our students. With our online accounting courses, you can learn at your own convenience!</p>
+                        <h5>90% Practical & 10% Theory</h5>
+                        <p>Learn by doing! Practice in a Virtual Office (BAP), file GST & ITR on simulation, and master accounting with JET: 200+ journal entries. Build real-world confidence with minimal theory and maximum practical exposure.</p>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -639,8 +632,8 @@
                         <img src="assets/frontend/images/plece-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>100% Placement Assurance</h5>
-                        <p>Our accountant certification is industry recognized. When you enroll in Certified Industrial Accountant Plus courses, you get Triple Certification Advantage- ICA, SAP & MOS Certification. With ICA Edu Skills online courses, you can be rest assured of becoming job ready.</p>
+                        <h5>Internship Focused Training</h5>
+                        <p>For Job Assured candidates, internships are highly encouraged as they provide real workplace exposure, practical skills, and stronger CVs. This experience builds confidence and ensurLearn From Anywhere, Anytimees a smooth transition into the corporate world.</p>
                     </div>
                 </div>
                 <div class="d-flex">
@@ -648,8 +641,8 @@
                         <img src="assets/frontend/images/soft-img.png" alt="..." class="img-fluid">
                     </div>
                     <div class="flex-grow-1 ms-4">
-                        <h5>10 Simulation Softwares</h5>
-                        <p>With our 10 simulation software, you will get hands-on experience on practicing GSTR, ITR, TDS Return Filing, PF & ESI and much more. Stand out in front of recruiters by enrolling in our courses.</p>
+                        <h5>Learn From Anywhere, Anytime</h5>
+                        <p>Self-Paced (Recordings) which is ideal for professionals, shift workers, new parents, or entrepreneurs to learn at their convenience. Live Classes is Best for students, part-timers, or business owners seeking real-time interaction and guidance.</p>
                     </div>
                 </div>
             </div>
@@ -667,6 +660,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <h2>Get The Best E-learning Experience with ICA!</h2>
+                <div class="text-center">
+                    <a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow mb-4">Talk to Our Exparts <i class="fal fa-chevron-right ml-2"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -729,7 +725,7 @@
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-lg-9 text-left aos-init">
-                <h3 class="title">Our latest blog news</h3>
+                <h3 class="title">From Our Blog</h3>
             </div>
             <div class="col-lg-3 text-right aos-init">
                 <a href="/blog" class="thm-btn bg-thm-color-two thm-color-two-shadow mr-4 mb-4">View All Blogs <i class="fal fa-chevron-right ml-2"></i></a>

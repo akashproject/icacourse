@@ -1262,13 +1262,13 @@ textarea.form-control-custom+i {
 }
 
 .thm-btn {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--thm-white);
     display: inline-flex;
     align-items: center;
     border: none;
-    padding: 10px 30px;
+    padding: 10px 15px;
     text-transform: uppercase;
     transition: 0.5s all;
 }
@@ -8322,7 +8322,7 @@ a.change_mobile_no {
 /*course_details*/
 
 .course-item {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin: 20px 5px;
 }
 
@@ -8388,6 +8388,51 @@ a.change_mobile_no {
     top: 3px;
     font-weight: 800;
     color: #34368c;
+}
+
+.learning-outcomes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.learning-outcomes ul li {
+    padding: 80px 10px;
+    border-radius: 6px;
+    border: 2px solid #7129b5;
+    display: inline-table;
+    width: 33%;
+    height: 283px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding-bottom: 6px;
+    background: #fff;
+}
+
+.learning-outcomes ul li::before {
+    left: 44%;
+    top: 0;
+    font-size: 45px;
+}
+
+.learning-outcomes ul li:hover {
+    transform: scale(1.1);
+    background: #fff;
+    z-index: 2;
+    animation: zoomIn 1s forwards;
+    box-shadow: 0 0 5px 3px #7129b533;
+}
+
+.learning-outcomes ul li strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 26px;
+    height: 38px;
+}
+
+.learning-outcomes {
+    text-align: center;
 }
 
 .sidebar .sidebar_widget {
@@ -10340,6 +10385,9 @@ align-self: center;
     background: #97289F;
 }
 
+.talk-to-expert:hover {
+    background: #97289f;
+}
 
 .hero-banner{
     width: 100%;
@@ -10505,74 +10553,22 @@ align-self: center;
 
 @keyframes animeBox {
     from {
-        right: 62%;
+        right: 12%;
     }
     to {
-        right: 63%;
+        right: 13%;
     }
 }
 
 
 
-/* .form-right{
-    background: #abadff;
-    padding: 0px 44px;
-    overflow: hidden;
-}
-
-.form-right .right-object{
-    position: absolute;
-    left: -88px;
-    top: -154px;
-    width: 280px;
-}
-
-.form-right .bottom-object{
-    position: absolute;
-    bottom: -79px;
-    width: 184px;
-    right: -70px;
-}
-
+/* 
 @keyframes sway {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(1.5deg); }
     50% { transform: rotate(0deg); }
     75% { transform: rotate(-1.5deg); }
     100% { transform: rotate(0deg); }
-}
-
-
-.form-right .right-card{
-    text-align: center;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    border-right: 5px solid #393185;
-    position: relative;
-}
-
-.form-right .right-card.animate-sway {
-    animation: sway 1.5s ease-in-out infinite;
-}
-
-.form-right .right-card h2{
-    font-size: 20px;
-    color: #393185;
-}
-.form-right .right-card .stycky-pin{
-    border-radius: 50%;
-    position: absolute;
-    left: 44%;
-    top: -17px;
-    width: 35px;
-    animation: none; 
-}
-.form-right .right-card .right-profile{
-    border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: #d4d5ff 0px 2px 8px 0px;
-    width: 150px;
 } */
 
 

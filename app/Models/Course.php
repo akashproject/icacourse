@@ -12,7 +12,7 @@ class Course extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'id','name','type_id','tags','subjects','slug','banner_image','featured_image','course_video_title','course_video_link','course_video_image','description','excerpt','duration','no_of_module','criteria','feature','highlights','certification','number_of_enrolled','number_of_rating','erp_course_id','display_price','price','faqs','blog','enable_otp','title','meta_description','schema','robots','utm_campaign','utm_source','status','created_at',
+        'id','name','type_id','tags','subjects','slug','banner_image','featured_image','course_video_title','course_video_link','course_video_image','description','excerpt','duration','no_of_module','criteria','feature','highlights','certification','eligibility','number_of_enrolled','number_of_rating','erp_course_id','display_price','price','faqs','blog','enable_otp','title','meta_description','schema','robots','utm_campaign','utm_source','status','created_at',
     ];
 
     public function category()

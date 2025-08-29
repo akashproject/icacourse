@@ -95,13 +95,6 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::post('/save-file', [App\Http\Controllers\Administrator\MediaController::class, 'updateFile'])->name('admin-save-file');
         Route::get('/delete-file/{id}', [App\Http\Controllers\Administrator\MediaController::class, 'delete'])->name('admin-delete-file');
         Route::post('/search-media', [App\Http\Controllers\Administrator\MediaController::class, 'search'])->name('admin-search-media');
-
-       //Coupon Code
-        Route::get('/coupons', [App\Http\Controllers\Administrator\CouponController::class, 'index'])->name('admin-coupons');
-        Route::get('/add-coupon', [App\Http\Controllers\Administrator\CouponController::class, 'add'])->name('admin-add-coupon');
-        Route::get('/view-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'show'])->name('admin-view-coupon');
-        Route::post('/save-coupon', [App\Http\Controllers\Administrator\CouponController::class, 'save'])->name('admin-save-coupon');
-        Route::get('/delete-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'delete'])->name('admin-delete-coupon');
     
         // Sync With ERP
         Route::get('/sync-with-erp', [App\Http\Controllers\Administrator\SyncErpController::class, 'index'])->name('admin-sync-with-erp');
@@ -124,6 +117,15 @@ Route::group(['prefix' => 'administrator'], function () {
         //Settings
         Route::get('/settings', [App\Http\Controllers\Administrator\SettingController::class, 'show'])->name('admin-settings');
         Route::post('/save-settings', [App\Http\Controllers\Administrator\SettingController::class, 'save'])->name('admin-save-settings');
+    });
+
+    Route::group(['middleware' => ['auth']], function () {
+        //Coupon Code
+        Route::get('/coupons', [App\Http\Controllers\Administrator\CouponController::class, 'index'])->name('admin-coupons');
+        Route::get('/add-coupon', [App\Http\Controllers\Administrator\CouponController::class, 'add'])->name('admin-add-coupon');
+        Route::get('/view-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'show'])->name('admin-view-coupon');
+        Route::post('/save-coupon', [App\Http\Controllers\Administrator\CouponController::class, 'save'])->name('admin-save-coupon');
+        Route::get('/delete-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'delete'])->name('admin-delete-coupon');
     });
 });
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('website');

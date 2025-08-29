@@ -1749,6 +1749,11 @@
     .coach_block.right .coach_hover_tooltip{
         left: 0;
     }
+    
+    .learning-outcomes ul li {
+        display: block;
+        width: 100%;
+    }
 }
 
 

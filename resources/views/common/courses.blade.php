@@ -26,12 +26,17 @@
                             ({{ $course->number_of_rating }}) Ratings
                         </div>
                     </div>
+                    <div class="coach_meta">
+                        <div class="price_wrap"> 
+                            <div class="sell_price">
+                                ₹{{ number_format($course->price) }}/-
+                            </div>
+                        </div>
+                    </div>
                     <div class="course_price_box">
                         <div class="coach_meta">
-                            <div class="price_wrap"> 
-                                <div class="sell_price">
-                                    ₹{{ number_format($course->price) }}/-
-                                </div>
+                            <div class="text-center">
+                                <a href="#lead-generate-popup" class=" btn btn-small talk-to-expert text-white bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"><i class="fal fa-phone"></i> Talk to Expert </a>
                             </div>
                         </div>
 
@@ -49,6 +54,7 @@
                             </form>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@ jQuery('.add_course_to_cart').on('submit', function(e) {
             console.log(cart_count);
             
             jQuery(".header_cart-items").text(cart_count);
-            jQuery(".add_to_cart_btn_"+formId).prop('disabled', true).text('Added to cart').addClass("disabled");
+            jQuery(".add_to_cart_btn_"+formId).prop('disabled', true).html('<i class="fal fa-shopping-bag"></i> Added to cart').addClass("disabled");
         },
     });
     return false;

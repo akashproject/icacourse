@@ -83,7 +83,12 @@
 								<input type="text" class="form-control" name="certification" id="certification" placeholder="Enter Course certification" value="{{ $course->certification }}" >
 							</div>
 						</div>
-						
+						<div class="form-group row mb-2">
+							<label for="eligibility" class="col-sm-3 control-label col-form-label">Eligibility</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="eligibility" id="eligibility" placeholder="Enter Course eligibility" value="{{ $course->eligibility }}" >
+							</div>
+						</div>
 						<div class="form-group row mb-2">
 							<label for="number_of_enrolled" class="col-sm-3 control-label col-form-label">No Of Enrolled</label>
 							<div class="col-sm-9">

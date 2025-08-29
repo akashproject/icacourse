@@ -91,7 +91,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        
+        app()->terminating(function () {
+            DB::disconnect();
+        });
         View::composer('*', function($view)
         {
             // Header Menu            
