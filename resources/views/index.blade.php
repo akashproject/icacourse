@@ -660,8 +660,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <h2>Get The Best E-learning Experience with ICA!</h2>
-                <div class="text-center">
-                    <a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow mb-4">Talk to Our Exparts <i class="fal fa-chevron-right ml-2"></i></a>
+                <div class="text-center z-2 position-relative">
+                    <a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow"><i class="fal fa-phone mx-2"></i> Talk to Our Exparts</a>
                 </div>
             </div>
         </div>

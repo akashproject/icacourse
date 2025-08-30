@@ -46,6 +46,9 @@
 .label-failed {
     background: #ff1d1d;
 }
+i.fal.fa-phone {
+    transform: rotate(102deg);
+}
 /*Animations*/
 @keyframes fadeHeaderInDown {
     0% {
@@ -8320,10 +8323,12 @@ a.change_mobile_no {
     right: 10px;
 }
 /*course_details*/
-
+.slick-initialized .slick-slide {
+    margin: 0 5px;
+}
 .course-item {
     padding-bottom: 10px;
-    margin: 20px 5px;
+    margin: 20px 0;
 }
 
 .course_details h2 {
@@ -9326,7 +9331,7 @@ ul.cart-course-list a {
     display: flex;
     align-items: center;
     border-top: 1px solid #e5e4e4;
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .gross_price, .sell_price {
@@ -10380,7 +10385,9 @@ align-self: center;
 }
 
 /* soumen-17-07-27 */
-
+.talk-to-expert,.add-to-cart {
+    font-size: 15px !important;
+}
 .add-to-cart:hover {
     background: #97289F;
 }

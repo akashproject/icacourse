@@ -217,52 +217,6 @@
     </section>
     <!-- Details End -->
 
-    @if(check_device("mobile"))
-    <div class="cart-sm sticky-bar">
-        <form id="add_course_to_cart_{{ $contentMain->id }}" class="add_course_to_cart" data-id="{{ $contentMain->id }}">
-            @csrf
-            <div class="cart-price-wrap">
-                <div class="mobile-view-price-wrap"> 
-                    @foreach(getCourseFees($contentMain->erp_course_id) as $fee)
-                        @php 
-                            @$checked = ($fee->Install_Payable == "N")?"checked":"";
-                            if(in_array($fee->FeeID,$cartItems)) {
-                                $checked = "checked";
-                            }
-                        @endphp
-                    
-                        
-                        <label for="select_price_option_{{ $fee->FeeID }}" class="course_mobile_price_options border-4px-radious">
-                            <input type="radio" name="course_fee_id" class="course_fee_selection" id="select_price_option_{{ $fee->FeeID }}" value="{{ $fee->FeeID }}" {{$checked}} > 
-                            <span> {{ ($fee->Install_Payable == "N")?"One Time Pay":"Pay"; }}</span>
-                            <h3> ₹{{ number_format($fee->Down_Payment)}} </h3>
-                            <span class="mt-2" style="font-size: 12px;"> </span>
-                            <span class="mt-2" style="font-size: 12px;" > {{ ($fee->Install_Payable == "N")?"":"₹".number_format($fee->InstallAmount)." X ".$fee->NoOfInstall." Months"; }}</span>
-                        </label>
-                    @endforeach                               
-                </div>                     
-            </div>
-
-            <div class="cart-btn-wrap">
-                <div class="cart-btn-options">
-                    <div class="cart-button">
-                        @php    
-                            $props = (array_key_exists($contentMain->id, $cartItems))?"disabled":""
-                        @endphp
-                        <button class="mobile_sticky_add_to_cart {{$props}} add_to_cart_btn_{{ $contentMain->id }} border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" style="background: #7129b5;" {{$props}}> Add to cart &nbsp;<i class="fal fa-shopping-bag"></i></button>
-                    </div>
-                    @if(in_array('1',json_decode($contentMain->type_id))) 
-                        <div class="cart-button">
-                            <a href="{{ route('loan-check-eligibility',base64_encode($contentMain->id)) }}" class="border-4px-radious thm-btn btn-large bg-thm-color-three thm-color-three-shadow" > Loan <img src="{{ url('assets/frontend/images/loan.png') }}" ></a>
-                        </div>
-                    @endif
-                </div>
-            </div>
-            <input type="hidden" name="course_id" value="{{ $contentMain->id }}">
-        </form>
-    </div>
-    @endif
-
     <section class="experience-wrapper">
         <img src="{{ url('assets/frontend/images/experience-img-left.png')}}" alt="" class="experience-img-left">
         <img src="{{ url('assets/frontend/images/experience-img-right.png')}}" alt="" class="experience-img-right">
@@ -270,6 +224,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-5">
                     <h2>Get The Best E-learning Experience with ICA!</h2>
+                    <div class="text-center z-2 position-relative">
+                        <a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow"><i class="fal fa-phone mx-2"></i> Talk to Our Exparts</a>
+                    </div>
                 </div>
             </div>
         </div>
