@@ -79,24 +79,21 @@ jQuery('#lead_validate_form').validate({
     }
 });
 
-jQuery('#checkoutform').validate({
+jQuery('#proceed_to_checkout_form').validate({
     rules: {
-        'mobile': {
-            required: true,
-            number: true,
-            maxlength: 10,
-            minlength: 10,
+        'lead_email': {
+          required: true,
         },
     },
 
     messages: {
-        'lead_email_address': "Enter valid email address.",
-        'lead_first_name': "Enter valid first name.",
-        'lead_last_name': "Enter Valid last name.",
+        'lead_email': "Enter valid email address.",
+        'first_name': "Enter valid first name.",
+        'last_name': "Enter Valid last name.",
         'guardian_name': "Enter Valid Gurdian name.",
         'lead_mobile[1]': "Enter valid mobile number.",
         'addressline_1': "Enter Valid address",
-        //'date_of_birth': "Please type your date of birth",
+        'date_of_birth': "Please type your date of birth",
         'gender': "Select your gender",
         'state': "Please Select State",
         'city': "Please Select city",

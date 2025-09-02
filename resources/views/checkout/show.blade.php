@@ -3,11 +3,25 @@
 <!-- Coach Grid Start -->
 <section class="section-padding">
     <div class="container">
-        <form method="post" action="{{ route('proceed-to-checkout') }}" id="checkoutform">
+        <form method="post" action="{{ route('proceed-to-checkout') }}" id="proceed_to_checkout_form">
             @csrf
             <div class="row">
                 <div class="col-md-8">
                     <h3> Checkout </h3>
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
                     <div class="checkout_information mb-2 active">
                         <h5> Personal Infomation </h5>
                         <div class="checkout_form_info">
@@ -49,12 +63,14 @@
                                             <label for="lead_email_address">Email Address</label>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
                                             <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" placeholder="Date Of Birth" value="{{ isset($student['date_of_birth'])?$student['date_of_birth']:''}}" autocomplete="off" value="" required>
                                             <label for="date_of_birth">Date Of Birth</label>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
                                             <select class="form-control" name="gender" id="gender" required>
@@ -66,6 +82,7 @@
                                             <label for="gender">Gender</label>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-4 mb-2">
                                         <div class="form-floating">
                                             <select class="form-control" name="qualification" id="qualification" required>
@@ -77,6 +94,7 @@
                                             <label for="qualification">Highest Qualification</label>
                                         </div>
                                     </div>
+                                    
                                     <div class="col-lg-4">
                                         <div class="form-floating">
                                             <select class="form-control" name="language_option" id="language_option" required>
@@ -100,9 +118,7 @@
                                         <textarea name="addressline_1" id="addressline_1" class="form-control" autocomplete="off" placeholder="Select Address" value="" required="">{{ isset($student['address'])?$student['address']:''}}</textarea>
                                         <label for="addressline_1" >Address</label>
                                     </div>
-
                                 </div>
-
                                 <div class="col-lg-4 mb-2">
                                     <div class="form-floating">
                                         <select class="form-control" name="state" id="state" onChange="getCitiesByStateId(this);" required>
@@ -127,16 +143,15 @@
                                         <label for="city">City</label>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-4 mb-2">
                                     <div class="form-floating">
                                         <input type="number" id="pincode" name="pincode" placeholder="Select Pincode" class="form-control" autocomplete="off" value="{{ isset($student['pincode'])?$student['pincode']:''}}" required="">
                                         <label for="pincode" >Pincode</label>
                                     </div>
                                 </div>
-                                <div class="col-12 ">
+                                <div class="col-lg-12">
                                     <div class="form-group disclaimer">
-                                        <p style="margin:0"><input type="checkbox" class="" checked="" required> I agree to accept all  <a target="_blank" href="{{ route('page-view','term-condition') }}" >T&C</a> and the <a target="_blank" href="{{ route('page-view','guidelines') }}" >guidelines</a> before purchasing the course </p>
+                                        <p style="margin:0"><input type="checkbox" class="" checked=""> I agree to accept all  <a target="_blank" href="{{ route('page-view','term-condition') }}" >T&C</a> and the <a target="_blank" href="{{ route('page-view','guidelines') }}" >guidelines</a> before purchasing the course. </p>
                                     </div>
                                 </div>
                                 <div class="col-12 text-right">
@@ -151,7 +166,6 @@
                 <div class="col-md-4">
                     <h3> Your order </h3>
                     <div class="sidebar">
-                        
                         <div class="sidebar_widget recent_widgets wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                             <h5 class="widget_title">Course{{ (count($cartItems) >1)?'s ':'' }} added to cart</h5>
                             <ul class="cart-course-list">
@@ -204,7 +218,6 @@
                                 </li>
                             </ul>
                             <hr>
-                            
                         </div>
                     </div>
                     
@@ -231,7 +244,6 @@
             <input type="hidden" name ="source_url" value="{{ url()->current() }}" >
             <input type="hidden" name="amount" id="amount" value="{{ base64_encode(totalCartAmount()) }}">
             <input type="hidden" name="discount" id="discount" value="">
-            
         </form>
 
     </div>

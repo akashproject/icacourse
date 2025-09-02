@@ -18,7 +18,7 @@ trait afterLeadSubmit
             'Email' => $postData['email'],
             'MobileNumber' => $postData['mobile'],
             'Center' => getStateById($postData['state'])->name,
-            'Location' => getCityById($postData['city'])->name,
+            // 'Location' => getCityById($postData['city'])->name,
             'Field4' => "Retail Online",
             'pincode' => $postData['pincode'],
             'LeadType' => $postData['lead_type'],

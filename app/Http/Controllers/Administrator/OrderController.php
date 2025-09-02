@@ -96,33 +96,40 @@ class OrderController extends Controller
 
     public function exportCsv()
     {
-        $results = DB::table('orders')->join('students', 'orders.profile_id', '=', 'students.id')->get();
+        $results = DB::table('orders')->select('orders.id as id','students.id as student_id','orders.order_id','orders.coupon','orders.amount','orders.discount','orders.student_code','orders.money_receipt','orders.payment_id','orders.payment_mode','orders.status','orders.erp_status','orders.created_at','students.first_name','students.last_name','students.guardian_name','students.mobile','students.email','students.date_of_birth','students.address','students.state','students.city','students.pincode')->join('students', 'orders.profile_id', '=', 'students.id')->get();
         $csvData = [];
-        $csvData[] = ['Order ID','Name','Email','Mobile','Date Of Birth','Address','State','City','Pincode','Courses','Total Amount', 'Discount','Student Code','Money Receipt','Payment Id','Payment Mode','Status','ERP Status','Created At'];
-
+        $csvData[] = ['Order ID','Name','Email','Mobile','Guardian Name','Date Of Birth','Address','State','City','Pincode','Courses','Course Price','Course Discount','Total Discount','Total Course Price','Total Paid','Student Code','Money Receipt','Payment Id','Payment Mode','Status','ERP Status','Created At'];
         foreach ($results as $row) {
             $courses = "";
+            $course_price = "";
+            $course_discount = "";
             $order_items = DB::table('order_items')
             ->join('courses', 'order_items.course_id', '=', 'courses.id')
             ->select('courses.name as course', 'order_items.fee_id', 'order_items.amount', 'order_items.discount')
             ->where('order_items.order_id',$row->id)
             ->get();
             foreach ($order_items as $key => $item) {
-                $courses .= $item->course.': Rs.'.$item->amount.' Discount Rs.'.$item->discount.' ,';
+                $courses .= $item->course.' | ';
+                $course_price .= $item->amount.' | ';
+                $course_discount .= $item->discount.' | ';
             }
             $csvData[] = [
                 $row->order_id,
                 $row->first_name.' '.$row->last_name,
                 $row->email,
                 $row->mobile,
+                $row->guardian_name,
                 $row->date_of_birth,
                 $row->address,
                 $row->state,
                 $row->city,
                 $row->pincode,
                 $courses,
-                $row->amount,
+                $course_price,
+                $course_discount,
                 $row->discount,
+                $row->amount,
+                $row->amount - $row->discount,
                 $row->student_code,
                 $row->money_receipt,
                 $row->payment_id,

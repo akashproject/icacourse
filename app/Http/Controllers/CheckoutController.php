@@ -68,6 +68,9 @@ class CheckoutController extends Controller
                 'lead_mobile' => ['required', 'array', 'min:1'],
                 'date_of_birth' => ['required'],
                 'amount' => ['required'],
+                'city' => ['required'],
+                'state' => ['required'],
+                'pincode' => ['required'],
             ]);
             $data['otp_status'] = "1";
             $lead = $this->captureLeadToDB($data);
