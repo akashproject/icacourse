@@ -8,8 +8,10 @@
                 <h2>Reinvent the <span class="">online learning</span> experience with us</h2>
                 <p>India’s #1 Accounts, Finance & Taxation Training Institute to Provide Online Job Assurance Courses</p>
                 <div class="d-flex">
+                    @if(!check_device("mobile"))
 					<a href="{{ route('page-view','courses') }}" class="thm-btn bg-thm-color-two thm-color-two-shadow mx-4 mb-4">Explore Courses <i class="fal fa-chevron-right ml-2"></i></a>
-					<a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow mb-4"><i class="fal fa-calendar-alt mx-2"></i>Schedule A DEMO CLASS </a>
+					@endif
+                    <a href="#lead-generate-popup" class="open-popup-link thm-btn bg-thm-color-two thm-color-two-shadow mb-4"><i class="fal fa-calendar-alt mx-2"></i>Schedule A DEMO CLASS </a>
                 </div>
             </div>
             <div class="col-lg-6">

@@ -22,37 +22,23 @@
                 <label for="email">Email Address</label>
             </div>
         </div>
-
+<!-- 
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
                 <input type="number" class="form-control" name="pincode" id="lead_pincode" placeholder="Enter Pincode" autocomplete="off" required="">
                 <label for="lead_pincode">Pincode</label>
             </div>
-        </div>
+        </div> -->
 
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
                 <select class="form-control" name="state" id="state" onChange="getCitiesByStateId(this);" required>
-                    <option value="">  Select State</option>
+                    <option value="">  Select your state</option>
                     @foreach(getStates() as $value)
                     <option value="{{ $value->Id }}" {{ (isset($student['state']) && $student['state'] == $value->Id )?'selected':''}}> {{ $value->name }} </option>
                     @endforeach
                 </select>
                 <label for="state" >State</label>
-            </div>
-        </div>
-
-        <div class="col-lg-6 mb-2">
-            <div class="form-floating">
-                <select class="form-control" name="city" id="city" required="">
-                    <option value="">  Select City</option>
-                    @if(isset($student['state']))
-                        @foreach(getCitiesByStateName($student['state']) as $value)
-                        <option value="{{ $value->id }}" {{ (isset($student['city']) && $student['city'] == $value->id )?'selected':''}}> {{ $value->name }} </option>
-                        @endforeach
-                    @endif
-                </select>
-                <label for="city">City</label>
             </div>
         </div>
 

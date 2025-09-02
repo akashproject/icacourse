@@ -4731,8 +4731,8 @@ a.remove_form_cart {
 }
 
 .cart-button {
-    display: inline;
-    margin-right: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 .division {

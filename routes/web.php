@@ -11,7 +11,6 @@ Route::get('/index/clear-cache', function() {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['prefix' => 'administrator'], function () {
     Route::group(['middleware' => ['auth','role:super-admin|admin']], function () {
-        Route::get('/', [App\Http\Controllers\Administrator\IndexController::class, 'dashboard'])->name('admin-dashboard');
         
         //Users
         Route::get('/users', [App\Http\Controllers\Administrator\UserController::class, 'index'])->name('admin-users');
@@ -121,6 +120,7 @@ Route::group(['prefix' => 'administrator'], function () {
 
     Route::group(['middleware' => ['auth']], function () {
         //Coupon Code
+        Route::get('/', [App\Http\Controllers\Administrator\IndexController::class, 'dashboard'])->name('admin-dashboard');
         Route::get('/coupons', [App\Http\Controllers\Administrator\CouponController::class, 'index'])->name('admin-coupons');
         Route::get('/add-coupon', [App\Http\Controllers\Administrator\CouponController::class, 'add'])->name('admin-add-coupon');
         Route::get('/view-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'show'])->name('admin-view-coupon');
