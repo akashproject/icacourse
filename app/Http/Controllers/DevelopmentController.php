@@ -25,8 +25,7 @@ class ApiController extends Controller
         $categories = App::make('courseTypes');
         return response()->json($categories, $this->_statusOK);
     }
-
-
+    
     public function courses() {
         $courses = App::make('courses');
         return response()->json($courses, $this->_statusOK);

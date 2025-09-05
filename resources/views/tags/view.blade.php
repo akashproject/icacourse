@@ -120,7 +120,7 @@
                                 <div class="course_price_box">
                                     <div class="coach_meta">
                                         <div class="text-center">
-                                            <a href="#lead-generate-popup" class=" btn btn-small talk-to-expert text-white bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"><i class="fal fa-phone"></i> Talk to Expert </a>
+                                            <a href="#lead-generate-popup" class=" btn btn-small talk-to-expert text-white bg-thm-color-two thm-color-two-shadow btn-rectangle open-popup-link"><i class="fal fa-download"></i> Get Brochure </a>
                                         </div>
                                     </div>
 

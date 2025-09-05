@@ -4773,6 +4773,10 @@ a.remove_form_cart {
     bottom: -20px;
 }
 
+.coach_block .coach_img a {
+    width: 100%;
+}
+
 
 .coach_block .coach_caption {
     background-color: var(--thm-white);

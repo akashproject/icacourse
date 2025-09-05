@@ -15,16 +15,6 @@ class CheckoutController extends Controller
     use afterLeadSubmit;
     public $_statusOK = 200;
     public $_statusErr = 500;
-    public function show(){
-        try {
-            $contentMain = (object)[
-                'enable_otp' => get_theme_setting('enable_otp')
-            ];
-            return view('checkout.show',compact('contentMain'));
-        } catch (\Illuminate\Database\QueryException $e) {
-            //throw $th;
-        }
-    }
 
     public function studentValidate(){
         try {
@@ -43,11 +33,15 @@ class CheckoutController extends Controller
         try {
             $data = $request->all();  
             $student = Student::where('mobile',$data['mobile'])->first();
-            if(!$student){
-                $student = [
-                    'mobile' => $data['mobile'],
-                ];
+
+            if($student){
+                Cookie::queue('student', json_encode($student), 6000000000); 
+                return redirect()->route('checkout-to-payment'); 
             }
+            
+            $student = [
+                'mobile' => $data['mobile'],
+            ];
 
             Cookie::queue('student', json_encode($student), 6000000000); 
             return redirect()->route('checkout'); 
@@ -56,51 +50,104 @@ class CheckoutController extends Controller
         }
     }
 
+    public function show(){
+        try {
+            $contentMain = (object)[
+                'enable_otp' => get_theme_setting('enable_otp')
+            ];
+            $studentData = json_decode(Cookie::get('student'),true);
+            $student = Student::where('mobile',$studentData['mobile'])->first();
+            if($student){
+                return redirect()->route('checkout-to-payment'); 
+            }
+            return view('checkout.show',compact('contentMain'));
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    public function paymentStep(){
+        try {
+            $contentMain = (object)[
+                'enable_otp' => get_theme_setting('enable_otp')
+            ];
+            $studentData = json_decode(Cookie::get('student'),true);
+            return view('checkout.payment',compact('contentMain'));
+        } catch (\Illuminate\Database\QueryException $e) {
+            //throw $th;
+        }
+    }
+
+    public function leadCaptureFromCheckout(Request $request)
+    {
+        try {
+           
+            $postData = $request->all();
+            $nameArray = explode(" ", $postData["lead_full_name"]);
+            $postData["first_name"] = current(explode(" ", $postData["lead_full_name"]));
+            unset($nameArray["0"]);
+            $postData["last_name"] = implode(" ", $nameArray);
+            $lead = $this->captureLeadToDB($postData);
+
+            $updateData['otp_status'] = "1";
+            $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
+            $updateData['crm_status'] = ($ee['result'] == "Success")?'1':'0';
+            $updateData['crm_response'] = $ee;
+
+            $cogno = $this->cognoai_api_calling($lead);
+            $updateData['whatsapp_status'] = ($cogno['status'] == "200")?'1':'0';
+
+            $thankYou = $this->thankyouNotication($lead);
+            $updateData['message_status'] = ($thankYou['statusCode'] == "200")?'1':'0';
+
+            $brevo = $this->sendEmailBrochureByBrevo($lead);
+            $updateData['mail_status'] = (isset($brevo['messageId']))?'1':'0';
+            $lead->update($updateData);
+
+            $studentData = [
+                'first_name' => $lead->first_name,
+                'last_name' => $lead->last_name,
+                'mobile' => $lead->mobile,
+                'email' => $lead->email,
+                'state' => $lead->state,
+                'city' => $lead->city,
+                'pincode' => $lead->pincode,
+            ];
+            $student = Student::where('mobile',$lead->mobile)->first();
+            if(!$student) { 
+                $student = Student::create($studentData);
+            }
+            $student->update($studentData);
+            Cookie::queue('student', json_encode($student), 6000000000); 
+            return redirect()->route('checkout-to-payment');
+        } catch (\Illuminate\Database\QueryException $e) {
+            return response()->json($e, $this->_statusOK);
+        }
+    }
+
     public function proceedToCheckout(Request $request)
     {
         try {
             $data = $request->all();
             $validatedData = $request->validate([
-                'last_name' => 'required',
-                'last_name' => 'required',
                 'guardian_name' => 'required',
-                'lead_email' => 'required|email',
-                'lead_mobile' => ['required', 'array', 'min:1'],
                 'date_of_birth' => ['required'],
                 'amount' => ['required'],
-                'city' => ['required'],
-                'state' => ['required'],
-                'pincode' => ['required'],
             ]);
-            $data['otp_status'] = "1";
-            $lead = $this->captureLeadToDB($data);
-
-            $ee = $this->b2cLeadCaptureLeadToExtraage($lead);
-            $data['crm_status'] = ($ee['result'] == "Success")?'1':'0';
-            $data['crm_response'] = $ee;
-            $lead->update($data);
 
             $cartItems = json_decode(Cookie::get('cartItems'),true);
-            $student = Student::where('mobile',$data['lead_mobile'][1])->first();
+            $studentData = json_decode(Cookie::get('student'),true);
+            $student = Student::where('mobile',$studentData['mobile'])->first();
             $studentInfo = [
-                'first_name'=>$data['first_name'],
-                'last_name'=>$data['last_name'],
                 'guardian_name'=>$data['guardian_name'],
-                'mobile'=>$data['lead_mobile'][1],
-                'email'=>$data['lead_email'],
                 'date_of_birth'=>$data['date_of_birth'],
                 'gender'=>$data['gender'],
                 'qualification'=>$data['qualification'],
                 'language'=>$data['language_option'],
                 'address'=>$data['addressline_1'],
-                'state'=>$data['state'],
-                'city'=>$data['city'],
-                'pincode'=>$data['pincode'],
             ];
             if($student){
                 $student->update($studentInfo);
-            } else {
-                $student = Student::create($studentInfo);
             }
             Cookie::queue('student', json_encode($student), 6000000000);
             $order_id = "order_".random_strings(14);
@@ -121,7 +168,7 @@ class CheckoutController extends Controller
             if(isset($data['discount']) && $data['discount'] != ''){
 				$base_value = intdiv($data['discount'], count($cartItems));
 				$remainder = $data['discount'] % count($cartItems);
-			}   
+			}
 
             $orderItem = [];
             foreach ($cartItems as $key => $value) {

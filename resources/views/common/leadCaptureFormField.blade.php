@@ -22,7 +22,7 @@
                 <label for="email">Email Address</label>
             </div>
         </div>
-<!-- 
+        <!-- 
         <div class="col-lg-6 mb-2">
             <div class="form-floating">
                 <input type="number" class="form-control" name="pincode" id="lead_pincode" placeholder="Enter Pincode" autocomplete="off" required="">

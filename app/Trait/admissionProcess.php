@@ -4,6 +4,7 @@ namespace App\Trait;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Student;
+use App\Models\Coupon;
 
 trait admissionProcess
 {
@@ -89,6 +90,10 @@ trait admissionProcess
         } catch(\Illuminate\Database\QueryException $e){
             return response()->json($e, $this->_statusOK);
         }
+    }
+
+    public function updateCouponUse($coupon){
+        $coupon = Coupon::where('code',$coupon)->first();
     }
 
 }

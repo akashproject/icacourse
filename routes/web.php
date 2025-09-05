@@ -128,24 +128,29 @@ Route::group(['prefix' => 'administrator'], function () {
         Route::get('/delete-coupon/{id}', [App\Http\Controllers\Administrator\CouponController::class, 'delete'])->name('admin-delete-coupon');
     });
 });
+
+Route::get('/index/test-mail', [App\Http\Controllers\IndexController::class, 'testEmail'])->name('test-mail');
+
+//Pages
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('website');
 Route::get('/{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page-view')->where('slug', '([A-Za-z0-9\-]+)');
 
+// Ad Pages
+Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
+Route::post('/ad-page-capture-lead', [App\Http\Controllers\AdPageController::class, 'captureLead'])->name('ad-page-capture-lead');
 
+//Courses
 Route::get('/courses/{slug}', [App\Http\Controllers\CourseController::class, 'view'])->name('view-courses');
 Route::get('/category/{slug}', [App\Http\Controllers\CourseTypeController::class, 'view'])->name('category');
 Route::get('/tag/{slug}', [App\Http\Controllers\TagController::class, 'view'])->name('tag');
-
-
-Route::get('/ads/{slug}', [App\Http\Controllers\AdPageController::class, 'index'])->name('ad-page-view')->where('slug', '([A-Za-z0-9\-]+)');
-Route::post('/ad-page-capture-lead', [App\Http\Controllers\AdPageController::class, 'captureLead'])->name('ad-page-capture-lead');
 
 Route::post('/submit-mobile-otp', [App\Http\Controllers\IndexController::class, 'submitMobileOtp'])->name('submit-mobile-otp');
 Route::post('/insert-lead-records', [App\Http\Controllers\IndexController::class, 'insertLeadRecord'])->name('insert-lead-records');
 Route::post('/capture-lead', [App\Http\Controllers\IndexController::class, 'captureLead'])->name('capture-lead');
 Route::post('/save-contact', [App\Http\Controllers\IndexController::class, 'saveContact'])->name('save-contact');
 Route::post('/apply-coupon-code', [App\Http\Controllers\IndexController::class, 'applyCouponCode'])->name('apply-coupon-code');
-Route::get('/index/test-mail', [App\Http\Controllers\IndexController::class, 'testEmail'])->name('test-mail');
+Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
+
 //Cart
 Route::get('loan/check-eligibility/{course_id}', [App\Http\Controllers\CartController::class, 'checkLoanEligibility'])->name('loan-check-eligibility');
 Route::post('/add-to-cart', [App\Http\Controllers\CartController::class, 'addToCart'])->name('add-to-cart');
@@ -158,15 +163,16 @@ Route::post('/upload-payslips', [App\Http\Controllers\CartController::class, 'up
 Route::get('/cart/validate', [App\Http\Controllers\CheckoutController::class, 'studentValidate'])->name('validate');
 Route::post('/validate-lead', [App\Http\Controllers\CheckoutController::class, 'validateLead'])->name('validate-lead');
 Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');
+Route::post('/lead-capture-from-checkout', [App\Http\Controllers\CheckoutController::class, 'leadCaptureFromCheckout'])->name('lead-capture-from-checkout');
+Route::get('/cart/checkout/payment', [App\Http\Controllers\CheckoutController::class, 'paymentStep'])->name('checkout-to-payment')->middleware('check_cart_item');
 Route::post('/proceed-to-checkout', [App\Http\Controllers\CheckoutController::class, 'proceedToCheckout'])->name('proceed-to-checkout')->middleware('check_cart_item');
-
 Route::get('/cart/mail', [App\Http\Controllers\CheckoutController::class, 'mail'])->name('testInvoice');
 
 //Payment
 Route::post('/payment/success', [App\Http\Controllers\PaymentController::class, 'success'])->name('payment-success');
 Route::post('/payment/failed', [App\Http\Controllers\PaymentController::class, 'failed'])->name('payment-failed');
 
-Route::post('/get-city-by-state-id', [App\Http\Controllers\IndexController::class, 'getCitiesByStateId'])->name('get-city-by-state-id');
+//Api
 Route::get('/api/primary-menu', [App\Http\Controllers\ApiController::class, 'primaryMenu'])->name('api-primary-menu');
 Route::get('/api/cart', [App\Http\Controllers\ApiController::class, 'cart'])->name('api-cart');
 Route::get('/api/footer-menu', [App\Http\Controllers\ApiController::class, 'footerMenu'])->name('api-footer-menu');

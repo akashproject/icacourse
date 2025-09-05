@@ -47,8 +47,12 @@ class PaymentController extends Controller
                 return Http::post(route('payment-failed'), ['status' => 'failure']);
             }
 
+            if($order->coupon != null) {
+                $this->updateCouponUse($order->coupon);
+            }
+
             $this->invoice($responseData['order_id']);
-            return view('payment.success',compact('contentMain'));
+            return redirect()->route('page-view', 'payment-success');
         } catch (\Illuminate\Database\QueryException $e) {
             var_dump($e->getMessage());
         }

@@ -104,6 +104,35 @@ jQuery('#proceed_to_checkout_form').validate({
 
 });
 
+jQuery('#leal-capture-form').validate({
+  rules: {
+    'lead_mobile_number[1]': {
+        required: true,
+        number: true,
+        maxlength: 10,
+        minlength: 10,
+    },
+    pincode:{
+      maxlength: 6,
+      minlength: 6,
+    }
+  },
+  messages: {
+    'lead_mobile_number[1]': "Please type valid mobile number.",
+    lead_full_name:{
+      'required':"Enter Valid Full Name"
+    },
+    lead_email:{
+      'required':"Enter Valid Email Address"
+    },
+    lead_pincode:{
+      'required':"Enter Valid Address Pincode",
+      'maxlength':"Enter Valid Address Pincode",
+      'minlength':"Enter Valid Address Pincode",
+    }
+  }
+});
+
 jQuery('#leadCaptureForm').validate({
     rules: {
         'lead_mobile_number[1]': {
