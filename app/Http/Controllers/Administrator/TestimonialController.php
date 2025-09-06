@@ -61,4 +61,10 @@ class TestimonialController extends Controller
             var_dump($e->getMessage()); 
         }
     }
+
+    public function delete($id) {
+        $course = Testimonial::findOrFail($id);
+        $course->delete();
+        return redirect()->back()->with('message', 'Testimonial deleted successfully!');
+    }
 }

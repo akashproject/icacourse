@@ -4332,7 +4332,7 @@ header.header.header-3.can-sticky.sticky {
     margin-top: 60px;
 }
 .testimonial_item {
-    padding: 40px;
+    padding: 18px;
     border: 2px solid var(--thm-border);
     background-color: transparent;
     transition: 0.3s all;

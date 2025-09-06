@@ -74,9 +74,7 @@ class OrderController extends Controller
             }
 
             $orders = $orders->orderBy("id","desc")->get();
-
             return view('administrator.orders.index',compact('orders','pending','success','admissions','erpStatusFailed'));
-
         } catch(\Illuminate\Database\QueryException $e){
             
         }        

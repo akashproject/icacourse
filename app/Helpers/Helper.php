@@ -202,7 +202,7 @@ if (! function_exists('getFaqsById')) {
 
 if (! function_exists('getTestimonials')) {
     function getTestimonials(){
-        $faq = DB::table('testimonials')->where('status',"1")->get();
+        $faq = DB::table('testimonials')->where('status',"1")->orderBy('id',"desc")->limit(10)->get();
         return $faq;
     }
 }
