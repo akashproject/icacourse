@@ -149,7 +149,7 @@
                                         <h6 class="mb-0">Course Type</h6>
                                     </div>
                                     <div class="right-side">
-                                        {{ (in_array('1',json_decode($contentMain->type_id)))?"100% Job Assurance":"Short Term" }}                                   
+                                        {{ (in_array('1',json_decode($contentMain->type_id)))?"Job Assurance":"Short Term" }}                                   
                                     </div>
                                 </li>
                                 <li>

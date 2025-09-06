@@ -5,7 +5,6 @@ Auth::routes();
 
 Route::get('/index/clear-cache', function() {
     echo $exitCode = Artisan::call('cache:clear');
-    // return what you want
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -159,7 +158,7 @@ Route::post('/remove-from-cart', [App\Http\Controllers\CartController::class, 'r
 Route::post('/submit-loan-eligibility-form', [App\Http\Controllers\CartController::class, 'submitLoanEligibilityForm'])->name('submit-loan-eligibility-form');
 Route::post('/upload-payslips', [App\Http\Controllers\CartController::class, 'uploadPayslips'])->name('upload-payslips');
 
-//Checkout 
+//Checkout
 Route::get('/cart/validate', [App\Http\Controllers\CheckoutController::class, 'studentValidate'])->name('validate');
 Route::post('/validate-lead', [App\Http\Controllers\CheckoutController::class, 'validateLead'])->name('validate-lead');
 Route::get('/cart/checkout', [App\Http\Controllers\CheckoutController::class, 'show'])->name('checkout')->middleware('check_cart_item');

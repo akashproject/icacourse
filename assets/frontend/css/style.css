@@ -4271,15 +4271,10 @@ header.header.header-3.can-sticky.sticky {
 }
 
 .coach_block .coach_badges,
-
 .video_box .video_badges {
-
     position: absolute;
-
     top: 20px;
-
     right: 20px;
-
 }
 
 
@@ -4346,7 +4341,6 @@ header.header.header-3.can-sticky.sticky {
 	height:290px;
 }
 
-
 .testimonial_item.normal {
     margin-bottom: 30px;
     margin-top: 0;
@@ -4357,7 +4351,6 @@ header.header.header-3.can-sticky.sticky {
     display: flex;
     align-items: center;
 }
-
 
 .testimonial_item .author .image {
     width: 67px;
@@ -4376,7 +4369,6 @@ header.header.header-3.can-sticky.sticky {
 .testimonial_item .author .text {
     margin-bottom: 20px;
 }
-
 
 .testimonial_item .author .text h6 {
     line-height: normal;
@@ -4405,7 +4397,6 @@ header.header.header-3.can-sticky.sticky {
     font-weight: bold;
 }
 
-
 .testimonial_item.normal:hover,
 .testimonial_slider .slick-current .testimonial_item {
     box-shadow: 0px 1px 30px 1px #ecf2ff;
@@ -4413,13 +4404,11 @@ header.header.header-3.can-sticky.sticky {
     border-color: transparent;
 }
 
-
 .testimonial_slider .slick-dots {
     position: absolute;
     right: 15px;
     top: -60px;
 }
-
 
 .circle_wave {
     box-shadow: -3px 5px 90px 185px rgb(var(--thm-color-two-rgb), 5%);
@@ -4434,7 +4423,6 @@ header.header.header-3.can-sticky.sticky {
     z-index: -1;
     border-radius: 50%;
 }
-
 
 .testimonial_slider.style_2 .slick-arrow {
     background-color: var(--thm-white);
@@ -4458,7 +4446,6 @@ header.header.header-3.can-sticky.sticky {
     right: 0;
     margin-top: 50px;
 }
-
 
 .testimonial_slider.style_2 .slick-dots li button {
     background-color: transparent;
@@ -4490,214 +4477,122 @@ header.header.header-3.can-sticky.sticky {
     color: var(--thm-color-one);
 }
 
-
-
 .testimonial_slider .slick-current .testimonial_item.style_dark .comment {
     color: var(--thm-body-color);
 }
 
-
-
 .testimonial_item.style_4 {
-
     border-radius: 8px;
-
     border: none;
-
     background-color: var(--thm-white);
-
 }
 
 
 
 /*style 2*/
-
 .testi_bg {
-
     background-repeat: no-repeat;
-
     background-position: right top;
-
     background-size: auto;
-
 }
-
-
 
 .testimonial_item.style_2 {
-
     padding: 0;
-
     border: none;
-
     margin: 0;
-
     max-width: 450px;
-
     line-height: 2;
-
     margin-top: 10px;
-
 }
 
-
-
 .testimonial_item.style_2 .author,
-
 .testimonial_item.style_2 .comment {
-
     position: relative;
-
     padding-left: 65px;
-
 }
 
 
 
 .testimonial_item.style_2 .comment:before {
-
     content: "\f10d";
-
     font-family: "Font Awesome 5 Pro";
-
     font-size: 40px;
-
     font-weight: 100;
-
     color: var(--thm-color-three);
-
     position: absolute;
-
     left: 0;
-
     line-height: 1;
-
     top: -8px;
-
 }
-
-
 
 .testimonial_item.style_2 .author .image {
-
     width: 55px;
-
     height: 55px;
-
 }
-
-
 
 .testimonial_item.style_2 .author .image img {
-
     width: 100%;
-
     height: 100%;
-
 }
-
-
 
 .testimonial_item.style_2 .author .text h6 {
-
     font-size: 18px;
-
 }
-
 
 
 .testimonial_slider_single .slick-dots {
-
     justify-content: flex-start;
-
     margin-top: 60px;
-
 }
-
-
 
 /*style 3*/
-
 .testimonial_item.style_3 {
-
     padding: 0 15px;
-
     border: none;
-
     margin: 0 auto;
-
 }
-
-
-
 .testimonial_item.style_3 .comment {
-
     font-size: 20px;
-
     font-weight: 500;
-
 }
-
-
 
 .testimonial_item_img {
-
     width: 66px;
-
     height: 66px;
-
     border-radius: 50%;
-
     position: relative;
-
     overflow: hidden;
-
     transition: 0.3s all;
-
     margin: 10px;
-
 }
 
-
-
 .testimonial_item_img img {
-
     cursor: pointer;
-
 }
 
 
 
 .testimonial_slider_nav .slick-current .testimonial_item_img {
-
     transform: scale(1.15);
-
     border: 7px solid var(--thm-color-two);
-
 }
 
 
 
 .testimonial_slider_nav .slick-list {
-
     max-width: 250px;
-
 }
 
 
 
 .testimonial_slider_nav .slick-dots {
-
     justify-content: flex-start;
-
     margin-top: 60px;
-
 }
 
 
 
 /*Coach grid*/
-
 .coach_block .best-selling {
     background-color: #197a19d1;
     text-align: center;
@@ -4733,6 +4628,7 @@ a.remove_form_cart {
 .cart-button {
     display: flex;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .division {
@@ -4764,7 +4660,6 @@ a.remove_form_cart {
     border-radius: 10px;
 }
 
-
 .coach_block .coach_img .link {
     width: 40px;
     height: 40px;
@@ -4776,7 +4671,6 @@ a.remove_form_cart {
 .coach_block .coach_img a {
     width: 100%;
 }
-
 
 .coach_block .coach_caption {
     background-color: var(--thm-white);
@@ -4795,14 +4689,12 @@ a.remove_form_cart {
 .coach_block .coach_caption .coach_meta h5 {
     margin-bottom: 10px;
 }
-
 .coach_block .coach_caption .course_tag {
     overflow: hidden;
     display: flex;
     gap: 30px;
     margin: 5px 0;
 }
-
 .coach_block .coach_caption .course_tag .tag {
     border-radius: 5px;
     font-size: 14px;
@@ -8375,8 +8267,8 @@ a.change_mobile_no {
 }
 
 .course-description h2 {
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-top: 30px;
+    margin-bottom: 7px;
 }
 
 .course-description ul {
@@ -8557,6 +8449,7 @@ ul.cart-course-list a {
     align-items: center;
     font-size: 18px;
     font-weight: 600;
+    width: 183px;
 }
 
 .sidebar .info_widgets ul li .left-side i {
@@ -8576,6 +8469,7 @@ ul.cart-course-list a {
 
 .sidebar .info_widgets ul li .right-side {
     font-size: 18px;
+    flex: 1;
 }
 
 
@@ -10875,7 +10769,6 @@ align-self: center;
         bottom: 6rem;
     }
 }
-
 
 .section-price{
     padding: 4rem 0;
